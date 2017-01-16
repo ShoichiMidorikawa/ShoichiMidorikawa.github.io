@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+<title>ご挨拶</title>
+<script>
+
+ function onClick(){
+  var str1=document.getElementById("txt").value;
+  var str2=document.getElementById("display");
+
+  str2.innerHTML='こんにちは'+str1+'さん';
+ }
+</script>
+</head>
+<body>
+<form name="f1">
+  <input type="text" size="30" id="txt">
+  <br>
+  <input type="button"  name="button" value="ボタン"  onclick="onClick()">
+  <br>
+  <p id="display"></p>
+</form>
+
+</body>
+</html> 

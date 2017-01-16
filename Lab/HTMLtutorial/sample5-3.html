@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<mata charset="UTF-8">
+<title>タイトル </title>
+<style>
+body{
+  padding: 50px;
+  margin : 30px; 
+  top:  0px;
+}
+</style>
+<script>
+　var str1;
+ function onClick(){
+  var image=document.getElementById('image');
+  var btn = document.getElementById('btn');
+  if(str1){
+    image.src='AodaiPV-ver01.mp4';
+    btn.innerHTML="第2部へ";
+    str1="";
+  }else{
+    image.src='AodaiPV-ver02.1.mp4';
+    btn.innerHTML="第1部へ";
+    str1="1";
+  }
+ }
+</script>
+</head>
+
+<body> 
+
+<center>
+  <h1>ビデオによる大学紹介</h1><br>
+  <h3>これは2014年に制作したものです。</h3>
+  <p> <iframe  id="image" width="600" height="390" src="AodaiPV-ver01.mp4"
+        frameborder="0" allowfullscreen></iframe> </p>
+</center>
+
+  <center>
+  <button id="btn"  onclick="onClick()">第2部へ</button><br> 
+  </center>
+  <br>
+
+</body>
+</html> 

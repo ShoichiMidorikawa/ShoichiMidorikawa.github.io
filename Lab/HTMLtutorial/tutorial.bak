@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<HTML lang="ja">
+<HEAD>
+<META charset="UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<TITLE>HTML入門</TITLE>
+<style>
+<!--
+
+body{
+  padding: 30px;
+  margin-left: 500px;
+}
+
+
+
+-->
+</style>
+</HEAD>
+<BODY>
+<div>
+<!--
+<P align="left" style="line-height : 5mm;"><B><FONT SIZE="5">HTML入門</FONT></B><BR>
+-->
+<BR>
+<BR>
+<P align="left" style="line-height : 5mm;"><FONT SIZE="5"><A href="HTML-tutorial.pdf">HTML入門(テキスト)</A></FONT></P>
+<UL>
+  <LI style="line-height : 6mm;"><A href="sample0.html">sample0.html</A> (HTMLの基本構造)<LI style="line-height : 6mm;"><A href="sample1.html">sample1.html</A> (文字の入力)<LI style="line-height : 6mm;"><A href="sample1-2.html">sample1-2.html</A> （CSS入門)<LI style="line-height : 6mm;"><A href="sample2.html">sample2.html</A> (リンクと動画共有 as time goes by)<LI style="line-height : 6mm;"><A href="sample3-1.html">sample3-1.html</A> (フォーム機能)<LI style="line-height : 6mm;"><A href="sample3-2.html">sample3-2.html</A> (JavaScript入門(１)テキスト入力)<LI style="line-height : 6mm;"><A href="sample3-3.html">sample3-3.html</A> (JavaScript入門(2)改良)<LI style="line-height : 6mm;"><A href="sample3f.html">sample3f.html</A> (応用例題 blowing in the wind)<LI style="line-height : 6mm;"><A href="sample4.html">sample4.html</A> (縦書き　三人吉三廓初買)<LI style="line-height : 6mm;"><A href="sample5-1.html">sample5-1.html
+    </A> (ビデオの公開　リンク)<LI style="line-height : 6mm;"><A href="sample5-2.html">sample5-2.html </A> (ビデオの公開　動画の埋め込み)<LI style="line-height : 6mm;"><A href="sample5-3.html">sample5-3.html </A> (ビデオの公開　複数動画の再生)</UL>
+</div>
+</BODY>
+</HTML>

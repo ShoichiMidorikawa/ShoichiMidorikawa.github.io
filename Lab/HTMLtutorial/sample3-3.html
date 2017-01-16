@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+<title>ご挨拶(2)</title>
+<script>
+
+ function onClick(){
+  var str1=document.getElementById("txt").value;
+  var str2=document.getElementById("display");
+  if(str1)
+    str2.innerHTML='こんにちは'+str1+'さん';
+  else
+    str2.innerHTML ='名前を入力してください。';
+  
+ }
+</script>
+</head>
+<body>
+<form name="f1">
+  <input type="text" size="30" id="txt">
+  <br>
+  <input type="button"  name="button" value="ボタン"  onclick="onClick()">
+  <br>
+  <p id="display"></p>
+</form>
+
+</body>
+</html> 
