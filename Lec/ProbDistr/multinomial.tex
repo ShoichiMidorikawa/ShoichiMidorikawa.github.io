@@ -1,0 +1,258 @@
+\documentclass[a4j]{jarticle}
+
+\setlength{\hoffset}{-1.5cm}
+\setlength{\textwidth}{18.cm}
+\begin{document}
+
+\noindent
+{\bf \Large 多項分布(multinomial distribution)}
+\begin{equation}
+p(x_1, \ x_2, \ \cdots , \ x_n) = \frac{N!}{x_1! x_2! \cdots x_n!}p_1^{x_1}p_2^{x_2} \cdots p_n^{x_n}
+\label{eq:multi}
+\end{equation}
+ただし、
+\begin{eqnarray}
+x_1 + x_2 + \cdots + x_n &=& N , \label{cond_x} \\
+p_1 + p_2 + \cdots + p_n &=& 1
+\end{eqnarray}
+ここで、条件式(\ref{cond_x})は、独立変数が${n-1}$コであることを表している。これを、計算に
+取り込むために、変数が${n-1}$コである関数を${P(x_1, \ x_2, \ \cdots, x_{n-1})}$で表し、
+\begin{equation}
+P(x_1, \ x_2, \ \cdots, x_{n-1}) = \sum_{x_n=0}^N p(x_1, \ x_2, \ \cdots , \ x_n) \,
+\delta_{x_1 + x_2 + \cdots + x_n, \ n} 
+\label{eq:P}
+\end{equation}
+と書こう。ここで、${\delta_{x_1 + x_2 + \cdots + x_n, \ n}}$は、クロネッカーのデルタである。
+
+$N$は十分に大きいとして、(\ref{eq:multi})式をスターリングの公式を用いて書き直すと、
+\begin{eqnarray}
+p(x_1, \ x_2, \ \cdots , \ x_n) &\sim& 
+\frac{ \sqrt{2\pi} N^{N+\frac{1}{2}}}{\sqrt{2\pi} x_1^{x_1 + \frac{1}{2}} \sqrt{2\pi} x_2^{x_2 + \frac{1}{2}}
+\cdots \sqrt{2\pi} x_n^{x_n + \frac{1}{2}} } p_1^{x_1}p_2^{x_2} \cdots p_n^{x_n} \nonumber \\  
+&=& \frac{N^{-(n-1)/2}}{(2\pi)^{(n-1)/2}\sqrt{p_1p_2 \cdots p_n}}
+\left( \frac{x_1}{Np_1} \right)^{-x_1-\frac{1}{2}} \left( \frac{x_2}{Np_2} \right)^{-x_2-\frac{1}{2}}
+\cdots \left( \frac{x_n}{Np_n} \right)^{-x_n-\frac{1}{2}} \quad
+\label{eq:s_multi}
+\end{eqnarray}
+ここで、
+\[
+t_i = \frac{x_i-Np_i}{\sqrt{N}} \quad (i = 1, \ 2, \ \cdots , \ n)
+\]
+と置くと、
+\[
+x_i = Np_i + \sqrt{N} t_i, \qquad  \frac{x_i}{Np_i} = 1+ \frac{t_i}{\sqrt{N} p_i}
+\] 
+だから、
+\begin{eqnarray*}
+\left(\frac{x_i}{Np_i} \right)^{-x_i-\frac{1}{2}}
+&=& \exp\left\{ -\left(x_i+\frac{1}{2}\right) \ln \left( \frac{x_i}{Np_i} \right) \right\} \\ 
+&=& \exp\left\{- \left(Np_i + \sqrt{N} t_i + \frac{1}{2}\right)\ln \left(1+\frac{t_i}{\sqrt{N} p_i}\right)\right\} \\
+&=& \exp\left\{- \left(Np_i + \sqrt{N} t_i + \frac{1}{2}\right) 
+\left(\frac{t_i}{\sqrt{N} p_i} - \frac{t_i^2}{2Np_i^2} + \dots  \right)\right\} \\
+&=&  \exp\left\{ - \sqrt{N} t_i - \frac{t_i^2}{2p_i} + \cdots \right\} \\
+\end{eqnarray*}
+となる。
+これらを用いて(\ref{eq:s_multi})式を書き直すと、
+\[
+p(x_1, \ x_2, \ \cdots , \ x_n)  
+\sim 
+ \frac{N^{-(n-1)/2}}{(2\pi)^{(n-1)/2}\sqrt{p_1p_2 \cdots p_n}}
+\exp \left\{ - \sqrt{N}(t_1 + t_2 + \cdots + t_n) 
+- \left( \frac{t_1^2}{2p_1} + \frac{t_2^2}{2p_2} + \cdots + \frac{t_n^2}{2p_n} \right) \right\} 
+\]
+となる。この式を(\ref{eq:P})式に代入し、さらに、和を積分で置き換える、
+すなわち、
+\[
+ \sum_{x_n=0}^N \delta_{x_1 + x_2 + \cdots + x_n, \ n} \ \to \ 
+\int_{-\infty}^{+\infty} \, dt_n \delta(t_1+t_2+ \cdots + t_n)
+\]
+とおく。このデルタ関数のお蔭で、${\sqrt{N}(t_1 + t_2 + \cdots + t_n)=0}$となる。
+
+一方、連続変数${t_1, \ t_2, \ \cdots , \ t_{n-1}}$の分布を${F(t_1, \ t_2, \ \cdots , \ t_{n-1})}$と書くと、
+${\Delta x_i = \sqrt{N} \Delta t_i}$、かつ${\Delta x_i=1}$だから、${\displaystyle \Delta t_i = 1/\sqrt{N}}$、
+すなわち、
+\[
+P(x_1, \ x_2, \ \cdots, x_{n-1}) = (\sqrt{N})^{-(n-1)} F(t_1, \ t_2, \ \cdots , \ t_{n-1})
+\]
+となるので、結局、
+\begin{eqnarray*}
+&&F(t_1, \ t_2, \ \cdots , \ t_{n-1}) \nonumber \\
+&&= \frac{1}{(2\pi)^{(n-1)/2}\sqrt{p_1p_2 \cdots p_n}}
+\int_{-\infty}^{+\infty} \, dt_n \delta(t_1+t_2+ \cdots + t_n)
+\exp \left\{ 
+-  \frac{t_1^2}{2p_1} - \frac{t_2^2}{2p_2} - \cdots - \frac{t_n^2}{2p_n}  \right\} \\
+&&= \frac{1}{(2\pi)^{(n-1)/2}\sqrt{p_1p_2 \cdots p_n}}
+\exp \left\{ 
+-  \frac{t_1^2}{2p_1} - \frac{t_2^2}{2p_2} - \cdots - \frac{(t_1+t_2+ \cdots +t_{n-1})^2}{2p_n}  \right\} \\
+\label{eq:F}　
+\end{eqnarray*}
+となる。この指数部分を行列表示を用いて、
+\[
+\frac{t_1^2}{p_1} + \frac{t_2^2}{p_2} + \cdots + \frac{(t_1+t_2+ \cdots +t_{n-1})^2}{p_n}
+= {\bf t}^T A {\bf t}
+\]
+と書こう。ここに、
+\[
+A =
+\left(
+\begin{array}{cccc}
+\frac{1}{p_1}+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & \frac{1}{p_n} \\
+\frac{1}{p_n} & \frac{1}{p_2}+\frac{1}{p_n} & \ldots  & \frac{1}{p_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & \frac{1}{p_{n-1}}+\frac{1}{p_n} 
+\end{array}
+\right),
+\qquad
+{\bf t} = 
+\left(
+\begin{array}{l}
+t_1 \\
+t_2 \\
+\vdots \\
+t_{n-1}
+\end{array}
+\right)
+\]
+である。行列$A$を対角化する直行行列を$S$と書き、$S$で${\bf t}$を変換したベクトルを${\bf u}$と書く。
+\[
+SAS^{-1} = D =
+\left(
+\begin{array}{cccc}
+\lambda_1 & 0 & \ldots & 0 \\
+0 & \lambda_2 & \ldots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \ldots & \lambda_{n-1}
+\end{array}
+\right),
+\qquad
+{\bf u} = 
+\left(
+\begin{array}{l}
+u_1 \\
+u_2 \\
+\vdots \\
+u_{n-1}
+\end{array}
+\right)
+= S {\bf t}
+\]
+ここで、${\lambda_i > 0 \ (i = 1, \ 2, \ \cdots, \ n-1)}$ である。
+
+
+次に、行列式${|A|}$を行列式の性質を使って計算する。
+\begin{eqnarray*}
+|A| &=&
+\left|
+\begin{array}{cccc}
+\frac{1}{p_1}+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & \frac{1}{p_n} \\
+\frac{1}{p_n} & \frac{1}{p_2}+\frac{1}{p_n} & \ldots  & \frac{1}{p_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & \frac{1}{p_n} 
+\end{array}
+\right|
++
+\left|
+\begin{array}{cccc}
+\frac{1}{p_1}+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & 0 \\
+\frac{1}{p_n} & \frac{1}{p_2}+\frac{1}{p_n} & \ldots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & \frac{1}{p_{n-1}} 
+\end{array}
+\right| \\ \\
+&=& |A_1| + |A_2|
+\end{eqnarray*}
+
+\noindent
+${\bullet}$${|A_1|}$の計算　第1列から第$(n-2)$まで、第${(n-1)}$を引いても行列の値は変わらないので、
+\[
+|A_1| = 
+\left|
+\begin{array}{cccccc}
+\frac{1}{p_1} & 0 & 0 & \ldots & 0 & \frac{1}{p_n} \\
+ 0 & \frac{1}{p_2} & 0 & \ldots & 0 &\frac{1}{p_n} \\
+ 0 & 0 & \frac{1}{p_3} & \ldots & 0 &\frac{1}{p_n} \\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+ 0 & 0 & 0 & \ldots & \frac{1}{p_{n-2}} & \frac{1}{p_n} \\
+ 0 & 0 & 0 & \ldots & 0 & \frac{1}{p_n} 
+\end{array}
+\right|
+= \frac{1}{p_1 p_2 \cdots p_{n-2} p_n}
+\]
+
+\noindent
+${\bullet}$${|A_2|}$の計算
+\[
+|A_2| = 
+\frac{1}{p_{n-1}}
+\left|
+\begin{array}{cccc}
+\frac{1}{p_1}+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & \frac{1}{p_n} \\
+\frac{1}{p_n} & \frac{1}{p_2}+\frac{1}{p_n} & \ldots  & \frac{1}{p_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{1}{p_n} & \frac{1}{p_n} & \ldots & \frac{1}{p_{n-2}}+\frac{1}{p_n} 
+\end{array}
+\right|
+\]
+後は、$|A_|$の計算と同様な操作を順次繰り返せば良い。
+\begin{eqnarray*}
+|A_2| &=& \frac{1}{p_{n-1}} \left\{ \frac{1}{p_1p_2 \cdots p_{n-3}p_n} 
++ \frac{1}{p_{n-2}} \Bigg[ \frac{1}{p_1p_2\cdots p_{n-4}p_n} + \frac{1}{p_{n-3}}\bigg(
+\cdots + \frac{1}{p_2}\Big( \frac{1}{p_n}+\frac{1}{p_1} \Big) \bigg) \Bigg] \right\} \\
+&=& \frac{1}{p_1p_2 \cdots p_{n-3}p_{n-1}p_n} +  \frac{1}{p_1p_2 \cdots p_{n-4}p_{n-2}p_{n-1}p_n}
++ \cdots + \frac{1}{p_2 p_3 \cdots p_n} + \frac{1}{p_1p_2\cdots p_{n-1}}  
+\end{eqnarray*}
+
+以上の結果から、
+\[
+|A| = \frac{p_{n-1} + p_{n-2} \cdots + p_1 + p_n}{p_1p_2p_3 \cdots p_n}
+= \frac{1}{p_1p_2p_3 \cdots p_n}
+\]
+一方、
+\[
+|A| = \lambda_1 \lambda_2 \lambda_3 \cdots \lambda_{n-1}
+\]
+でもあるので、
+\[
+\lambda_1 \lambda_2 \cdots \lambda_{n-1} =  \frac{1}{p_1p_2p_3 \cdots p_n}
+\]
+を得る。
+
+そこで、${F(t_1, \ t_2, \ \cdots , \ t_{n-1})}$を${u_1, \ u_2, \ \cdots, \ u_{n-1}}$を用いて
+書き直すと、
+\begin{eqnarray*}
+f(u_1, \ u_2, \ \cdots, \ u_{n-1}) &=& F(t_1, \ t_2, \ \cdots , \ t_{n-1}) \\
+&=&  \frac{\sqrt{\lambda_1\lambda_2 \cdots \lambda_{n-1}}}{(2\pi)^{(n-1)/2}}
+\exp \left\{ 
+-  \frac{\lambda_1}{2}u_1^2 - \frac{\lambda_2}{2}u_2^2 - \cdots - \frac{\lambda_{n-1}}{2}u_{n-1}^2  \right\} \\
+\end{eqnarray*}
+となる。
+
+
+さらに、${v_i = \sqrt{\lambda_i} u_i \ (i = 1, \ 2, \ \cdots, \ n-1)}$ と変数変換をすると、
+\[
+\int_{-\infty}^{+\infty} \delta(v_i - \sqrt{\lambda_i} u_i) \exp\left(- \frac{\lambda_i}{2}u_i^2 \right)\, du_i 
+= \frac{1}{\sqrt{\lambda_i}} \exp\left(- \frac{1}{2}v_i^2 \right)
+\]
+だから、
+\begin{eqnarray*}
+g(v_1, \ \cdots, \ v_{n-1}) &=&
+\int \cdots \int  f(u_1, \ \cdots, \ u_{n-1}) 
+\delta(v_1 - \sqrt{\lambda_1} u_1) \cdots \delta(v_{n-1} - \sqrt{\lambda_{n-1}} u_{n-1})
+\, du_1 \cdots du_{n-1}  \\
+&=& \frac{1}{(2\pi)^{(n-1)/2}}
+\exp \left\{ 
+-  \frac{1}{2}\left(v_1^2 + v_2^2 + \cdots +v_{n-1}^2 \right)  \right\} \\
+\end{eqnarray*}
+となる。これは、独立な${n-1}$コの標準正規分布を表している。したがって、
+\[
+\chi^2 = v_1^2 + v_2^2 + \cdots + v_{n-1}^2 = 
+\frac{t_1^2}{p_1} + \frac{t_2^2}{p_2} + \cdots + \frac{t_n^2}{p_n} 
+\] 
+は、自由度${n-1}$の${\chi^2}$分布に従う。
+
+
+
+\end{document}
+------------------------------------------------------------------------
+
+
