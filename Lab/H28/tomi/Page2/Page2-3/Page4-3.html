@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang = "ja">
+
+<head>
+
+<meta charset = "shift-jis">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>一緒に学ぶ！HP制作</title>
+
+<link rel = "stylesheet" href = "css/Page4.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src = "js/Page4.js"></script>
+<script src="../../Page1/js/jquery.smartmenus.js" type="text/javascript"></script>
+<link href="../../Page1/css/css/sm-core-css.css" rel="stylesheet" type="text/css" />
+<link href="../../Page1/css/css/sm-simple/sm-simple.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<p class="pagetop"><a href="#wrap">▲Topへ</a></p>
+
+<p class="resizeimage">
+<a href="../../Page1/Page1.html">
+<img src="../../Page1/Photo/icon2.png" alt="HPロゴ">
+</a>
+</p>
+
+<body>
+
+<center><h1>サイトを作ってみよう</h1></center>
+
+<ul id="main-menu" class="sm sm-simple">
+  <li><a href="../../Page1/Page1.html">Home</a></li>
+  <li><a href="#">jQueryについて</a>
+    <ul>
+      <li><a href="../Page2-1/Page2.html">jQueryって何？</a></li>
+      <li><a href="../Page2-2/Page3.html">jQueryプラグイン一部紹介</a></li>
+    </ul>
+  </li>
+
+  <li><a href="#">サイトを作ってみよう</a>
+    <ul>
+      <li><a href="../Page2-3/Page4.html">1.準備</a></li>
+      <li><a href="../Page2-3/Page4-kiso.html">2.基礎</a></li>
+　　　<li><a href="../Page2-3/Page4-1.html">3.スライドショーの導入</a></li>
+      <li><a href="../Page2-3/Page4-2.html">4.メニューの導入</a></li>
+　　　<li><a href="../Page2-3/Page4-3.html">5.動画の埋め込み</a></li>
+      <li><a href="../Page2-3/Page4-4.html">6.完成</a></li>
+    </ul>
+  </li>
+
+<li><a href="#">HPサンプル</a>
+    <ul>
+      <li><a href="../Page2-4/Page5.html">HPサンプル</a></li>
+    </ul>
+  </li>
+
+<li><a href="#">プチ紹介</a>
+    <ul>
+      <li><a href="../Page2-5/Page6.html">参考資料</a></li>
+      <li><a href="../Page2-6/Page7.html">役立ちツール</a></li>
+    </ul>
+  </li>
+
+</ul>
+
+<center><h1>5.動画の埋め込み</h1></center>
+
+<p>動画の埋め込みに挑戦してみましょう。</p>
+
+<p class="margin">
+
+<p>今回メニューの実装に使うjQueryのプラグインは『FitVids.js』です。
+<br>当サイトのメニューの『jQueryについて』→『jQueryプラグイン一部紹介』にも掲載しています。</p>
+
+<p class="margin">
+
+<p>まずは『FitVids.js』を用意しましょう。</p>
+<p><a href="http://fitvidsjs.com/" target="_blank">http://fitvidsjs.com/</a>へアクセスしてください。</p>
+<p>アクセスすると下の画像のように大きく『<b><fc1>Download</fc1></b>』とあるので<b>左クリック</b>しましょう。</p>
+
+<img src="../../Page1/Photo/P3.PNG" width="390" height="230">
+
+<p>クリックすると下の画像のような画面が出るので<b><fc1>赤丸</fc1></b>で囲っている部分『<b>jquery.fitvids.js</b>』を<b>左クリック</b>しましょう。</p>
+
+<img src="../../Page1/Photo/P4.PNG" width="390" height="230">
+
+<p>クリックすると下の画像のような画面が出るので<b><fc1>赤丸</fc1></b>で囲っている部分『<b>Raw</b>』を<b>左クリック</b>しましょう。</p>
+
+<img src="../../Page1/Photo/P5.PNG" width="390" height="230">
+
+<p>クリックすると下の画像のような画面が出るので<b>右クリック</b>をして『<b>名前を付けて保存</b>』を選んでください。
+<br><small><fc1>※1</fc1> 保存名は『jquery.fitvids.js』のままで大丈夫です</small>
+<br><small><fc1>※2</fc1> 保存先は『jsフォルダ』内に保存してください</small></p>
+
+<img src="../../Page1/Photo/P6.PNG" width="390" height="230">
+
+<p class="margin">
+
+<p>これで『FitVids.js』の用意ができました。</p>
+
+<p class="margin">
+
+<p>では色々と設定していきましょう。</p>
+<p>まず、『<fc1>Page1.html</fc1>』ファイルの「<fc2>head</fc2>」内に下記のコードを入力しましょう。</p>
+
+<div class="block">
+<pre>
+<code>
+&lt;script src=&quot;../js/jquery.fitvids.js&quot;&gt;&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<p class="margin">
+
+<p>次に『<fc1>Page1.js</fc1>』ファイルに下記のコードを入力しましょう。</p>
+
+<div class="block">
+<pre>
+<code>
+$(document).ready(function(){
+$("#fitvids").fitVids();
+});
+</code>
+</pre>
+</div>
+
+<p class="margin">
+
+<p>次に『<fc1>Page1.html</fc1>』ファイルの「<fc2>body</fc2>」内に下記のコードを入力しましょう。今回は用意した動画（オリジナル動画.mp4）を使用していきます。
+<br><small><fc1>※1</fc1> 動画ファイル名が書かれている部分に載せたいYouTubeのURLや自身の動画のURLを入力してください。</small>
+<br><small><fc1>※2</fc1> コードが長いので途中改行しています。</small></p>
+
+<div class="block">
+<pre>
+<code>
+&lt;center&gt;
+&lt;div id=&quot;fitvids&quot;&gt;
+ &lt;iframe width=&quot;640&quot;
+  height=&quot;360&quot;
+  src=&quot;../Photo/オリジナル動画.mp4&quot;
+  frameborder=&quot;0&quot;
+  allowfullscreen&gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+</code>
+</pre>
+</div>
+
+<p class="margin">
+
+<p>次に『<fc1>Page1.css</fc1>』ファイルに下記のコードを入力します。</p>
+
+<div class="block">
+<pre>
+<code>
+.fitvids {
+position: relative;
+margin: 20px 0;
+padding-bottom: 56.25%;
+padding-top: 30px;
+overflow: hidden;
+max-width: 100%;
+height: auto;
+}
+
+.fitvids iframe, .fitvids object, .fitvids embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+</code>
+</pre>
+</div>
+
+<p class="margin">
+
+<p>これで動画の埋め込みをすることができました。</p>
+<p>次のページで最終確認をしましょう。</p>
+<p><a href="Page4-4.html">6.完成</a></p>
+
+<p class="margin">
+
+</body>
