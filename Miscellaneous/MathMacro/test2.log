@@ -1,0 +1,100 @@
+This is pTeX, Version p2.1.8, based on TeX, Version 3.14159 (SJIS) (Web2C 7.2) (format=platex 1998.10.16)  26 JAN 2012 19:14
+**test2.tex
+(test2.tex
+pLaTeX2e <1998/09/01>+1 (based on LaTeX2e <1998/06/01> patch level 0)
+(C:/ptex/texmf/tex/platex/base/jarticle.cls
+Document Class: jarticle 1998/12/24 v1.1o Standard pLaTeX class
+\c@@paper=\count81
+(C:/ptex/texmf/tex/platex/base/jsize10.clo
+File: jsize10.clo 1998/12/24 v1.1o Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 594.
+LaTeX Info: Redefining \mathrm on input line 596.
+LaTeX Info: Redefining \mathbf on input line 597.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count90
+)
+\cta=\count91
+\ctb=\count92
+\ctc=\count93
+\ctd=\count94
+\cte=\count95
+\ctf=\count96
+\ctg=\count97
+\cth=\count98
+\cti=\count99
+\ctj=\count100
+\ctk=\count101
+\ctl=\count102
+\ctm=\count103
+\ctn=\count104
+ (test2.aux)
+\openout1 = `test2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 102.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 102.
+\cs=\count105
+\ct=\count106
+\cu=\count107
+\cv=\count108
+\cw=\count109
+\cs=\count110
+\ct=\count111
+\cu=\count112
+\cv=\count113
+\cw=\count114
+\cs=\count115
+\ct=\count116
+\cu=\count117
+\cv=\count118
+\cw=\count119
+\cs=\count120
+\ct=\count121
+\cu=\count122
+\cv=\count123
+\cw=\count124
+ [1
+
+] (test2.aux) ) 
+Here is how much of TeX's memory you used:
+ 267 strings out of 10661
+ 2373 string characters out of 69663
+ 51166 words of memory out of 263001
+ 3445 multiletter control sequences out of 10000+0
+ 7519 words of font info for 31 fonts, out of 200000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,6n,19p,116b,210s stack positions out of 300i,100n,500p,30000b,4000s
+
+Output written on test2.dvi (1 page, 1144 bytes).

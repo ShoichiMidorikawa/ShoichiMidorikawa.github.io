@@ -1,0 +1,80 @@
+\documentclass[a4j]{jarticle}
+
+
+\makeatletter
+
+\newcount\cta  \newcount\ctb  \newcount\ctc  \newcount\ctd  \newcount\cte \newcount\ctf \newcount\ctg
+\newcount\cth  \newcount\cti  \newcount\ctj  \newcount\ctk  \newcount\ctl \newcount\ctm \newcount\ctn
+
+
+\def\add#1#2{%
+   \cta=#1  \ctb=#2 
+   \advance \cta by \ctb
+   \edef\cta{\expandafter\the\cta}
+   \cta
+}
+
+
+\def\sub#1#2{%
+   \ctc=#1  \ctd=#2 
+   \advance \ctc by -\ctd
+   \edef\ctc{\expandafter\the\ctc}
+   \ctc
+}
+
+
+\def\div#1#2{%
+   \cte=#1  \ctf=#2 
+   \divide \cte by \ctf
+   \edef\cte{\expandafter\the\cte}
+   \cte
+}
+
+\def\rem#1#2{%
+   \ctg=#1 \cth=#2
+   \cti=#1
+   \divide \cti by \cth
+   \multiply \cti by \cth
+   \advance \ctg by -\cti
+   \edef\ctg{\expandafter\the\ctg}
+   \ctg
+} 
+
+\def\gcd#1#2{%
+   \ctg=#1 \cth=#2
+   \cti=#1
+   \@whilenum\cth>0\do{
+      \divide \cti by \cth
+      \ctj=\cti
+      \multiply \ctj by \cth
+      \advance \ctg by -\ctj
+      \ctk=\ctg
+      \cti=\cth
+      \ctg=\cth
+      \cth=\ctk
+   }
+   \edef\cti{\expandafter\Rval\the\cti}
+   \cti
+} 
+   
+
+
+\makeatother
+
+
+\begin{document}
+
+
+
+
+‚±‚±‚©‚çn‚ß‚æ‚¤I
+
+\begin{eqnarray*}
+7+2&=&\add{7}{2} \\
+17-5 &=& \sub{17}{5} \\
+19€3&=&\div{20}{3} \quad —]‚è\ \rem{20}{3}
+\end{eqnarray*}
+
+
+
+\end{document}

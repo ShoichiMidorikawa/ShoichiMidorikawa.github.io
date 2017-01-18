@@ -1,0 +1,163 @@
+This is pTeX, Version p2.1.8, based on TeX, Version 3.14159 (SJIS) (Web2C 7.2) (format=platex 1998.10.16)  31 JAN 2012 14:25
+**test3.tex
+(test3.tex
+pLaTeX2e <1998/09/01>+1 (based on LaTeX2e <1998/06/01> patch level 0)
+(C:/ptex/texmf/tex/platex/base/jarticle.cls
+Document Class: jarticle 1998/12/24 v1.1o Standard pLaTeX class
+\c@@paper=\count81
+(C:/ptex/texmf/tex/platex/base/jsize10.clo
+File: jsize10.clo 1998/12/24 v1.1o Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 594.
+LaTeX Info: Redefining \mathrm on input line 596.
+LaTeX Info: Redefining \mathbf on input line 597.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count90
+) (Math0.tex
+\ma=\dimen121
+\mb=\dimen122
+\mc=\dimen123
+\md=\dimen124
+\ma=\dimen125
+\mb=\dimen126
+\mc=\dimen127
+\md=\dimen128
+\cta=\count91
+\ctb=\count92
+\ctc=\count93
+\ctd=\count94
+\cte=\count95
+\ctf=\count96
+\ctg=\count97
+\cth=\count98
+\cti=\count99
+\ctj=\count100
+\ctk=\count101
+\ctl=\count102
+\ctm=\count103
+\ctn=\count104
+\ca=\count105
+\cb=\count106
+\cc=\count107
+\cd=\count108
+\ce=\count109
+\cx=\count110
+\cxx=\count111
+) (test3.aux)
+\openout1 = `test3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 14.
+\X=\dimen129
+\Y=\dimen130
+\Z=\dimen131
+\X=\dimen132
+\Y=\dimen133
+\X=\dimen134
+\Y=\dimen135
+\Z=\dimen136
+\cs=\count112
+\ct=\count113
+\cu=\count114
+\cv=\count115
+\cw=\count116
+\cs=\count117
+\ct=\count118
+\cu=\count119
+\cv=\count120
+\cw=\count121
+\cs=\count122
+\ct=\count123
+\cu=\count124
+\cv=\count125
+\cw=\count126
+\cs=\count127
+\ct=\count128
+\cu=\count129
+\cv=\count130
+\cw=\count131
+\cs=\count132
+\ct=\count133
+\cu=\count134
+\cv=\count135
+\cw=\count136
+\cs=\count137
+\ct=\count138
+\cu=\count139
+\cv=\count140
+\cw=\count141
+\cs=\count142
+\ct=\count143
+\cu=\count144
+\cv=\count145
+\cw=\count146
+\cs=\count147
+\ct=\count148
+\cu=\count149
+\cv=\count150
+\cw=\count151
+\cs=\count152
+\ct=\count153
+\cu=\count154
+\cv=\count155
+\cw=\count156
+\x=\dimen137
+\y=\count157
+\x=\count158
+\y=\count159
+\X=\dimen138
+\Y=\dimen139
+\Z=\dimen140
+\X=\dimen141
+\Y=\dimen142
+\Z=\dimen143
+ [1
+
+]
+(test3.aux) ) 
+Here is how much of TeX's memory you used:
+ 307 strings out of 10661
+ 2569 string characters out of 69663
+ 51984 words of memory out of 263001
+ 3480 multiletter control sequences out of 10000+0
+ 8292 words of font info for 34 fonts, out of 200000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,4n,19p,132b,210s stack positions out of 300i,100n,500p,30000b,4000s
+
+Output written on test3.dvi (1 page, 1384 bytes).

@@ -1,0 +1,293 @@
+This is pTeX, Version p2.1.8, based on TeX, Version 3.14159 (SJIS) (Web2C 7.2) (format=platex 1998.10.16)  27 JAN 2012 15:45
+**example2.tex
+(example2.tex
+pLaTeX2e <1998/09/01>+1 (based on LaTeX2e <1998/06/01> patch level 0)
+(C:/ptex/texmf/tex/platex/base/jarticle.cls
+Document Class: jarticle 1998/12/24 v1.1o Standard pLaTeX class
+\c@@paper=\count81
+(C:/ptex/texmf/tex/platex/base/jsize10.clo
+File: jsize10.clo 1998/12/24 v1.1o Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 594.
+LaTeX Info: Redefining \mathrm on input line 596.
+LaTeX Info: Redefining \mathbf on input line 597.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count90
+) (MathMv2.tex
+\ma=\dimen121
+\mb=\dimen122
+\mc=\dimen123
+\md=\dimen124
+\cta=\count91
+\ctb=\count92
+\ctc=\count93
+\ctd=\count94
+\cte=\count95
+\ctf=\count96
+\ctg=\count97
+\cth=\count98
+\cti=\count99
+\ctj=\count100
+\ctk=\count101
+\ctl=\count102
+\ctm=\count103
+\ctn=\count104
+\ca=\count105
+\cb=\count106
+\cc=\count107
+\cd=\count108
+\ce=\count109
+\cx=\count110
+\cxx=\count111
+\c@K=\count112
+) (example2.aux)
+\openout1 = `example2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 11.
+\cs=\count113
+\ct=\count114
+\cu=\count115
+\cv=\count116
+\cw=\count117
+\cs=\count118
+\ct=\count119
+\cu=\count120
+\cv=\count121
+\cw=\count122
+\cs=\count123
+\ct=\count124
+\cu=\count125
+\cv=\count126
+\cw=\count127
+\cs=\count128
+\ct=\count129
+\cu=\count130
+\cv=\count131
+\cw=\count132
+\X=\dimen125
+\Y=\dimen126
+\Z=\dimen127
+\X=\dimen128
+\Y=\dimen129
+\Z=\dimen130
+\X=\dimen131
+\Y=\dimen132
+\Z=\dimen133
+\X=\dimen134
+\Y=\dimen135
+\Z=\dimen136
+\X=\dimen137
+\Y=\dimen138
+\Z=\dimen139
+\X=\dimen140
+\Y=\dimen141
+\Z=\dimen142
+\X=\dimen143
+\Y=\dimen144
+\Z=\dimen145
+\X=\dimen146
+\Y=\dimen147
+\Z=\dimen148
+\X=\dimen149
+\Y=\dimen150
+\Z=\dimen151
+\X=\dimen152
+\Y=\dimen153
+\Z=\dimen154
+\X=\dimen155
+\Y=\dimen156
+\Z=\dimen157
+\X=\dimen158
+\Y=\dimen159
+\Z=\dimen160
+\X=\dimen161
+\Y=\dimen162
+\Z=\dimen163
+\X=\dimen164
+\Y=\dimen165
+\Z=\dimen166
+\X=\dimen167
+\Y=\dimen168
+\Z=\dimen169
+
+[1
+
+]
+\X=\dimen170
+\Y=\dimen171
+\Z=\dimen172
+\X=\dimen173
+\Y=\dimen174
+\Z=\dimen175
+\X=\dimen176
+\Y=\dimen177
+\Z=\dimen178
+\X=\dimen179
+\Y=\dimen180
+\Z=\dimen181
+\X=\dimen182
+\Y=\dimen183
+\Z=\dimen184
+\X=\dimen185
+\Y=\dimen186
+\X=\dimen187
+\Y=\dimen188
+\Z=\dimen189
+\X=\dimen190
+\Y=\dimen191
+\Z=\dimen192
+\X=\dimen193
+\Y=\dimen194
+\Z=\dimen195
+\X=\dimen196
+\Y=\dimen197
+\Z=\dimen198
+\X=\dimen199
+\Y=\dimen200
+\Z=\dimen201
+\X=\dimen202
+\Z=\dimen203
+\Y=\dimen204
+\X=\dimen205
+\Y=\dimen206
+\Z=\dimen207
+\X=\dimen208
+\Z=\dimen209
+\Y=\dimen210
+\X=\dimen211
+\Y=\dimen212
+\Z=\dimen213
+ [2]
+\X=\dimen214
+\Y=\dimen215
+\X=\dimen216
+\Z=\dimen217
+\Y=\dimen218
+\X=\dimen219
+\Y=\dimen220
+\Z=\dimen221
+\X=\dimen222
+\Y=\dimen223
+\Z=\dimen224
+\X=\dimen225
+\Y=\dimen226
+\Z=\dimen227
+\X=\dimen228
+\Y=\dimen229
+\Z=\dimen230
+\cnt=\count133
+\mul=\count134
+\mul=\count135
+\mul=\count136
+\mul=\count137
+\mul=\count138
+\mul=\count139
+\mul=\count140
+\mul=\count141
+\mul=\count142
+\mul=\count143
+\mul=\count144
+\mul=\count145
+\mul=\count146
+\mul=\count147
+\mul=\count148
+\mul=\count149
+\mul=\count150
+\mul=\count151
+\mul=\count152
+\mul=\count153
+\mul=\count154
+\mul=\count155
+\mul=\count156
+\mul=\count157
+\mul=\count158
+\mul=\count159
+\mul=\count160
+\mul=\count161
+\mul=\count162
+\mul=\count163
+\mul=\count164
+\mul=\count165
+\mul=\count166
+\cnt=\count167
+\cnst=\count168
+\cnt=\count169
+\cnst=\count170
+\cnt=\count171
+\cnst=\count172
+\N=\count173
+\cnt=\count174
+\cnst=\count175
+\N=\count176
+\cnv=\count177
+\cnt=\count178
+\cnst=\count179
+\N=\count180
+\mul=\count181
+\cnt=\count182
+\cnst=\count183
+\N=\count184
+\mul=\count185
+\mul=\count186
+\mul=\count187
+\mul=\count188
+\mul=\count189
+\mul=\count190
+\cnt=\count191
+\cnst=\count192
+\N=\count193
+\cnv=\count194
+\mul=\count195
+\mul=\count196
+\mul=\count197
+\mul=\count198
+\mul=\count199
+\mul=\count200
+ [3] (example2.aux) ) 
+Here is how much of TeX's memory you used:
+ 315 strings out of 10661
+ 2610 string characters out of 69663
+ 54561 words of memory out of 263001
+ 3489 multiletter control sequences out of 10000+0
+ 8124 words of font info for 33 fonts, out of 200000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,6n,19p,137b,274s stack positions out of 300i,100n,500p,30000b,4000s
+
+Output written on example2.dvi (3 pages, 5484 bytes).

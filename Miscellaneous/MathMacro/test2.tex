@@ -1,0 +1,139 @@
+\documentclass[a4j]{jarticle}
+
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%% Integer Arithmetic %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcount\cta  \newcount\ctb  \newcount\ctc  \newcount\ctd  \newcount\cte \newcount\ctf \newcount\ctg
+\newcount\cth  \newcount\cti  \newcount\ctj  \newcount\ctk  \newcount\ctl \newcount\ctm \newcount\ctn
+
+
+\def\add#1#2#3{%
+   \cta=#1  \ctb=#2
+   \advance \cta by \ctb
+   \edef#3{\the\cta}
+}
+
+
+\def\sub#1#2#3{%
+   \ctc=#1  \ctd=#2 
+   \advance \ctc by -\ctd
+   \edef#3{\the\ctc}
+}
+
+\def\mul#1#2#3{%
+   \ctl=#1 \ctm=#2
+   \multiply \ctl by \ctm
+   \edef#3{\the\ctl} 
+}
+
+
+
+\def\div#1#2#3{%
+   \cte=#1  \ctf=#2 
+   \divide \cte by \ctf
+   \edef#3{\the\cte}
+}
+
+\def\rem#1#2#3{%
+   \ctg=#1 \cth=#2
+   \cti=#1
+   \divide \cti by \cth
+   \multiply \cti by \cth
+   \advance \ctg by -\cti
+   \edef#3{\the\ctg}
+} 
+
+\def\gcd#1#2#3{%
+   \ctg=#1 \cth=#2
+   \cti=#1
+   \@whilenum\cth>0\do{
+      \divide \cti by \cth
+      \ctj=\cti
+      \multiply \ctj by \cth
+      \advance \ctg by -\ctj
+      \ctk=\ctg
+      \cti=\cth
+      \ctg=\cth
+      \cth=\ctk
+   }
+   \edef#3{\the\cti}
+} 
+   
+\def\Ea[#1/#2+#3/#4]#5#6{%
+    \newcount\cs    \newcount\ct    \newcount\cu    \newcount\cv    \newcount\cw 
+    \cs=#1  \ct=#2   \cu=#3  \cv=#4
+    \multiply \ct by \cv
+    \multiply \cs by #4
+    \multiply \cu by #2
+    \advance \cs by \cu
+    \gcd{\ct}{\cs}\cw
+    \divide \cs by \cw
+    \divide \ct by \cw
+    \edef#5{\the\cs}
+    \edef#6{\the\ct}
+} 
+
+\def\Em[#1/#2*#3/#4]#5#6{%
+    \newcount\cs    \newcount\ct    \newcount\cu    \newcount\cv    \newcount\cw 
+    \cs=#1  \ct=#2   \cu=#3  \cv=#4
+    \multiply \ct by #4
+    \multiply \cs by #3
+    \gcd{\ct}{\cs}\cw
+    \divide \cs by \cw
+    \divide \ct by \cw
+    \edef#5{\the\cs}
+    \edef#6{\the\ct}
+} 
+
+
+
+\makeatother
+
+
+\begin{document}
+
+
+\qn
+
+\centerline{----- Integer Arithmetic  -----}
+
+
+\begin{eqnarray*}
+-4+6 &=& \add{-4}{6}\X \X  \\
+13 + 17 + 23 &=& \add{13}{17}\u \add{\u}{23}\v  \v  \\
+25Å~31 &=& \mul{25}{31}\X \X \\
+355ÅÄ113 &=& \div{355}{113}\X \X  ó]ÇË \rem{355}{113}\Y \Y  \\
+\end{eqnarray*}
+
+\vskip 1cm
+
+
+\centerline{-----  Greatest Common Divisor -----}
+
+\begin{center}
+gcd(1183, 42) = \gcd{91}{42}\Z \Z
+\end{center}
+
+\vskip 1cm
+
+\centerline{-----  Arithmetic with Fractions -----}
+
+\[
+\frac{5}{4}+\frac{3}{8} = \Ea[{5}/{4}+{3}/{8}]\x\y \frac{\x}{\y}
+\]
+
+\[
+\frac{4}{5} \times \frac{1}{2} = \Em[{4}/{5}*{1}/{2}]{\x}{\y}  \frac{\x}{\y}
+\]
+
+\[
+\frac{5}{9} \cdot \frac{3}{7} +\frac{3}{14} = \Em[{5}/{9}*{3}/{7}]{\p}{\q} 
+\Ea[{\p}/{\q}+{3}/{14}]\x\y \frac{\x}{\y}
+\]
+
+
+
+\end{document}

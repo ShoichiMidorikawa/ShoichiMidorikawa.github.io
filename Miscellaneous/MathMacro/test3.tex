@@ -1,0 +1,146 @@
+\documentclass[a4j]{jarticle}
+\input{Math0}
+
+
+\begin{document}
+
+\begin{center}{\large \bf Arithmetic Calculation} \end{center}
+
+
+
+\begin{center}------------- Multiplication -----------------\end{center}
+
+
+\[
+1.234 \times (-2.345) = \Emul{1.234}{-2.345}
+\]
+
+
+\[
+-3.2 \times 1.6 \times 0.7 = \EmulS{-3.2}{1.6}{\u} \Emul{\u}{0.7}
+\]
+
+
+\centerline{----------- {\large\bf test}--------------- }
+
+% \Ea[{\a}/{\b}+{}/{}]\a\b
+
+\[
+1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7}  + \frac{1}{9}  - \frac{1}{11}  + \frac{1}{13} - \frac{1}{15} 
+ + \frac{1}{17} - \frac{1}{19} 
+= \Ea[{1}/{1}+{-1}/{3}]\a\b   \Ea[{\a}/{\b}+{1}/{5}]\a\b  \Ea[{\a}/{\b}+{-1}/{7}]\a\b 
+ \Ea[{\a}/{\b}+{1}/{9}]\a\b  \Ea[{\a}/{\b}+{-1}/{11}]\a\b  \Ea[{\a}/{\b}+{1}/{13}]\a\b  
+ \Ea[{\a}/{\b}+{-1}/{15}]\a\b  \Ea[{\a}/{\b}+{1}/{17}]\a\b  \Ea[{\a}/{\b}+{-1}/{19}]\a\b
+ \frac{\a}{\b}
+\qquad
+%\a \div \b  =\Ediv{263}{315}
+\]
+
+
+
+\newdimen\x \newcount\y \x=1pt \y=\x
+\edef\y{\the\y} 
+\y
+
+
+
+\def\äÑéZ#1#2#3{
+   \newcount\x
+   \newcount\y
+   \x=#1 \divide\x by #2   
+   \edef\r{\the\x.}
+   \y=\x \multiply\y by #2
+   \x=#1 \advance\x by -\y 
+   \multiply\x by 10 \edef\s{\the\x}
+   \divide\x by #2 \edef\r{\r\the\x}
+
+   \y=\x \multiply\y by #2
+   \x=\s \advance\x by -\y 
+   \multiply\x by 10 \edef\s{\the\x}
+   \divide\x by #2 \edef\r{\r\the\x}
+
+   \y=\x \multiply\y by #2
+   \x=\s \advance\x by -\y 
+   \multiply\x by 10 \edef\s{\the\x}
+   \divide\x by #2 \edef\r{\r\the\x}
+
+   \y=\x \multiply\y by #2
+   \x=\s \advance\x by -\y 
+   \multiply\x by 10 \edef\s{\the\x}
+   \divide\x by #2 \edef\r{\r\the\x}
+
+   \y=\x \multiply\y by #2
+   \x=\s \advance\x by -\y 
+   \multiply\x by 10 \edef\s{\the\x}
+   \divide\x by #2 \edef\r{\r\the\x}
+
+   \y=\x \multiply\y by #2
+   \x=\s \advance\x by -\y 
+   \multiply\x by 10 \edef\s{\the\x}
+   \divide\x by #2 \edef\r{\r\the\x}
+
+   \y=\x \multiply\y by #2
+   \x=\s \advance\x by -\y 
+   \multiply\x by 10 \edef\s{\the\x}
+   \divide\x by #2 \edef\r{\r\the\x}
+
+   \edef#3{\r}
+}
+
+\äÑéZ{44257352}{14549535}\R
+\R
+
+\[
+4.4257352 \div 1.4549535 = \Ediv{4.4257352}{1.4549535}
+\]
+
+
+
+
+\vskip 1cm
+
+\begin{center}------------- Division -----------------\end{center}
+
+\[
+3.55 \div 1.13= \Ediv{3.55}{1.13}
+\]
+
+à»â∫ÇÃåvéZÇÕÉ_ÉÅÅI
+\begin{verbatim}
+\[
+355 \div 113= \Ediv{355}{113}
+\]
+\end{verbatim}
+
+
+
+\end{document}
+
+
+-----------------------end ---------------------
+
+
+\newpage
+
+
+
+\begin{center}------------- Arithmetic Calculation in General -----------------\end{center}
+
+\[
+Åi22Å~12ÅjÅ{Åi486ÅÄ6Åj= 
+\EmulS{22}{12}{\u} \edef\ma{\u}  
+\EdivS{486}{6}{\u} \Eadd{\ma}{\u} 
+\]
+
+\[
+(8.63+7.05) \times (6.5-1.6) =
+\EaddS{8.63}{7.05}{\u} \edef\ma{\u} 
+\EsubS{6.5}{1.6}{\u}     \edef\mb{\u}  \Emul{\ma}{\mb}
+\]
+
+
+
+
+
+
+

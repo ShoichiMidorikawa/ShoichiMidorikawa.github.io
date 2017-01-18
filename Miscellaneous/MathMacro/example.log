@@ -1,0 +1,262 @@
+This is pTeX, Version p2.1.8, based on TeX, Version 3.14159 (SJIS) (Web2C 7.2) (format=platex 1998.10.16)  26 JAN 2012 19:24
+**example.tex
+(example.tex
+pLaTeX2e <1998/09/01>+1 (based on LaTeX2e <1998/06/01> patch level 0)
+(C:/ptex/texmf/tex/platex/base/jarticle.cls
+Document Class: jarticle 1998/12/24 v1.1o Standard pLaTeX class
+\c@@paper=\count81
+(C:/ptex/texmf/tex/platex/base/jsize10.clo
+File: jsize10.clo 1998/12/24 v1.1o Standard pLaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 594.
+LaTeX Info: Redefining \mathrm on input line 596.
+LaTeX Info: Redefining \mathbf on input line 597.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count90
+) (MathM.tex
+\ma=\dimen121
+\mb=\dimen122
+\mc=\dimen123
+\md=\dimen124
+\ca=\count91
+\cb=\count92
+\cc=\count93
+\cd=\count94
+\ce=\count95
+\cx=\count96
+\cxx=\count97
+\c@K=\count98
+) (example.aux)
+\openout1 = `example.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
+\X=\dimen125
+\Y=\dimen126
+\Z=\dimen127
+\X=\dimen128
+\Y=\dimen129
+\Z=\dimen130
+\X=\dimen131
+\Y=\dimen132
+\Z=\dimen133
+\X=\dimen134
+\Y=\dimen135
+\Z=\dimen136
+\X=\dimen137
+\Y=\dimen138
+\Z=\dimen139
+\X=\dimen140
+\Y=\dimen141
+\Z=\dimen142
+\X=\dimen143
+\Y=\dimen144
+\Z=\dimen145
+\X=\dimen146
+\Y=\dimen147
+\Z=\dimen148
+\X=\dimen149
+\Y=\dimen150
+\Z=\dimen151
+\X=\dimen152
+\Y=\dimen153
+\Z=\dimen154
+\X=\dimen155
+\Y=\dimen156
+\Z=\dimen157
+\X=\dimen158
+\Y=\dimen159
+\Z=\dimen160
+\X=\dimen161
+\Y=\dimen162
+\Z=\dimen163
+\X=\dimen164
+\Y=\dimen165
+\Z=\dimen166
+\X=\dimen167
+\Y=\dimen168
+\Z=\dimen169
+\X=\dimen170
+\Y=\dimen171
+\Z=\dimen172
+\X=\dimen173
+\Y=\dimen174
+\Z=\dimen175
+\X=\dimen176
+\Y=\dimen177
+\Z=\dimen178
+\X=\dimen179
+\Y=\dimen180
+\Z=\dimen181
+\X=\dimen182
+\Y=\dimen183
+\Z=\dimen184
+\X=\dimen185
+\Y=\dimen186
+\X=\dimen187
+\Y=\dimen188
+\Z=\dimen189
+\X=\dimen190
+\Y=\dimen191
+\Z=\dimen192
+\X=\dimen193
+\Y=\dimen194
+\Z=\dimen195
+\X=\dimen196
+\Y=\dimen197
+\Z=\dimen198
+\X=\dimen199
+\Y=\dimen200
+\Z=\dimen201
+\X=\dimen202
+\Y=\dimen203
+\Z=\dimen204
+ [1
+
+]
+\X=\dimen205
+\Z=\dimen206
+\Y=\dimen207
+\X=\dimen208
+\Y=\dimen209
+\Z=\dimen210
+\X=\dimen211
+\Z=\dimen212
+\Y=\dimen213
+\X=\dimen214
+\Y=\dimen215
+\Z=\dimen216
+\X=\dimen217
+\Y=\dimen218
+\X=\dimen219
+\Z=\dimen220
+\Y=\dimen221
+\X=\dimen222
+\Y=\dimen223
+\Z=\dimen224
+\X=\dimen225
+\Y=\dimen226
+\Z=\dimen227
+\X=\dimen228
+\Y=\dimen229
+\Z=\dimen230
+\X=\dimen231
+\Y=\dimen232
+\Z=\dimen233
+\cnt=\count99
+\mul=\count100
+\mul=\count101
+\mul=\count102
+\mul=\count103
+\mul=\count104
+\mul=\count105
+\mul=\count106
+\mul=\count107
+\mul=\count108
+\mul=\count109
+\mul=\count110
+\mul=\count111
+\mul=\count112
+\mul=\count113
+\mul=\count114
+\mul=\count115
+\mul=\count116
+\mul=\count117
+\mul=\count118
+\mul=\count119
+\mul=\count120
+\mul=\count121
+\mul=\count122
+\mul=\count123
+\mul=\count124
+\mul=\count125
+\mul=\count126
+\mul=\count127
+\mul=\count128
+\mul=\count129
+\mul=\count130
+\mul=\count131
+\mul=\count132
+\cnt=\count133
+\cnst=\count134
+\cnt=\count135
+\cnst=\count136
+\cnt=\count137
+\cnst=\count138
+\N=\count139
+\cnt=\count140
+\cnst=\count141
+\N=\count142
+\cnv=\count143
+\cnt=\count144
+\cnst=\count145
+\N=\count146
+\mul=\count147
+\cnt=\count148
+\cnst=\count149
+\N=\count150
+\mul=\count151
+\mul=\count152
+\mul=\count153
+\mul=\count154
+\mul=\count155
+\mul=\count156
+
+[2]
+\cnt=\count157
+\cnst=\count158
+\N=\count159
+\cnv=\count160
+\mul=\count161
+\mul=\count162
+\mul=\count163
+\mul=\count164
+\mul=\count165
+\mul=\count166
+ [3] (example.aux) ) 
+Here is how much of TeX's memory you used:
+ 290 strings out of 10661
+ 2529 string characters out of 69663
+ 54165 words of memory out of 263001
+ 3464 multiletter control sequences out of 10000+0
+ 8124 words of font info for 33 fonts, out of 200000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 22i,5n,19p,134b,210s stack positions out of 300i,100n,500p,30000b,4000s
+
+Output written on example.dvi (3 pages, 4680 bytes).

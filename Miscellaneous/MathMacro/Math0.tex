@@ -1,0 +1,254 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                             %
+%  MathM.tex by Shoichi Midorikawa            %
+%                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newdimen\ma \newdimen\mb \newdimen\mc \newdimen\md  
+\newdimen\ma \newdimen\mb \newdimen\mc \newdimen\md  
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%% Integer Arithmetic %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcount\cta  \newcount\ctb  \newcount\ctc  \newcount\ctd  \newcount\cte \newcount\ctf \newcount\ctg
+\newcount\cth  \newcount\cti  \newcount\ctj  \newcount\ctk  \newcount\ctl \newcount\ctm \newcount\ctn
+
+
+\def\add#1#2#3{%
+   \cta=#1  \ctb=#2
+   \advance \cta by \ctb
+   \edef#3{\the\cta}
+}
+
+
+\def\sub#1#2#3{%
+   \ctc=#1  \ctd=#2 
+   \advance \ctc by -\ctd
+   \edef#3{\the\ctc}
+}
+
+\def\mul#1#2#3{%
+   \ctl=#1 \ctm=#2
+   \multiply \ctl by \ctm
+   \edef#3{\the\ctl} 
+}
+
+
+
+\def\divison#1#2#3{%
+   \cte=#1  \ctf=#2 
+   \divide \cte by \ctf
+   \edef#3{\the\cte}
+}
+
+\def\rem#1#2#3{%
+   \ctg=#1 \cth=#2
+   \cti=#1
+   \divide \cti by \cth
+   \multiply \cti by \cth
+   \advance \ctg by -\cti
+   \edef#3{\the\ctg}
+} 
+
+\def\gcd#1#2#3{%
+   \ctg=#1 \cth=#2
+   \cti=#1
+   \@whilenum\cth>0\do{
+      \divide \cti by \cth
+      \ctj=\cti
+      \multiply \ctj by \cth
+      \advance \ctg by -\ctj
+      \ctk=\ctg
+      \cti=\cth
+      \ctg=\cth
+      \cth=\ctk
+   }
+   \edef#3{\the\cti}
+} 
+   
+\def\Ea[#1/#2+#3/#4]#5#6{%
+    \newcount\cs    \newcount\ct    \newcount\cu    \newcount\cv    \newcount\cw 
+    \cs=#1  \ct=#2   \cu=#3  \cv=#4
+    \multiply \ct by \cv
+    \multiply \cs by #4
+    \multiply \cu by #2
+    \advance \cs by \cu
+    \gcd{\ct}{\cs}\cw
+    \divide \cs by \cw
+    \divide \ct by \cw
+    \edef#5{\the\cs}
+    \edef#6{\the\ct}
+} 
+
+\def\Em[#1/#2*#3/#4]#5#6{%
+    \newcount\cs    \newcount\ct    \newcount\cu    \newcount\cv    \newcount\cw 
+    \cs=#1  \ct=#2   \cu=#3  \cv=#4
+    \multiply \ct by #4
+    \multiply \cs by #3
+    \gcd{\ct}{\cs}\cw
+    \divide \cs by \cw
+    \divide \ct by \cw
+    \edef#5{\the\cs}
+    \edef#6{\the\ct}
+} 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Arithmetic %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcount\ca  \newcount\cb  \newcount\cc  \newcount\cd  \newcount\ce \newcount\cx \newcount\cxx
+
+\def\Fn#1#2{%  #1‚ğ¬”‘æ4ˆÊ‚ğlÌŒÜ“ü‚·‚éƒvƒƒOƒ‰ƒ€
+   \count0=\X  \count1=\X  \count2=\Z 
+   \divide \count0 by \count2   \ca=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cb=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cc=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cd=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \ce=\count0
+   \edef\Re{\the\ce}
+   \ifnum\Re>4 \advance \cd by 1 \fi        %#1‚Ì¬”“_‘æ5ˆÊ‚ğlÌŒÜ“ü‚·‚éƒvƒƒOƒ‰ƒ€
+   \ifnum\cd=10 \cd=0 \cx=1 \else \cx=0 \fi   \advance \cc by \cx
+   \ifnum\cc=10 \cc=0 \cx=1 \else \cx=0 \fi   \advance \cb by \cx
+   \ifnum\cb=10 \cb=0 \cx=1 \else \cx=0 \fi   \advance \ca by \cx
+}
+
+
+\def\Fnb#1#2{%  
+   \count0=\X  \count1=\X  \count2=\Z 
+   \divide \count0 by \count2   \ca=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cb=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cc=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cd=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \ce=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cx=\count0
+   \edef\Rx{\the\cx} 
+}
+
+
+\def\R#1#2{%     Œ‹‰Ê‚Ì•„†‚ğŒˆ‚ß‚é
+   \Fn{\X}{\Z}
+   \edef\Ra{\the\ca}    \ifnum\Z<0 \edef\Ra{-\the\ca} \fi
+   \def\Rdot{.} \edef\Rb{\the\cb} \edef\Rc{\the\cc} \edef\Rd{\the\cd} \edef\Re{\the\ce}
+   \advance \cd by \cxx    \advance \cc by \cd    \advance \cb by \cc
+   \Ra   
+   \ifnum\cb>0 \Rdot\Rb \fi   \ifnum\cc>0 \Rc \fi 
+   \ifnum\cd>0 \Rd \fi        %\ifnum\ce>0 \Re \fi 
+}
+
+\def\RB#1#2#3{%  Š„‚èZ‚ÌAŒ‹‰Ê‚Ì•„†‚ğŒˆ‚ß‚éB
+   \Fn{\X}{\Z}
+   \edef\Ra{\the\ca}    \ifnum\Y<0 \edef\Ra{-\the\ca} \fi
+   \def\Rdot{.} \edef\Rb{\the\cb} \edef\Rc{\the\cc} \edef\Rd{\the\cd} \edef\Re{\the\ce}
+   \advance \cd by \cxx    \advance \cc by \cd    \advance \cb by \cc
+   \Ra   
+   \ifnum\cb>0 \Rdot\Rb \fi \ifnum\cc>0 \Rc \fi
+   \ifnum\cd>0 \Rd \fi  %\ifnum\ce>0 \Re \fi 
+}
+
+
+\def\Eadd#1#2{%  ‘«‚µZ
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\Z=1.0\p@
+\X=#1\p@
+\Y=#2\p@
+\ifnum\X<-\Y \Z=-1.0\p@ \fi
+\advance \X by \Y     
+\R{\X}{\Z}
+}
+
+{\catcode`\p=12\catcode`\t=12\gdef\Rval#1pt{#1}}
+\def\EaddS#1#2#3{%
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\X=#1\p@
+\Y=#2\p@
+\advance \X by \Y     %‘«‚µZ
+\edef\u{\expandafter\Rval\the\X}      %‘«‚µZŒ‹‰Ê
+}
+
+
+\def\Esub#1#2{%  ˆø‚«Z
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\X=#1\p@
+\Y=#2\p@
+\Z=1.0\p@
+\ifnum\X<\Y \Z=-1.0\p@ \fi
+\advance \X by -\Y
+\R{\X}{\Z}
+}
+
+\def\EsubS#1#2#3{%  
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\X=#1\p@
+\Y=#2\p@
+\advance \X by -\Y     
+\edef\u{\expandafter\Rval\the\X}     
+}
+
+
+\def\Emul#1#2{%  Š|‚¯Z
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\Z=1.0\p@
+\X=#1\p@
+\X=#2\X
+\Z=1.0\p@
+\ifnum\X<0 \Z=-1.0\p@ \fi
+\R{\X}{\Z}
+}
+
+\def\EmulS#1#2#3{% 
+\newdimen\X
+\newdimen\Y
+\X=#1\p@
+\X=#2\X
+\edef\u{\expandafter\Rval\the\X}
+}
+
+
+\def\Ediv#1#2{%
+   \newdimen\X  \newdimen\Y  \newdimen\Z
+   \X=#1\p@  \Y=#2\X \ifnum\X<0 \X=-\X \fi
+   \Z=#2\p@  \ifnum\Z<0 \Z=-\Z \fi
+   \RB{\X}{\Y}{\Z}
+}
+
+
+\def\EdivS#1#2#3{%
+   \newdimen\X \newdimen\Z \newdimen\Y 
+   \X=#1\p@  \Y=#2\X  \ifnum\X<0 \X=-\X \fi
+   \Z=#2\p@  \ifnum\Z<0 \Z=-\Z \fi
+   \Fnb{\X}{\Z}
+   \edef\Ra{\the\ca.} \ifnum\Y<0 \edef\Ra{-\the\ca.} \fi
+   \edef\Rb{\the\cb}  \edef\Rc{\the\cc}  \edef\Rd{\the\cd}  \edef\Re{\the\ce}
+   \edef\u{\Ra\Rb\Rc\Rd\Re\Rx} 
+}
+
+
+
+
+\makeatother
+
+
+
+
+
