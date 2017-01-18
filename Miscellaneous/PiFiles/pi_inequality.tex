@@ -1,0 +1,107 @@
+\documentclass[a4j, fleqn]{jarticle}
+\usepackage{graphicx}
+\voffset -1.5cm
+\setlength{\textheight}{25cm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\noindent
+{\bf \large 円周率は3.05より大きいことを証明せよ。}
+
+\noindent
+{\bf【証明】}
+
+マチン(Machin)の公式より、
+\[
+\frac{\pi}{4} = 4 \alpha - \beta, 　ここで、\tan \alpha = \frac{1}{5}, 　\tan \beta = \frac{1}{239}
+\]
+${\tan \alpha = \frac{1}{5}}$の両辺を２乗して、
+\[
+\tan^2 \alpha = \frac{\sin^2\alpha}{1-\sin^2\alpha} = \frac{1}{25},　∴\  \sin \alpha = \frac{1}{\sqrt{26}}
+\]
+ゆえに、
+\[
+\alpha > \sin \alpha = \frac{1}{\sqrt{26}} > \frac{1}{\sqrt{27}} = \frac{\sqrt{3}}{9} > \frac{1.732}{9} > 0.192
+\]
+一方、
+\[
+\
+\beta < \tan \beta = \frac{1}{239} < \frac{1}{200} = 0.005
+\]
+以上の関係式より、${\displaystyle \frac{\pi}{4} > 4 \times 0.192-0.005}$、すなわち、
+\[
+\pi > 3.052
+\]
+を得る。
+
+\noindent
+[註]
+\[
+4\left(4 \sin \alpha - \tan \beta \right) <\pi < 4\left(4 \tan \alpha - \sin \beta \right)
+\]
+ところで、\\
+${\displaystyle
+4\left(4 \sin \alpha - \tan \beta \right)
+ = 4\left( \frac{4}{\sqrt{26}} - \frac{1}{239} \right)
+= 3.121\cdots, \
+ 4\left(4 \tan \alpha - \sin \beta \right)= 4\left(\frac{4}{5} - \frac{1}{\sqrt{239^2+1}}\right)
+= 3.183\cdots
+}$
+だから、
+\[
+3.12 < \pi < 3.19
+\]
+上限値と下限値の平均値を取ると、${\pi \simeq 3.15}$と結構良い値が出る。
+
+\vskip 5mm
+
+\noindent
+{\bf 【別解】}(オーソドックスな方法)
+
+角の大きさを表すのに弧度法を用いることにする。${\theta > 0}$とすると、定義より、
+\[
+\theta > \sin \theta,　　　　 
+更に、　　
+\lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1
+\]
+なので、${\theta}$が小さいほど、${\sin \theta}$との一致は良くなる。
+そこで、${\displaystyle \theta = 15°= \frac{\pi}{12}}$を代入する。1つの角が15°の直角三角形の
+３辺の比は下図のようになるので、
+\[
+\frac{\pi}{12} > \sin \frac{\pi}{12} = \frac{1}{\sqrt{2}(\sqrt{3}+1)}=\frac{\sqrt{2}(\sqrt{3}-1)}{4}
+\]
+ゆえに、
+\[
+\pi > 3\sqrt{2}(\sqrt{3}-1) > 3\times 1.41 \times (1.732 - 1) > 3.096 > 3.05
+\]
+
+\begin{minipage}[t]{0.5\textwidth}
+\noindent
+{\bf [註]} \ 
+${\displaystyle 
+\sin \theta < \theta < \tan \theta \ (0 < \theta < \pi/2)
+}$
+に${\displaystyle \theta = \frac{\pi}{12}}$
+を代入して、整理すると、
+\[
+   3\sqrt{2}(\sqrt{3}-1) < \pi < 12(2-\sqrt{3})
+\]
+${\sqrt{2} = 1.414\cdots, \ \sqrt{3} = 1.732\cdots}$を代入して計算すると、
+\[
+3.10 < \pi < 3.22
+\]
+を得る。上限値と下限値の平均を取ると、${\pi \simeq 3.16}$となる。
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\hfil \break
+%\begin{figure}
+\includegraphics[width=8cm]{sin15.eps}
+%\end{figure}
+\hfil \break
+
+\end{minipage}
+
+
+\end{document}
