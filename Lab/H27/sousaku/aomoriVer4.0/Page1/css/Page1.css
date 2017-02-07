@@ -1,0 +1,13 @@
+hr {
+	height: 0px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #bbb inset;
+}
+
+ul.bxslider ,
+ul.bxslider li {
+margin:0;
+padding:0;
+}
+
+p.resizeimage img { width: 100%; }
