@@ -1,0 +1,4 @@
+
+$(function() {
+  $('#main-menu').smartmenus();
+});

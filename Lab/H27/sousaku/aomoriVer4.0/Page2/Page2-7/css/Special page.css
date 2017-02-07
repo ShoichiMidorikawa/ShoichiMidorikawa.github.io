@@ -1,0 +1,9 @@
+h1{
+  font-size: 30px;
+  background-color: #90EE90;
+}
+
+h2{
+  font-size: 20px;
+}
+p.resizeimage img { width: 100%; }
