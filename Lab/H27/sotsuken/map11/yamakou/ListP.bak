@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="Shift_JIS">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.1.0 for Windows">
+<title>簡易スライドショー</title>
+  <script src="jquery-2.1.3.js"></script>
+  <script src="sample1-5-2.js"></script>
+  <link rel="stylesheet" href="sample9-2.css">
+</head>
+<body>
+
+<!--画像タイトル-->
+<center>
+<h1 id="title"><img src="yamdamap2.png" width="1082" height="479" border="0" usemap="#yamdamap2"></h1>
+</center>
+<map name="yamdamap2" id="yamdamap2">
+  <area href="ListA.html" shape="circle" coords="762,394,23">
+  <area href="yamakoumon/ListP.html" shape="circle" coords="315,398,21">
+  <area href="yamasyoku/ListP.html" shape="circle" coords="188,294,23">
+  <area href="yamagra/ListB.html" shape="circle" coords="227,76,22">
+  <area href="yamazisya/ListP.html" shape="circle" coords="952,225,21">
+  <area shape="default" nohref>
+</map><!-- 画像要素を入れるためのボックス -->
+
+<center>
+<h3>青森大学と同じ系列の青森山田高校</h3>
+<h3>多くの学科があり、マルチに学ぶことができる。以下の学科がある</h3>
+<h4>普通科特進コース・普通科吹奏楽コース</h4>
+<h4>普通科演劇コース・普通科美術コース</h4>
+<h4>普通科文化教養コース・普通科スポーツコース</h4>
+<h4>情報処理科・自動車科・調理科</h4>
+<h3>また数多くの部活があり、全国的に有名</h3>
+<H4>ここでは運動部の一部を紹介します</H4>
+<H3>サッカー部...いわずとしれた名門、Jリーガーを22名も輩出</H3>
+<h3>野球部...甲子園出場11回の強豪</h3>
+<h3>男子新体操部...30年間で27回の団体全国優勝、15回の個人総合優勝</h3>
+<h3>このほかにも福原愛や水谷隼画在籍した卓球部や藤井・垣岩ペアで有名なバトミントン部などがある</h3>
+
+</center>
+</body>
+</html>
