@@ -1,9 +1,9 @@
-$(function(){
+ï»¿$(function(){
 
-/* ---   Ê^‚Ìƒf[ƒ^“ü—Í ----  */
+/* ---   å†™çœŸã®ãƒ‡ãƒ¼ã‚¿å…¥åŠ› ----  */
 
-      ph = 1200;   // Ê^‚Ì‚‚³
-      pw = 8192;   // Ê^‚Ì•
+      ph = 1200;   // å†™çœŸã®é«˜ã•
+      pw = 8192;   // å†™çœŸã®å¹…
       pr = pw/ph;
 
 
@@ -11,11 +11,11 @@ $(function(){
    var photo = document.getElementById('photo'); 
 
 
-   // img—v‘f‚ğHTL‚É’Ç‰Á
+   // imgè¦ç´ ã‚’HTLã«è¿½åŠ 
    var img;
       img = document.createElement('img');
       img.src = "mini2.jpg";  
-      img.alt="ÂX‘åŠw‘Oƒ~ƒjƒXƒgƒbƒv";
+      img.alt="é’æ£®å¤§å­¦å‰ãƒŸãƒ‹ã‚¹ãƒˆãƒƒãƒ—";
       img.id="panorama"; 
 //      img.vspace="50";
       img.style.display = 'none';
@@ -23,7 +23,7 @@ $(function(){
    var img2;
       img2 = document.createElement('img');
       img2.src = "mini2.jpg";  
-      img2.alt="ÂX‘åŠw‘Oƒ~ƒjƒXƒgƒbƒv";
+      img2.alt="é’æ£®å¤§å­¦å‰ãƒŸãƒ‹ã‚¹ãƒˆãƒƒãƒ—";
 //      img2.vspace="50";
       img.id="panorama"; 
       img2.style.display = 'none';
@@ -31,7 +31,7 @@ $(function(){
    var img3;
       img3 = document.createElement('img');
       img3.src = "mini2.jpg";  
-      img3.alt="ÂX‘åŠw‘Oƒ~ƒjƒXƒgƒbƒv";
+      img3.alt="é’æ£®å¤§å­¦å‰ãƒŸãƒ‹ã‚¹ãƒˆãƒƒãƒ—";
 //      img3.vspace="50";
       img.id="panorama"; 
       img3.style.display = 'none';
@@ -49,8 +49,8 @@ $(function(){
 
       plm = 3*pr*img.height-600;  // left-margin
 
-      console.log("width="+Math.round(3*pr*img.height)) // css‚Ì’l
-      console.log("height="+img.height);  // css‚Ì’l
+      console.log("width="+Math.round(3*pr*img.height)) // cssã®å€¤
+      console.log("height="+img.height);  // cssã®å€¤
 
 
       photo.appendChild(img);
@@ -77,9 +77,9 @@ $(function(){
    var xf, yf; 
    var xd;
    var xl;
-   var xl=-2100; //cssƒtƒ@ƒCƒ‹‚Ìmargin-left‚Ì’l 
+   var xl=-2100; //cssãƒ•ã‚¡ã‚¤ãƒ«ã®margin-leftã®å€¤ 
   
-     console.log("margin-left="+xl); // cssƒtƒ@ƒCƒ‹‚Ìmargin-left‚Ì’l 
+     console.log("margin-left="+xl); // cssãƒ•ã‚¡ã‚¤ãƒ«ã®margin-leftã®å€¤ 
 
 
      $("#photo").mousedown(function(e){
