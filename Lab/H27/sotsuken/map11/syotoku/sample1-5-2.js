@@ -2,8 +2,8 @@
 
 /* ---   写真のデータ入力 ----  */
 
-      ph = 1177;   // 写真の高さ
-      pw = 8191;   // 写真の幅
+      ph = 1248;   // 写真の高さ
+      pw = 8448;   // 写真の幅
       pr = pw/ph;
 
 
@@ -14,24 +14,24 @@
    // img要素をHTLに追加
    var img;
       img = document.createElement('img');
-      img.src = "syokutyu2.jpg";  
-      img.alt="職員用駐車場入り口";
+      img.src = "syotoku2.jpg";  
+      img.alt="正徳館前";
       img.id="panorama"; 
 //      img.vspace="50";
       img.style.display = 'none';
 
    var img2;
       img2 = document.createElement('img');
-      img2.src = "syokutyu2.jpg";  
-      img2.alt="職員用駐車場入り口";
+      img2.src = "syotoku2.jpg";  
+      img2.alt="正徳館前";
 //      img2.vspace="50";
       img.id="panorama"; 
       img2.style.display = 'none';
 
    var img3;
       img3 = document.createElement('img');
-      img3.src = "syokutyu2.jpg";  
-      img3.alt="職員用駐車場入り口";
+      img3.src = "syotoku2.jpg";  
+      img3.alt="正徳館前";
 //      img3.vspace="50";
       img.id="panorama"; 
       img3.style.display = 'none';
