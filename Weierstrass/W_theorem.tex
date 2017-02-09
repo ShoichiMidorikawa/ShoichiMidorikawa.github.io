@@ -1,0 +1,141 @@
+\documentclass[a4j, 12pt]{jarticle}
+
+
+\begin{document}
+
+\noindent
+{\bf 定理(Weierstrass)}
+\[
+f(x) = \sum_{n=0}^{\infty} a^n \cos(b^n \pi x) \quad 
+\left(ただし、0<a<1, \ b 奇数, \ ab > 1+ \frac{3}{2}\pi\right)
+\]
+とおくと、$f(x)$は到る処連続で、到る処微分できない。\\
+\\
+\noindent
+{\underline{Proof}}　\\
+${|a^n \cos(b^n\pi x)|≦a^n}$ かつ ${0 < a < 1}$ より
+\[
+\sum_{n=0}^{\infty} a^n
+\]
+は一様収束。\\
+よって、Weierstrass の定理より、
+\[
+\sum_{n=0}^{\infty} a^n \cos(b^n \pi x)
+\]
+は一様収束。各項は、continuous function であることは明らか。\\
+よって、${f(x)}$は continuous。\\
+\\
+{\bf 1st step}
+\begin{eqnarray*}
+&&\frac{1}{h} \{ f(x+h) - f(x)\} \\
+&&= \sum_{n=0}^\infty\frac{1}{h}a^n \left[\cos b^n\pi (x+h) - \cos b^n \pi x \right] \\
+&&= \sum_{n=0}^{m-1} \frac{1}{h}a^n [\cos b^n\pi (x+h) - \cos b^n \pi x ]
++ \sum_{n=m}^{\infty} \frac{1}{h}a^n [\cos b^n\pi (x+h) - \cos b^n \pi x ] \\　
+&&= s_m + r_m
+\end{eqnarray*}
+とおく。
+\begin{eqnarray*}
+|s_m| &=& \left| \sum_{n=0}^{m-1} \frac{1}{h}a^n [\cos b^n\pi (x+h) - \cos b^n \pi x ]  \right| \\
+&=& \left| - \sum_{n=0}^{m-1} \frac{2}{h} a^n \sin \frac{b^n \pi (2x+h)}{2} \sin\frac{b^n \pi h}{2} \right| \\
+&≦& \sum_{n=0}^{m-1} \left| (ab)^n \pi 
+\frac{\sin b^n\pi (x+ \frac{h}{2}) \sin\frac{b^n \pi h}{2}}{\frac{1}{2}b^n \pi h} \right| \\
+&≦& \pi \sum_{n=0}^{m-1} (ab)^n \\
+&=& \pi \frac{(ab)^m - 1}{ab-1} < \frac{\pi (ab)^m}{ab-1}
+\end{eqnarray*}
+よって、${\displaystyle \exists\epsilon : | \epsilon | < 1, \ s_m = \frac{\pi (ab)^m \epsilon }{ab-1} }$
+
+\newpage
+
+\noindent
+{\bf 2nd step} \\
+${b^mx }$に最も近い integer を ${k_m}$ とし、${b^mx = k_m + \rho_m}$ とおくと、
+${\displaystyle |\rho_m|≦\frac{1}{2}}$ \\
+${\xi_m = (k_m + 1)b^{-m}, \ \eta_m = (k_m - 1) b^{-m}}$ とおくと、
+\[
+\eta_m < x < \xi_m
+\]
+${m \to \infty }$なるとき、${\xi_m, \  \eta_m \to x}$. \\
+いま、特に $h$ を、${x+h = \xi_m}$ なる如くとると、
+\[
+h = \xi_m - x = (k_m+1)b^{-m} - x = b^{-m}(k_m + 1 - b^m x) = (1 - \rho_m)b^{-m} ≦ \frac{3}{2} b^{-m}
+\]
+${n≧m}$のとき、
+\begin{eqnarray*}
+\cos b^n \pi (x+h)&=&\cos b^n \pi \xi_m = \cos(b^{n-m} \pi (1+k_m)) = (-1)^{1+k_m} \ \ (∵ b 奇数) \\
+\cos b^n \pi x &=& \cos \left( b^{n-m} \pi (k_m + \rho_m)  \right) 
+= \cos \left( b^{n-m} \pi k_m + b^{n-m} \pi \rho_m \right) \\
+&=& (-1)^{k_m} \cos \left( b^{n-m} \pi \rho_m \right)
+\end{eqnarray*}
+\[
+∴　r_m = (-1)^{1+k_m} \frac{1}{h} \sum_{n=m}^\infty a^n \left( 1+ \cos (b^{n-m} \pi \rho_m) \right)
+\]
+ここで、${1+\cos(\pi \rho_m)≧1, \ 1 + \cos(b^{n-m} \pi \rho_m)≧0 \ \ {\rm for} \ n > m }$だから、
+\[
+(-1)^{1+k_m}r_m≧\frac{1}{h} a^m ≧ \frac{2}{3}(ab)^m \ \left({\rm Note \ that} \ \  h ≦ \frac{3}{2}b^{-m} \right)
+\]
+\[
+∴　\exists \theta > 1; \ r_m = (-1)^{1+k_m}\frac{2}{3}(ab)^m \theta
+\]
+\begin{eqnarray*}
+\frac{1}{h} \left\{ f(\xi_m) - f(x)  \right\} &=& s_m + r_m \\
+&=& (-1)^{1+k_m}\frac{2}{3} \theta (ab)^m + \epsilon \pi \frac{(ab)^m}{ab-1}  \\
+&=& (-1)^{1+k_m} (ab)^m \left\{ \frac{2}{3} \theta + (-1)^{1+k_m} \frac{\pi \epsilon}{ab-1} \right\}
+\end{eqnarray*}
+ここで、
+\[
+\frac{2}{3} \theta + (-1)^{1+k_m} \frac{\pi \epsilon}{ab-1} > \frac{2}{3} - \frac{\pi}{ab-1}
+\]
+ところが、${\displaystyle ab-1 > \frac{3}{2} \pi}$． ∴　${\displaystyle \frac{2}{3}> \frac{\pi}{ab-1}}$
+\[
+∴　\frac{2}{3} \theta + (-1)^{1+k_m} \frac{\pi \epsilon}{ab-1} > 0
+\]
+
+\newpage
+
+\noindent
+次に、${\displaystyle \frac{1}{h} \left\{f(\eta_m) - f(x) \right\}}$ の振る舞いを調べる。\\
+${x+h =\eta_m=(k_m-1)b^{-m} }$とおくと、${b^m x = k_m + \rho_m}$ だから、
+\[
+h = -(1+ \rho_m)b^{-m} \  \ ∴　|h| ≦ \frac{3}{2}b^{-m}
+\]
+\begin{eqnarray*}
+\cos(b^n \pi \eta_m) &=& \cos \left( b^n \pi (k_m-1)b^{-m} \right) = \cos \left(b^{n-m} \pi(k_m-1) \right)
+= (-1)^{k_m-1} \ \ (∵ b 奇数) \\
+\cos(b^n \pi x) &=& \cos\left(b^n \pi (k_m+\rho_m)b^{-m} \right) = \cos \left(b^{n-m} \pi (k_m+\rho_m) \right) \\
+&=& \cos (b^{n-m} \pi k_m)  \cos(b^{n-m} \pi \rho_m) = (-1)^{k_m} \cos(b^{n-m} \pi \rho_m)
+\end{eqnarray*}
+\[
+∴　\frac{1}{h} \left\{ f(\eta_m) - f(x) \right\} 
+= (-1)^{k_m-1} \frac{1}{h} \sum_{n=m}^\infty a^n \left( 1 + \cos(b^{n-m} \pi \rho_m ) \right) 
++ \frac{\pi \epsilon (ab)^m}{ab - 1} \ \ \left( |\epsilon| < 1 \right)
+\]
+ところが、\\
+${1+\cos(\pi \rho_m) ≧ 1, \ \ 1+\cos(b^{n-m}\pi\rho_m)≧0 \ \ {\rm for} \ n > m }$
+\[
+∴　\frac{1}{h} \sum_{n=m}^\infty a^n \left( 1 + \cos(b^{n-m} \pi \rho_m) \right) ≧ 
+\ \frac{1}{h}a^m \ ≧ \ \frac{2}{3}(ab)^m
+\]
+なので、
+\[
+\exists \theta' > 1, \ \ \frac{1}{h} \sum_{n=m}^\infty a^n\left( 1 + \cos(b^{n-m} \pi \rho_m) \right) 
+= \frac{2}{3} (ab)^m \theta'
+\]
+\[
+∴　\frac{1}{h} \left\{ f(\eta_m) - f(x) \right\} 
+= (-1)^{k_m-1}(ab)^m \left\{ \frac{2}{3}\theta' + (-1)^{k_m-1} \frac{\pi \epsilon}{ab-1}  \right\}
+\]
+ここで、
+\[
+\frac{2}{3}\theta' + (-1)^{k_m-1} \frac{\pi \epsilon}{ab-1} > \frac{2}{3} - \frac{\pi}{ab-1} > 0 \ \
+\left(∵　ab > 1 + \frac{3}{2} \pi \right)
+\]
+${ab > 1}$ なので、${m \to \infty}$ のとき ${(ab)^m \to \infty}$．このとき、
+${\displaystyle \frac{1}{h}\left\{f(\xi_m) - f(x)  \right\}}$ も 
+${\displaystyle \frac{1}{h}\left\{f(\eta_m) - f(x)  \right\}}$ も
+発散するので、${f'(x)}$ は存在しない。
+
+
+
+
+
+\end{document}
