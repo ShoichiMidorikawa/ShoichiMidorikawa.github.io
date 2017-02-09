@@ -1,0 +1,255 @@
+\documentclass[a4j]{jarticle}
+%\input{MathM}
+
+\begin{document}
+
+\begin{center}{\large \bf Arithmetic Calculation} \end{center}
+
+
+
+\begin{center}------------- Addition -----------------\end{center}
+
+
+\[
+- 5 + 3 = %\Eadd{-5}{3}
+\]
+
+\[
+-3.2 + 1.6 = %\Eadd{-3.2}{1.6}  
+\]
+
+\[
+0.1 + 0.1 = %\Eadd{0.1}{0.1}
+\]
+
+\[
+0.24 + 0.36 = %\Eadd{0.24}{0.36}
+\]
+
+\[
+-12 + 2.3 + 3.45 = %\EaddS{-12}{2.3}{\u} \Eadd{\u}{3.45}
+\]
+
+
+\begin{center}------------- Subtraction -----------------\end{center}
+
+\[
+2.3 - 1.2 = %\Esub{2.3}{1.2}
+\]
+
+\[
+0.1 - 0.1 = %\Esub{0.1}{0.1}
+\]
+
+\[
+0.5 - 0.72 = %\Esub{0.5}{0.72}
+\]
+
+\[
+3.2 - 1.6 = %\Esub{3.2}{1.6}
+\]
+
+\[
+7.5 - 1.6 - 2.1 = %\EsubS{7.5}{1.6}{\u} \Esub{\u}{2.1} 
+\]
+
+\[
+10 - 73 - 28 = %\EsubS{10}{73}{\u} \Esub{\u}{28} 
+\]
+
+
+\begin{center}------------- Multiplication -----------------\end{center}
+
+
+\[
+1.2 \times (-2.3) = %\Emul{1.2}{-2.3}
+\]
+
+\[
+0.1 \times 0 = %\Emul{0.1}{0}
+\]
+
+\[
+0.5 \times 0.5 = %\Emul{0.5}{0.5}
+\]
+
+\[
+3.2 \times 1.6 = %\Emul{3.2}{1.6}
+\]
+
+\[
+0.5 \times 0.7 = %\Emul{0.5}{0.7}
+\]
+
+\[
+-3.2 \times 1.6 \times 0.7 = %\EmulS{-3.2}{1.6}{\u} \Emul{\u}{0.7}
+\]
+
+
+
+
+\begin{center}------------- Division -----------------\end{center}
+
+
+\[
+3.7 \div (-1.4) = %\Ediv{3.7}{-1.4}
+\]
+\[
+2 \div 3= %\Ediv{2}{3}
+\]
+\[
+1 \div 3 = %\Ediv{1}{3}
+\]
+\[
+10 \div 7 = %\Ediv{10}{7}
+\]
+\[
+5.12 \div 1.6 = %\Ediv{5.12}{1.6} 
+\]
+
+\[
+(-5.12) \div 1.6 \div (-0.8) = %\EdivS{-5.12}{1.6}{\u} \Ediv{\u}{-0.8}
+\]
+\[
+9 \div 3 \div 2 = %\EdivS{9}{3}{\u} \Ediv{\u}{2}
+\]
+
+\begin{center}------------- Arithmetic Calculation in General -----------------\end{center}
+
+\[
+Åi22Å~12ÅjÅ{Åi486ÅÄ6Åj= %\EmulS{22}{12}{\u} \edef\ma{\u}  \EdivS{486}{6}{\u} \Eadd{\ma}{\u} 
+\]
+
+\[
+(8.63+7.05) \times (6.5-1.6) = %\EaddS{8.63}{7.05}{\u} \edef\ma{\u} \EsubS{6.5}{1.6}{\u} \edef\mb{\u}  \Emul{\ma}{\mb}
+\]
+
+
+
+\begin{center}{\large \bf Combinatorics} \end{center}
+
+\begin{center}{----------- Factorials --------------}\end{center}
+
+\[
+7! = %\factorial{7}
+\]
+
+
+\begin{center}{------------ Permutations -------------}\end{center}
+
+\[
+_9{\rm P}_4 = %\perm{9}{4}
+\]
+
+\begin{center}{ ------------- Combinations ------------ } \end{center}
+
+
+\[
+ _9{\rm C}_9 = %\comb{9}{9}
+, \ \
+_9{\rm C}_8 = %\comb{9}{8}
+, \ \
+ _9{\rm C}_7 = %\comb{9}{7}
+, \ \
+ _9{\rm C}_6 = %\comb{9}{6}
+, \ \
+ _9{\rm C}_5 = %\comb{9}{5}
+, \ \
+\]
+\[
+ _9{\rm C}_4 = %\comb{9}{4}
+, \ \
+ _9{\rm C}_3 = %\comb{9}{3}
+, \ \
+ _9{\rm C}_2 = %\comb{9}{2}
+, \ \
+ _9{\rm C}_1 = %\comb{9}{1}
+, \ \
+ _9{\rm C}_0 = %\comb{9}{0}
+\]
+
+\[
+_{20}{\rm C}_{0} = %\comb{20}{0}
+, \ \ 
+_{20}{\rm C}_{1} = %\comb{20}{1}
+, \ \ 
+_{20}{\rm C}_{2} = %\comb{20}{2}
+, \ \
+_{20}{\rm C}_{3} = %\comb{20}{3}
+, \ \
+_{20}{\rm C}_{4} = %\comb{20}{4}
+, \ \
+_{20}{\rm C}_{5} = %\comb{20}{5}
+, \ \
+_{20}{\rm C}_{6} = %\comb{20}{6}, 
+\]
+\[
+_{20}{\rm C}_{7} = %\comb{20}{7}
+, \ \
+_{20}{\rm C}_{8} = %\comb{20}{8}
+, \ \
+_{20}{\rm C}_{9} = %\comb{20}{9}
+, \ \
+_{20}{\rm C}_{10} = %\comb{20}{10}
+, \ \
+_{20}{\rm C}_{11} = %\comb{20}{11},  
+\]
+\[
+_{20}{\rm C}_{12} = %\comb{20}{12}
+, \ \ 
+_{20}{\rm C}_{13} = %\comb{20}{13}
+, \ \
+_{20}{\rm C}_{14} = %\comb{20}{14}
+, \ \
+_{20}{\rm C}_{15} = %\comb{20}{15}
+, \ \
+_{20}{\rm C}_{16} = %\comb{20}{16}
+, \ \
+_{20}{\rm C}_{17} = %\comb{20}{17}, 
+\]
+\[
+_{20}{\rm C}_{18} = %\comb{20}{18}
+, \ \
+_{20}{\rm C}_{19} = %\comb{20}{19}
+, \ \
+_{20}{\rm C}_{20} = %\comb{20}{20}
+\]
+ 
+
+\begin{center}----------------- Binomial Expansion -----------------------\end{center}
+
+
+\[
+(x+y)^2 = %\Expand(x+y)^2
+\]
+
+\[
+(x-y)^2 = %\Expand(x-y)^2
+\]
+
+\[
+(x+y)^3 = %\Expand(x+y)^3
+\]
+
+\[
+(x-y)^3 = %\Expand(x-y)^3
+\]
+
+\[
+(a+b)^4 = %\Expand(a+b)^4
+\]
+
+\[
+(\alpha+\beta)^9 = %\Expand(\alpha+\beta)^9
+\]
+
+
+\[
+(\alpha-\beta)^9 = %\Expand(\alpha-\beta)^9
+\]
+
+
+
+
+\end{document}
+

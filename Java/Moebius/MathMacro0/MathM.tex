@@ -1,0 +1,269 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                             %
+%  MathM.tex by Shoichi Midorikawa            %
+%                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newdimen\ma \newdimen\mb \newdimen\mc \newdimen\md  
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%% Arithmetic %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcount\ca  \newcount\cb  \newcount\cc  \newcount\cd  \newcount\ce \newcount\cx \newcount\cxx
+
+\def\Fn#1#2{%  #1‚ğ¬”‘æ4ˆÊ‚ğlÌŒÜ“ü‚·‚éƒvƒƒOƒ‰ƒ€
+   \count0=\X  \count1=\X  \count2=\Z 
+   \divide \count0 by \count2   \ca=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cb=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cc=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cd=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \ce=\count0
+   \edef\Re{\the\ce}
+   \ifnum\Re>4 \advance \cd by 1 \fi        %#1‚Ì¬”“_‘æ5ˆÊ‚ğlÌŒÜ“ü‚·‚éƒvƒƒOƒ‰ƒ€
+   \ifnum\cd=10 \cd=0 \cx=1 \else \cx=0 \fi   \advance \cc by \cx
+   \ifnum\cc=10 \cc=0 \cx=1 \else \cx=0 \fi   \advance \cb by \cx
+   \ifnum\cb=10 \cb=0 \cx=1 \else \cx=0 \fi   \advance \ca by \cx
+}
+
+
+\def\Fnb#1#2{%  
+   \count0=\X  \count1=\X  \count2=\Z 
+   \divide \count0 by \count2   \ca=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cb=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cc=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cd=\count0 
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \ce=\count0
+   \multiply \count0 by \count2   \advance \count1 by -\count0   \multiply \count1 by 10   \count0=\count1
+   \divide \count0 by \count2   \cx=\count0
+   \edef\Rx{\the\cx} 
+}
+
+
+\def\R#1#2{%     Œ‹‰Ê‚Ì•„†‚ğŒˆ‚ß‚é
+   \Fn{\X}{\Z}
+   \edef\Ra{\the\ca}    \ifnum\Z<0 \edef\Ra{-\the\ca} \fi
+   \def\Rdot{.} \edef\Rb{\the\cb} \edef\Rc{\the\cc} \edef\Rd{\the\cd} \edef\Re{\the\ce}
+   \advance \cd by \cxx    \advance \cc by \cd    \advance \cb by \cc
+   \Ra   
+   \ifnum\cb>0 \Rdot\Rb \fi   \ifnum\cc>0 \Rc \fi 
+   \ifnum\cd>0 \Rd \fi        %\ifnum\ce>0 \Re \fi 
+}
+
+\def\RB#1#2#3{%  Š„‚èZ‚ÌAŒ‹‰Ê‚Ì•„†‚ğŒˆ‚ß‚éB
+   \Fn{\X}{\Z}
+   \edef\Ra{\the\ca}    \ifnum\Y<0 \edef\Ra{-\the\ca} \fi
+   \def\Rdot{.} \edef\Rb{\the\cb} \edef\Rc{\the\cc} \edef\Rd{\the\cd} \edef\Re{\the\ce}
+   \advance \cd by \cxx    \advance \cc by \cd    \advance \cb by \cc
+   \Ra   
+   \ifnum\cb>0 \Rdot\Rb \fi \ifnum\cc>0 \Rc \fi
+   \ifnum\cd>0 \Rd \fi  %\ifnum\ce>0 \Re \fi 
+}
+
+
+\def\Eadd#1#2{%  ‘«‚µZ
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\Z=1.0\p@
+\X=#1\p@
+\Y=#2\p@
+\ifnum\X<-\Y \Z=-1.0\p@ \fi
+\advance \X by \Y     
+\R{\X}{\Z}
+}
+
+{\catcode`\p=12\catcode`\t=12\gdef\Rval#1pt{#1}}
+\def\EaddS#1#2#3{%
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\X=#1\p@
+\Y=#2\p@
+\advance \X by \Y     %‘«‚µZ
+\edef\u{\expandafter\Rval\the\X}      %‘«‚µZŒ‹‰Ê
+}
+
+
+\def\Esub#1#2{%  ˆø‚«Z
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\X=#1\p@
+\Y=#2\p@
+\Z=1.0\p@
+\ifnum\X<\Y \Z=-1.0\p@ \fi
+\advance \X by -\Y
+\R{\X}{\Z}
+}
+
+\def\EsubS#1#2#3{%  
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\X=#1\p@
+\Y=#2\p@
+\advance \X by -\Y     
+\edef\u{\expandafter\Rval\the\X}     
+}
+
+
+\def\Emul#1#2{%  Š|‚¯Z
+\newdimen\X
+\newdimen\Y
+\newdimen\Z
+\Z=1.0\p@
+\X=#1\p@
+\X=#2\X
+\Z=1.0\p@
+\ifnum\X<0 \Z=-1.0\p@ \fi
+\R{\X}{\Z}
+}
+
+\def\EmulS#1#2#3{% 
+\newdimen\X
+\newdimen\Y
+\X=#1\p@
+\X=#2\X
+\edef\u{\expandafter\Rval\the\X}
+}
+
+
+\def\Ediv#1#2{%
+   \newdimen\X  \newdimen\Y  \newdimen\Z
+   \X=#1\p@  \Y=#2\X \ifnum\X<0 \X=-\X \fi
+   \Z=#2\p@  \ifnum\Z<0 \Z=-\Z \fi
+   \RB{\X}{\Y}{\Z}
+}
+
+
+\def\EdivS#1#2#3{%
+   \newdimen\X \newdimen\Z \newdimen\Y 
+   \X=#1\p@  \Y=#2\X  \ifnum\X<0 \X=-\X \fi
+   \Z=#2\p@  \ifnum\Z<0 \Z=-\Z \fi
+   \Fnb{\X}{\Z}
+   \edef\Ra{\the\ca.} \ifnum\Y<0 \edef\Ra{-\the\ca.} \fi
+   \edef\Rb{\the\cb}  \edef\Rc{\the\cc}  \edef\Rd{\the\cd}  \edef\Re{\the\ce}
+   \edef\u{\Ra\Rb\Rc\Rd\Re\Rx} 
+}
+
+
+%%%%%%%%%%%%%%%%% combinatorics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%--------- Facotrial --------------
+
+\def\factorial#1{
+\count1=#1
+\newcount\cnt
+%\newcount\cntt
+\newcount\mul
+\cnt=0%
+\mul=1%
+\loop 
+\ifnum\count1>\cnt 
+%\cntt=\cnt 
+\advance \cnt by 1 
+\multiply \mul by \cnt
+\repeat 
+\the\mul
+}
+
+%---------- Permutations ---------------
+
+\def\perm#1#2{
+\count0=#1  
+\count1=#1
+\advance \count1 by -#2   
+\advance \count1 by 1
+\newcount\mul
+\mul=\count0
+\loop
+\ifnum\count0>\count1
+\advance \count0 by -1
+\multiply \mul by \count0
+\repeat
+\the\mul
+}
+
+
+
+
+%---------- Combinations ---------------
+
+\def\comb#1#2{
+\count0=#1  
+\count1=#1
+\count2=1
+\advance \count1 by -#2   
+\advance \count1 by 1
+\newcount\mul
+\mul=#1 
+\loop
+\ifnum\count0>\count1
+\advance \count0 by -1
+\advance \count2 by 1
+\multiply \mul by \count0
+\divide \mul by \count2
+\repeat
+\ifnum#2=0 \mul=1 \fi  
+\the\mul
+}
+
+
+\newcounter{K}
+
+\def\Expand(#1#2#3)^#4{%
+\newcount\cnt
+\newcount\cnst
+\cnt=#4
+\advance \cnt by -1
+\cnst=#4
+\ifnum#4=2 
+  \if#2+ #1^2 + 2 #1#3 + #3^2 \else
+         #1^2 - 2 #1#3 + #3^2 \fi
+\else 
+\newcount\N \N=\cnt
+\setcounter{K}{2}
+\if#2+
+#1^{#4} + \advance \cnst by -1 
+#4 #1^{\the\cnst} #3 + \advance \cnst by -1 
+\@whilenum\value{K}<\N\do{
+\comb{#4}{\theK} #1^{\the\cnst} #3^{\theK}  + \advance \cnst by -1 \stepcounter{K}}
+#4 #1 #3^{\theK} + 
+#3^{#4}
+\fi
+\if#2-
+\newcount\cnv \cnv=1 
+#1^{#4} - 
+\advance \cnst by -1 
+#4 #1^{\the\cnst} #3  + 
+\advance \cnst by -1 
+\@whilenum\value{K}<\N\do{
+\comb{#4}{\theK} #1^{\the\cnst} #3^{\theK} 
+\ifnum\cnv=0 + \else - \fi \ifnum\cnv=0 \cnv=1 \else \cnv=0 \fi
+\advance \cnst by -1 \stepcounter{K}}
+#4 #1 #3^{\theK}
+\ifnum\cnv=0 + \else - \fi \ifnum\cnv=0 \cnv=1 \else \cnv=0 \fi
+#3^{#4}
+\fi
+\fi}
+
+
+
+
+\makeatother
+
+
+
+
+
