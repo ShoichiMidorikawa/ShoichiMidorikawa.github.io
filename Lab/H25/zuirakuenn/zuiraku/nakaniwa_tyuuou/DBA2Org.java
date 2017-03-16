@@ -1,0 +1,195 @@
+//  DBA2.java　
+//  1枚の写真をマウスでぐるぐる回す。
+//  double buffering使用　ちらつき無し
+//  bridge3.jpg 3653×484 pixel
+
+
+
+import java.awt.*;
+import java.applet.Applet;
+import java.awt.event.*;
+
+/*
+<applet code="DBA2.class" width=900 height=600>
+</applet>
+*/
+
+public class DBA2 extends Applet implements ActionListener, Runnable {
+  Scrollbar scr;
+
+  Image image;
+  Image buffer;
+  Graphics bufferg;
+  Thread kick;
+  int i,j = 0;
+  MediaTracker mt;
+  double xp, yp;
+  double x, y;
+  double dx, dy;
+  int nx, sx;
+  int k = 12;
+  int pw = 8046;  // パノラマ写真の幅
+  int ph = 1576;   // パノラマ写真の縦
+  int nw=750;     // 描画の横幅
+  int nh=450;     //描画の高さ
+  int ax= 100;     // 表示画像の左上隅のブラウザーにおけるx座標の値
+  int ay= 50;      // 表示画像の左上隅のブラウザーにおけるy座標の値
+  int sy; 
+  int ny;
+  int xsc=750;          // ブラウザーのx軸方向のスケール         
+  int ysc=450;          // ブラウザーのy軸方向のスケール
+     int sv;
+     int nw_s;
+     int nh_s;
+
+  int min=100*nw/pw+1;
+
+  int aaa;
+
+
+  public void init() {
+    setLayout(new BorderLayout());
+    Panel p = new Panel();
+
+    p.setLayout(new GridLayout(1, 3, 0, 0));
+    scr = new Scrollbar(Scrollbar.HORIZONTAL, 50, 1, min, 100);
+    p.add(new Label("　	　　　　　　　　　　　　　　　　　　　拡大縮小"));
+    p.add(scr);  p.add(new Label("　　　　　　　　　 ")); 
+    add("North", p);
+
+     mt = new MediaTracker(this);
+
+     image = getImage(getDocumentBase(), "tyuuou.jpg");
+     mt.addImage(image,0);
+
+      kick = new Thread(this);
+      kick.start();
+      sx=2000;   // 写真の初期位置のx座標
+      sy=ph-nh*2;     // 写真の初期位置のy座標 
+      buffer = createImage(nw, nh);	
+//      System.out.println("start");
+
+  }
+
+
+  public void run() {
+
+
+   addMouseListener(new MouseAdapter(){
+      public void mousePressed(MouseEvent e){
+         xp = e.getX();
+         yp = e.getY();
+      }
+   });
+
+
+   addMouseMotionListener(new MouseMotionAdapter(){
+      public void mouseDragged(MouseEvent e){
+         x = e.getX();
+         y = e.getY();
+         dx = x-xp;
+         dy = y - yp;
+         nx = (int)(dx/50);
+         ny = (int)(dy/50);
+
+
+         sx = nx+sx;
+         if(0<sx && sx<pw-nw_s){
+            sx= sx%pw;
+            repaint();
+         }  
+         else if(sx<0) {
+            sx = 0;
+            repaint();
+	 }
+	 else if(sx > pw-nw_s){
+            sx=pw-nw_s;
+	    repaint();
+         }
+
+         sy = ny+sy; 
+         if(sy<0)
+            sy=0;
+         if(sy>ph-nh_s)
+            sy=ph-nh_s;
+
+      }
+   });     
+
+   scr.addAdjustmentListener(new AdjustmentListener(){ 
+       public void adjustmentValueChanged(AdjustmentEvent e){
+          System.out.println("aaa="+aaa);
+          repaint();
+       }
+   });
+
+
+  }
+
+
+  public void actionPerformed(ActionEvent e){
+     repaint();
+  }
+
+
+
+  public void update(Graphics g){
+    paint(g);
+  }
+
+
+  public void paint(Graphics g) {
+     
+     sv=scr.getValue();
+     nw_s=nw*100/sv;
+     nh_s=nh*100/sv;
+
+    
+     if(bufferg == null)
+        bufferg = buffer.getGraphics();
+
+     Dimension d = getSize();
+     bufferg.setColor(Color.white);
+     bufferg.fillRect( 0, 0, d.width, d.height);
+
+        
+     if(sy+nh_s < ph && sx+nw_s<pw){        //改良中
+        System.out.println("nh_s =" +nh_s);
+        bufferg.drawImage(image, 0, 0, nw, nh, sx, sy, sx+nw_s, sy+nh_s, this);
+        g.drawImage(buffer, ax, ay, xsc, ysc, this);
+        System.out.println("TEST");
+     }else if(sy+nh_s < ph && sx+nw_s<pw){
+        bufferg.drawImage(image, 0, 0, nw, nh, pw-nw_s, sy, pw, sy+nh_s, this); 
+        g.drawImage(buffer, ax, ay, xsc, ysc, this);
+        System.out.println("nh_s =" +nh_s);
+        System.out.println("TEST2");
+     }else if(sy+nh_s >= ph && sx+nw_s<pw){
+        bufferg.drawImage(image, 0, 0, nw, nh, sx, ph-nh_s, sx+nw_s, ph, this); 
+        g.drawImage(buffer, ax, ay, xsc, ysc, this);
+        System.out.println("nh_s =" +nh_s);
+        System.out.println("TEST3");
+     }else{
+        bufferg.drawImage(image, 0,  0, nw, nh , pw-nw_s, ph-nh_s, pw, ph, this); 
+//        bufferg.drawImage(image, 0, 0, nw, nh, pw-nw_s, ph-nh_s, pw, ph, this); 
+        g.drawImage(buffer, ax, ay, xsc, ysc, this);
+        System.out.println("nh_s =" +nh_s);
+        System.out.println("TEST4");
+     }
+
+   }
+}
+/*
+ drawImage(Image img, int dx1, int dy1, int dx2, int dy2, int sx1, int sy1, int sx2, int sy2, ImageObserver observer)
+
+パラメータ: 
+	img - 描画される指定イメージ
+	dx1 - デスティネーション矩形の最初の隅の x 座標
+	dy1 - デスティネーション矩形の最初の隅の y 座標
+	dx2 - デスティネーション矩形の 2 番目の隅の x 座標
+	dy2 - デスティネーション矩形の 2 番目の隅の y 座標
+	sx1 - ソース矩形の最初の隅の x 座標
+	sy1 - ソース矩形の最初の隅の y 座標
+	sx2 - ソース矩形の 2 番目の隅の x 座標
+	sy2 - ソース矩形の 2 番目の隅の y 座標o
+	bserver - イメージがさらにスケーリングされ、変換されることを通知するオブジェクト
+*/
