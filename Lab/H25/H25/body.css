@@ -1,0 +1,368 @@
+@charset "Shift_JIS";
+
+/* --- 全体の背景・テキスト --- */
+body {
+margin: 0;
+padding: 0;
+background-color: #B0E0E6; /* 全体の背景色 */
+color: #000000; /* 全体の文字色 */
+font-size: 100%; /* 全体の文字サイズ */
+}
+
+
+
+
+/* --- 全体のリンクテキスト --- */
+a:link { color: #029EBC; }
+a:visited { color: #029EBC; }
+a:hover { color: #4169e1; }
+a:active { color: #029EBC; }
+
+/* --- コンテナ --- */
+#container {
+width: 780px; /* コンテナの幅 */
+margin: 0 auto; /* センタリング */
+background : url(pageback_900.gif) repeat-y center top; /* コンテナの背景 */
+}
+
+/* --- ページ --- */
+#page {
+width: 780px; /* ページの幅 */
+margin: 0 auto; /* センタリング */
+border-bottom: 1px #c0c0c0 solid; /* ページの下境界線 */
+}
+
+/* --- ヘッダ --- */
+#header {
+background-color: #F0F0E8; /* ヘッダの背景色 */
+}
+/* --- ナビゲーションバー --- */
+div.nav {
+width: 100%; /* ナビゲーションの幅 */
+background : #000000 url(hor_menu6_on.gif) repeat-x center top; /* ナビゲーションの背景 */
+border-top: 1px #333333 solid; /* 上境界線 */
+border-bottom: 1px #666666 solid; /* 下境界線 */
+font-size: 80%;
+}
+
+/* --- メニューエリア --- */
+div.nav ul.nl {
+width: 600px; /* メニューの幅 */
+margin: 0 auto; /* センターに配置 */
+padding: 0;
+background : #000000 url(hor_menu6_off.gif) repeat-x center top; /* メニューの背景 */
+border-left: 1px #333333 solid; /* メニューの左境界線 */
+border-right: 1px #666666 solid; /* メニューの右境界線 */
+list-style-type: none;
+text-align: center;
+}
+
+
+
+/* --- メニュー項目 --- */
+div.nav ul.nl li {
+width: 19.9%; /* 項目の幅 */
+float: left;
+}
+
+
+
+
+
+/* --- リンク --- */
+
+div.nav ul.nl li a {
+display: block;
+position: relative; /* IE6用 */
+padding: 9px 2px; /* リンクエリアのパディング（上下、左右） */
+border-left: 1px #666666 solid; /* リンクエリアの左境界線 */
+border-right: 1px #333333 solid; /* リンクエリアの右境界線 */
+text-decoration: none; /* テキストの下線（なし） */
+font-weight: bold; /* 太字 */
+}
+
+
+/* --- リンク --- */
+a {
+text-decoration: none; /* テキストの下線（なし） */
+font-weight: bold; /* 太字 */
+}
+
+
+/* --- リンクテキストの色 --- */
+div.nav ul.nl li a:link {
+color: #ffffff;
+}
+div.nav ul.nl li a:visited {
+color: #ffffff;
+}
+div.nav ul.nl li a:hover {
+color: #ff8000;
+}
+div.nav ul.nl li a:active {
+color: #ff8000;
+}
+
+
+/* --- 見出しエリア --- */
+div.heading {
+width: 600px; /* 見出しエリアの幅 */
+margin-bottom: 1em;
+padding: 4px 0; /* 見出しエリアのパディング（上下、左右） */
+border-bottom: 1px #c0c0c0 solid; /* 見出しエリアの下境界線 */
+}
+
+/* --- 見出し --- */
+
+h1 {
+font-size: 130%; /* 見出しの文字サイズ */
+font-weight: 800; /* 見出しの文字太さ */
+}
+h2 {
+font-size: 100%; /* 見出しの文字サイズ */
+font-weight: 100; /* 見出しの文字太さ */
+}
+
+div.heading h3 {
+margin: 0;
+padding: 3px 3px 0 5px; /* 見出しのパディング（上右下左） */
+border-left: 5px #000080 solid; /* 見出しの左境界線 */
+font-size: 100%; /* 見出しの文字サイズ */
+line-height: 100%;
+}
+
+/* --- ボックス --- */
+div.section {
+width: 298px; /* ボックスの幅 */
+background-color: #ffffff; /* ボックスの背景色 */
+border: 1px #c0c0c0 solid; /* ボックスの境界線 */
+font-size: 80%; /* ボックスの文字サイズ */
+}
+
+/* --- 見出し --- */
+div.section h3 {
+margin: 0; /* 見出しのマージン */
+padding: 6px 10px; /* 見出しのパディング（上下、左右） */
+background-color: #f5f5f5; /* 見出しの背景色 */
+border-bottom: 1px #c0c0c0 solid; /* 見出しの下境界線 */
+font-size: 100%; /* 見出しの文字サイズ */
+}
+
+/* --- ボックス内の段落 --- */
+div.section p {
+margin: 1em 10px; /* 段落のマージン（上下、左右） */
+}
+
+/* --- 新着情報エリア --- */
+div.update {
+width: 500px; /* 新着情報エリアの幅 */
+font-size: 80%;
+}
+
+
+
+/* --- 新着リスト --- */
+div.update dl {
+width: 100%; /* 新着リストの幅 */
+margin: 0;
+border-top: 1px #c0c0c0 dotted; /* 新着リストの上境界線 */
+}
+
+/* --- 日付エリア --- */
+div.update dt {
+width: 6.7em; /* 日付エリアの幅 */
+float: left;
+padding: 7px 0 6px 3px; /* 日付エリアのパディング（上右下左） */
+line-height: 120%;
+}
+
+/* --- 本文エリア --- */
+div.update dd {
+margin: 0;
+padding: 7px 3px 6px 6.6em; /* 本文エリアのパディング（上右下左） */
+border-bottom: 1px #c0c0c0 dotted; /* 本文エリア下境界線 */
+line-height: 120%;
+}
+
+
+
+
+
+/* --- clearfix --- */
+.clearFix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.clearFix {
+min-height: 1px;
+}
+
+
+/* --- clearfix --- */
+.clearFix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.clearFix {
+min-height: 1px;
+}
+
+/* --- コンテンツ --- */
+#content {
+background-color: #ffffff; /* コンテンツの背景色 */
+}
+
+/* --- フッタ --- */
+#footer {
+background-color: #c0c0c0; /* フッタの背景色 */
+}
+
+
+.menuRibbon {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	background:#029EBC;
+	color:#EBF7FA;
+	line-height:140%;
+	font-weight:bold;
+}
+
+.menuRibbonLight {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	background:#80CEDD;
+	color:#017589;
+	line-height:140%;
+	font-weight:bold;
+}
+
+.menuTab {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:0 0 0 5px;
+	border-color: #80CEDD;
+	border-style:solid;
+	background:#029EBC;
+	color:#EBF7FA;
+	line-height:140%;
+	font-weight:bold;
+}
+
+.menuTabLight {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:0 0 0 5px;
+	border-color:#029EBC;
+	border-style:solid;
+	background:#80CEDD;
+	color:#017589;
+	line-height:140%;
+	font-weight:bold;
+}
+
+.menuTabDouble {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:0 5px;
+	border-color: #80CEDD;
+	border-style:solid;
+	background:#029EBC;
+	color:#EBF7FA;
+	line-height:140%;
+	font-weight:bold;
+	text-align:center;
+}
+
+.menuTabDoubleLight {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:0 5px;
+	border-color:#029EBC;
+	border-style:solid;
+	background:#80CEDD;
+	color:#017589;
+	line-height:140%;
+	font-weight:bold;
+	text-align:center;
+}
+
+.menuLine {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:0 0 5px 0;
+	border-color: #80CEDD;
+	border-style:solid;
+	background:#029EBC;
+	color:#EBF7FA;
+	line-height:140%;
+	font-weight:bold;
+}
+
+.menuLineLight {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:0 0 5px 0 ;
+	border-color:#029EBC;
+	border-style:solid;
+	background:#80CEDD;
+	color:#017589;
+	line-height:140%;
+	font-weight:bold;
+}
+
+.menuLineDouble {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:5px 0;
+	border-color: #80CEDD;
+	border-style:solid;
+	background:#029EBC;
+	color:#EBF7FA;
+	line-height:140%;
+	font-weight:bold;
+	text-align:center;
+}
+
+.menuLineDoubleLightW {
+	margin:0 0 10px 0;
+	padding:4px 16px;
+	border-width:5px 0;
+	border-color:#029EBC;
+	border-style:solid;
+	background:#fff;
+	color:#017589;
+	line-height:140%;
+	font-weight:bold;
+	text-align:center;
+}
+
+.menuLineDoubleLight {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:5px 0;
+	border-color:#029EBC;
+	border-style:solid;
+	background:#80CEDD;
+	color:#017589;
+	line-height:140%;
+	font-weight:bold;
+	text-align:center;
+}
+
+.menuLineLightW {
+	margin:0 0 10px 0;
+	padding:2px 8px;
+	border-width:0 0 5px 0 ;
+	border-color:#029EBC;
+	border-style:solid;
+	background:#fff;
+	color:#017589;
+	line-height:140%;
+	font-weight:bold;
+}
