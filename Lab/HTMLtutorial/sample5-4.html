@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<style>
+</style>
+<script>
+var b=1;
+onload= function(){
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<4; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    image.src="https://www.youtube.com/embed/C35DrtPlUbc" ;
+  }
+  b[1].onclick = function(){
+    for(var i=0; i<4; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    image.src="https://www.youtube.com/embed/AMQOAdqkXGs" ;
+  }
+  b[2].onclick = function(){
+    for(var i=0; i<4; i++)
+           b[i].style.color='black';
+    b[2].style.color='red';
+    image.src="https://www.youtube.com/embed/pSYS7cPc3nE" ;
+  }
+  b[3].onclick = function(){
+    for(var i=0; i<4; i++)
+           b[i].style.color='black';
+    b[3].style.color='red';
+    image.src="https://www.youtube.com/embed/v0zewZucBXI" ;
+  }
+ 
+};
+
+</script>
+</head>
+<body>
+<center>
+<h1>Sukiyaki聴き比べ</h1>
+<button id="btn0" > Kyu Sakamoto </button>
+<button id="btn1" >Hikaru Nishida</button>
+<button id="btn2" >     4P.M.    </button>
+<button id="btn3" >A Taste of Honey</button>
+
+<p> 
+<iframe  id="image" width="600" height="390" 
+src="https://www.youtube.com/embed/C35DrtPlUbc"
+frameborder="0" allowfullscreen></iframe> </p>
+</center>
+
+</body>
+</html> 
