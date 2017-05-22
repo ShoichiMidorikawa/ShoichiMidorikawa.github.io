@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title> sound</title>
+
+<script>
+var aud = document.getElementsByTagName("audio");
+onload=function(){
+   aud[0].play();
+   var dt = aud[0].duration;
+   var n = (dt+0.5)*1000;
+   setTimeout('aud[1].play()', n);
+};
+</script>
+</head>
+
+<body>
+<h1>
+<p>JavaScriptによるサウンドの再生</p>
+</h1>
+<h2>
+<p>異なるサウンドを続けて再生</p>
+</h2>
+<br>
+<audio id="aaa" src="doremi.wav"></audio>
+<audio id="abc" src="doshira.wav"></audio>
+</body>
+</html> 

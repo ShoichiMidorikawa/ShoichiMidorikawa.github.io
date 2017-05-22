@@ -13,8 +13,9 @@
 </style>
 <script>
 onload=function(){
-  document.getElementById("aaa");
-}
+  var aud = document.getElementById("aaa");
+  aud.play();  
+};
 </script>
 
 </head>
@@ -23,9 +24,6 @@ onload=function(){
 <p>注意! 画面を開くと警告音が鳴ります。</p>
 <br>
 <br>
-<audio id="aaa" autoplay>
-<source src="beep.wav">
-</audio>
-
+<audio id="aaa" src="beep.wav"></audio>
 </body>
 </html> 
