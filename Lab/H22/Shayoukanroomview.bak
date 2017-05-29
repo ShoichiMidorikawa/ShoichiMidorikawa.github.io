@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.2 for Windows">
+<TITLE>ルームビュー</TITLE>
+</HEAD>
+<BODY bgcolor="#000000" text="#ffffff">
+<H1>平成２２年度　卒業研究<BR></H1>
+<HR>
+<H1>ルームビュー<BR>
+</H1>
+<H3>作品説明<BR>
+　　　・作品をご覧頂くためには<A href="http://www.java.com/ja/download/">Java2-JRE</A>のインストールが<FONT color="#ff0000">必要</FONT>です。<BR>
+　　　・斜陽館の外観（および周囲の風景）や内部を360度見渡すことが出来るものです。<BR>
+　　　・下記の見取り図の赤いボタンをクリックして頂きますと、その部分に対応したルームビューを見る事が出来ます。<BR>
+　　　・ルームビューからこちらに戻る場合ブラウザの<FONT color="#ff0000">戻る</FONT>をご使用ください。<BR>
+</H3>
+<H3>操作方法<BR>
+　　　・写真を左右にドラックする事で視点が動きます。<BR>
+</H3>
+<P><IMG src="madori.jpg" width="740" height="421" border="0" usemap="#madori"><MAP name="madori">
+  <AREA shape="circle" coords="102,300,5" href="RoomView/syagai.html">
+  <AREA shape="circle" coords="665,103,5" href="RoomView/syayounoma.html">
+  <AREA shape="circle" coords="314,223,6" href="RoomView/syanai.html">
+  <AREA shape="circle" coords="416,262,6" href="RoomView/syarouka.html">
+  <AREA shape="circle" coords="614,92,6" href="RoomView/syayou2kai.html">
+  <AREA shape="circle" coords="527,28,6" href="RoomView/husumae.html">
+  <AREA shape="circle" coords="584,49,5" href="RoomView/husumae2dan.html">
+  <AREA shape="circle" coords="622,51,5" href="RoomView/syayou2kaiwahu.html">
+  <AREA shape="default" nohref>
+</MAP><MAP name="madori212">
+  <AREA shape="circle" coords="29,24,6" href="RoomView/husumae.html">
+  <AREA shape="circle" coords="87,47,6" href="RoomView/husumae2dan.html">
+  <AREA shape="circle" coords="123,47,5" href="RoomView/syayou2kaiwahu.html">
+  <AREA shape="circle" coords="116,85,6" href="RoomView/syayou2kai.html">
+  <AREA shape="circle" coords="167,96,5" href="RoomView/syayounoma.html">
+  <AREA shape="circle" coords="304,234,6" href="RoomView/syarouka.html">
+  <AREA shape="circle" coords="202,198,6" href="RoomView/syanai.html">
+  <AREA shape="circle" coords="72,268,6" href="RoomView/syagai.html">
+  <AREA shape="default" nohref>
+</MAP></P>
+<HR>
+<H2 align="center"><A href="ShayouViewer.htm">卒業研究の説明に戻る</A></H2>
+</BODY>
+</HTML>

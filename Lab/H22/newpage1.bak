@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.2 for Windows">
+<TITLE>斜陽館</TITLE>
+</HEAD>
+<BODY bgcolor="#000000" text="#ffffff">
+<H1>斜陽館<BR>
+</H1>
+<H2>・斜陽館とは？</H2>
+<H3>　　・文豪・太宰治の生家であり、現在は太宰治記念館として利用されています。<BR>
+　　・元々は太宰治の父にあたる津島源右衛門が住宅として建てました。<BR>
+　　・建築物としても評価が高い建物です。<BR>
+</H3>
+<H2>・太宰治とは？</H2>
+<H3>　　・1909年生まれ。戦後まもなく入水自殺で亡くなっています。<BR>
+　　・太宰治はペンネームであり、本名は津島修治(つしましゅうじ)。<BR>
+　　・『津軽』、『人間失格』、『走れメロス』などを残し、<BR>
+　　　『走れメロス』は中学校の国語の教科書に掲載、『人間失格』『桜桃』などは映画化されています。<BR>
+　　・数度の自殺未遂や退廃的な作風から暗い印象を持たれがちですが、<BR>
+　　　『畜犬談』のようにユーモア溢れる作品や『走れメロス』のようにハッピーエンド(皆が幸せで物語が終わる)の作品も数多く残しています。<BR>
+</H3>
+<H2>・作品について</H2>
+<H3>　　目的：<BR>
+　　　　　・斜陽館の外観や内観をweb上からでも見れるようにする事です。<BR>
+<BR>
+　　作品：<BR>
+　　　　　・斜陽館入り口、板の間、仏間と座敷、洋間と控室、和室<BR>
+　　　　　　それぞれのボタンを(下記の見取り図から)クリックすると、それぞれの外観や内観が見る事が出来ます。<BR>
+　　　　　・作品をご覧いただく為にはJava2-JREのインストールが必要です。<BR>
+<BR>
+　　操作方法：<BR>
+　　　　　・写真をドラッグ(マウスの左ボタンでクリックしたまま動かす)すると視点が動きます。<BR>
+　　　　　（ボタンをクリックした先からこのページに戻りたい時はブラウザの『戻る』ボタンを押してください。）<BR>
+</H3>
+<P><IMG src="madori212.jpg" width="543" height="365" border="0" usemap="#madori212"><MAP name="madori212">
+  <AREA shape="circle" coords="29,24,6" href="ルームビュー/husumae.html">
+  <AREA shape="circle" coords="87,47,6" href="ルームビュー/husumae2dan.html">
+  <AREA shape="circle" coords="123,47,5" href="ルームビュー/syayou2kaiwahu.html">
+  <AREA shape="circle" coords="116,85,6" href="ルームビュー/syayou2kai.html">
+  <AREA shape="circle" coords="167,96,5" href="ルームビュー/syayounoma.html">
+  <AREA shape="circle" coords="304,234,6" href="ルームビュー/syarouka.html">
+  <AREA shape="circle" coords="202,198,6" href="ルームビュー/syanai.html">
+  <AREA shape="circle" coords="72,268,6" href="ルームビュー/syagai.html">
+  <AREA shape="default" nohref>
+</MAP></P>
+</BODY>
+</HTML>
