@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title> sound</title>
+
+<script>
+onload = function(){
+  var yyy = document.getElementById("youtube-player");
+
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<5; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    yyy.src="https://www.youtube.com/embed/WttNlbaECDY?autoplay=1
+             &amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+  }
+  b[1].onclick = function(){
+    for(var i=0; i<5; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    yyy.src="https://www.youtube.com/embed/J2bm6KQKHeQ?autoplay=1
+             &amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+  }
+  b[2].onclick = function(){
+    for(var i=0; i<5; i++)
+           b[i].style.color='black';
+    b[2].style.color='red';
+    yyy.src="https://www.youtube.com/embed/OT1HCQcSHW0?autoplay=1
+             &amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+  }
+  b[3].onclick = function(){
+    for(var i=0; i<5; i++)
+           b[i].style.color='black';
+    b[3].style.color='red';
+    yyy.src="https://www.youtube.com/embed/Gu2pVPWGYMQ?autoplay=1
+             &amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+
+  }
+  b[4].onclick = function(){
+    for(var i=0; i<5; i++)
+           b[i].style.color='black';
+    b[4].style.color='red';
+        yyy.src="https://www.youtube.com/embed/nV4WVdw-vNM?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+  }
+};
+</script>
+</head>
+
+<body>
+<center>
+<h1>
+<p>YouTubeからサウンドを取り出す2</p>
+</h1>
+<h2>
+雨の曲５つ
+</h2>
+<button id="btn0" >Singing In The Rain <br> Gene Kelly </button>
+<button id="btn1" >Rhythm Of The Rain <br> Cascades </button>
+<button id="btn2" >Rain Drops Keep Falling On My Head <br> B.J. Thomas </button>
+<button id="btn3" >Have You Ever Seen The Rain? <br> Creedence Clearwater Revival </button>
+<button id="btn4" >L`a Pioggia (雨) <br> Gigliola Cinquetti</button>
+<br>
+<br>
+ <div data-video="WttNlbaECDY"  
+         data-autoplay="1"      // "0":ボタンを押すと再生。　"1": 自動再生  
+         data-loop="1"             
+         id="youtube-audio">
+ </div>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+<br>
+このページは、Firefox か Chrome でご覧ください。
+edgeでサウンドは流れますが、スタート・ストップボタンが表示されません。
+</center>
+</body>
+</html>
