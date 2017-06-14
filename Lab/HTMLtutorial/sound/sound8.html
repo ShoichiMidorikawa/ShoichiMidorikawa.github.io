@@ -3,28 +3,52 @@
 <head>
 <meta charset="utf-8">
 <title> sound</title>
+<script>
+onload= function(){
+  var sl=document.getElementById('sel1');
+  var im=document.getElementById('image');
+  
+  sl.onchange = function(){
+    var selectedItem = this.options[this.selectedIndex];
+    if(selectedItem.value == 0){
+      im.width='600';
+      im.height='390';
+    }else if(selectedItem.value == 1){
+      im.width='0';
+      im.height='0';
+    }
+  }
 
+  var b=document.getElementById('btn'); 
+  b.onclick = function(){
+      image.src="https://www.youtube.com/embed/0XSaKQlBZuE?rel=0&autoplay=1" ;
+  }
+};
+</script>
 </head>
-
 <body>
 <center>
 <h1>
-<p>YouTubeからサウンドを取り出す１</p>
+<p>YouTube動画をOFFしてオーディオプレーヤーとして使用１</p>
 </h1>
 <br>
+動画(ON/OFF)
+<select id="sel1">
+ <option value="0">ON</option>
+ <option value="1" >OFF</option>
+</select>
 <br>
- <div data-video="0XSaKQlBZuE"   //ここにYouTubeビデオのIDを書きます。
-         data-autoplay="0"       //0":ボタンを押すと再生。　"1": 自動再生  
-         data-loop="1"             
-         id="youtube-audio">
- </div>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
 <br>
-<A href="https://www.labnol.org/internet/youtube-audio-player/26740/">詳しくは、ここを見てください。</A>
+<button id="btn" >Rock'n'Roll Music <br> Chuck Berry </button>
 <br>
-スタート・ストップボタンが表示されるまでお待ちください。
+<p> 
+<iframe id="image" width="640" height="360" 
+src="https://www.youtube.com/embed/0XSaKQlBZuE?rel=0" 
+frameborder="0" allowfullscreen></iframe>
+</p>
+
 
 </center>
 </body>
 </html>
+

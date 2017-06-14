@@ -1,12 +1,26 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title> sound</title>
-
+<meta charset="UTF-8">
+<title> </title>
+<style>
+</style>
 <script>
-onload = function(){
-  var yyy = document.getElementById("youtube-player");
+onload= function(){
+  var sl=document.getElementById('sel1');
+  var im=document.getElementById('image');
+  
+  sl.onchange = function(){
+    var selectedItem = this.options[this.selectedIndex];
+    if(selectedItem.value == 0){
+      im.width='600';
+      im.height='390';
+    }else if(selectedItem.value == 1){
+      im.width='0';
+      im.height='0';
+    }
+    console.log( selectedItem.value );
+  }
 
   var b=document.getElementsByTagName('button'); 
     b[0].style.color='red';
@@ -15,66 +29,65 @@ onload = function(){
     for(var i=0; i<5; i++)
            b[i].style.color='black';
     b[0].style.color='red';
-    yyy.src="https://www.youtube.com/embed/rR5-9be1_Kk?"
-            +"autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+    image.src="https://www.youtube.com/embed/rR5-9be1_Kk?rel=0&autoplay=1" ;
   }
   b[1].onclick = function(){
     for(var i=0; i<5; i++)
            b[i].style.color='black';
     b[1].style.color='red';
-    yyy.src="https://www.youtube.com/embed/J2bm6KQKHeQ?"
-            +"autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+    image.src="https://www.youtube.com/embed/J2bm6KQKHeQ?rel=0&autoplay=1" ;
   }
   b[2].onclick = function(){
     for(var i=0; i<5; i++)
            b[i].style.color='black';
     b[2].style.color='red';
-    yyy.src="https://www.youtube.com/embed/OT1HCQcSHW0?"
-            +"autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+    image.src="https://www.youtube.com/embed/OT1HCQcSHW0?rel=0&autoplay=1" ;
   }
   b[3].onclick = function(){
     for(var i=0; i<5; i++)
            b[i].style.color='black';
     b[3].style.color='red';
-    yyy.src="https://www.youtube.com/embed/Gu2pVPWGYMQ?"
-            +"autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
-
+    image.src="https://www.youtube.com/embed/Gu2pVPWGYMQ?rel=0&autoplay=1" ;
   }
   b[4].onclick = function(){
-    for(var i=0; i<5; i++)
+    for(var i=0; i<4; i++)
            b[i].style.color='black';
     b[4].style.color='red';
-    yyy.src="https://www.youtube.com/embed/852RYmmr53I?"
-            +"autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1";
+    image.src="https://www.youtube.com/embed/852RYmmr53I?rel=0&autoplay=1" ;
   }
+ 
 };
+
 </script>
 </head>
-
 <body>
 <center>
 <h1>
-<p>YouTubeからサウンドを取り出す2</p>
+<p>YouTube動画をOFFしてオーディオプレーヤーとして使用２</p>
 </h1>
 <h2>
 雨の曲５つ
 </h2>
+
+動画(ON/OFF)
+<select id="sel1">
+ <option value="0">ON</option>
+ <option value="1" >OFF</option>
+</select>
+
+
+<br>
+<br>
 <button id="btn0" >Singing In The Rain <br> Gene Kelly </button>
 <button id="btn1" >Rhythm Of The Rain <br> Cascades </button>
 <button id="btn2" >Rain Drops Keep Falling On My Head <br> B.J. Thomas </button>
 <button id="btn3" >Have You Ever Seen The Rain? <br> Creedence Clearwater Revival </button>
 <button id="btn4" >L`a Pioggia (雨) <br> Gigliola Cinquetti</button>
 <br>
-<br>
- <div data-video="rR5-9be1_Kk"  
-         data-autoplay="0"      // "0":ボタンを押すと再生。　"1": 自動再生  
-         data-loop="1"             
-         id="youtube-audio">
- </div>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
-<br>
-スタート・ストップボタンが表示されるまでお待ちください。
+<p> 
+<iframe  id="image" width="600" height="390" 
+src="https://www.youtube.com/embed/rR5-9be1_Kk?rel=0"
+frameborder="0" allowfullscreen></iframe> </p>
 </center>
 </body>
-</html>
+</html> 
