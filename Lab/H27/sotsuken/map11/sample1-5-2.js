@@ -75,8 +75,8 @@
       y2=mouseY-yl;
 //      y2=yf-yl;
   
-//     $("dd#start").html("x2="+x2+"<br>"
-//                       +"y2="+y2+"<br>");
+     $("dd#start").html("x2="+x2+"<br>"
+                       +"y2="+y2+"<br>");
 
 
 //クリックした点の表示
@@ -95,10 +95,10 @@
 	if(x2>1394 && x2<1410 && y2>1088 && y2<1103)　//中庭・階段上
 	        location.href="nakaniwa_ue/ListP.html";
 
-	if(x2>1219 && x2<1236 && y2>1104 && y2<1121)　//中庭・ピロティ近く
+	if(x2>1260 && x2<1280 && y2>1065 && y2<1122)　//中庭・ピロティ近く
 	        location.href="nakaniwa_3tika/ListP.html"; 
 
-	if(x2>1315 && x2<1332 && y2>1145 && y2<1160)　//中庭・６号館近く
+	if(x2>1315 && x2<1330 && y2>1145 && y2<1160)　//中庭・６号館近く
 	        location.href="nakaniwa_6tika/ListP.html"; 
 
 	if(x2>1646 && x2<1670 && y2>1194 && y2<1216)　//マックスバリュー
