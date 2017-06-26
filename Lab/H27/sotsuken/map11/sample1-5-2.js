@@ -1,12 +1,23 @@
-ï»¿$(function(){
+$(function(){
+	var mouseX;	// XÀ•W
+	var mouseY;	// YÀ•W
+
+   document.body.addEventListener( "click", function( e ) {
+	// ƒ}ƒEƒXˆÊ’u‚ğæ“¾‚·‚é
+	mouseX = e.pageX ;	// XÀ•W
+	mouseY = e.pageY ;	// YÀ•W
+        console.log('mouseX='+mouseX);
+        console.log('mouseY='+mouseY); 
+   } ) ;
+
 
    var x2, y2;
    var photo = document.getElementById('photo'); 
-   // imgè¦ç´ ã‚’HTLã«è¿½åŠ 
+   // img—v‘f‚ğHTL‚É’Ç‰Á
    var img;
       img = document.createElement('img');
       img.src = "map50.jpg";  
-      img.alt="å¤§å­¦åœ°å›³";
+      img.alt="‘åŠw’n}";
       img.id="map"; 
       img.style.display = 'none';
  
@@ -14,6 +25,7 @@
 //      img.width = 1503*1.5; 
       img.width = 2200; 
       img.height= Math.round(img.width*2148/3006);
+//      img.height= 1572;
 
       photo.appendChild(img);
 
@@ -22,14 +34,14 @@
    img.style.display = 'inline';   
 
 
-// mousemoveãƒã‚¦ã‚¹ã‚’ä½¿ã£ã¦åœ°å›³ã‚’å‹•ã‹ã™
+// mousemoveƒ}ƒEƒX‚ğg‚Á‚Ä’n}‚ğ“®‚©‚·
    var xm, ym;
    var xi, yi;
    var xf, yf; 
    var xd, yd;
-   var xl=-720;  //cssã®margin-left 
-   var yl=-510;  //cssã®margin-top
-   var xe= img.width-700; //cssã®å€¤ã‹ã‚‰ 
+   var xl=-720;  //css‚Ìmargin-left 
+   var yl=-510;  //css‚Ìmargin-top
+   var xe= img.width-700; //css‚Ì’l‚©‚ç 
    var ye= img.height-500;
      $("#photo").mousedown(function(e){
 //        console.log("mouse down");
@@ -60,87 +72,88 @@
        },"slow", "swing");
       
       x2=xf-xl;      
-      y2=yf-yl;
+      y2=mouseY-yl;
+//      y2=yf-yl;
   
 //     $("dd#start").html("x2="+x2+"<br>"
 //                       +"y2="+y2+"<br>");
 
 
-//ã‚¯ãƒªãƒƒã‚¯ã—ãŸç‚¹ã®è¡¨ç¤º
+//ƒNƒŠƒbƒN‚µ‚½“_‚Ì•\¦
       if(x2>1574 && x2<1599 && y2>1083 && y2<1105) 
         location.href="http://www.aomori-u.ac.jp";
-//ãƒªãƒ³ã‚¯ã®å¼µã£ã¦ã‚ã‚‹å ´æ‰€ã‚’é–‹ã
-     if(x2>1210 && x2<1228 && y2>1089 && y2<1107)  //ãƒ”ãƒ­ãƒ†ã‚£
+//ƒŠƒ“ƒN‚Ì’£‚Á‚Ä‚ ‚éêŠ‚ğŠJ‚­
+     if(x2>1210 && x2<1228 && y2>1089 && y2<1107)  //ƒsƒƒeƒB
 	        location.href="panorama/ListP.html";
 
-	if(x2>1220 && x2<1238 && y2>1066 && y2<1084)  //ä¼‘æ†©å®¤
+	if(x2>1220 && x2<1238 && y2>1066 && y2<1084)  //‹xŒeº
 	        location.href="kyukeisitu/ListP.html";
 
-	if(x2>1318 && x2<1337 && y2>1071 && y2<1089)ã€€//ä¸­åº­ãƒ»ã‚¹ãƒ†ãƒ¼ã‚¸
+	if(x2>1318 && x2<1337 && y2>1071 && y2<1089)@//’†’ëEƒXƒe[ƒW
 	        location.href="nakaniwa_stage/ListP.html";
    
-	if(x2>1394 && x2<1410 && y2>1088 && y2<1103)ã€€//ä¸­åº­ãƒ»éšæ®µä¸Š
+	if(x2>1394 && x2<1410 && y2>1088 && y2<1103)@//’†’ëEŠK’iã
 	        location.href="nakaniwa_ue/ListP.html";
 
-	if(x2>1219 && x2<1236 && y2>1104 && y2<1121)ã€€//ä¸­åº­ãƒ»ãƒ”ãƒ­ãƒ†ã‚£è¿‘ã
+	if(x2>1219 && x2<1236 && y2>1104 && y2<1121)@//’†’ëEƒsƒƒeƒB‹ß‚­
 	        location.href="nakaniwa_3tika/ListP.html"; 
 
-	if(x2>1315 && x2<1332 && y2>1145 && y2<1160)ã€€//ä¸­åº­ãƒ»ï¼–å·é¤¨è¿‘ã
+	if(x2>1315 && x2<1332 && y2>1145 && y2<1160)@//’†’ëE‚U†ŠÙ‹ß‚­
 	        location.href="nakaniwa_6tika/ListP.html"; 
 
-	if(x2>1646 && x2<1670 && y2>1194 && y2<1216)ã€€//ãƒãƒƒã‚¯ã‚¹ãƒãƒªãƒ¥ãƒ¼
+	if(x2>1646 && x2<1670 && y2>1194 && y2<1216)@//ƒ}ƒbƒNƒXƒoƒŠƒ…[
 	        location.href="max/ListP.html"; 
   
-	if(x2>1206 && x2<1223 && y2>675 && y2<690)ã€€//äº¤ç•ª
+	if(x2>1206 && x2<1223 && y2>675 && y2<690)@//Œğ”Ô
 	        location.href="koban/ListP.html"; 
 
-	if(x2>1113 && x2<1130 && y2>1096 && y2<1111)ã€€//ï¼•å·é¤¨å‰
+	if(x2>1113 && x2<1130 && y2>1096 && y2<1111)@//‚T†ŠÙ‘O
 	        location.href="5gou/ListP.html"; 
 
-	if(x2>1139 && x2<1155 && y2>1074 && y2<1089)ã€€//é£Ÿå ‚å†…
+	if(x2>1139 && x2<1155 && y2>1074 && y2<1089)@//H“°“à
 	        location.href="syokudo/ListP.html"; 
 
-	if(x2>1175 && x2<1191 && y2>1073 && y2<1088)ã€€//é£Ÿå ‚æ¨ª
+	if(x2>1175 && x2<1191 && y2>1073 && y2<1088)@//H“°‰¡
 	        location.href="syokuyoko/ListP.html"; 
 
-	if(x2>1032 && x2<1049 && y2>1132 && y2<1146)ã€€//ç¬¬ä¸€ä½“è‚²é¤¨
+	if(x2>1032 && x2<1049 && y2>1132 && y2<1146)@//‘æˆê‘ÌˆçŠÙ
 	        location.href="1tai/ListP.html"; 
 
-	if(x2>1500 && x2<1516 && y2>1086 && y2<1101)ã€€//æ­£å¾³é¤¨
+	if(x2>1500 && x2<1516 && y2>1086 && y2<1101)@//³“¿ŠÙ
 	        location.href="syotoku/ListP.html"; 
 
-	if(x2>1180 && x2<1196 && y2>914 && y2<930)ã€€//å­¦ç”Ÿèª²å‡ºå…¥ã‚Šå£
+	if(x2>1180 && x2<1196 && y2>914 && y2<930)@//Šw¶‰Ûo“ü‚èŒû
 	        location.href="gakuseika/ListP.html";
 
 
-	if(x2>1116 && x2<1134 && y2>969 && y2<985)ã€€//é§è¼ªå ´
+	if(x2>1116 && x2<1134 && y2>969 && y2<985)@//’“—Öê
 	        location.href="tyurin/ListP.html";
 
-	if(x2>1106 && x2<1127 && y2>877 && y2<895)ã€€//æ­£é–€
+	if(x2>1106 && x2<1127 && y2>877 && y2<895)@//³–å
 	        location.href="seimon/ListP.html";
 
-	if(x2>1543 && x2<1562 && y2>1164 && y2<1179)ã€€//è£é–€
+	if(x2>1543 && x2<1562 && y2>1164 && y2<1179)@//— –å
 	        location.href="uramon/ListP.html";
 
-	if(x2>1211 && x2<1231 && y2>1262 && y2<1279)ã€€//è·å“¡ç”¨é§è»Šå ´
+	if(x2>1211 && x2<1231 && y2>1262 && y2<1279)@//Eˆõ—p’“Ôê
 	        location.href="syokutyu/ListP.html";
 
-	if(x2>914 && x2<932 && y2>1142 && y2<1160)ã€€//äº¤å·®ç‚¹superman
+	if(x2>914 && x2<932 && y2>1142 && y2<1160)@//Œğ·“_superman
 	        location.href="superman/ListP.html"; 
 
-	if(x2>1182 && x2<1201 && y2>353 && y2<369)ã€€//å¹¸ç•‘å°å­¦æ ¡
+	if(x2>1182 && x2<1201 && y2>353 && y2<369)@//K”¨¬ŠwZ
 	        location.href="koubata/ListP.html"; 
 
-	if(x2>956 && x2<973 && y2>1171 && y2<1186)ã€€//ãµããµã
+	if(x2>956 && x2<973 && y2>1171 && y2<1186)@//‚Ó‚­‚Ó‚­
 	        location.href="meet/ListP.html"; 
 
-	if(x2>902 && x2<920 && y2>1098 && y2<1114)ã€€//ãƒŸãƒ‹ã‚¹ãƒˆãƒƒãƒ—
+	if(x2>902 && x2<920 && y2>1098 && y2<1114)@//ƒ~ƒjƒXƒgƒbƒv
 	        location.href="mini/ListP.html"; 
 
-	if(x2>1039 && x2<1058 && y2>752 && y2<769)ã€€//å¹¼ç¨šåœ’
+	if(x2>1039 && x2<1058 && y2>752 && y2<769)@//—c’t‰€
 	        location.href="youti/ListP.html"; 
 
-	if(x2>1428 && x2<1447 && y2>1446 && y2<1464)ã€€//éƒµä¾¿å±€
+	if(x2>1428 && x2<1447 && y2>1446 && y2<1464)@//—X•Ö‹Ç
 	        location.href="yubin/ListP.html"; 
 
 
