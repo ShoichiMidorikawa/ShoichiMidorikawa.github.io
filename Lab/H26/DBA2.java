@@ -193,7 +193,7 @@ public class DBA2 extends Applet implements ActionListener, Runnable {
             System.out.println("That's OK!");
          }
          if(x2>1850 && x2 < 1895 && y2 > 1130 && y2 < 1170){
-            try{newURL = new URL(getCodeBase(),"syokuin/DBA2.html");}	//Eˆõ
+            try{newURL = new URL(getCodeBase(),"syokuin/DBA4.html");}	//Eˆõ
             catch(MalformedURLException e2){}
             getAppletContext().showDocument(newURL);
             System.out.println("That's OK!");
