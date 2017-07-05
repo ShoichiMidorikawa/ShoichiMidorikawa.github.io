@@ -1,4 +1,4 @@
-4﻿// IFrame Player API の読み込み
+44﻿// IFrame Player API の読み込み
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -11,24 +11,24 @@ var ytID = 'KV8Hj_E8LJc';
           ytPlayer1 = new YT.Player(
              'sample1', // 埋め込む場所の指定
              {
-                width: '0', // プレーヤーの幅
-                height: '0', // プレーヤーの高さ
+                width: '40', // プレーヤーの幅
+                height: '20', // プレーヤーの高さ
                 videoId: 'Tn3acz2KI9M'  // YouTubeのID
              }
           );
           ytPlayer2 = new YT.Player(
              'sample2', // 埋め込む場所の指定
              {
-                width: '0', // プレーヤーの幅
-                height: '0', // プレーヤーの高さ
+                width: '40', // プレーヤーの幅
+                height: '20', // プレーヤーの高さ
                 videoId: 'KV8Hj_E8LJc' // YouTubeのID
              }
           );
           ytPlayer3 = new YT.Player(
              'sample3', // 埋め込む場所の指定
              {
-                width: '0', // プレーヤーの幅
-                height: '0', // プレーヤーの高さ
+                width: '40', // プレーヤーの幅
+                height: '20', // プレーヤーの高さ
                 videoId: 'omjZ73GFPaQ' // YouTubeのID
              }
           );
