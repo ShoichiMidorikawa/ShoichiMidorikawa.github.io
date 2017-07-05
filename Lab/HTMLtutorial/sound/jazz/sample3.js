@@ -11,31 +11,28 @@ var ytID = 'KV8Hj_E8LJc';
           ytPlayer1 = new YT.Player(
              'sample1', // 埋め込む場所の指定
              {
-                width: '200', // プレーヤーの幅
-                height: '100', // プレーヤーの高さ
+                width: '100', // プレーヤーの幅
+                height: '50', // プレーヤーの高さ
                 videoId: 'Tn3acz2KI9M'  // YouTubeのID
              }
           );
           ytPlayer2 = new YT.Player(
              'sample2', // 埋め込む場所の指定
              {
-                width: '200', // プレーヤーの幅
-                height: '100', // プレーヤーの高さ
+                width: '100', // プレーヤーの幅
+                height: '50', // プレーヤーの高さ
                 videoId: 'KV8Hj_E8LJc' // YouTubeのID
              }
           );
           ytPlayer3 = new YT.Player(
              'sample3', // 埋め込む場所の指定
              {
-                width: '200', // プレーヤーの幅
-                height: '100', // プレーヤーの高さ
+                width: '100', // プレーヤーの幅
+                height: '50', // プレーヤーの高さ
                 videoId: 'omjZ73GFPaQ' // YouTubeのID
              }
           );
        };
-
-
-
 
 onload = function(){
   var sl=document.getElementById('sel1');
@@ -53,11 +50,8 @@ onload = function(){
 
   sl.onchange = function(){
 
-
-    var selectedItem = 0;
     var selectedItem = this.options[this.selectedIndex];
- 
- 
+  
     if(selectedItem.value == 0){
        $('#play').click(function() {
          ytPlayer2.pauseVideo();
