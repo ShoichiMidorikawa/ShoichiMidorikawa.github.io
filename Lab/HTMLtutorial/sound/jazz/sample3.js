@@ -11,24 +11,24 @@ var ytID = 'KV8Hj_E8LJc';
           ytPlayer1 = new YT.Player(
              'sample1', // 埋め込む場所の指定
              {
-                width: '40', // プレーヤーの幅
-                height: '20', // プレーヤーの高さ
+                width: '20', // プレーヤーの幅
+                height: '10', // プレーヤーの高さ
                 videoId: 'Tn3acz2KI9M'  // YouTubeのID
              }
           );
           ytPlayer2 = new YT.Player(
              'sample2', // 埋め込む場所の指定
              {
-                width: '40', // プレーヤーの幅
-                height: '20', // プレーヤーの高さ
+                width: '20', // プレーヤーの幅
+                height: '10', // プレーヤーの高さ
                 videoId: 'KV8Hj_E8LJc' // YouTubeのID
              }
           );
           ytPlayer3 = new YT.Player(
              'sample3', // 埋め込む場所の指定
              {
-                width: '40', // プレーヤーの幅
-                height: '20', // プレーヤーの高さ
+                width: '20', // プレーヤーの幅
+                height: '10', // プレーヤーの高さ
                 videoId: 'omjZ73GFPaQ' // YouTubeのID
              }
           );
