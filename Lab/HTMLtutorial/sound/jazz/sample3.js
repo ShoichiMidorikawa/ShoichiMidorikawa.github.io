@@ -1,38 +1,44 @@
-44﻿// IFrame Player API の読み込み
+﻿// IFrame Player API の読み込み
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var ytID = 'Tn3acz2KI9M';
-var ytID = 'KV8Hj_E8LJc'; 
-
-       function onYouTubeIframeAPIReady() {
-          ytPlayer1 = new YT.Player(
-             'sample1', // 埋め込む場所の指定
+  function onYouTubeIframeAPIReady() {
+      ytPlayer1 = new YT.Player(
+         'sample1', // 埋め込む場所
+         {
+            width: '0',  // プレーヤー幅
+            height: '0', // プレーヤー高さ
+            videoId: 'Tn3acz2KI9M'  // YouTubeID
+         }
+      );
+      ytPlayer2 = new YT.Player(
+             'sample2', 
              {
-                width: '0', // プレーヤーの幅
-                height: '0', // プレーヤーの高さ
-                videoId: 'Tn3acz2KI9M'  // YouTubeのID
+                width: '0', 
+                height: '0',
+                videoId: 'KV8Hj_E8LJc'
              }
-          );
-          ytPlayer2 = new YT.Player(
-             'sample2', // 埋め込む場所の指定
-             {
-                width: '0', // プレーヤーの幅
-                height: '0', // プレーヤーの高さ
-                videoId: 'KV8Hj_E8LJc' // YouTubeのID
-             }
-          );
-          ytPlayer3 = new YT.Player(
+      );
+      ytPlayer3 = new YT.Player(
              'sample3', // 埋め込む場所の指定
              {
-                width: '0', // プレーヤーの幅
-                height: '0', // プレーヤーの高さ
-                videoId: 'omjZ73GFPaQ' // YouTubeのID
+                width: '0', 
+                height: '0', 
+                videoId: 'omjZ73GFPaQ' 
              }
-          );
-       };
+      );
+      ytPlayer4 = new YT.Player(
+             'sample4', // 埋め込む場所の指定
+             {
+                width: '0', 
+                height: '0', 
+                videoId: 'YsVJuulCmAE' 
+             }
+      );
+  };
+
 
 onload = function(){
   var sl=document.getElementById('sel1');
@@ -47,7 +53,6 @@ onload = function(){
          ytPlayer1.pauseVideo().seekTo(0);
        });
 
-
   sl.onchange = function(){
 
     var selectedItem = this.options[this.selectedIndex];
@@ -56,7 +61,9 @@ onload = function(){
        $('#play').click(function() {
          ytPlayer2.pauseVideo();
          ytPlayer3.pauseVideo();
+         ytPlayer4.pauseVideo();
          ytPlayer1.playVideo();
+   ytPlayer1.playVideo();
        });
        $('#pause').click(function() {
          ytPlayer1.pauseVideo();
@@ -68,6 +75,7 @@ onload = function(){
        $('#play').click(function() {
          ytPlayer1.pauseVideo();
          ytPlayer3.pauseVideo();
+         ytPlayer4.pauseVideo();
          ytPlayer2.playVideo();
        });
        $('#pause').click(function() {
@@ -80,6 +88,7 @@ onload = function(){
        $('#play').click(function() {
          ytPlayer1.pauseVideo();
          ytPlayer2.pauseVideo();
+         ytPlayer4.pauseVideo();
          ytPlayer3.playVideo();
        });
        $('#pause').click(function() {
@@ -87,8 +96,20 @@ onload = function(){
        });
        $('#stop').click(function() {
          ytPlayer3.pauseVideo().seekTo(0);
-       });
-    
+       });    
+    }else if(selectedItem.value == 3){
+       $('#play').click(function() {
+         ytPlayer1.pauseVideo();
+         ytPlayer2.pauseVideo();
+         ytPlayer3.pauseVideo();
+         ytPlayer4.playVideo();
+       });
+       $('#pause').click(function() {
+         ytPlayer4.pauseVideo();
+       });
+       $('#stop').click(function() {
+         ytPlayer4.pauseVideo().seekTo(0);
+       });    
     }
   }
 
