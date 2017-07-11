@@ -1,3 +1,4 @@
+#ƒŠƒT[ƒWƒ…‹Èü
 reset
 set terminal png
 set output "lissajous2-3.png"
