@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.2 for Windows">
+<TITLE>ようこそ緑川研究室へ</TITLE>
+</HEAD>
+<BODY bgcolor="#004000" text="#76ff00" link="#0066cc" vlink="#009999" alink="#ff9900">
+<DIV style="width : 352px;height : 218px;top : 308px;left : 307px;
+  position : absolute;
+  z-index : 1;
+  visibility : visible;
+" id="Layer1"><IMG src="z_21.JPG" width="351" height="218" border="0"></DIV>
+<H1 align="center"><FONT color="#ffffff">ようこそ緑川研究室へ</FONT></H1>
+<H2><BR>
+平成16年度　<BR>
+　　　メンバー　　 ：　齋藤大輔、齋藤武志、斎藤昌弘、佐藤仁彦<BR>
+　　　研究テーマ　：　<A href="AomoriUniv.avi">青森大学の３DCG</A><BR>
+</H2>
+<BR>
+<H2><FONT color="#ffff00">平成17年度<BR>
+　　　メンバー　　：　加糠寛大、工藤航太、須藤倫史、高杉勇介、成田理雅<BR>
+　　　研究テーマ ：　三内丸山遺跡の3次元復元<BR><BR><BR>
+<BR><BR><BR><BR><BR><BR>
+<BR>
+</FONT></H2>
+<H3><FONT color="#ffff00">　　　作品をご覧いただくためには、Java2-JREのほかにJava3D-JREのインストールが必要です。<BR>
+</FONT></H3>
+<H2><FONT color="#ffff00">　　　　　　　　　　　 　<a href="tower/MyView.html">六本柱(屋根あり)</a>、
+                         <a href="tower2/MyView.html">六本柱(屋根無し)</a>、
+                         <a href="storehouse/MyView.html">高床式倉庫</a>、
+                         <BR>
+　　　　　　　　　　　 　<FONT color="#ffff00"><A href="house/MyView.html">竪穴式住居</A></FONT>、  </FONT><A href="Big/MyView.html">大型竪穴住居</A>、 <a href="All/MyView.html">全景</a></H2>
+<BR><BR><BR><BR><BR><BR>
+<P><FONT color="#ffff00" size="5"><B><A href="H18HP/newpage1.htm">平成18年度卒業研究</A></B></FONT></P>
+<BR><BR><BR><BR>
+
+<H2 align="center"><FONT color="#ffffff"><A href="Default.html">研究室のTOPへ戻る</A></FONT></H2>
+</BODY>
+</HTML>
