@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> </title>
+<style>
+</style>
+<script>
+onload= function(){
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<2; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    image.src="https://www.youtube.com/embed/6Gj5aLQIEQo?rel=0&autoplay=1" ;
+  }
+  b[1].onclick = function(){
+    for(var i=0; i<2; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    image.src="https://www.youtube.com/embed/6Gj5aLQIEQo?start=225&end=230&rel=0&autoplay=1" ;
+  }
+
+};
+
+</script>
+</head>
+<body>
+<center>
+<h1>YouTube動画の部分再生</h1>
+<h2> Gone with the Wind - End Scene </h2>
+<br>
+<button id="btn0" > 全て再生 </button>
+<button id="btn1" >一部再生</button>
+<p> 
+<iframe  id="image" width="600" height="390" 
+src="https://www.youtube.com/embed/6Gj5aLQIEQo?rel=0"
+frameborder="0" allowfullscreen></iframe> </p>
+</center>
+
+</body>
+</html> 
