@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"> 
+<title></title>
+<style>
+div.parent{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+
+div.child2{
+    background-color: lightblue;
+    border: solid 1px #000000;
+    border-radius: 7px; /*角の丸み*/
+    border-style: solod;
+    text-align: left;
+    width: 680px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+</style>
+<script>
+  // ここには、JavaScript言語で記述します。　
+</script>
+</head>
+<body>
+
+<div class=parent>
+<h1>探索アルゴリズム(Searching Algorithms )</h1>
+
+<h2>線形探索(Linear Search)</h2>
+ <div class="child2">
+/*<br>
+   線形探索法による素数探索<br>
+*/<br>
+<br>
+#include &lt;stdio.h><br>  
+<br>
+#define &nbsp; n &nbsp;&nbsp; 25<br>
+<br>
+prime_n[n]={2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};<br>
+<br>
+void search(int key){<br>
+&nbsp;&nbsp;&nbsp; int i=0;<br>
+<br>
+&nbsp;&nbsp;&nbsp; while(prime_n[i] <= key){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(prime_n[i] == key){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("%s\n", "素数です。");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("探索回数=%d\n", i+1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit(0);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i++;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; printf("%s\n", "素数ではありません。");<br>
+&nbsp;&nbsp;&nbsp; printf("探索回数=%d\n", i+1);<br>
+}<br>
+<br>
+int main(void){<br>
+&nbsp;&nbsp;&nbsp;   int i;<br>
+&nbsp;&nbsp;&nbsp;   int key;<br>
+&nbsp;&nbsp;&nbsp;   printf("97以下の自然数を入力してください。\n");<br>
+&nbsp;&nbsp;&nbsp;   scanf("%d", &key);<br>
+<br> 
+&nbsp;&nbsp;&nbsp;   search(key);<br>
+<br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+}<br>
+ </div>
+<br>
+<br>
+<br>
+<p>
+<h2>二分探索(Binary Search)</h2>
+</p>
+ <div class="child2">
+/*<br>
+   二分探索法による素数探索  <br>
+*/<br>
+<br>
+#include  &lt;stdio.h><br>
+<br>
+#define &nbsp; n &nbsp;&nbsp; 25<br>
+<br>
+prime_n[n]={2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
+<br>
+<br>
+void binary_search(int key){<br>
+&nbsp;&nbsp;&nbsp;   int i=0;<br>
+&nbsp;&nbsp;&nbsp;   int low, high, mid;<br>
+<br>
+&nbsp;&nbsp;&nbsp;   low=0;<br>
+&nbsp;&nbsp;&nbsp;   high=n-1;<br>
+<br>
+&nbsp;&nbsp;&nbsp;   while(low <= high){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      i=i+1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      mid = (low + high)/2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      if(prime_n[mid] == key){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         printf("%s\n", "素数です。");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         printf("探索回数=%d\n", i+1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         exit(0);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      else if(prime_n[mid] > key)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         high = mid - 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         low =mid + 1;<br>
+&nbsp;&nbsp;&nbsp;   }<br>
+&nbsp;&nbsp;&nbsp;   printf("%s\n", "素数ではありません。");<br>
+&nbsp;&nbsp;&nbsp;   printf("探索回数=%d\n", i);<br>
+}<br>
+<br>
+int main(void){<br>
+&nbsp;&nbsp;&nbsp;   int i;<br>
+&nbsp;&nbsp;&nbsp;   int key;<br>
+&nbsp;&nbsp;&nbsp;   printf("97以下の自然数を入力してください。\n");<br>
+&nbsp;&nbsp;&nbsp;   scanf("%d", &key);<br>
+<br> 
+&nbsp;&nbsp;&nbsp;   binary_search(key);<br>
+<br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+}<br>
+
+ </div>
+<br>
+
+</div>
+
+
+</body>
+</html> 
