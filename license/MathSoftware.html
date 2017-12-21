@@ -36,7 +36,7 @@ div.child2{
     background-color: lightblue;
     text-align: left;
     font-size: 18px;
-    width: 500px;
+    width: 600px;
     margin: auto;
     padding:6px 6px 6px;
 }
@@ -59,7 +59,6 @@ div.child2{
   <A href="test3.pdf">\(\TeX\)文書(.pdf)の例</A>
 </b1>
   <br>
-
 <b1>
   <a href="MJsample.html">MathJaxの例</a>
 </b1>
@@ -68,6 +67,48 @@ div.child2{
 <b1>
   <A href="MathJaxTemplate.html">MathJaxテンプレート </A>
 </b1>
+<br>
+<br>
+<div class="parent">
+ <div class="child2">
+
+ &lt;!DOCTYPE html> <br>
+ &lt;html lang="ja"> <br>
+ &lt;head> <br>
+ &lt;meta charset="UTF-8">  <br>
+ &lt;title> &lt;/title> <br>
+ &lt;script type="text/javascript" async  <br>
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"> <br> 
+ &lt;/script> <br>
+ &lt;style> <br>
+body{ <br>
+  margin:  100px; <br>
+  font-size: x-large; <br>
+} <br>
+ &lt;/style> <br>
+ <br>
+ &lt;/head> <br>
+ &lt;body> <br>
+ <br>
+ &lt;!-- <code>\[ と \]</code>で囲まれた範囲に数式を書きます。--> <br>
+ <br>
+<code>
+\[<br>
+ y = \sin x <br>
+\]<br>
+</code>
+ <br>
+
+ &lt;!-- 図の挿入 --> <br>
+ &lt;center> <br>
+ &lt;img src="sin.png" width="350"> <br>
+ &lt;/center> <br>
+ <br> <br>
+ &lt;/body> <br>
+ &lt;/html>  <br>
+ </div>
+</div>
+
   <br>
   <br>
   <br>
@@ -78,7 +119,9 @@ div.child2{
 <b1>
   <a href="quad.png">２次関数のグラフ</a>
 </b1>
-  <br>
+<br>
+<img src="quad.png" width="350">
+<br>
 <b1>
   <a href="quad.plt">quad.pltファイル</a>
 </b1>
@@ -100,7 +143,8 @@ div.child2{
 <b1>
  <center>
   <a href="quad2.png">２次関数のグラフ2</a>
-
+<br>
+<img src="quad2.png" width="350">
   <br>
   <br>
 
@@ -130,6 +174,9 @@ div.child2{
 <b1>
 <a href="sin.png">サイン関数のグラフ</a>
 <br>
+<img src="sin.png" width="350">
+<br>
+
 <a href="sin.plt">sin.pltファイル</a>
 </b1>
 <br>
@@ -152,9 +199,52 @@ div.child2{
 
 <br>
 <br>
+
+<center>
+<b1>
+<a href="sin.png">タンジェント関数のグラフ</a>
+<br>
+<img src="tangent.png" width="350">
+<br>
+
+<a href="tangent.plt">tangent.pltファイル</a>
+</b1>
+<br>
+<br>
+</center>
+
+<div class="parent">
+ <div class="child2">
+   # タンジェント関数の描画<br>
+   reset<br>
+   set terminal png<br>
+   set output "tangent.png"<br>
+   set nokey <br>
+   set grid <br>
+<br>
+   set xtics ("-3p/2" -1.5*pi, "-p" -pi, "-p/2" -0.5*pi,  \ <br>
+   "0" 0.0, "p/2" 0.5*pi, "p" pi, "3p/2" 1.5*pi) font "Symbol" <br>
+<br>
+   set ytics -4, 1 <br>
+   set xzeroaxis <br>
+   set yzeroaxis <br>
+   set xrange [-1.5*pi: 1.5*pi] <br>
+   set yrange [-4:4] <br>
+   plot tan(x) ls 1 notitle <br>
+ </div>
+</div>
+
+<br>
+<br>
+<center>
+
+
+
 <center>
 <b1>
 <a href="lissajous.png">リサージュ図形</a>
+<br>
+<img src="lissajous.png" width="350">
 <br>
 
 <a href="lissajous.plt">lissajous.pltファイル</a>
