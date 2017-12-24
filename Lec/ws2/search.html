@@ -48,20 +48,20 @@ void search(int key){<br>
 <br>
 &nbsp;&nbsp;&nbsp; while(prime_n[i] <= key){<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(prime_n[i] == key){<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("%s\n", "素数です。");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("素数です。\n");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printf("探索回数=%d\n", i+1);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit(0);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i++;<br>
 &nbsp;&nbsp;&nbsp; }<br>
-&nbsp;&nbsp;&nbsp; printf("%s\n", "素数ではありません。");<br>
+&nbsp;&nbsp;&nbsp; printf("素数ではありません。\n");<br>
 &nbsp;&nbsp;&nbsp; printf("探索回数=%d\n", i+1);<br>
 }<br>
 <br>
 int main(void){<br>
 &nbsp;&nbsp;&nbsp;   int i;<br>
 &nbsp;&nbsp;&nbsp;   int key;<br>
-&nbsp;&nbsp;&nbsp;   printf("97以下の自然数を入力してください。\n");<br>
+&nbsp;&nbsp;&nbsp;   printf("100以下の自然数を入力してください。\n");<br>
 &nbsp;&nbsp;&nbsp;   scanf("%d", &key);<br>
 <br> 
 &nbsp;&nbsp;&nbsp;   search(key);<br>
@@ -98,7 +98,7 @@ void binary_search(int key){<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      i=i+1;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      mid = (low + high)/2;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      if(prime_n[mid] == key){<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         printf("%s\n", "素数です。");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         printf(""素数です。\n");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         printf("探索回数=%d\n", i+1);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         exit(0);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      }<br>
@@ -107,14 +107,14 @@ void binary_search(int key){<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      else<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         low =mid + 1;<br>
 &nbsp;&nbsp;&nbsp;   }<br>
-&nbsp;&nbsp;&nbsp;   printf("%s\n", "素数ではありません。");<br>
+&nbsp;&nbsp;&nbsp;   printf(""素数ではありません。\n");<br>
 &nbsp;&nbsp;&nbsp;   printf("探索回数=%d\n", i);<br>
 }<br>
 <br>
 int main(void){<br>
 &nbsp;&nbsp;&nbsp;   int i;<br>
 &nbsp;&nbsp;&nbsp;   int key;<br>
-&nbsp;&nbsp;&nbsp;   printf("97以下の自然数を入力してください。\n");<br>
+&nbsp;&nbsp;&nbsp;   printf("100以下の自然数を入力してください。\n");<br>
 &nbsp;&nbsp;&nbsp;   scanf("%d", &key);<br>
 <br> 
 &nbsp;&nbsp;&nbsp;   binary_search(key);<br>
@@ -124,6 +124,95 @@ int main(void){<br>
 
  </div>
 <br>
+<br>
+<br>
+<br>
+<p>
+<h2>配列の添え字とkeyを一致させる</h2>
+</p>
+ <div class="child2">
+/*<br>
+   keyと配列の添え字(subscript)を一致させる<br>
+*/<br>
+<br>
+#include &lt;stdio.h><br>
+<br>
+#define &nbsp; n &nbsp;&nbsp; 101<br>
+<br>
+prime_n[n]={0,0,2, 3,0, 5,0, 7,0,0,0, 11,0, 13,0,0,0, 17,0, 19,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            0,0,0, 23,0,0,0,0,0, 29,0, 31,0,0,0,0,0, 37,0,0,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+0, 41,0, 43,0,0,0, 47,0,0,0,0,0, 53,0,0,0,0,0, 59,<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            0, 61,0,0,0,0,0, 67,0,0,0, 71,0, 73,0,0,0,0,0, 79,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            0,0,0, 83,0,0,0,0,0, 89,0,0,0,0,0,0,0, 97,0,0,0};<br>
+<br>
+void search(int key){<br>
+<br>
+&nbsp;&nbsp;&nbsp;    if(prime_n[key] == 0)<br>
+   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;    printf("素数ではありません。\n");<br>
+&nbsp;&nbsp;&nbsp;    else<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;      printf("素数です。\n");<br>   
+}<br>
+<br>
+int main(void){<br>
+&nbsp;&nbsp;&nbsp;    int key;<br>
+&nbsp;&nbsp;&nbsp;    printf("100以下の自然数を入力してください。\n");<br>
+&nbsp;&nbsp;&nbsp;    scanf("%d", &key);<br>
+ <br>
+&nbsp;&nbsp;&nbsp;    search(key);<br>
+<br>
+&nbsp;&nbsp;&nbsp; return 0;<br>
+}<br>
+
+ </div>
+<br>
+<br>
+<br>
+<br>
+<p>
+<h2>ハッシュ法</h2>
+</p>
+ <div class="child2">
+/* <br>
+   ハッシュ法 <br>
+*/ <br>
+<br>
+#include &lt;stdio.h><br>
+<br>
+#define &nbsp; n &nbsp;&nbsp; 49<br>
+<br>
+prime_n[n]={0,0,2, 3, 53, 5,0, 7,0,0, 59, 11, 61, 13,0,0,0, 17, 67,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             19, 0,0, 71, 23, 73,0,0,0,0, 29, 79, 31,0,0, 83,0,0,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              37,0,0, 89, 41,0, 43,0,0,0, 47, 97};<br>
+<br>
+void search(int key){<br>
+&nbsp;&nbsp;&nbsp;   int h;<br>
+&nbsp;&nbsp;&nbsp;   h = key%49;<br> 
+&nbsp;&nbsp;&nbsp;   <br>
+&nbsp;&nbsp;&nbsp;   if(prime_n[h] == key)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      printf("素数です。\n");<br>
+&nbsp;&nbsp;&nbsp;   else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("素数ではありません。\n");<br>
+}<br>
+<br>
+int main(void){<br>
+&nbsp;&nbsp;&nbsp;   int key;<br>
+&nbsp;&nbsp;&nbsp;   printf("100以下の自然数を入力してください。\n");<br>
+&nbsp;&nbsp;&nbsp;   scanf("%d", &key);<br>
+<br> 
+&nbsp;&nbsp;&nbsp;   search(key);<br>
+<br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+}<br>
+
+ </div>
+
+
 
 </div>
 
