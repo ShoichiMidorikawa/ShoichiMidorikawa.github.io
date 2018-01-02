@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"> 
+<title></title>
+<style>
+div.parent{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+
+div.child2{
+    background-color: lightblue;
+    border: solid 1px #000000;
+    border-radius: 7px; /*角の丸み*/
+    border-style: solod;
+    text-align: left;
+    width: 680px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+</style>
+<script>
+  // ここには、JavaScript言語で記述します。　
+</script>
+</head>
+<body>
+
+<div class=parent>
+<h1>連結リスト(Linked List)</h1>
+
+<h2>簡単な例(Simple Example)</h2>
+ <div class="child2">
+#include &lt;stdio.h><br>  
+#include &lt;stdlib.h><br>
+<br>
+/* セルの定義 */ <br>
+typedef struct cell{ <br>
+&nbsp;&nbsp;&nbsp;    struct cell *next; <br>
+&nbsp;&nbsp;&nbsp;    int data; <br>
+}cell; <br>
+ <br>
+cell c1, c2, c3; <br>
+ <br>
+int main(void){ <br>
+ <br> 
+&nbsp;&nbsp;&nbsp;  cell *p; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  c1.next = &c2; <br>
+&nbsp;&nbsp;&nbsp;  c1.data = 23; <br>
+&nbsp;&nbsp;&nbsp;  c2.next = &c3; <br>
+&nbsp;&nbsp;&nbsp;  c2.data = 31; <br>
+&nbsp;&nbsp;&nbsp;  c3.next = NULL; <br>
+&nbsp;&nbsp;&nbsp;  c3.data = 97; <br>
+ <br> 
+&nbsp;&nbsp;&nbsp;  for(p= &c1; p != NULL; p = p -> next) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("%d\n", p -> data); <br>
+ <br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+}<br>
+ </div>
+<br>
+<br>
+<br>
+<h2>簡単な例2(Simple Example2) - 要素の初期化  -</h2>
+ <div class="child2">
+/* <br>
+&nbsp;&nbsp;&nbsp; 構造体の初期化2 <br>
+*/ <br>
+<br>
+#include &lt;stdio.h><br>  
+#include &lt;stdlib.h><br>
+<br>
+typedef struct cell{ <br>
+&nbsp;&nbsp;&nbsp;    struct cell *next; <br>
+&nbsp;&nbsp;&nbsp;    int data; <br>
+}cell; <br>
+ <br>
+int main(void){ <br>
+ <br> 
+&nbsp;&nbsp;&nbsp;  cell *p; <br>
+ <br>
+&nbsp;&nbsp;&nbsp; // 初期化の順番に注意！<br>
+&nbsp;&nbsp;&nbsp;  cell c3 = {NULL, 97}; <br>
+&nbsp;&nbsp;&nbsp;  cell c2 = { &c3, 31}; <br>
+&nbsp;&nbsp;&nbsp;  cell c1 = { &c2, 23}; <br>
+ <br> 
+&nbsp;&nbsp;&nbsp;  for(p= &c1; p != NULL; p = p -> next) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("%d\n", p -> data); <br>
+ <br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+}<br>
+ </div>
+<br>
+<br>
+<br>
+<p>
+<h2>要素の追加(Adding an Item)</h2>
+</p>
+ <div class="child2">
+/* <br>
+&nbsp;&nbsp;&nbsp;   要素の挿入 <br>
+*/ <br>
+
+#include  &lt;stdio.h><br>
+#include  &lt; stdlib.h> <br>
+ <br>
+typedef struct cell{ <br>
+&nbsp;&nbsp;&nbsp;    struct cell *next; <br>
+&nbsp;&nbsp;&nbsp;    int data; <br>
+}cell; <br>
+ <br>
+int main(void){ <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  cell *p; <br>
+&nbsp;&nbsp;&nbsp;  cell *pt; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  cell c3 = {NULL, 97}; <br>
+&nbsp;&nbsp;&nbsp;  cell c2 = { &c3, 31}; <br>
+&nbsp;&nbsp;&nbsp;  cell c1 = { &c2, 23}; <br>
+ <br> 
+&nbsp;&nbsp;&nbsp;  cell ct; <br>
+<br>
+&nbsp;&nbsp;&nbsp;  ct.data = 123; <br> 
+ <br>
+&nbsp;&nbsp;&nbsp;  p =  &c2; <br>
+&nbsp;&nbsp;&nbsp;  pt = &ct; <br>
+&nbsp;&nbsp;&nbsp;  pt -> next = p -> next; <br>
+&nbsp;&nbsp;&nbsp;  p -> next = pt; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  for(p= &c1; p != NULL; p = p -> next) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("%3d\n", p -> data); <br>
+ <br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+}<br>
+
+ </div>
+<br>
+<br>
+<br>
+<br>
+<p>
+<h2>要素の削除(Removing an Item)</h2>
+</p>
+ <div class="child2">
+/*<br>
+&nbsp;&nbsp;&nbsp;   リストの削除<br>
+*/<br>
+<br>
+#include &lt;stdio.h><br>
+#include &lt;stdlib.h> <br>
+<br>
+typedef struct cell{ <br>
+&nbsp;&nbsp;&nbsp;    struct cell *next; <br>
+&nbsp;&nbsp;&nbsp;    int data; <br>
+}cell; <br>
+ <br>
+int main(void){ <br>
+ <br> 
+&nbsp;&nbsp;&nbsp;  cell *p, *pt; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  cell c3 = {NULL, 97}; <br>
+&nbsp;&nbsp;&nbsp;  cell c2 = { &c3, 31}; <br>
+&nbsp;&nbsp;&nbsp;  cell c1 = { &c2, 23}; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  pt =  &c1; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  p = pt -> next; <br>
+&nbsp;&nbsp;&nbsp;  pt -> next = p ->next;
+ <br>
+&nbsp;&nbsp;&nbsp;  for(p= &c1; p != NULL; p = p -> next) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("%3d\n", p -> data); <br>
+<br>
+&nbsp;&nbsp;&nbsp; return 0;<br>
+}<br>
+ </div>
+
+
+</div>
+
+
+</body>
+</html> 
