@@ -10,11 +10,20 @@ div.parent{
 p{
   text-align: center;
 }
-
 div.child2{
     background-color: lightblue;
     border: solid 1px #000000;
     border-radius: 7px; /*角の丸み*/
+    border-style: solod;
+    text-align: left;
+    width: 680px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+div.child3{
+    background-color: palegreen;
+    border: solid 1px #000000;
+//    border-radius: 7px; /*角の丸み*/
     border-style: solod;
     text-align: left;
     width: 680px;
@@ -96,12 +105,53 @@ int main(void){ <br>
 <br>
 <br>
 <br>
+<h2>ヘッダーの導入(Using a Header Node)</h2>
+ <div class="child2">
+/* <br>
+&nbsp;&nbsp;&nbsp; headerの導入 <br>
+*/ <br>
+<br>
+#include &lt;stdio.h><br>  
+#include &lt;stdlib.h><br>
+<br>
+typedef struct cell{ <br>
+&nbsp;&nbsp;&nbsp;    struct cell *next; <br>
+&nbsp;&nbsp;&nbsp;    int data; <br>
+}cell; <br>
+ <br>
+int main(void){ <br>
+ <br> 
+&nbsp;&nbsp;&nbsp;  cell *p; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  cell c3 = {NULL, 97}; <br>
+&nbsp;&nbsp;&nbsp;  cell c2 = { &c3, 31}; <br>
+&nbsp;&nbsp;&nbsp;  cell c1 = { &c2, 23}; <br>
+&nbsp;&nbsp;&nbsp;  cell header = {&c1, };<br> 
+ <br> 
+&nbsp;&nbsp;&nbsp;  for(p=header.next; p != NULL; p = p -> next) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("%d\n", p -> data); <br>
+ <br>
+&nbsp;&nbsp;&nbsp;return 0;<br>
+}<br>
+ </div>
+<br>
+<p>
+<h3>実行結果</h3>
+</p>
+ <div class="child3">
+23 <br>
+31 <br>
+97 <br>
+ </div>
+<br>
+<br>
+<br>
 <p>
 <h2>要素の追加(Adding an Item)</h2>
 </p>
  <div class="child2">
 /* <br>
-&nbsp;&nbsp;&nbsp;   要素の挿入 <br>
+&nbsp;&nbsp;&nbsp;   要素の追加 <br>
 */ <br>
 
 #include  &lt;stdio.h><br>
@@ -120,9 +170,9 @@ int main(void){ <br>
 &nbsp;&nbsp;&nbsp;  cell c3 = {NULL, 97}; <br>
 &nbsp;&nbsp;&nbsp;  cell c2 = { &c3, 31}; <br>
 &nbsp;&nbsp;&nbsp;  cell c1 = { &c2, 23}; <br>
+&nbsp;&nbsp;&nbsp;  cell header = { &c1, };<br> 
  <br> 
 &nbsp;&nbsp;&nbsp;  cell ct; <br>
-<br>
 &nbsp;&nbsp;&nbsp;  ct.data = 123; <br> 
  <br>
 &nbsp;&nbsp;&nbsp;  p =  &c2; <br>
@@ -130,13 +180,30 @@ int main(void){ <br>
 &nbsp;&nbsp;&nbsp;  pt -> next = p -> next; <br>
 &nbsp;&nbsp;&nbsp;  p -> next = pt; <br>
  <br>
-&nbsp;&nbsp;&nbsp;  for(p= &c1; p != NULL; p = p -> next) <br>
+&nbsp;&nbsp;&nbsp;  for(p = header.next; p != NULL; p = p -> next) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("%3d\n", p -> data); <br>
  <br>
 &nbsp;&nbsp;&nbsp;return 0;<br>
 }<br>
-
  </div>
+<br>
+<p>
+<h3>実行結果</h3>
+</p>
+ <div class="child3">
+&nbsp; 23 <br>
+&nbsp; 31 <br>
+123 <br>
+&nbsp; 97 <br>
+ </div>
+<br>
+25行目を p = &header; とすると、
+ <div class="child3">
+123 <br>
+&nbsp; 23 <br>
+&nbsp; 31 <br>
+&nbsp; 97 <br>
+ </div> 
 <br>
 <br>
 <br>
@@ -146,7 +213,7 @@ int main(void){ <br>
 </p>
  <div class="child2">
 /*<br>
-&nbsp;&nbsp;&nbsp;   リストの削除<br>
+&nbsp;&nbsp;&nbsp;   要素の削除<br>
 */<br>
 <br>
 #include &lt;stdio.h><br>
@@ -164,18 +231,33 @@ int main(void){ <br>
 &nbsp;&nbsp;&nbsp;  cell c3 = {NULL, 97}; <br>
 &nbsp;&nbsp;&nbsp;  cell c2 = { &c3, 31}; <br>
 &nbsp;&nbsp;&nbsp;  cell c1 = { &c2, 23}; <br>
+&nbsp;&nbsp;&nbsp;  cell header = { &c1, };<br>
  <br>
-&nbsp;&nbsp;&nbsp;  pt =  &c1; <br>
+&nbsp;&nbsp;&nbsp;  pt =  &c1; &nbsp; // c1の次のリスト(すなわちc2)を削除<br>
  <br>
 &nbsp;&nbsp;&nbsp;  p = pt -> next; <br>
 &nbsp;&nbsp;&nbsp;  pt -> next = p ->next;
  <br>
-&nbsp;&nbsp;&nbsp;  for(p= &c1; p != NULL; p = p -> next) <br>
+&nbsp;&nbsp;&nbsp;  for(p = header.next; p != NULL; p = p -> next) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     printf("%3d\n", p -> data); <br>
 <br>
 &nbsp;&nbsp;&nbsp; return 0;<br>
 }<br>
  </div>
+<br>
+<p>
+<h3>実行結果</h3>
+</p>
+ <div class="child3">
+&nbsp; 23 <br>
+&nbsp; 97 <br>
+ </div>
+<br>
+25行目を p = &header; とすると、
+ <div class="child3">
+&nbsp; 31 <br>
+&nbsp; 97 <br>
+ </div> 
 
 
 </div>
