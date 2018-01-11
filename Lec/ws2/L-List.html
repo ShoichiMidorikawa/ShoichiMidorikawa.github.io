@@ -30,6 +30,11 @@ div.child3{
     margin: auto;
     padding:6px 6px 6px;
 }
+div.child4{
+    text-align: right;
+    width: 670px;
+    margin: auto;
+}
 </style>
 <script>
   // ここには、JavaScript言語で記述します。　
@@ -258,6 +263,87 @@ int main(void){ <br>
 &nbsp; 31 <br>
 &nbsp; 97 <br>
  </div> 
+-----------
+<br>
+<br>
+<br>
+<br>
+<p>
+<h2>リストの最後のセルを削除する関数 delete_LC(struct cell *q)</h2>
+</p>
+ <div class="child2">
+/*<br>
+&nbsp;&nbsp;&nbsp;   リストの最後のセルを削除する関数 delete_LC(struct cell *q)<br>
+*/<br>
+<br>
+#include &lt;stdio.h><br>
+#include &lt;stdlib.h> <br>
+#include &lt;string.h> <br>
+
+<br>
+typedef struct cell{ <br>
+&nbsp;&nbsp;&nbsp;    struct cell *next; <br>
+&nbsp;&nbsp;&nbsp;    char name[30]; <br>
+}cell; <br>
+ <br>
+void delete_LC(struct cell *q){ <br>
+&nbsp;&nbsp;&nbsp;   cell *p; <br>
+&nbsp;&nbsp;&nbsp;   p = q -> next; <br>
+&nbsp;&nbsp;&nbsp;   if(p -> next == NULL){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      q -> next = NULL; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      printf("%25s\n", p -> name); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      if(strcmp(q -> name,"And Then There Were None!") == 0) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         printf("%20s\n", q -> name); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      return; <br>
+&nbsp;&nbsp;&nbsp;   } <br>
+&nbsp;&nbsp;&nbsp;   if(p != NULL){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      delete_LC(q -> next); <br>
+&nbsp;&nbsp;&nbsp;   } <br>
+} <br> 
+ <br>
+int main(void){ <br>
+ <br>  
+&nbsp;&nbsp;&nbsp;  int i; <br>
+&nbsp;&nbsp;&nbsp;  cell c10 ={NULL,  "Ten Little Indians"}; <br> 
+&nbsp;&nbsp;&nbsp;  cell c9 = { &c10, "Nine Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c8 = { &c9,  "Eight Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c7 = { &c8,  "Seven Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c6 = { &c7,  "Six Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c5 = { &c6,  "Five Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c4 = { &c5,  "Four Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c3 = { &c4,  "Three Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c2 = { &c3,  "Two Little Indians"};  <br>
+&nbsp;&nbsp;&nbsp;  cell c1 = { &c2,  "One Little Indian"};  <br>
+&nbsp;&nbsp;&nbsp;  cell header = { &c1, "And Then There Were None!"}; <br>
+ <br>
+&nbsp;&nbsp;&nbsp;  for(i=0; i<10; i++){ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    delete_LC(&header); <br>
+&nbsp;&nbsp;&nbsp;  } <br>
+<br>
+&nbsp;&nbsp;&nbsp; return 0;<br>
+}<br>
+ </div>
+<br>
+<p>
+<h3>実行結果</h3>
+</p>
+ <div class="child3">
+   <div class="child4">
+       Ten Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+      Nine Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+     Eight Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+     Seven Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+       Six Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+      Five Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+      Four Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+     Three Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+       Two Little Indians  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+        One Little Indian  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+And Then There Were None!  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&nbsp; <br>
+   </div>
+ </div>
+
+
 
 
 </div>
