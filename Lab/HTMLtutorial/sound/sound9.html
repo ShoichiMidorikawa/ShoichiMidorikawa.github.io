@@ -8,8 +8,11 @@
 <script>
 onload= function(){
   var sl=document.getElementById('sel1');
-  var im=document.getElementById('image');
-  
+  var   im=document.getElementById('image');
+
+  str = "https://www.youtube.com/embed/w40ushYAaYA?rel=0";
+  image.src=str+"&autoplay=0" ;
+
   sl.onchange = function(){
     var selectedItem = this.options[this.selectedIndex];
     if(selectedItem.value == 0){
@@ -29,7 +32,7 @@ onload= function(){
     for(var i=0; i<5; i++)
            b[i].style.color='black';
     b[0].style.color='red';
-    image.src="https://www.youtube.com/embed/w40ushYAaYA?rel=0&autoplay=1" ;
+    image.src=str+"&autoplay=1" ;
   }
   b[1].onclick = function(){
     for(var i=0; i<5; i++)
@@ -55,7 +58,6 @@ onload= function(){
     b[4].style.color='red';
     image.src="https://www.youtube.com/embed/852RYmmr53I?rel=0&autoplay=1" ;
   }
- 
 };
 
 </script>
@@ -74,20 +76,19 @@ onload= function(){
  <option value="0">ON</option>
  <option value="1" >OFF</option>
 </select>
-
-
 <br>
 <br>
-<button id="btn0" >Singing In The Rain <br> Gene Kelly </button>
+<button id="btn0" >Singin'In The Rain <br> Gene Kelly </button>
 <button id="btn1" >Rhythm Of The Rain <br> Cascades </button>
 <button id="btn2" >Rain Drops Keep Falling On My Head <br> B.J. Thomas </button>
 <button id="btn3" >Have You Ever Seen The Rain? <br> Creedence Clearwater Revival </button>
 <button id="btn4" >L`a Pioggia (雨) <br> Gigliola Cinquetti</button>
 <br>
-<p> 
+<br>
+<p>
 <iframe  id="image" width="600" height="390" 
-src="https://www.youtube.com/embed/w40ushYAaYA?rel=0"
-frameborder="0" allowfullscreen></iframe> </p>
+</iframe> </p>
 </center>
 </body>
 </html> 
+
