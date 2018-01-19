@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> 2010年ヒットソング</title>
+<style>
+h2{
+ position: absolute;
+  top: 120px;
+  right: 390px;
+}
+h3{
+ position: absolute;
+  top: 600px;
+  left: 30px;
+}
+</style>
+<script>
+onload= function(){
+  var sl=document.getElementById('sel1');
+  var im=document.getElementById('image');
+  
+  sl.onchange = function(){
+    var selectedItem = this.options[this.selectedIndex];
+    if(selectedItem.value == 0){
+      im.width='600';
+      im.height='390';
+    }else if(selectedItem.value == 1){
+      im.width='0';
+      im.height='0';
+    }
+    console.log( selectedItem.value );
+  }
+
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    image.src="https://www.youtube.com/embed/HDn_EK7VRwQ?rel=0&autoplay=1";
+  }
+  b[1].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    image.src="https://www.youtube.com/embed/lkHlnWFnA0c?rel=0&autoplay=1";
+  }
+  b[2].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[2].style.color='red';
+    image.src="https://www.youtube.com/embed/Hr5qRBLWnRc?rel=0&autoplay=1";
+  }
+ 
+};
+
+</script>
+</head>
+<body>
+<center>
+<h1>
+<p>2010年 CD売り上げ TOP3</p>
+</h1>
+
+
+動画(ON/OFF)
+<select id="sel1">
+ <option value="0">ON</option>
+ <option value="1" >OFF</option>
+</select>
+
+<br>
+<br>
+<h2>
+1位
+<button id="btn0" > 　Beginner　 <br>　 AKB48　 </button>
+2位
+<button id="btn1" >　ヘビーローテーション　 <br> 　AKB48　 </button>
+3位
+<button id="btn2" > 　Troublemaker　 <br>　 嵐 　</button>
+</h2>
+<br>
+<p> 
+<iframe  id="image" width="600" height="390" 
+src="https://www.youtube.com/embed/HDn_EK7VRwQ?rel=0"
+frameborder="0" allowfullscreen></iframe> 
+
+
+</p>
+</center>
+<h3>
+<a href="1996~2017.html">TOPへ戻る</a>
+<a name="1996~2017"></a><br>
+<a href="https://entamedata.web.fc2.com/music/hit_music2010.html">ランキングサイト</a></br>
+</h3>
+</body>
+</html> 
