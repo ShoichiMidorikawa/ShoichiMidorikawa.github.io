@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Timer</title>
+<style>
+  p{
+    position: relative; 
+    text-align: center;
+    top: -200px;
+    font-size : 200px; 
+  }
+  p2{
+    position: relative; 
+    top: -350px;
+    font-size : 200px; 
+  }
+  button{
+    font-size:20pt;
+    width:80px;
+    height:40px
+  }
+
+</style>
+
+<script>
+
+
+var now;
+var s, m, h;
+var s0, m0, h0;
+
+function showClock(){
+ if(str1=='1'){
+   now = new Date();
+   h0 = now.getHours();
+   m0 = now.getMinutes();
+   s0 = now.getSeconds(); 
+   image2.innerHTML = '';
+ }
+ 
+ var now2 = new Date();
+ var h1 = now2.getHours();
+ var m1 = now2.getMinutes();
+ var s1 = now2.getSeconds(); 
+  
+ if(s1<s0){
+   s1=s1+60;
+   m1=m1-1;  
+ }
+   s=s1-s0;
+   if(s<10)
+    s='0'+s;
+ 
+ if(m1<m0){
+   m1=m1+60;
+   h1=h1-1;
+ }
+  m=m1-m0;
+  h=h1-h0;
+  if(m<10)
+     m='0'+m;
+
+ msg = h + ':' + m + ':' + s;
+ var image=document.getElementById('image');
+ image.innerHTML = msg;
+
+//  console.log(s);
+  if(m==4 && s<1){
+     image2.innerHTML = '残り１分';
+     var aud = document.getElementById("aaa");
+     aud.play();  
+  } 
+  else if(m==4 && s>2){
+    image2.innerHTML = '';
+  }
+  else if(m==5 &&  s<2){
+     image2.innerHTML = '講演終了';
+     var aud = document.getElementById("aaa");
+     aud.play();  
+  }  
+  else if(m==5 && s>3){
+    image2.innerHTML = '';
+  }
+  else if(m==7 &&  s<3){
+     image2.innerHTML = '質問終了';
+     var aud = document.getElementById("aaa");
+     aud.play();  
+  }    
+};
+
+function showClock2(){
+};
+
+
+var str1=0;  
+function onClick(){     
+  setInterval('showClock()', 1000);
+  str1=1;
+};
+
+function onClick2(){
+  now = new Date();
+  h0 = now.getHours();
+  m0 = now.getMinutes();
+  s0 = now.getSeconds(); 
+  setInterval('showClock()', 1000);
+  str1=0;
+};
+
+</script>
+</head>
+
+<body>
+<button id="btn2"  onclick="onClick2()">start</button>
+<button id="btn"  onclick="onClick()">stop</button><br>
+<p id="image"> </p>
+<br>
+<center>
+<p2 id="image2"></p2>
+</center>
+<audio id="aaa" src="do.wav"></audio>
+
+</body>
+</html> 
