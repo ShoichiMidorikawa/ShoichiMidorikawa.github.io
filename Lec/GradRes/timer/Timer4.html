@@ -17,7 +17,7 @@
   }
   button{
     font-size:20pt;
-    width:80px;
+    width:130px;
     height:40px
   }
 
@@ -29,6 +29,9 @@
 var now;
 var s, m, h;
 var s0, m0, h0;
+var s2=0, m2=0, h2=0;
+var s3, m3, h3;
+
 
 function showClock(){
  if(str1=='1'){
@@ -40,28 +43,41 @@ function showClock(){
  }
  
  var now2 = new Date();
- var h1 = now2.getHours();
- var m1 = now2.getMinutes();
- var s1 = now2.getSeconds(); 
+ var h1 = h2+now2.getHours();
+ var m1 = m2+now2.getMinutes();
+ var s1 = s2+now2.getSeconds(); 
   
  if(s1<s0){
    s1=s1+60;
    m1=m1-1;  
  }
    s=s1-s0;
-   if(s<10)
-    s='0'+s;
+ if(s>=60){
+   s=s%60;
+   m1+=1;
+  }  
  
  if(m1<m0){
    m1=m1+60;
+ if(m1>=60){
+   m1=m1%60;
+   h1+=1;
+ }
    h1=h1-1;
  }
   m=m1-m0;
   h=h1-h0;
   if(m<10)
-     m='0'+m;
+     m=m;
 
- msg = h + ':' + m + ':' + s;
+  s3=s;
+  if(s3<10)
+    s3='0'+s3;
+  m3=m;
+  if(m3<10)
+    m3='0'+m3;
+ 
+ msg = h + ':' + m3 + ':' + s3;
  var image=document.getElementById('image');
  image.innerHTML = msg;
 
@@ -94,12 +110,22 @@ function showClock2(){
 
 
 var str1=0;  
-function onClick(){     
+
+function onClick3(){ 
+  s2=0; m2=0; h2=0;
   setInterval('showClock()', 1000);
   str1=1;
 };
 
-function onClick2(){
+
+function onClick2(){ 
+  s2=s; m2=m; h2=h;
+  setInterval('showClock()', 1000);
+  console.log('h2='+h+' m2='+m+' s2='+s ); 
+  str1=1;
+};
+
+function onClick(){
   now = new Date();
   h0 = now.getHours();
   m0 = now.getMinutes();
@@ -112,8 +138,9 @@ function onClick2(){
 </head>
 
 <body>
-<button id="btn2"  onclick="onClick2()">start</button>
-<button id="btn"  onclick="onClick()">stop</button><br>
+<button id="btn"  onclick="onClick()">開始</button>
+<button id="btn2"  onclick="onClick2()">一時停止</button>
+<button id="btn3"  onclick="onClick3()">リセット</button><br>
 <p id="image"> </p>
 <br>
 <center>
