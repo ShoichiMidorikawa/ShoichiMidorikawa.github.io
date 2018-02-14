@@ -32,6 +32,11 @@ var s0, m0, h0;
 var s2=0, m2=0, h2=0;
 var s3, m3, h3;
 
+onload = function(){
+ msg =  '0:00:00';
+ var image=document.getElementById('image');
+ image.innerHTML = msg;
+}
 
 function showClock(){
  if(str1=='1'){
@@ -105,9 +110,6 @@ function showClock(){
   }    
 };
 
-function showClock2(){
-};
-
 
 var str1=0;  
 
@@ -134,13 +136,19 @@ function onClick(){
   str1=0;
 };
 
+function onClick4(){
+     var aud = document.getElementById("aaa");
+     aud.play();  
+};
+
 </script>
 </head>
 
 <body>
 <button id="btn"  onclick="onClick()">開始</button>
 <button id="btn2"  onclick="onClick2()">一時停止</button>
-<button id="btn3"  onclick="onClick3()">リセット</button><br>
+<button id="btn3"  onclick="onClick3()">リセット</button>
+<button id="btn4"  onclick="onClick4()">ベル音</button><br>
 <p id="image"> </p>
 <br>
 <center>
