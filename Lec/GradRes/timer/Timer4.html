@@ -29,10 +29,14 @@
 var now;
 var s, m, h;
 var s0, m0, h0;
-var s2=0, m2=0, h2=0;
+var s2, m2, h2;
 var s3, m3, h3;
 
 onload = function(){
+  s2=0, m2=0, h2=0;
+  s3=0, m3=0, h3=0;
+  s=0,  m=0,  h=0;  
+
  msg =  '0:00:00';
  var image=document.getElementById('image');
  image.innerHTML = msg;
@@ -54,26 +58,30 @@ function showClock(){
   
  if(s1<s0){
    s1=s1+60;
-   m1=m1-1;  
+   if(m1>1){
+     m1=m1-1;
+   }
+   else if(m1==0){
+     m1=59;
+     h1=h1-1;
+   }        
  }
-   s=s1-s0;
+ s=s1-s0;
  if(s>=60){
    s=s%60;
    m1+=1;
-  }  
+ }  
  
  if(m1<m0){
    m1=m1+60;
- if(m1>=60){
-   m1=m1%60;
-   h1+=1;
- }
    h1=h1-1;
  }
-  m=m1-m0;
+ m=m1-m0;
+ if(m>=60){
+   m=m%60;
+   h1+=1;  
+ }
   h=h1-h0;
-  if(m<10)
-     m=m;
 
   s3=s;
   if(s3<10)
