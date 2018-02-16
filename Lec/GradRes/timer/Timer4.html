@@ -75,7 +75,7 @@ function showClock(){
  image.innerHTML = msg;
 
 //  console.log(s);
-  if(m==4 && s<1){
+  if(m==4 && s<0.9){
      image2.innerHTML = '残り１分';
      var aud = document.getElementById("aaa");
      aud.play();  
@@ -83,7 +83,7 @@ function showClock(){
   else if(m==4 && s>2){
     image2.innerHTML = '';
   }
-  else if(m==5 &&  s<2){
+  else if(m==5 &&  s<1.8){
      image2.innerHTML = '講演終了';
      var aud = document.getElementById("aaa");
      aud.play();  
@@ -91,7 +91,7 @@ function showClock(){
   else if(m==5 && s>3){
     image2.innerHTML = '';
   }
-  else if(m==7 &&  s<3){
+  else if(m==7 &&  s<2.7){
      image2.innerHTML = '質問終了';
      var aud = document.getElementById("aaa");
      aud.play();  
