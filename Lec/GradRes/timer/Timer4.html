@@ -75,26 +75,26 @@ function showClock(){
  image.innerHTML = msg;
 
 //  console.log(s);
-  if(m==4 && s<0.9){
+  if(m==4 && s<1){
      image2.innerHTML = '残り１分';
-     var aud = document.getElementById("aaa");
-     aud.play();  
+     var aud1 = document.getElementById("aaa1");
+     aud1.play();  
   } 
   else if(m==4 && s>2){
     image2.innerHTML = '';
   }
-  else if(m==5 &&  s<1.8){
+  else if(m==5 &&  s<1){
      image2.innerHTML = '講演終了';
-     var aud = document.getElementById("aaa");
-     aud.play();  
+     var aud2 = document.getElementById("aaa2");
+     aud2.play();  
   }  
   else if(m==5 && s>3){
     image2.innerHTML = '';
   }
-  else if(m==7 &&  s<2.7){
+  else if(m==7 &&  s<1){
      image2.innerHTML = '質問終了';
-     var aud = document.getElementById("aaa");
-     aud.play();  
+     var aud3 = document.getElementById("aaa3");
+     aud3.play();  
   }    
 };
 
@@ -125,8 +125,8 @@ function onClick(){
 };
 
 function onClick4(){
-     var aud = document.getElementById("aaa");
-     aud.play();  
+     var aud1 = document.getElementById("aaa1");
+     aud1.play();  
 };
 
 </script>
@@ -142,7 +142,9 @@ function onClick4(){
 <center>
 <p2 id="image2"></p2>
 </center>
-<audio id="aaa" src="do.wav"></audio>
+<audio id="aaa1" src="do1.wav"></audio>
+<audio id="aaa2" src="do2.wav"></audio>
+<audio id="aaa3" src="do3.wav"></audio>
 
 </body>
 </html> 
