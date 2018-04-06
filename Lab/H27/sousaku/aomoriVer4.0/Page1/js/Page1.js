@@ -1,4 +1,4 @@
-alert("���̃y�[�W�ł͉��y������܂�(�L�E�ցE)");
+﻿alert("このページでは音楽が流れます(´・ω・)");
 
 $(function(){
  $("C1").css("color","green");
