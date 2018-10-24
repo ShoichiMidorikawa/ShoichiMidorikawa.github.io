@@ -1,4 +1,16 @@
-﻿<!DOCTYPE html>
+﻿<!--
+1,2人用Timer
+1人の場合
+4分　予鈴
+5分　終了
+7分　質問終了
+2人の場合
+8分　予鈴
+10分　終了
+14分　質問終了
+-->
+
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -20,6 +32,13 @@
     width:130px;
     height:40px
   }
+  select{
+    position: relative; 
+    top: -2px;
+    font-size:20pt;
+    width:145px;
+    height:40px
+  }
 
 </style>
 
@@ -31,6 +50,8 @@ var s, m, h;
 var s0, m0, h0;
 var s2, m2, h2;
 var s3, m3, h3;
+var mm0,mm1,mm2;
+var flag;
 
 onload = function(){
   s2=0, m2=0, h2=0;
@@ -40,7 +61,26 @@ onload = function(){
  msg =  '0:00:00';
  var image=document.getElementById('image');
  image.innerHTML = msg;
+ var sl=document.getElementById('sel1');
+
+       mm0=4;
+       mm1=5;
+       mm2=7;
+       flag=0;
+
+ sl.onchange = function(){
+     var selectedItem = this.options[this.selectedIndex];
+     if(selectedItem.value == 1){
+       mm0=8;
+       mm1=10;
+       mm2=14;
+       flag=1;
+     }
+     console.log( selectedItem.value );
+  }
 }
+
+
 
 function showClock(){
  if(str1=='1'){
@@ -75,23 +115,27 @@ function showClock(){
  image.innerHTML = msg;
 
 //  console.log(s);
-  if(m==4 && s<1){
-     image2.innerHTML = '残り１分';
+  if(m==mm0 && s<1){
+     if(flag ==1){
+       image2.innerHTML = '残り2分';
+     }else{
+       image2.innerHTML = '残り１分';
+     }
      var aud1 = document.getElementById("aaa1");
      aud1.play();  
   } 
-  else if(m==4 && s>2){
+  else if(m==mm0 && s>2){
     image2.innerHTML = '';
   }
-  else if(m==5 &&  s<1){
+  else if(m==mm1 &&  s<1){
      image2.innerHTML = '講演終了';
      var aud2 = document.getElementById("aaa2");
      aud2.play();  
   }  
-  else if(m==5 && s>3){
+  else if(m==mm1 && s>3){
     image2.innerHTML = '';
   }
-  else if(m==7 &&  s<1){
+  else if(m==mm2 &&  s<1){
      image2.innerHTML = '質問終了';
      var aud3 = document.getElementById("aaa3");
      aud3.play();  
@@ -133,6 +177,10 @@ function onClick4(){
 </head>
 
 <body>
+<select id="sel1">
+ <option value="0">1人</option>
+ <option value="1" >2人</option>
+</select>
 <button id="btn"  onclick="onClick()">開始</button>
 <button id="btn2"  onclick="onClick2()">一時停止</button>
 <button id="btn3"  onclick="onClick3()">リセット</button>
