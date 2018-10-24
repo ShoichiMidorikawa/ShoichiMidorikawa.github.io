@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Timer</title>
+<style>
+  p{
+    position: relative; 
+    text-align: center;
+    top: -200px;
+    font-size : 200px; 
+  }
+  p2{
+    position: relative; 
+    top: -350px;
+    font-size : 200px; 
+  }
+  button{
+    font-size:20pt;
+    width:130px;
+    height:40px
+  }
+
+</style>
+
+<script>
+var stime; // 開始時刻
+var ptime; // 一時停止した時刻
+var phase; // 状態(0:開始待ち, 1:発表開始～終了1分前, 2:終了1分前～終了, 3:質問中, 4:終了後)
+var pausing = false; // 一時停止中フラグ
+
+var timespan=[0,0,0]; // 発表時間-1分, 発表時間, 発表時間 + 質問時間
+
+onload = function(){
+  phase = 0;
+  setTimeSpan();
+  setInterval('tick()', 10);
+}
+
+// 毎フレーム実行される関数
+function tick(){
+  showTime();
+  var infoText = ["開始前", "発表中", "残り1分以内", "質問時間", "発表終了"];
+  document.getElementById('infoarea').innerHTML = infoText[phase];
+  if ((Date.parse(new Date()) - stime)> timespan[phase-1]){
+    playBell(phase);
+    phase++;
+  }
+}
+
+// 時間表示
+function showTime(){
+  var ntime = Date.parse(new Date());
+  if (pausing){
+    ntime = ptime;
+  }
+  var s=0;
+  // カウントアップ
+  if (document.getElementById('selectType').value == 'cu'){
+    if (phase > 0){
+      s = parseInt((ntime - stime)/1000);
+    }
+  }
+  // カウントダウン
+  else{
+    var s;
+    if (phase == 0){
+      s=timespan[1]/1000; // 制限時間
+    }else{
+      if (phase <=2){ // 発表中
+        s = parseInt((timespan[1] - ntime + stime)/1000); // 制限時間-経過時間
+      }else{ // 質問中, 終了後
+        s = parseInt(-(timespan[1] - ntime + stime)/1000); // 経過時間-制限時間
+      }
+    }
+  }
+  var m = parseInt(s/60);
+  s = s%60;
+  document.getElementById('timearea').innerHTML = ('00' + m).slice(-2) + "'" + ('00' + s).slice(-2);
+}
+
+// num回ベルを鳴らす
+function playBell(num){
+  var bellSound = [new Audio("bell.mp3"), new Audio("bell.mp3"), new Audio("bell.mp3")];
+  bellSound[2].addEventListener("timeupdate", function(){
+    if (bellSound[2].currentTime>0.1){
+      bellSound[2].pause();
+      bellSound[1].play();
+    }
+  }, false);
+  bellSound[1].addEventListener("timeupdate", function(){
+    if (bellSound[1].currentTime>0.1){
+      bellSound[1].pause();
+      bellSound[0].play();
+    }
+  }, false);
+  bellSound[num-1].play();
+}
+
+// スタート
+function startPressed(){
+  phase = 1;
+  stime = Date.parse(new Date());
+  setInterval('tick()', 10);
+}
+
+// リセット
+function resetPressed(){
+  phase = 0;
+}
+
+// 一時停止・再開
+function pausePressed(){
+  if (document.getElementById('btnPause').value == '一時停止'){
+    ptime = Date.parse(new Date());
+    pausing = true;
+    document.getElementById('btnPause').value = '再開';
+  }else{
+    stime += Date.parse(new Date()) - ptime;
+    pausing = false;
+    document.getElementById('btnPause').value = '一時停止';
+  }
+}
+
+// 人数に応じて時間を設定
+function setTimeSpan(){
+  var ts=document.getElementById('selectSpeaker').value.split(",");
+  for (var i=0; i<3; i++){
+    timespan[i] = parseInt(ts[i])*60*1000;
+  }
+}
+</script>
+</head>
+
+<body>
+<input type="button" id="btnStart" style="font-size:20pt" onclick="startPressed()" value = "開始">
+<input type="button" id="btnReset" style="font-size:20pt" onclick="resetPressed()" value = "リセット">
+<input type="button" id="btnBell" style="font-size:20pt" onclick="playBell(1)" value="ベル音">
+<input type="button" id="btnPause" style="font-size:20pt" onclick="pausePressed()" value = "一時停止">
+<div align="right">
+  <select id="selectSpeaker" onchange="setTimeSpan()">
+    <option value="4,5,7">1名 (4, 5, 7分)</option>
+    <option value="9,10,14">2名 (9, 10, 14分)</option>
+  </select>
+  <select id="selectType">
+    <option value="cu">カウントアップ</option>
+    <option value="cd">カウントダウン</option>
+  </select>
+</div>
+<p id="timearea"> </p>
+<br>
+<center>
+<p2 id="infoarea"></p2>
+</center>
+</body>
+</html>
