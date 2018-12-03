@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>教師メニュー</title>
+<script>
+</script>
+
+<style>
+ul {
+ list-style: none;
+ top: 0;
+ height: 180px;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+}
+
+ul li,
+ul li dl {
+ width: 135px;
+ height: 180px;
+}
+
+ul {
+ letter-spacing: -1em;
+}
+
+ul li {
+ display: inline-block;
+ position: relative;
+ overflow: hidden;
+ margin: 0 5px;
+ letter-spacing: 0;
+}
+
+ul dl {
+ position: absolute;
+ top: 0;
+ margin: 0;
+ padding: 10px 10px; /*文字の幅*/
+ box-sizing: border-box;
+ color: #fff;
+ background: rgba(50,50,50,.5);
+}
+
+ul dl dt {
+ margin-bottom: 0.3em;
+}
+
+ul dl dd {
+ margin: 0;
+ font-size: 14px;
+ line-height: 1.6;
+ text-align: justify;
+ word-break: break-all;
+}
+
+ul dl dd:last-of-type {
+ margin-top: 5px;
+ text-align: left;
+}
+
+ul a {
+ padding: 0.3em 0.5em;
+ background-color: #fff;
+}
+
+/* type1 */
+.type1 dl {
+opacity: 0;
+-webkit-transform: translateY(100%);
+transform: translateY(100%);
+-webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+transition: opacity 0.6s, transform 0.6s;
+}
+
+.type1:hover dl {
+opacity: 1;
+-webkit-transform: translateY(0);
+transform: translateY(0);
+}
+
+/*背景1*/
+.backBox1{
+ padding: 0px;
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+ margin:0px;
+}
+
+ *{
+ margin: 0px;
+ padding: 0px;
+ }
+
+/*左ボックス*/
+.box5 {
+ padding: 0.5em 1em;
+ margin: 2em 0;
+ border: double 5px #4ec4d3;
+ width: 240px;
+ height: 520px;
+ background: whitesmoke;
+} 
+.box5 p {
+ margin: 0; 
+ padding: 0;
+}
+
+</style>
+
+
+</head>
+<body>
+<div class ="backBox1">
+
+<!--上段左端-->
+<div style ="position:absolute; top:10px; left:470px">
+ <a href="file:///E:introduction/faculty/pp/horibata.html">
+  <ul class="details">
+   <li class="type1">
+   <img src="file:///E:introduction/faculty/btn/horibata.png">
+    <dl>
+    <dt>堀端 孝俊</dt>
+     <dd>――専門分野――<br>
+        人工知能<br>
+        物理学<br>
+        ―――授業―――<br>
+        解析学、人工知能<br>
+        ディジタル回路…<br>
+     </dd>
+    </dl>
+   </li>
+  </ul>
+ </a>
+</div>
+
+<!--上段中央-->
+<div style ="position:absolute; top:10px; left:750px">
+ <a href="file:///E:introduction/faculty/pp/lee.html">
+  <ul class="details">
+   <li class="type1">
+    <img src="file:///E:introduction/faculty/btn/lee.png">
+     <dl>
+      <dt>李 孝烈</dt>
+      <dd>――専門分野――<br>
+       ｵﾍﾟﾚｰｼｮﾝｽﾞﾘｻｰﾁ<br>
+       数理計画法<br>
+       ―――授業―――<br>
+       ｺﾝﾋﾟｭｰﾀｼﾐｭﾚｰｼｮﾝ<br>
+       幾何学　　　 …<br>
+      </dd>
+     </dl>
+   </li>
+  </ul>
+ </a>
+</div>
+
+<!--上段右-->
+<div style ="position:absolute; top:10px; left:1030px">
+ <a href="file:///E:introduction/faculty/pp/tsunoda.html">
+  <ul class="details">
+   <li class="type1">
+    <img src="file:///E:introduction/faculty/btn/tsunoda.png">
+     <dl>
+      <dt>角田 均</dt>
+      <dd>――専門分野――<br>
+       ネットワークシステム<br>
+       地理情報システム<br>
+       ―――授業―――<br>
+       ｵﾍﾟﾚｰﾃｨﾝｸﾞｼｽﾃﾑ<br>
+       ﾃﾞｰﾀﾍﾞｰｽ　　…<br>
+      </dd>
+     </dl>
+   </li>
+  </ul>
+ </a>
+</div>
+
+<!--中段左-->
+<div style ="position:absolute; top:210px; left:470px">
+ <a href="file:///E:introduction/faculty/pp/midorikawa.html">
+  <ul class="details">
+   <li class="type1">
+    <img src="file:///E:introduction/faculty/btn/midorikawa.png">
+     <dl>
+      <dt>緑川 章一</dt>
+      <dd>――専門分野――<br>
+      ｺﾝﾋﾟｭｰﾀｸﾞﾗﾌｨｯｸｽ<br>
+      素粒子論、物理学<br>
+      ―――授業―――<br>
+      CG基礎数学<br>
+      確率・統計　　…<br>
+      </dd>
+      </dl>
+   </li>
+  </ul>
+ </a>
+</div>
+
+<!--中段中央-->
+<div style ="position:absolute; top:210px; left:750px">
+ <a href="file:///E:introduction/faculty/pp/sakai.html">
+<ul class="details">
+<li class="type1">
+<img src="file:///E:introduction/faculty/btn/sakai.png">
+<dl>
+<dt>坂井 雄介</dt>
+<dd>――専門分野――<br>
+計算機ｱｰｷﾃｸﾁｬ<br>
+教育用システム<br>
+―――授業―――<br>
+ｺﾝﾋﾟｭｰﾀｱｰｷﾃｸﾁｬ<br>
+ｿﾌﾄｳｪｱ設計　　…<br>
+</dd>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+<!--中段右-->
+<div style ="position:absolute; top:210px; left:1030px">
+ <a href="file:///E:introduction/faculty/pp/hashimoto.html">
+<ul class="details">
+<li class="type1">
+<img src="file:///E:introduction/faculty/btn/hashimoto.png">
+<dl>
+<dt>橋本 恭能</dt>
+<dd>――専門分野――<br>
+組込みシステム<br>
+物性物理学<br>
+―――授業―――<br>
+マイコンシステム<br>
+ｴﾚｸﾄﾛﾆｸｽ…<br>
+</dd>
+</dl>
+</li>
+</ul>
+</a>
+</div>
+
+<!--下段左-->
+<div style ="position:absolute; top:410px; left:470px">
+ <a href="file:///E:introduction/faculty/pp/wajima.html">
+ <ul class="details">
+ <li class="type1">
+ <img src="file:///E:introduction/faculty/btn/wajima.png">
+ <dl>
+ <dt>和島 茂</dt>
+<dd>――専門分野――<br>
+電子回路設計<br>
+<br>
+―――授業―――<br>
+ｺﾝﾋﾟｭｰﾀｸﾞﾗﾌｨｯｸｽ<br>
+3D-CAD演習…<br>
+</dd>
+ </dl>
+ </li>
+ </ul>
+ </a>
+</div>
+
+<!--下段中央-->
+<div style ="position:absolute; top:410px; left:750px">
+ <a href="file:///E:introduction/faculty/pp/kuroda.html">
+ <ul class="details">
+ <li class="type1">
+ <img src="file:///E:introduction/faculty/btn/kuroda.png">
+ <dl>
+ <dt>黒田 茂</dt>
+<dd>――専門分野――<br>
+情報数理、脳科学<br>
+動物行動学<br>
+―――授業―――<br>
+ｺﾝﾋﾟｭｰﾀ基礎<br>
+情報と職業　…<br>
+</dd>
+ </dl>
+ </li>
+ </ul>
+ </a>
+</div>
+
+<!--下段右-->
+<div style ="position:absolute; top:410px; left:1030px">
+ <a href="file:///E:introduction/faculty/pp/fujisawa.html">
+ <ul class="details">
+ <li class="type1">
+ <img src="file:///E:introduction/faculty/btn/fujisawa.png">
+ <dl>
+ <dt>藤澤 日明</dt>
+<dd>――専門分野――<br>
+情報検索<br>
+画像処理<br>
+―――授業―――<br>
+Weデザイン<br>
+ﾌﾟﾛｸﾞﾗﾐﾝｸﾞ言語…<br>
+</dd>
+ </dl>
+ </li>
+ </ul>
+ </a>
+</div>
+
+<!--説明-->
+<div style ="position:absolute; top:0px; left:35px">
+<div class="box5">
+<p>
+<center><h2>教員一覧</h2></center>
+<br>
+青森大学ソフトウェア情報学部所属となっている教員方9人の紹介です。<br>
+人柄や専門分野、受験生の方へのメッセージ動画、リンクまでまとめていますので
+気になるところをクリックしてみてください！<br>
+<br>
+カーソルを写真の上に当てると<br>
+　・名前<br>
+　・専門分野<br>
+　・受け持つ授業<br>
+を簡易的に確認できます。<br>
+時間の無い方はこちらだけでもご確認ください！<br>
+<br>
+　　　　<b>Let's click!!→</b>
+</p>
+</div>
+</div>
+
+</body>
+</html>

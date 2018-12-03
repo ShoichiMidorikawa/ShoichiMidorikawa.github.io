@@ -1,0 +1,199 @@
+﻿<!--黒田先生紹介ページ-->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<meta charset="UTF-8">
+<head>
+<title>黒田茂</title>
+<script>
+</script>
+<style>
+/*マージン等の設定*/
+ *{
+ margin: 0px;
+ padding: 0px;
+ }
+
+/*タイトル*/
+ h1{
+  text-align:center;
+  text-valign:middle;
+  font-size:50px;
+ }
+
+/*ルビのサイズ*/
+ rt{
+ font-size:15px;
+ }
+
+/*研究室風景*/
+.labpic{
+ width: 270px;
+ height:200px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室の画像の縮小*/
+img.reduction1 {
+ width: 250px;
+ height: 165px;
+}
+
+/*画像の縮小*/
+img.reduction {
+ width: auto;
+}
+
+/*左のサイドバー*/
+.sidebar {
+ border-right: 5px double #cccccc;
+ width: 300px;
+ height:612px;
+}
+
+/*リンクのタイトル*/
+ h4{
+  font-size:15px;
+  line-height:1.5;
+ }
+
+/*リストの文字の設定--*/>
+ ul li{
+  line-height:1.8;
+ }
+
+/*リスト表示の設定*/
+.list{
+ list-style:none;
+}
+
+/*背景1*/
+.backBox1{
+ padding: 0px;
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+ margin:0px;
+}
+
+/*教師紹介文*/
+.section1 {
+ border: 0px solid #cccccc;
+ width: 600px;
+ height: 340px;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+.左部分背景 {
+ border: 0px solid #cccccc;
+ width: 300px;
+ height: 612px;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+</style>
+</head>
+
+<body>
+<div class="backBox1">
+
+<!--教師名-->
+<div style ="position:absolute; top:0%; left:52%">
+ <h1><ruby><rb>黒田 茂</rb><rp>
+ (</rp><rt>くろだ しげる<rt><rp>)</rp></ruby></h1>
+</div>
+
+<!--左ボックス-->
+<div style ="position:absolute; top:0px; left:0px">
+ <div class ="section2">
+ </div>
+</div>
+
+<!--教師画像の描画-->
+<div style="position:absolute; top:92px; left:950px;">
+ <img src="file:///E:introduction/faculty/img/kuroda.png" alt="教師画像" align="right" height="520">
+</div>
+
+<!--左のサイドバーの描画-->
+<div style ="position:absolute; top:0px; left:0px">
+ <div class="sidebar"></div>
+</div>
+
+<!--サイト内リンク-->
+<div style ="position:absolute; top:10px; left:20px;">
+ <h3>――――HP内リンク――――</h3>
+</div>
+
+<!--研究室-->
+<div style ="position:absolute; top:50px; left:10px">
+ <div class="labpic">
+ <center><p><b>研究室</b></p></center>
+  <div style="position:absolute; top:30px; left:10px">
+   <a href ="file:///E:introduction/lab/pp/kuroda.html">
+    <img src="file:///E:introduction/lab/img/pic/kuroda03.jpg" alt="黒田研究室" class="reduction1">
+   </a>
+  </div>
+ </div>
+</div>
+
+<!--HP外リンク-->
+<div style ="position:absolute; top:280px; left:20px">
+ <h3>――――HP外リンク――――</h3>
+</div>
+
+<!--授業のリンク-->
+<div style ="position:absolute; top:290px; left:10px;">
+ <ul class="list">
+  <br>
+  <h4>…関連授業…</h4>
+  <li><a href ="https://aomoriu-web.campusplan.jp/public/web/Syllabus/WebSyllabusSansho/UI/WSL_SyllabusSansho.aspx?P1=30000501&P2=2018&P3=20181001" TARGET="_blank">アルゴリズムとデータ構造Ⅰ</a></li>
+  <li><a href ="https://aomoriu-web.campusplan.jp/public/web/Syllabus/WebSyllabusSansho/UI/WSL_SyllabusSansho.aspx?P1=30002101&P2=2018&P3=20181001" TARGET="_blank">コンピュータ基礎</a></li>
+  <li><a href ="https://aomoriu-web.campusplan.jp/public/web/Syllabus/WebSyllabusSansho/UI/WSL_SyllabusSansho.aspx?P1=30007401&P2=2018&P3=20181001" TARGET="_blank">代数学Ⅱ</a></li>
+  <li><a href ="https://aomoriu-web.campusplan.jp/public/web/Syllabus/WebSyllabusSansho/UI/WSL_SyllabusSansho.aspx?P1=30006701&P2=2018&P3=20181001" TARGET="_blank">情報と職業</a></li>
+ </ul>
+ <br>
+ <ul class="list">
+  <h4>…その他…</h4>
+  <li><a href = "https://sites.google.com/site/labkuroda/home" TARGET="_blank">教員個人</a></li>
+  <li><a href="https://www.amazon.co.jp/dp/4320057201/ref=cm_sw_r_tw_dp_U_x_o5EOBb2NC3865" TARGET="_blank">著書「動物実験 第３巻」</a></li>
+ </ul>
+</div>
+
+<!--教師紹介-->
+<div style ="position:absolute; top:90px; left:330px">
+ <div class ="section1">
+  <h3>　　　　　　　　　　　　　　教員紹介</h3>
+  <p>　部屋の白衣、生物への愛情、丁寧な説明の数々、印象は理科の先生。<br>
+　生物系と工学系の間で日々揺れており、何か質問をすると目が輝く。<br>
+　好物はアボカド、オススメは「辻井餅店」で出しているラーメン。<br>
+<br>
+　年齢　　　　　　：47歳（2018年現在）<br>
+　趣味　　　　　　：散歩。建物を眺めたり、道端の虫を観察する。<br>
+　アピールポイント：ムカデを５年研究していたが、青森で初めて目撃。<br>
+　青森大学の良い所：明るく、落ち着いた雰囲気。人口密度が丁度良い。<br>
+―――――――――――――――――――<br>
+　専門分野　　　　：数理科学、動物行動学、脳科学<br>
+　研究内容　　　　：単細胞生物の行動学、生物ロコモーション<br>
+　　　　　　　　　　生物アルゴリズムの工学的応用<br>
+　学歴・学位　　　：北海道大学理学研究科博士課程、博士(理学)<br>
+ </p>
+ </div>
+</div>
+
+<!--教師の紹介動画-->
+<div style="position:absolute; top:440px; left:330px;">
+ <video src ="file:///E:introduction/faculty/video/kuroda.mp4" width="288px" heigth="165px" controls></video>
+</div>
+
+
+<!--ふきだし-->
+<div style="position:absolute; top:450px; left:620px;">
+ <img src="file:///E:introduction/faculty/img/balloon.png" alt="ふきだし" align="center" height="150">
+</div>
+
+</div>
+</body>
+</html>
