@@ -1,0 +1,85 @@
+/*教師ページ用CSS*/
+
+@charset"UTF-8";
+
+/*マージン等の設定*/
+ *{
+ margin: 0px;
+ padding: 0px;
+ }
+
+/*タイトル*/
+ h1{
+  text-align:center;
+  text-valign:middle;
+  font-size:50px;
+ }
+
+/*ルビのサイズ*/
+ rt{
+ font-size:15px;
+ }
+
+/*研究室風景の枠*/
+.labpic{
+ width: 270px;
+ height:200px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室の画像の縮小*/
+img.labreduce {
+ width: 250px;
+ height: 165px;
+}
+
+/*左のサイドバー*/
+.sidebar {
+ border-right: 5px double #cccccc;
+ width: 300px;
+ height:612px;
+}
+
+/*リンクのタイトル*/
+ h4{
+  font-size:15px;
+  line-height:1.5;
+ }
+
+/*リストの文字の設定--*/>
+ ul li{
+  line-height:1.8;
+ }
+
+/*リスト表示の設定*/
+.list{
+ list-style:none;
+}
+
+/*背景1*/
+.backBox1{
+ padding: 0px;
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+ margin:0px;
+}
+
+/*教師紹介文*/
+.section1 {
+ border: 0px solid #cccccc;
+ width: 600px;
+ height: 340px;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+/*左部分背景*/
+.section2 {
+ border: 0px solid #cccccc;
+ width: 300px;
+ height: 612px;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+

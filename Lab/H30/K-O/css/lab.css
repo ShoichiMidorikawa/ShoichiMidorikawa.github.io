@@ -1,0 +1,93 @@
+/*研究室ページ用CSS*/
+
+@chatset"UTF-8"
+
+/*マージン等の設定*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+/*タイトル*/
+h1{
+ font-size:50px;
+ text-agiln:center;
+}
+
+/*活動内容の写真のボックス*/
+.section {
+ border: 0px solid #cccccc;
+ width: 300px;
+ background-color:rgba(220, 220, 220, 0.5);
+}
+
+/*研究内容タイトルの設定*/
+.section h3{
+ margin: 0.5em 0 0.5em 0;
+ font-size:16px
+ text-align: center;
+}
+
+/*研究内容説明の設定*/
+.section p{
+ margin: 0;
+ font-size:14 px;
+ color: #333333;
+}
+
+/*左のサイドバー*/
+.sidebar {
+ margin: 0 auto;
+ border-right: 5px double #cccccc;
+ width: 300px;
+ height:612px;
+ min-height: 100%;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+/*背景*/
+.backBox1{
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+}
+
+/*sectionの写真のサイズ*/
+img.reduction2{
+ width:300px;
+ height:auto;
+}
+
+/*研究室紹介文*/
+.content {
+ border: 0px solid #cccccc;
+ width: 600px;
+ background-color:rgba(220, 220, 220, 0.5);
+ padding:0px;
+ margin:0px;
+}
+
+/*教師画像の部分*/
+.backBox2{
+ width: 200px;
+ height:250px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室風景*/
+.item{
+ width: 270px;
+ height:200px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室風景の縮小*/
+.reduction{
+ width:250px;
+ height:165px;
+}
+
