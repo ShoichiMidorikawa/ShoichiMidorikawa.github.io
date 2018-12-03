@@ -1,0 +1,19 @@
+ul.bxslider ,
+ul.bxslider li {
+margin:0;
+padding:0;
+}
+
+.fitvids {
+position: relative;
+margin: 20px 0;
+padding-bottom: 56.25%;
+padding-top: 30px;
+overflow: hidden;
+max-width: 100%;
+height: auto;
+}
+
+p.margin { margin: 30px; }
+
+p.resizeimage img { width: 100%; }
