@@ -1,0 +1,196 @@
+﻿<!--黒田研究室ページ-->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<meta charset = "UTF-8">
+<head>
+<title>黒田研究室</title>
+<script>
+</script>
+<style>
+ h1{
+  font-size:50px;
+  text-agiln:center;
+ }
+
+/*活動内容の写真のボックス*/
+.section {
+ border: 0px solid #cccccc;
+ width: 300px;
+ background-color:rgba(220, 220, 220, 0.5);
+}
+
+/*写真のタイトルの設定*/
+.section h3{
+ margin: 0.5em 0 0.5em 0;
+ font-size:16px
+ text-align: center;
+}
+
+/*写真の説明の設定*/
+.section p{
+ margin: 0;
+ font-size:14 px;
+ color: #333333;
+}
+
+/*左のサイドバー*/
+.sidebar {
+ margin: 0 auto;
+ border-right: 5px double #cccccc;
+ width: 300px;
+ height:612px;
+ min-height: 100%;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+/*背景1*/
+.backBox1{
+ padding: 0px;
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+ margin:0px;
+}
+
+ *{
+ margin: 0px;
+ padding: 0px;
+ }
+
+ /*sectionの写真のサイズ*/
+ img.reduction2{
+  width:300px;
+  height:auto;
+ }
+
+ /*研究室紹介文*/
+.content {
+ border: 0px solid #cccccc;
+ width: 550px;
+ background-color:rgba(220, 220, 220, 0.5);
+ padding:0px;
+ margin:0px;
+}
+
+/*著書の部分*/
+.backBox2{
+ width: 200px;
+ height:250px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室風景*/
+.item{
+ width: 270px;
+ height:200px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+ .reduction{
+  width:250px;
+  height:165px;
+ }
+</style>
+</head>
+
+<body>
+<div class="backBox1">
+
+ <!--左のサイドバーの描画-->
+ <div style ="position:absolute; top:0px; left:0px">
+  <div class="sidebar">
+  </div>
+ </div>
+
+ <!--教師リンク-->
+ <div style ="position:absolute; top:10px; left:50px;">
+  <div class="backBox2">
+   <center><p><b>担当教授</b></p></center>
+   </div>
+   <div style="position:absolute; top:35px; left:35px">
+    <a href="file:///E:introduction/faculty/pp/kuroda.html">
+    <img src="file:///E:introduction/faculty/btn/kuroda.png" alt="教師写真" ></a>
+    <center><p>黒田　茂</p></center>
+   </div>
+  </div>
+ </div>
+
+ <!--研究室画像-->
+ <div style ="position:absolute; top:280px; left:15px;">
+  <div class ="item">
+   <center><p><b>研究室風景</b></p></center>
+   <div style ="position:absolute; top:30px; left:10px">
+    <a href ="file:///E:introduction/lab/img/col/kuroda.html" TARGET="_blank">
+    <img src="file:///E:introduction/lab/img/pic/kuroda05.jpg" alt="［写真］" class="reduction"></a>
+   </div>
+  </div>
+ </div>
+
+<!--リンク-->
+ <div style="position:absolute; top:500px; left:10px;">
+  <h3>――――HP外リンク――――</h3>
+  <ul>
+   <li><a href = "https://sites.google.com/site/labkuroda/home" TARGET="_blank">教員個人</a></li>
+  </ul>
+ </div>
+
+ <!--研究室名-->
+ <div style ="position:absolute; top:0px; left:700px">
+  <center><h1><ruby><rb>黒田研究室</rb><rp>
+  (</rp><rt>くろだけんきゅうしつ<rt><rp>)</rp></ruby></h1></center>
+ </div>
+
+ <!--研究室の詳細-->
+ <div style ="position:absolute; top:110px; left:550px">
+  <div class ="content">
+   <p ><br>
+　　黒田ゼミは、まだ始まったばかりの研究室で、先生の人柄の為か<br>
+　　のんびりとした雰囲気があります。研究テーマも自由なので相談<br>
+　　次第で様々なことに挑戦させて貰えます。特別得意である必要は<br>
+　　ありませんが数学や物理に興味があり楽しめる方に向いています。
+<br>
+<br>
+</p>
+  </div>
+ </div>
+
+ <!--記事１-->
+ <div style ="position:absolute; top:280px; left:330px">
+  <div class ="section">
+   <center><h3>生き物</h3></center>
+   <p>大きなテーマは｢生物の柔軟で多様な運動を支える仕組みの解明と工学的な応用｣。海の生物にも今後挑戦予定。</p>
+    <a href ="file:///E:introduction/lab/img/cont/kuroda01.png" TARGET="_blank">
+    <img src ="file:///E:introduction/lab/img/cont/kuroda01_tmb.png" alt="活動内容1" class="reduction2"></a>
+  </div>
+  </div>
+ </div>
+
+ <!--記事２-->
+ <div style ="position:absolute; top:280px; left:685px">
+  <div class ="section">
+<center><h3>解析</h3></center>
+   <p>実際に様々な生物の動きや行動を撮影して、その動画を自分たちの作成したアプリを使うことで解析していく。</p>
+    <a href ="file:///E:introduction/lab/img/cont/kuroda02.png" TARGET="_blank">
+   <img src ="file:///E:introduction/lab/img/cont/kuroda02_tmb.png" alt="活動内容2" class="reduction2"></a>
+</div>
+ </div>
+
+ <!--記事3-->
+ <div style ="position:absolute; top:280px; left:1031px">
+  <div class ="section">
+<center><h3>アルゴリズム</h3></center>
+<p>モデルを作成してシミュレーション。基礎研究から得られる「生物のアルゴリズム」を応用する。（生物模倣工学）</p>
+    <a href ="file:///E:introduction/lab/img/cont/kuroda03.png" TARGET="_blank">
+   <img src ="file:///E:introduction/lab/img/cont/kuroda03_tmb.png" alt="活動内容1" class="reduction2"></a>  </div>
+ </div>
+
+</div>
+
+</body>
+</html>

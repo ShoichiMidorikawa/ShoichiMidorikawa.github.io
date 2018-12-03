@@ -1,0 +1,194 @@
+﻿<!--藤澤研究室ページ-->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<meta charset = "UTF-8">
+<head>
+<title>藤澤研究室</title>
+<script>
+</script>
+<style>
+/*マージン等の設定*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+/*タイトル*/
+h1{
+ font-size:50px;
+ text-agiln:center;
+}
+
+/*活動内容の写真のボックス*/
+.section {
+ border: 0px solid #cccccc;
+ width: 300px;
+ background-color:rgba(220, 220, 220, 0.5);
+}
+
+/*写真のタイトルの設定*/
+.section h3{
+ margin: 0.5em 0 0.5em 0;
+ font-size:16px
+ text-align: center;
+}
+
+/*写真の説明の設定*/
+.section p{
+ margin: 0;
+ font-size:14 px;
+ color: #333333;
+}
+
+/*左のサイドバー*/
+.sidebar {
+ margin: 0 auto;
+ border-right: 5px double #cccccc;
+ width: 300px;
+ height:612px;
+ min-height: 100%;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+/*背景1*/
+.backBox1{
+ padding: 0px;
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+ margin:0px;
+}
+
+/*sectionの写真のサイズ*/
+img.reduction2{
+ width:300px;
+ height:auto;
+}
+
+/*研究室紹介文*/
+.content {
+ border: 0px solid #cccccc;
+ width: 600px;
+ background-color:rgba(220, 220, 220, 0.5);
+ padding:0px;
+ margin:0px;
+}
+
+/*著書の部分*/
+.backBox2{
+ width: 200px;
+ height:250px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室風景*/
+.item{
+ width: 270px;
+ height:200px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室風景の縮小*/
+ .reduction{
+  width:250px;
+  height:165px;
+ }
+
+
+
+</style>
+</head>
+
+<body>
+<div class="backBox1">
+
+<!--左のサイドバーの描画-->
+<div style ="position:absolute; top:0px; left:0px">
+ <div class="sidebar">
+ </div>
+</div>
+
+<!--教師リンク-->
+<div style ="position:absolute; top:10px; left:50px;">
+ <div class="backBox2">
+  <center><p><b>担当教授</b></p></center>
+ </div>
+ <div style="position:absolute; top:35px; left:35px">
+  <a href="file:///E:introduction/faculty/pp/fujisawa.html">
+   <img src="file:///E:introduction/faculty/btn/fujisawa.png" alt="教師写真" >
+  </a>
+  <center><p>藤澤　日明</p></center>
+ </div>
+</div>
+
+<!--研究室画像-->
+<div style ="position:absolute; top:280px; left:15px;">
+ <div class ="item">
+  <center><p><b>研究室風景</b></p></center>
+  <div style ="position:absolute; top:30px; left:10px">
+   <a href ="file:///E:introduction/lab/img/col/sakai_fujisawa.html" TARGET="_blank">
+   <img src="file:///E:introduction/lab/img/pic/sakai_fujisawa06.jpg" alt="［写真］" class="reduction"></a>
+  </div>
+ </div>
+</div>
+
+<!--研究室名-->
+<div style ="position:absolute; top:0px; left:700px">
+ <center><h1><ruby><rb>藤澤研究室</rb><rp>
+  (</rp><rt>ふじさわけんきゅうしつ<rt><rp>)</rp></ruby></h1></center>
+</div>
+
+ <!--研究室の詳細-->
+ <div style ="position:absolute; top:110px; left:550px">
+  <div class ="content">
+   <p ><br>
+　　藤澤ゼミは、まだ始まったばかりで、先生自身が若いこともあって学生とは<br>
+　　“先輩”として近い距離感で接しているそうです。画像処理やSNSなど主に<br>
+　　サブカルチャー面が研究テーマで、新しいものが好きな方に向いています。<br>
+　　【坂井研究室と合同（同室/一緒に研究）です。】
+
+<br>
+<br>
+</p>
+  </div>
+ </div>
+
+ <!--記事１-->
+ <div style ="position:absolute; top:280px; left:330px">
+  <div class ="section">
+   <center><h3>流行の予測</h3></center>
+   <p>Twitter等のSNSからデータを抽出することで地域ごとに多く話題に出ている流行を予測するプログラムを開発中。</p>
+  <a href="file:///E:introduction/lab/img/cont/fujisawa01.png">
+   <img src ="file:///E:introduction/lab/img/cont/fujisawa01_tmb.png" alt="活動内容1" class="reduction2">
+  </a>
+  </div>
+ </div>
+
+ <!--記事２-->
+ <div style ="position:absolute; top:280px; left:685px">
+  <div class ="section">
+<center>   <h3>抑止力</h3></center>
+   <p>　ソーシャルゲームの課金に焦点を当てたテーマ。文章の特徴を捉え注意文を出すなど、未知の試みに目を向ける。</p>
+   <img src ="file:///E:introduction/lab/img/cont/fujisawa02.png"  alt="活動内容2" class="reduction2">
+  </div>
+ </div>
+
+ <!--記事3-->
+ <div style ="position:absolute; top:280px; left:1031px">
+  <div class ="section">
+   <center><h3>Coming soon</h3></center>
+   <p>　若い研究室ということは何にでも挑戦できるということ。<br><br></p>
+   <img src ="file:///E:introduction/lab/img/cont/fujisawa03.png"  alt="活動内容3" class="reduction2"></a>
+  </div>
+ </div>
+
+</div>
+
+</body>
+</html>

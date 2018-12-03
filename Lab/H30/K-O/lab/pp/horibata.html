@@ -1,0 +1,196 @@
+﻿<!--堀端研究室ページ-->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<meta charset = "UTF-8">
+<head>
+<title>堀端研究室</title>
+<script>
+</script>
+<style>
+
+ h1{
+  font-size:50px;
+  text-agiln:center;
+ }
+
+/*活動内容の写真のボックス*/
+.section {
+ border: 0px solid #cccccc;
+ width: 300px;
+ background-color:rgba(220, 220, 220, 0.5);
+}
+
+/*写真のタイトルの設定*/
+.section h3{
+ margin: 0.5em 0 0.5em 0;
+ font-size:16px
+ text-align: center;
+}
+
+/*写真の説明の設定*/
+.section p{
+ margin: 0;
+ font-size:14 px;
+ color: #333333;
+}
+
+/*左のサイドバー*/
+.sidebar {
+ margin: 0 auto;
+ border-right: 5px double #cccccc;
+ width: 300px;
+ height:612px;
+ min-height: 100%;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+/*背景1*/
+.backBox1{
+ padding: 0px;
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+ margin:0px;
+}
+
+ *{
+ margin: 0px;
+ padding: 0px;
+ }
+
+ /*sectionの写真のサイズ*/
+ img.reduction2{
+  width:300px;
+  height:auto;
+ }
+
+ /*研究室紹介文*/
+.content {
+ border: 0px solid #cccccc;
+ width: 600px;
+ background-color:rgba(220, 220, 220, 0.5);
+ padding:0px;
+ margin:0px;
+}
+
+/*著書の部分*/
+.backBox2{
+ width: 200px;
+ height:250px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室風景*/
+.item{
+ width: 270px;
+ height:200px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+ .reduction{
+  width:250px;
+  height:165px;
+ }
+</style>
+</head>
+
+<body>
+<div class="backBox1">
+
+ <!--左のサイドバーの描画-->
+ <div style ="position:absolute; top:0px; left:0px">
+  <div class="sidebar">
+  </div>
+ </div>
+
+ <!--教師リンク-->
+ <div style ="position:absolute; top:10px; left:50px;">
+  <div class="backBox2">
+   <center><p><b>担当教授</b></p></center>
+  </div>
+  <div style="position:absolute; top:35px; left:35px">
+   <a href="file:///E:introduction/faculty/pp/horibata.html">
+    <img src="file:///E:introduction/faculty/btn/horibata.png" alt="教師写真" >
+   </a>
+   <center><p>堀端　孝俊</p></center>
+  </div>
+ </div>
+
+ <!--研究室画像-->
+ <div style ="position:absolute; top:280px; left:15px;">
+  <div class ="item">
+   <center><p><b>研究室風景</b></p></center>
+   <div style ="position:absolute; top:30px; left:10px">
+    <a href ="file:///E:introduction/lab/img/col/horibata.html" TARGET="_blank">
+     <img src="file:///E:introduction/lab/img/pic/horibata03.jpg" alt="［写真］" class="reduction">
+    </a>
+   </div>
+  </div>
+ </div>
+
+<!--リンク-->
+<div style="position:absolute; top:500px; left:10px;">
+ <h3>――――HP外リンク――――</h3>
+ <ul>
+  <li><a href = "https://shoichimidorikawa.github.io/" TARGET="_blank">教員個人</a></li>
+  <li><a href="https://shoichimidorikawa.github.io/midorikawaLab.htm" TARGET="_blank">研究室</a></li>
+ </ul>
+</div>
+
+ <!--研究室名-->
+ <div style ="position:absolute; top:0px; left:700px">
+  <center><h1><ruby><rb>堀端研究室</rb><rp>
+  (</rp><rt>ほりばたけんきゅうしつ<rt><rp>)</rp></ruby></h1></center>
+ </div>
+
+ <!--研究室の詳細-->
+ <div style ="position:absolute; top:110px; left:550px">
+  <div class ="content">
+   <p ><br>
+　　堀端ゼミは、明るくてやる気のある方を募集しており、何故か青森山田高校<br>
+　　出身が集まりやすいそうです。その為、学生同士仲が良い傾向にあります。<br>
+　　大きなテーマは"Scheme"（関数型プログラミング言語）を使った手法で<br>
+　　数学的な問題を解き、それを応用して各々の研究課題に取り組むことです。
+<br>
+<br>
+</p>
+  </div>
+ </div>
+
+ <!--記事１-->
+ <div style ="position:absolute; top:280px; left:330px">
+  <div class ="section">
+   <center><h3>Scheme</h3></center>
+   <p>関数型プログラミング言語。この手法を使って、数学の問題を教材に解答を導き出せるものを作成していく。</p>
+   <img src ="file:///E:introduction/lab/img/cont/horibata01.png" alt="活動内容1" class="reduction2">
+  </div>
+ </div>
+
+ <!--記事２-->
+ <div style ="position:absolute; top:280px; left:685px">
+  <div class ="section">
+<center><h3>3年</h3></center>
+   <p>1年かけて「Scheme」の基礎的な内容を学んでいく。簡単な、素数の問題や最大公約数を求めるプログラミング。</p>
+   <img src ="file:///E:introduction/lab/img/cont/horibata09.jpg" alt="活動内容1" class="reduction2">
+  </div>
+ </div>
+
+ <!--記事3-->
+ <div style ="position:absolute; top:280px; left:1031px">
+  <div class ="section">
+<center><h3>4年</h3></center>
+<p>個人の具体的なテーマを決め勉強をしていく。「ディジタル回路のシミュレータ」「LRC回路の実現」など様々。</p>
+<img src ="file:///E:introduction/lab/img/cont/horibata02.png"  alt="活動内容2" class="reduction2">
+  </div>
+ </div>
+
+</div>
+
+</body>
+</html>

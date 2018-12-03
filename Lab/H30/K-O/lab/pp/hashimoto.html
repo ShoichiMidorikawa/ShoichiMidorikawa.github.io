@@ -1,0 +1,194 @@
+﻿<!--橋本研究室ページ-->
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<meta charset = "UTF-8">
+<head>
+<title>橋本研究室</title>
+<script>
+</script>
+<style>
+
+ h1{
+  font-size:50px;
+  text-agiln:center;
+ }
+
+/*活動内容の写真のボックス*/
+.section {
+ border: 0px solid #cccccc;
+ width: 300px;
+ background-color:rgba(220, 220, 220, 0.5);
+}
+
+/*写真のタイトルの設定*/
+.section h3{
+ margin: 0.5em 0 0.5em 0;
+ font-size:16px
+ text-align: center;
+}
+
+/*写真の説明の設定*/
+.section p{
+ margin: 0;
+ font-size:14 px;
+ color: #333333;
+}
+
+/*左のサイドバー*/
+.sidebar {
+ margin: 0 auto;
+ border-right: 5px double #cccccc;
+ width: 300px;
+ height:612px;
+ min-height: 100%;
+ background-color:rgba( 220, 220, 220, 0.5);
+}
+
+/*背景1*/
+.backBox1{
+ padding: 0px;
+ width: 1365px;
+ height:612px;
+ background-color:#afeeee;
+ margin:0px;
+}
+
+ *{
+ margin: 0px;
+ padding: 0px;
+ }
+
+ /*sectionの写真のサイズ*/
+ img.reduction2{
+  width:300px;
+  height:auto;
+ }
+
+ /*研究室紹介文*/
+.content {
+ border: 0px solid #cccccc;
+ width: 600px;
+ background-color:rgba(220, 220, 220, 0.5);
+ padding:0px;
+ margin:0px;
+}
+
+/*著書の部分*/
+.backBox2{
+ width: 200px;
+ height:250px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+/*研究室風景*/
+.item{
+ width: 270px;
+ height:200px;
+ border: solid 2px black;
+ font-weight: bold;
+ font-size:15px;
+}
+
+ .reduction{
+  width:250px;
+  height:165px;
+ }
+</style>
+</head>
+
+<body>
+<div class="backBox1">
+
+ <!--左のサイドバーの描画-->
+ <div style ="position:absolute; top:0px; left:0px">
+  <div class="sidebar">
+  </div>
+ </div>
+
+ <!--教師リンク-->
+ <div style ="position:absolute; top:10px; left:50px;">
+  <div class="backBox2">
+   <center><p><b>担当教授</b></p></center>
+   </div>
+   <div style="position:absolute; top:35px; left:35px">
+    <a href="file:///E:introduction/faculty/pp/hashimoto.html">
+    <img src="file:///E:introduction/faculty/btn/hashimoto.png" alt="教師写真" ></a>
+    <center><p>橋本　恭能</p></center>
+   </div>
+  </div>
+ </div>
+
+ <!--研究室画像-->
+ <div style ="position:absolute; top:280px; left:15px;">
+  <div class ="item">
+   <center><p><b>研究室風景</b></p></center>
+   <div style ="position:absolute; top:30px; left:10px">
+    <a href ="file:///E:introduction/lab/img/col/hashimoto.html" TARGET="_blank">
+    <img src="file:///E:introduction/lab/img/pic/hashimoto01.jpg" alt="［写真］" class="reduction"></a>
+   </div>
+  </div>
+ </div>
+
+<!--リンク-->
+ <div style="position:absolute; top:500px; left:10px;">
+  <h3>――――HP外リンク――――</h3>
+  <ul>
+   <li><a href = "https://shoichimidorikawa.github.io/" TARGET="_blank">教員個人</a></li>
+   <li><a href="https://shoichimidorikawa.github.io/midorikawaLab.htm" TARGET="_blank">研究室</a></li>
+  </ul>
+ </div>
+
+ <!--研究室名-->
+ <div style ="position:absolute; top:0px; left:700px">
+  <center><h1><ruby><rb>橋本研究室</rb><rp>
+  (</rp><rt>はしもとけんきゅうしつ<rt><rp>)</rp></ruby></h1></center>
+ </div>
+
+ <!--研究室の詳細-->
+ <div style ="position:absolute; top:110px; left:550px">
+  <div class ="content">
+   <p ><br>
+　　橋本ゼミは、長期休暇中などでも大学内で作業を続けることになる忙しい<br>
+　　研究室です。その為、技術よりも根気のある粘り強い学生を求めています。<br>
+　　その努力に見合うように毎年ロボット系での好成績を残しており、これは<br>
+　　その道を目指す方にとって様々な面で大きな強みになると思われます。<br>
+<br>
+</p>
+  </div>
+ </div>
+
+ <!--記事１-->
+ <div style ="position:absolute; top:280px; left:330px">
+  <div class ="section">
+   <center><h3>ロボット視点</h3></center>
+   <p>　最近手をつけ始めた研究。VRゴーグルを使って、ロボットの視点になり操作することで、新しい発見ができる</p>
+   <img src ="file:///E:introduction/lab/img/cont/hashimoto01.png" alt="活動内容1" class="reduction2">
+  </div>
+ </div>
+
+ <!--記事２-->
+ <div style ="position:absolute; top:280px; left:685px">
+  <div class ="section">
+<center>   <h3>ロボットコンテスト</h3></center>
+   <p>　毎年開かれているETロボコンに出場。入賞を目指して、プログラムの設計、開発、テストを繰り返しています。</p>
+   <img src ="file:///E:introduction/lab/img/cont/hashimoto02.png"  alt="活動内容2" class="reduction2">
+  </div>
+ </div>
+
+ <!--記事3-->
+ <div style ="position:absolute; top:280px; left:1031px">
+  <div class ="section">
+   <center><h3>学習セミナー</h3></center>
+   <p>　中高生向けにロボットを使ったプログラミング学習セミナーを行っている。資料作成から指導まで学生が行う。</p>
+   <img src ="file:///E:introduction/lab/img/cont/fujisawa03.png"  alt="活動内容3" class="reduction2">
+  </div>
+ </div>
+
+</div>
+
+</body>
+</html>
