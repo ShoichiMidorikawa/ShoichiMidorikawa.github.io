@@ -54,11 +54,17 @@ sl.onchange = function(){
                 image.src="back1_4.jpg"    ;break;
        case '1':image.src="../../HTMLtutorial/AodaiPV-ver01.mp4"    ;break;
        case '2':image.src="../../HTMLtutorial/AodaiPV-ver02.1.mp4"  ;break;
-       case '3': image.src="https://youtu.be/t5-CBQRCH1c" ;break;
+       case '3': image.src="https://www.youtube.com/embed/t5-CBQRCH1c" ;break;
        
   }
  }
 };
+
+//       case '3': image.src="https://youtu.be/t5-CBQRCH1c" ;break;
+//-------------
+//<iframe width="688" height="387" src="https://www.youtube.com/embed/t5-CBQRCH1c" frameborder="0" 
+//allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//----------
 
 
 //<iframe width="854" height="480" src="https://www.youtube.com/embed/ZYeC7ErV9Oc" frameborder="0" 
