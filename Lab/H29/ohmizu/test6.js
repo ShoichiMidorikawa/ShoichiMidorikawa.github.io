@@ -21,7 +21,7 @@
          b[0].style.color='red';
          b[0].innerHTML='BGM OFF';
          bgm.src="https://www.youtube.com/embed/1oeTz_zocC0?rel=0&autoplay=1&loop=1&playlist=ZYeC7ErV9Oc" ;
-         document.body.style.backgroundImage = "url(back1_5.jpg)";
+         document.body.style.backgroundImage = "url(back1_5.JPG)";
          n=2;
       }
       else if(n==3){
