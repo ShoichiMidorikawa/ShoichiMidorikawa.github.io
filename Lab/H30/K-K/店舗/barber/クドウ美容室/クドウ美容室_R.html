@@ -1,0 +1,131 @@
+﻿<header id="Header">
+    <div class="inner">
+      <font size=20><b>クドウ美容室</b></font>
+    </div>
+  </header>
+  <nav>
+    <ul id="Navi" class="clearfix"><!-- ここにclearfix ※floatさせる要素の直の親要素に付ける -->
+      <li><b>営業時間:  9：00～17：00</b></li><!-- liを全部 float leftで横並びに -->
+        <li>ホームページ:不明</li>
+    </ul>
+  </nav>
+  <div id="Contents" class="clearfix"><!-- ここにclearfix ※floatさせる要素の直の親要素に付ける -->
+    <div id="Main"></div><!-- float leftさせる -->
+    <div id="Side"><p class="text"><b><font size=6>場所<br>
+    ・<font color="red">正徳館</font>から<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;約<font face="Impact" color="red">300</font>m<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徒歩<font face="Impact" color="red">4</font>分<br>
+    定休日<br>　
+    <font face="Impact" color="red">毎週月曜</font>、<font face="Impact" color="red">第1日曜</font><br>
+    駐車場なし</font></b>
+  </div><!-- float leftさせる rightでもよい -->
+  </div>
+  <footer id="Footer">
+    <div class="inner"><a href="../../../ホーム画面/test1.html" class="square_btn">top</a><style>
+.square_btn {
+    position: relative;
+    display: inline-block;
+    padding: 0.2em 0.4em;
+    text-decoration: none;
+    color: #FFF;
+    background: #fd9535;/*色*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: solid 2px #d27d00;/*線色*/
+}
+.square_btn:active {/*押したとき*/
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.50);
+}</div>
+  </footer>
+  <style>
+    /* =========================================================
+    Header
+    ========================================================= */
+    #Header {
+      width:100%; /* 横幅を100%に */
+      background:#FFE5E5;
+    }
+    #Header .inner {
+      width:1100px;
+      min-height:30px;
+      margin:0 auto;
+      padding-top:30px;
+      background:#FFC9CA;
+      text-align:center;
+    }
+    #Header .inner p {
+      padding-top:30px;
+      text-align:center;
+    }
+    nav {
+      width:100%; /* 横幅を100%に */
+      background:#E5DDFF;
+    }
+    /* =========================================================
+    nav
+    ========================================================= */
+
+    nav #Navi {
+      width:1100px;
+      margin:0 auto;
+      background:#C4C9FF;
+    }
+    nav #Navi li {
+      float:left;
+      width:50%; /* ナビは5つなので100÷2=50で計算 */
+      min-height:4px;
+      margin:0;
+      background:none;
+      box-sizing:border-box; /* border分足されるので、box-sizingでborderを含むwidthに変更 */
+      border:#E1EAFF solid;
+      border-width: 0 1px 0 1px;
+      list-style:none;
+    }
+    /* =========================================================
+    Contents
+    ========================================================= */
+    #Contents {
+      width:1100px;
+      margin:0 auto;
+      padding:10px;
+      background:#D4D4D4;
+      box-sizing:border-box; /* 同じくpaddingを含むwidthへ変更 */
+    }
+    /* =========================================================
+    Main
+    ========================================================= */
+    #Contents #Main {
+      float:left; /* 左に寄せるよ */
+      width:550px;
+      min-height:500px;
+      background:url('../../../画像/床屋/クドウ美容室/exterior.jpg');
+      background-position:20% 40%;
+      background-repeat:no-repeat;
+      text-align:center;
+    }
+    /* =========================================================
+    Side
+    ========================================================= */
+    #Contents #Side {
+      float:left; /* 左に寄せて#Mainの横に並べるよ */
+      width:520px;
+      min-height:500px;
+      margin-left:10px;
+      background:#FDFFBF;
+      text-align:left;
+    }
+    /*==========================================================
+    Footer
+    ========================================================= */
+    #Footer {
+      width:100%; /* 横幅を100%に */
+      background:#DAFFDA;
+    }
+    #Footer .inner {
+      width:1100px;
+      min-height:80px;
+      margin:0 auto;
+      background:#7BF469;
+      text-align:center;
+    }
+  </style>
