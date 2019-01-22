@@ -48,7 +48,7 @@ var marker46_kouban;
 document.onkeydown = pageMove;
 
 function initialize() {
-  var latlng = new google.maps.LatLng(40.78405, 140.781172);
+  var latlng = new google.maps.LatLng(40.78456153, 140.781552);
   var opts = {
     zoom: 16,
     center: latlng,
@@ -201,12 +201,19 @@ function initialize() {
 
   var iconImage1="http://maps.google.com/mapfiles/kml/pal2/icon10.png";
   var iconImage2="su-pa-.jpg";
-  var iconImage3="http://maps.google.com/mapfiles/kml/pal2/icon10.png";
-  var iconImage4="http://maps.google.com/mapfiles/kml/pal2/icon10.png";
-  var iconImage5="http://maps.google.com/mapfiles/kml/pal2/icon10.png";
-  var iconImage6="http://maps.google.com/mapfiles/kml/pal2/icon10.png";
-  var iconImage7="http://maps.google.com/mapfiles/kml/pal2/icon10.png";
-  var iconImage8="http://maps.google.com/mapfiles/kml/pal2/icon10.png";
+  var iconImage3="bank.png";
+  var iconImage4="basu.png";
+  var iconImage5="byouin.png";
+  var iconImage6="ha.png";
+  var iconImage7="hone.png";
+  var iconImage8="insyoku.png";
+  var iconImage9="kami.png";
+  var iconImage10="koban.png";
+  var iconImage11="konbini.png";
+  var iconImage12="kusuri.png";
+  var iconImage13="neko.png";
+  var iconImage14="suitu.png";
+  var iconImage15="yubin.png";
 
   var m_latlng1 = new google.maps.LatLng(40.784056, 140.781172);
   marker1_daigaku = new google.maps.Marker({
@@ -228,7 +235,8 @@ function initialize() {
 
   var m_latlng3 = new google.maps.LatLng(40.784505852991366, 140.7808095216751);
   marker3_roson = new google.maps.Marker({
-    position: m_latlng3
+    position: m_latlng3,
+    icon:iconImage11
   });
   marker3_roson.addListener('click', function() {
     infowindow_3.open(map, marker3_roson);
@@ -236,7 +244,8 @@ function initialize() {
 
   var m_latlng4 = new google.maps.LatLng(40.7844875, 140.77892710000003);
   marker4_famima = new google.maps.Marker({
-    position: m_latlng4
+    position: m_latlng4,
+    icon:iconImage11
   });
   marker4_famima.addListener('click', function() {
     infowindow_4.open(map, marker4_famima);
@@ -245,7 +254,8 @@ function initialize() {
 
   var m_latlng5 = new google.maps.LatLng(40.7855263, 140.7818241);
   marker5_sebun = new google.maps.Marker({
-    position: m_latlng5
+    position: m_latlng5,
+    icon:iconImage11
   });
   marker5_sebun.addListener('click', function() {
     infowindow_5.open(map, marker5_sebun);
@@ -253,7 +263,8 @@ function initialize() {
 
   var m_latlng6 = new google.maps.LatLng(40.78145132, 140.77878714);
   marker6_takahasi = new google.maps.Marker({
-    position: m_latlng6
+    position: m_latlng6,
+    icon:iconImage11
   });
   marker6_takahasi.addListener('click', function() {
     infowindow_6.open(map, marker6_takahasi);
@@ -261,7 +272,8 @@ function initialize() {
 
   var m_latlng7 = new google.maps.LatLng(40.781313212719425, 140.7807371020317);
   marker7_tibasyokudou = new google.maps.Marker({
-    position: m_latlng7
+    position: m_latlng7,
+    icon:iconImage8
   });
   marker7_tibasyokudou.addListener('click', function() {
     infowindow_7.open(map, marker7_tibasyokudou);
@@ -269,7 +281,8 @@ function initialize() {
 
   var m_latlng8 = new google.maps.LatLng(40.78097403644637, 140.78093022108078);
   marker8_tarukou = new google.maps.Marker({
-    position: m_latlng8
+    position: m_latlng8,
+    icon:iconImage8
   });
   marker8_tarukou.addListener('click', function() {
     infowindow_8.open(map, marker8_tarukou);
@@ -277,7 +290,8 @@ function initialize() {
 
   var m_latlng9 = new google.maps.LatLng(40.7842264, 140.77822730000003);
   marker9_hokatei = new google.maps.Marker({
-    position: m_latlng9
+    position: m_latlng9,
+    icon:iconImage8
   });
   marker9_hokatei.addListener('click', function() {
     infowindow_9.open(map, marker9_hokatei);
@@ -285,7 +299,8 @@ function initialize() {
 
   var m_latlng10 = new google.maps.LatLng(40.7846875, 140.78006870000002);
   marker10_yosijun = new google.maps.Marker({
-    position: m_latlng10
+    position: m_latlng10,
+    icon:iconImage8
   });
   marker10_yosijun.addListener('click', function() {
     infowindow_10.open(map, marker10_yosijun);
@@ -293,7 +308,8 @@ function initialize() {
 
   var m_latlng11 = new google.maps.LatLng(40.78087147, 140.78710064);
   marker11_nekokafe = new google.maps.Marker({
-    position: m_latlng11
+    position: m_latlng11,
+    icon:iconImage13
   });
   marker11_nekokafe.addListener('click', function() {
     infowindow_11.open(map, marker11_nekokafe);
@@ -301,7 +317,8 @@ function initialize() {
 
   var m_latlng12 = new google.maps.LatLng(40.78259272, 140.78503668);
   marker12_kafehiguti = new google.maps.Marker({
-    position: m_latlng12
+    position: m_latlng12,
+    icon:iconImage13
   });
   marker12_kafehiguti.addListener('click', function() {
     infowindow_12.open(map, marker12_kafehiguti);
@@ -309,7 +326,8 @@ function initialize() {
 
   var m_latlng13 = new google.maps.LatLng(40.78756931, 140.78481586);
   marker13_ramensyopu = new google.maps.Marker({
-    position: m_latlng13
+    position: m_latlng13,
+    icon:iconImage8
   });
   marker13_ramensyopu.addListener('click', function() {
     infowindow_13.open(map, marker13_ramensyopu);
@@ -318,7 +336,8 @@ function initialize() {
 
   var m_latlng14 = new google.maps.LatLng(40.78129696, 140.77961192);
   marker14_maruhuku = new google.maps.Marker({
-    position: m_latlng14
+    position: m_latlng14,
+    icon:iconImage8
   });
   marker14_maruhuku.addListener('click', function() {
     infowindow_14.open(map, marker14_maruhuku);
@@ -327,7 +346,8 @@ function initialize() {
 
   var m_latlng15 = new google.maps.LatLng(40.78089381, 140.78092125);
   marker15_hinataboko = new google.maps.Marker({
-    position: m_latlng15
+    position: m_latlng15,
+    icon:iconImage8
   });
   marker15_hinataboko.addListener('click', function() {
     infowindow_15.open(map, marker15_hinataboko);
@@ -335,7 +355,8 @@ function initialize() {
 
   var m_latlng16 = new google.maps.LatLng(40.7839736, 140.77765490000002);
   marker16_Oeuf = new google.maps.Marker({
-    position: m_latlng16
+    position: m_latlng16,
+    icon:iconImage14
   });
   marker16_Oeuf.addListener('click', function() {
     infowindow_16.open(map, marker16_Oeuf);
@@ -343,7 +364,8 @@ function initialize() {
 
   var m_latlng17 = new google.maps.LatLng(40.7827266, 140.78049929999997);
   marker17_konkichin = new google.maps.Marker({
-    position: m_latlng17
+    position: m_latlng17,
+    icon:iconImage8
   });
   marker17_konkichin.addListener('click', function() {
     infowindow_17.open(map, marker17_konkichin);
@@ -351,7 +373,8 @@ function initialize() {
 
   var m_latlng18 = new google.maps.LatLng(40.78797453, 140.78469336);
   marker18_yakkyoku = new google.maps.Marker({
-    position: m_latlng18
+    position: m_latlng18,
+    icon:iconImage12
   });
   marker18_yakkyoku.addListener('click', function() {
     infowindow_18.open(map, marker18_yakkyoku);
@@ -359,7 +382,8 @@ function initialize() {
 
   var m_latlng19 = new google.maps.LatLng(40.78799542, 140.78449803);
   marker19_famirikuriniku = new google.maps.Marker({
-    position: m_latlng19
+    position: m_latlng19,
+    icon:iconImage5
   });
   marker19_famirikuriniku.addListener('click', function() {
     infowindow_19.open(map, marker19_famirikuriniku);
@@ -367,7 +391,8 @@ function initialize() {
 
   var m_latlng20 = new google.maps.LatLng(40.7813066, 140.78091929);
   marker20_sekotuin = new google.maps.Marker({
-    position: m_latlng20
+    position: m_latlng20,
+    icon:iconImage7
   });
   marker20_sekotuin.addListener('click', function() {
     infowindow_20.open(map, marker20_sekotuin);
@@ -375,7 +400,8 @@ function initialize() {
 
   var m_latlng21 = new google.maps.LatLng(40.78267599, 140.77701017);
   marker21_mikamiiin = new google.maps.Marker({
-    position: m_latlng21
+    position: m_latlng21,
+    icon:iconImage5
   });
   marker21_mikamiiin.addListener('click', function() {
     infowindow_21.open(map, marker21_mikamiiin);
@@ -383,7 +409,8 @@ function initialize() {
 
   var m_latlng22 = new google.maps.LatLng(40.78154881, 140.77863961);
   marker22_takenamisika = new google.maps.Marker({
-    position: m_latlng22
+    position: m_latlng22,
+    icon:iconImage6
   });
   marker22_takenamisika.addListener('click', function() {
     infowindow_22.open(map, marker22_takenamisika);
@@ -391,7 +418,8 @@ function initialize() {
 
   var m_latlng23 = new google.maps.LatLng(40.781279, 140.78139807);
   marker23_sekisika = new google.maps.Marker({
-    position: m_latlng23
+    position: m_latlng23,
+    icon:iconImage6
   });
   marker23_sekisika.addListener('click', function() {
     infowindow_23.open(map, marker23_sekisika);
@@ -399,7 +427,8 @@ function initialize() {
 
   var m_latlng24 = new google.maps.LatLng(40.78453987, 140.78384914);
   marker24_koubatasika = new google.maps.Marker({
-    position: m_latlng24
+    position: m_latlng24,
+    icon:iconImage6
   });
   marker24_koubatasika.addListener('click', function() {
     infowindow_24.open(map, marker24_koubatasika);
@@ -407,16 +436,17 @@ function initialize() {
 
   var m_latlng25 = new google.maps.LatLng(40.78415552, 140.77808037);
   marker25_airuhamanaka = new google.maps.Marker({
-    position: m_latlng25
+    position: m_latlng25,
+    icon:iconImage6
   });
   marker25_airuhamanaka.addListener('click', function() {
     infowindow_25.open(map, marker25_airuhamanaka);
   });
 
-
   var m_latlng26 = new google.maps.LatLng(40.78459927, 140.77972725);
   marker26_tehutehu = new google.maps.Marker({
-    position: m_latlng26
+    position: m_latlng26,
+    icon:iconImage9
   });
   marker26_tehutehu.addListener('click', function() {
     infowindow_26.open(map, marker26_tehutehu);
@@ -424,7 +454,8 @@ function initialize() {
 
   var m_latlng27 = new google.maps.LatLng(40.78106693, 140.78089515);
   marker27_CHELSEA = new google.maps.Marker({
-    position: m_latlng27
+    position: m_latlng27,
+    icon:iconImage9
   });
   marker27_CHELSEA.addListener('click', function() {
     infowindow_27.open(map, marker27_CHELSEA);
@@ -432,7 +463,8 @@ function initialize() {
 
   var m_latlng28 = new google.maps.LatLng(40.78428245, 140.77858195);
   marker28_SUPERMAN = new google.maps.Marker({
-    position: m_latlng28
+    position: m_latlng28,
+    icon:iconImage9
   });
   marker28_SUPERMAN.addListener('click', function() {
     infowindow_28.open(map, marker28_SUPERMAN);
@@ -440,7 +472,8 @@ function initialize() {
 
   var m_latlng29 = new google.maps.LatLng(40.78193748, 140.78358883);
   marker29_atorie = new google.maps.Marker({
-    position: m_latlng29
+    position: m_latlng29,
+    icon:iconImage9
   });
   marker29_atorie.addListener('click', function() {
     infowindow_29.open(map, marker29_atorie);
@@ -448,7 +481,8 @@ function initialize() {
 
   var m_latlng30 = new google.maps.LatLng(40.78242508, 140.78393573);
   marker30_ron = new google.maps.Marker({
-    position: m_latlng30
+    position: m_latlng30,
+    icon:iconImage9
   });
   marker30_ron.addListener('click', function() {
     infowindow_30.open(map, marker30_ron);
@@ -456,7 +490,8 @@ function initialize() {
 
   var m_latlng31 = new google.maps.LatLng(40.78369472, 140.78453808);
   marker31_kudou = new google.maps.Marker({
-    position: m_latlng31
+    position: m_latlng31,
+    icon:iconImage9
   });
   marker31_kudou.addListener('click', function() {
     infowindow_31.open(map, marker31_kudou);
@@ -464,7 +499,8 @@ function initialize() {
 
   var m_latlng32 = new google.maps.LatLng(40.78144929, 140.78374788);
   marker32_aogin = new google.maps.Marker({
-    position: m_latlng32
+    position: m_latlng32,
+    icon:iconImage3
   });
   marker32_aogin.addListener('click', function() {
     infowindow_32.open(map, marker32_aogin);
@@ -472,7 +508,8 @@ function initialize() {
 
   var m_latlng33 = new google.maps.LatLng(40.78061481, 140.78121799);
   marker33_aoginiten = new google.maps.Marker({
-    position: m_latlng33
+    position: m_latlng33,
+    icon:iconImage3
   });
   marker33_aoginiten.addListener('click', function() {
     infowindow_33.open(map, marker33_aoginiten);
@@ -480,7 +517,8 @@ function initialize() {
 
   var m_latlng34 = new google.maps.LatLng(40.78135383, 140.78119576);
   marker34_yuubin = new google.maps.Marker({
-    position: m_latlng34
+    position: m_latlng34,
+    icon:iconImage15
   });
   marker34_yuubin.addListener('click', function() {
     infowindow_34.open(map, marker34_yuubin);
@@ -488,7 +526,8 @@ function initialize() {
 
   var m_latlng35 = new google.maps.LatLng(40.78529981835521, 140.7818879143848);
   marker35_aodaimae = new google.maps.Marker({
-    position: m_latlng35
+    position: m_latlng35,
+    icon:iconImage4
   });
   marker35_aodaimae.addListener('click', function() {
     infowindow_35.open(map, marker35_aodaimae);
@@ -496,7 +535,8 @@ function initialize() {
 
   var m_latlng36 = new google.maps.LatLng(40.78506584330007, 140.7828849021248);
   marker36_aodaimae2 = new google.maps.Marker({
-    position: m_latlng36
+    position: m_latlng36,
+    icon:iconImage4
   });
   marker36_aodaimae2.addListener('click', function() {
     infowindow_36.open(map, marker36_aodaimae2);
@@ -504,7 +544,8 @@ function initialize() {
 
   var m_latlng37 = new google.maps.LatLng(40.785221936209595, 140.78292095102051);
   marker37_aodaimae3 = new google.maps.Marker({
-    position: m_latlng37
+    position: m_latlng37,
+    icon:iconImage4
   });
   marker37_aodaimae3.addListener('click', function() {
     infowindow_37.open(map, marker37_aodaimae3);
@@ -512,7 +553,8 @@ function initialize() {
 
   var m_latlng38 = new google.maps.LatLng(40.78301258331486, 140.78428398599635);
   marker38_higasidouri1 = new google.maps.Marker({
-    position: m_latlng38
+    position: m_latlng38,
+    icon:iconImage4
   });
   marker38_higasidouri1.addListener('click', function() {
     infowindow_38.open(map, marker38_higasidouri1);
@@ -520,7 +562,8 @@ function initialize() {
 
   var m_latlng39 = new google.maps.LatLng(40.78252023972352, 140.78430308552356);
   marker39_higasidouri2 = new google.maps.Marker({
-    position: m_latlng39
+    position: m_latlng39,
+    icon:iconImage4
   });
   marker39_higasidouri2.addListener('click', function() {
     infowindow_39.open(map, marker39_higasidouri2);
@@ -528,7 +571,8 @@ function initialize() {
 
   var m_latlng40 = new google.maps.LatLng(40.781431279561744, 140.78236258675588);
   marker40_koubatadanti1 = new google.maps.Marker({
-    position: m_latlng40
+    position: m_latlng40,
+    icon:iconImage4
   });
   marker40_koubatadanti1.addListener('click', function() {
     infowindow_40.open(map, marker40_koubatadanti1);
@@ -536,7 +580,8 @@ function initialize() {
 
   var m_latlng41 = new google.maps.LatLng(40.78109520243667, 140.78135401127952);
   marker41_koubatadanti2 = new google.maps.Marker({
-    position: m_latlng41
+    position: m_latlng41,
+    icon:iconImage4
   });
   marker41_koubatadanti2.addListener('click', function() {
     infowindow_41.open(map, marker41_koubatadanti2);
@@ -544,7 +589,8 @@ function initialize() {
 
   var m_latlng42 = new google.maps.LatLng(40.78178880225462, 140.77797360006502);
   marker42_nisiguti1 = new google.maps.Marker({
-    position: m_latlng42
+    position: m_latlng42,
+    icon:iconImage4
   });
   marker42_nisiguti1.addListener('click', function() {
     infowindow_42.open(map, marker42_nisiguti1);
@@ -552,7 +598,8 @@ function initialize() {
 
   var m_latlng43 = new google.maps.LatLng(40.78234160970877, 140.7769245141924);
   marker43_nisiguti2 = new google.maps.Marker({
-    position: m_latlng43
+    position: m_latlng43,
+    icon:iconImage4
   });
   marker43_nisiguti2.addListener('click', function() {
     infowindow_43.open(map, marker43_nisiguti2);
@@ -560,7 +607,8 @@ function initialize() {
 
   var m_latlng44 = new google.maps.LatLng(40.78732897, 140.7843517);
   marker44_syougakoumae1 = new google.maps.Marker({
-    position: m_latlng44
+    position: m_latlng44,
+    icon:iconImage4
   });
   marker44_syougakoumae1.addListener('click', function() {
     infowindow_44.open(map, marker44_syougakoumae1);
@@ -568,7 +616,8 @@ function initialize() {
 
   var m_latlng45 = new google.maps.LatLng(40.78740092, 140.78452534);
   marker45_syougakoumae2 = new google.maps.Marker({
-    position: m_latlng45
+    position: m_latlng45,
+    icon:iconImage4
   });
   marker45_syougakoumae2.addListener('click', function() {
     infowindow_45.open(map, marker45_syougakoumae2);
@@ -576,7 +625,8 @@ function initialize() {
 
   var m_latlng46 = new google.maps.LatLng(40.78543193, 140.78225255);
   marker46_kouban = new google.maps.Marker({
-    position: m_latlng46
+    position: m_latlng46,
+    icon:iconImage10
   });
   marker46_kouban.addListener('click', function() {
     infowindow_46.open(map, marker46_kouban);

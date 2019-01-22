@@ -142,6 +142,5 @@ var contentStr44 = '<div id="content">' + '<p>' + '<img src="../画像/バス/�
 var contentStr45 = '<div id="content">' + '<p>' + '<img src="../画像/バス/バス停10/exterior.jpg" align=left width="50" height="50" alt="home">' +
   '<a href=https://www.navitime.co.jp/diagram/bus/00312365/00056078/0/><font size="6"><b>幸畑小学校前</b></font></a>';
 
-var contentStr46 = '<div id="content">' + '<p>' +
-  '<h1>青森警察署八甲田交番</h1>' + '<img src="../画像/交番/青森警察署 八甲田交番/exterior.jpg" align=left width="50" height="50" alt="home">' +
-  '<a href=../店舗/Otherwise/青森警察署_八甲田交番/青森警察署_八甲田交番.html><b><font size=6>ファミマ</font><b></a>';
+var contentStr46 = '<div id="content">' + '<p>' +'<img src="../画像/交番/青森警察署 八甲田交番/exterior.jpg" align=left width="50" height="50" alt="home">' +
+  '<a href=../店舗/Otherwise/青森警察署_八甲田交番/青森警察署_八甲田交番.html><b><font size=6>青森警察署八甲田交番</font><b></a>';
