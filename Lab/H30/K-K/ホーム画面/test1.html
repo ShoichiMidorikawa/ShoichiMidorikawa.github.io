@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset=utf-8>
+  <title>Google Maps JavaScript API サンプル</title>
+  <script src="list.js"></script>
+  <script src="code4_2.js"></script>
+  <link rel="stylesheet" href="infow.css" type="text/css" />
+  <style>
+    #map_canvas{
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 550px;
+      width: 90%;
+    }
+  </style>
+</head>
+
+<body onload="initialize()">
+  <p><b>青森大学周辺　便利マップ</b></p>
+
+  <div id="map_canvas"></div>
+
+  <form>
+    <p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="open" value="全表示" onclick="doOpen()" />
+      <input type="button" id="close" value="削除" onclick="doClose()" />
+      <input type="button" id="open" value="コンビニ" onclick="doOpen_1()" />
+      <input type="button" id="open" value="床屋" onclick="doOpen_2()" />
+      <input type="button" id="open" value="病院" onclick="doOpen_3()" />
+      <input type="button" id="open" value="飲食店" onclick="doOpen_4()" />
+      <input type="button" id="open" value="スーパーマーケット" onclick="doOpen_5()" />
+      <input type="button" id="open" value="バス停" onclick="doOpen_6()" />
+      <input type="button" id="open" value="その他" onclick="doOpen_7()" />
+    </p>
+  </form>
+</body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPE3UCGSMjiE3yXX6y4tW-GARAaDoq1L4&callback=initMap">
+</script>
+
+</html>
