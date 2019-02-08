@@ -10,23 +10,23 @@
 
 <style>
 .video-wrap {
-  position: relative;
-    display: block;
-    margin: -10px;
+ position: relative;
+ display: block;
+ margin: -10px;
 }
 
 p {
-  font-family: serif;          
-  color: #fff;
-  position: absolute;
-  font-size: 120%;
+ font-family: serif;          
+ color: #fff;
+ position: absolute;
+ font-size: 120%;
 }
 
 .under {text-decoration : underline}
 
 img.example1{
-width: auto;
-height: 120px;
+ width: auto;
+ height: 120px;
 }
 
 resizeimage img {width:100%;}
@@ -53,68 +53,88 @@ resizeimage img {width:100%;}
  padding: 0px;
  width: 500px;
  height:120px;
- background-color:gray;
+ background-color:#ebf6f7;
 }
 
-/*下ボタン１*/
-.fl_fb2 {/*ボタンの下地*/
-  color: #FFF;/*文字・アイコン色*/
-  border-radius: 7px;/*角丸に*/
-  display: inline-block;
-  height: 100px;/*高さ*/
-  width: 450px;/*幅*/
-  text-align: center;/*中身を中央寄せ*/
-  font-size: 30px;/*文字のサイズ*/
-  line-height: 100px;/*高さと合わせる*/
-  vertical-align: middle;/*垂直中央寄せ*/
-  background: #4966a0;
-  overflow: hidden;/*はみ出た部分を隠す*/
-  text-decoration:none;/*下線は消す*/
+/*更新情報文字色*/
+p.backBox3{
+ color:gray;
 }
 
-.fl_fb2 .fa-facebook {
-    text-shadow: 2px 2px 1px #224282;
-    font-size: 30px;
+/*5分で分かる～ボタン*/
+.square_btn {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 1em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #316745;
+    transition: .4s;
+    height: 50px;/*高さ*/
+    width: 400px;/*幅*/
+    font-size: 30px;/*文字のサイズ*/
+
+}
+.square_btn>span{
+    border-bottom: solid 2px #FFF;
+    border-top: solid 2px #FFF;
 }
 
-.fl_fb2 span {/*テキスト*/
-  display:inline-block;
-  transition: .5s;
+ .square_btn:hover span {
+    padding: 0.1em 0;
 }
 
-.fl_fb2:hover span{/*ホバーで一周回転*/
-  -webkit-transform: rotateX(360deg);
-  -ms-transform: rotateX(360deg);
-  transform: rotateX(360deg);
+.back1 {
+ width:100%
+ width-min:500px;
+ height: auto;
+}
+
+/*左ボックス*/
+.box5 {
+ margin:2em 0;
+ position: relative;
+ padding: 0.5em 1.5em;
+ width: 600px;
+ height: 300px;
+} 
+
+.box5 p {
+ margin: 0; 
+ padding: 0;
 }
 
 </style>
 
 </head>
 <body>
-<!--背景2-->
+  
+<!--下部画像-->
 <div style ="position:absolute; top:0px; left:0px">
- <div class="backBox2">
- <p></p>
- </div>
+ <img src="image/downC.png">
 </div>
 
-<!--背景１-->
+<!--黒板-->
 <div style ="position:absolute; top:0px; left:0px">
- <div class="backBox1">
+ <img src="image/back03_2.png">
+</div>
+
+<!--黒板記入-->
+<div style ="position:absolute; top:0px; left:0px">
+ <div class="box5">
 <br><br><br><br><br><br><br><br><br><br><br>
  <p>　このサイトは、HTMLやCSSの勉強の為に学生が<br>
 　　 作成した<span class="under">青森大学ソフトウェア情報学部</span>の紹介サイトです。<br>
  <br>
-　 　1366*768の解像度を元に作りました。
  </p>
  </div>
 </div>
 
-<!--背景3-->
+<!--更新情報-->
 <div style ="position:absolute; top:450px; left:820px">
  <div class="backBox3">
- <p> 　＜更新情報＞<br><br>
+<font color="#808080">＜更新情報＞</font>
 </p>
  </div>
 </div>
@@ -140,17 +160,15 @@ resizeimage img {width:100%;}
 
 <!--5分でわかる青森大学-->
 <div style="position:absolute; top:460px; left:320px">    
- <a href="five_min/five_min.html"
-  class="fl_fb2" TARGET="_blank">
- <i class="fa fa-facebook"></i> <span>５分でわかる青森大学の利点</span>
+ <a href="five_min/five_min.html" class="square_btn" TARGET="_blank">
+ <span>５分でわかる青森大学の利点</span>
  </a>
 </div>
 
 <!--公式ホームページへのリンク-->
 <div style="position:absolute; top:450px; left:40px"> 
  <a href="http://www.aomori-u.ac.jp/" TARGET="_blank">
-  <img src="./image/univ.png"
-   class="example1" height="100px";>
+  <img src="./image/univ.png" class="example1" height="100px";>
  </a>
 </div>
 
