@@ -12,6 +12,7 @@
   text-align:center;
   text-valign:middle;
   font-size:50px;
+  color:white;
  }
 
  /*検定の紹介文*/
@@ -19,7 +20,7 @@
   width:625px;
   height:485px;
   border:1px  solid #cccccc;
-  background-color:rgba( 220, 220, 220, 0.5);
+  background-color:rgba( 220, 220, 220, 0.8);
  }
 
  /*左のサイドバー*/
@@ -56,7 +57,7 @@
  border: 0px solid #cccccc;
  width: 300px;
  height: 612px;
- background-color:rgba( 220, 220, 220, 0.5);
+ background-color:rgba( 220, 220, 220, 0.8);
 }
 
 /*画像の縮小*/
@@ -73,6 +74,7 @@ img.reduction {
  font-weight: bold;
  font-size:15px;
 }
+ 
  table{
   border-collapse:collapse;
   margin: 1px;
@@ -84,6 +86,7 @@ img.reduction {
    margin: 1px;
    padding: 1px;
    width: 120px;
+  color:white;
 }
 
  td{
@@ -91,8 +94,12 @@ img.reduction {
    margin: 1px;
    padding: 1px;
    width: 70px;
+  color:white;
 }
 
+.con p{
+ color:white;
+}
 
 .list{
    list-style:none;
@@ -103,8 +110,14 @@ img.reduction {
 
 <body>
 
-<div class="backBox1">
+<div style ="position:absolute; top:0px; left:0px">
+ <img src="../image/back03.png">
+</div>
+
+<div style ="position:absolute; top:0px; left:400px">
 <h1>　　　　　　教員免許</h1>
+</div>
+
 
 <!--左ボックス-->
 <div style ="position:absolute; top:0px; left:0px">
@@ -132,7 +145,7 @@ img.reduction {
 
 <!--サイト内リンク-->
 <div style ="position:absolute; top:10px; left:20px;">
- <h3>――――HP外リンク――――</h3>
+ <h3>――――HP内リンク――――</h3>
 </div>
 <div style ="position:absolute; top:50px; left:10px;">
  <ul class="list">
@@ -187,7 +200,9 @@ img.reduction {
 
 
 <div style="position:absolute; top:170px; left:1000px;">
+ <div class="con">
 <p><b>2016年　北東北３県各校別　教員採用倍率</b></p>
+  </div>
 </div>
 
 <div style="position:absolute; top:200px; left:980px;">
