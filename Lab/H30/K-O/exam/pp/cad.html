@@ -12,6 +12,7 @@
   text-align:center;
   text-valign:middle;
   font-size:50px;
+  color:white;
  }
 
  /*検定の紹介文*/
@@ -19,7 +20,7 @@
   width:625px;
   height:485px;
   border:1px  solid #cccccc;
-  background-color:rgba( 220, 220, 220, 0.5);
+  background-color:rgba( 220, 220, 220, 0.8);
  }
 
  /*左のサイドバー*/
@@ -56,7 +57,7 @@
  border: 0px solid #cccccc;
  width: 300px;
  height: 612px;
- background-color:rgba( 220, 220, 220, 0.5);
+ background-color:rgba( 220, 220, 220, 0.8);
 }
 
 /*画像の縮小*/
@@ -73,21 +74,23 @@ img.reduction {
  font-weight: bold;
  font-size:15px;
 }
- table{
-  border-collapse:collapse;
-  margin: 5px;
-  padding: 5px;
- }
+ 
+table{
+ border-collapse:collapse;
+ margin: 5px;
+ padding: 5px;
+}
 
- td, th {
-  border:2px solid #b7b7b7;
-   margin: 5px;
-   padding: 5px;
-   width: 150px;
+td, th {
+ border:2px solid #b7b7b7;
+ margin: 5px;
+ padding: 5px;
+ width: 150px;
+ color:white;
 }
 
 .list{
-   list-style:none;
+ list-style:none;
 }
 
 </style>
@@ -95,13 +98,20 @@ img.reduction {
 
 <body>
 
-<div class="backBox1">
-<h1>　　　　　３次元CAD利用技術者試験</h1>
+ <!--背景-->
+<div style ="position:absolute; top:0px; left:0px">
+ <img src="../../image/back03.png">
+</div>
+
+<!--タイトル-->
+<div style ="position:absolute; top:0px; left:500px">
+ <h1>３次元CAD利用技術者試験</h1>
+</div>
 
 <!--左ボックス-->
 <div style ="position:absolute; top:0px; left:0px">
  <div class ="section2">
-</div>
+ </div>
 </div>
 
 <!--左のサイドバーの描画-->
@@ -110,23 +120,25 @@ img.reduction {
  </div>
 </div>
 
- <div style ="position:absolute; top:50px; left:50px;">
-  <div class="backBox">
-   <center><p><b>関連教員</b></p></center>
-   </div>
-   <div style="position:absolute; top:35px; left:35px">
-    <a href="../../faculty/pp/wajima.html">
-    <img src="../../faculty/btn/wajima.png" alt="教師写真" ></a>
-    <center><p>和島 茂</p></center>
-   </div>
-  </div>
+<!--教員の写真-->
+<div style ="position:absolute; top:50px; left:50px;">
+ <div class="backBox">
+  <center><p><b>関連教員</b></p></center>
  </div>
+ <div style="position:absolute; top:35px; left:35px">
+  <a href="../../faculty/pp/wajima.html">
+  <img src="../../faculty/btn/wajima.png" alt="教師写真" ></a>
+  <center><p>和島 茂</p></center>
+ </div>
+</div>
+</div>
 
 <!--公式HPへのリンク-->
 <div style="position:absolute; top:500px; left:20px;border:0px solid #333333;">
  <h3>――――HP外リンク――――</h3>
 </div>
-   <div style="position:absolute; top:540px; left:10px">
+ 
+<div style="position:absolute; top:540px; left:10px">
  <ul class="list">
 <li><a href ="http://www.acsp.jp/cad/">コンピュータ教育振興協会
 </a></li>
