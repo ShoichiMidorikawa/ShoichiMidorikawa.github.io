@@ -12,6 +12,7 @@ h1{
   color:black;
   text-align:center;
 }
+  
 h2{
   color:#5bb7ae;
   text-align:left;
@@ -28,26 +29,43 @@ h2{
 }
 
 /*ボックス*/
-.box22{
-    padding: 0.5em 1em;
-    margin: 1em 0;
-    background: #f4f4f4;
-    border-left: solid 6px #5bb7ae;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
-    width: 400px;
-    height:150px;
+.box31{
+ position: relative;
+ margin: 2em 0;
+ padding: 25px 10px 7px 10px;
+ border: solid 5px #00a3af;
+ height:120px;
+ width:400px;
+ background:#ffffff;
+
 }
-.box22 p {
-    margin: 0; 
-    padding: 0;
-　　color: red;
+  
+.box31 .box-title {
+ position: absolute;
+ display: inline-block;
+ top: 0px;
+ left: -2px;
+ padding: 0 9px;
+ height: 40px;
+ line-height: 40px;
+ vertical-align: middle;
+ font-size: 30px;
+ background: #00a3af;
+ color: #ffffff;
+ font-weight: bold;
+}
+  
+.box31 p {
+ margin: 0; 
+ padding: 0;
+ color: black;
 }
 
  /*紹介文*/
 .content {
  border: 0px solid #cccccc;
  width: 600px;
- background-color:rgba(220, 220, 220, 0.5);
+ background-color:rgba(220, 220, 220, 0.8);
  padding:0px;
  margin:0px;
 }
@@ -56,14 +74,18 @@ h2{
  margin: 0px;
  padding: 0px;
  }
+  
 </style>
 </head>
 
-
 <body>
 
-<div class="backBox1">
-<h1>資格一覧</h1>
+<div style ="position:absolute; top:0px; left:0px">
+ <img src="../image/back03.png">
+</div>
+
+<div style ="position:absolute; top:0px; left:600px">
+ <h1>資格一覧</h1>
 </div>
 
 <div style="position:absolute; top:70px; left:370px;">
@@ -78,12 +100,13 @@ h2{
 
 <a href ="../exam/pp/fetee.html">
 <div style="position:absolute; top:170px; left:200px;">
-<div class="box22">
-    <p><h2>　情報処理技術者資格</h2><br>
+<div class="box31">
+ <span class="box-title">情報処理技術者資格</span>
+  <p><br>
 　・日本の国家試験<br>
 　・「春期」「秋期」の年２回実施<br>
 　　情報処理に必要な知識や技能を問われる
-</p>
+ </p>
 </div>
 </div>
 </a>
@@ -91,12 +114,13 @@ h2{
 
 <a href ="../exam/pp/cgengr.html">
 <div style="position:absolute; top:170px; left:700px;">
-<div class="box22">
-    <p><h2>　CG検定</h2><br>
+<div class="box31">
+ <span class="box-title">CG検定</span>
+  <p><br>
 　・CG-ARTS協会主催<br>
 　・「前期」「後期」の年２回実施<br>
 　　CG分野の開発設計を行うプログラマの為の検定
-</p>
+  </p>
 </div>
 </div>
 </a>
@@ -104,23 +128,25 @@ h2{
 
 <a href ="../exam/pp/cad.html">
 <div style="position:absolute; top:380px; left:700px;">
-<div class="box22">
-    <p><h2>　CAD利用技術者資格</h2><br>
+<div class="box31">
+ <span class="box-title">CAD利用技術者資格</span>
+  <p><br>
 　・各一般社団法人等が認定する試験<br>
 　・「夏期」「冬期」の年２回実施<br>
-</p>
+  </p>
 </div>
 </div>
 </a>
 
 <a href ="../exam/pp/mos.html">
 <div style="position:absolute; top:380px; left:200px;">
-<div class="box22">
-    <p><h2>　Microsoft Offie Specialist</h2><br>
+<div class="box31">
+ <span class="box-title">Microsoft Offie Specialist</span>
+  <p><br>
 　・マイクロソフト社認定の国際資格<br>
 　・CBT形式で実施<br>
 　　Microsoft Officeの基本操作や応用的使用の能力
-</p>
+ </p>
 </div>
 </div>
 </a>
