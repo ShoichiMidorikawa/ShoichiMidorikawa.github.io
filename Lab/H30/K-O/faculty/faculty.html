@@ -97,13 +97,29 @@ transform: translateY(0);
 
 /*左ボックス*/
 .box5 {
- padding: 0.5em 1em;
- margin: 2em 0;
- border: double 5px #4ec4d3;
+ margin:2em 0;
+ position: relative;
+ padding: 0.5em 1.5em;
+ border-top: solid 2px white;
+ border-bottom: solid 2px white;
  width: 240px;
  height: 520px;
- background: whitesmoke;
-} 
+}
+ 
+.box5:before, .box5:after{
+ content: '';
+ position: absolute;
+ top: -10px;
+ width: 2px;
+ height: -webkit-calc(100% + 20px);
+ height: calc(100% + 20px);
+ background-color: white;
+}
+ 
+.box5:before {left: 10px;}
+ 
+.box5:after {right: 10px;}
+ 
 .box5 p {
  margin: 0; 
  padding: 0;
@@ -111,10 +127,10 @@ transform: translateY(0);
 
 </style>
 
-
 </head>
 <body>
-<div class ="backBox1">
+<div style ="position:absolute; top:0px; left:0px">
+ <img src="../image/back03.png">
 
 <!--上段左端-->
 <div style ="position:absolute; top:10px; left:470px">
@@ -308,6 +324,7 @@ Webデザイン<br>
 <!--説明-->
 <div style ="position:absolute; top:0px; left:35px">
 <div class="box5">
+ <font color="white">
 <p>
 <center><h2>専門教員一覧</h2></center>
 <br>
@@ -324,6 +341,7 @@ Webデザイン<br>
 <br>
 　　　　<b>Let's click!!→</b>
 </p>
+ </font>
 </div>
 </div>
 
