@@ -12,6 +12,7 @@
   text-align:center;
   text-valign:middle;
   font-size:50px;
+  color:white;
  }
 
  /*検定の紹介文*/
@@ -19,7 +20,7 @@
   width:400px;
   height:485px;
   border:1px  solid #cccccc;
-  background-color:rgba( 220, 220, 220, 0.5);
+  background-color:rgba( 220, 220, 220, 0.8);
  }
 
  /*左のサイドバー*/
@@ -56,7 +57,7 @@
  border: 0px solid #cccccc;
  width: 300px;
  height: 612px;
- background-color:rgba( 220, 220, 220, 0.5);
+ background-color:rgba( 220, 220, 220, 0.8);
 }
 
 /*画像の縮小*/
@@ -84,6 +85,7 @@ img.reduction {
    margin: 1px;
    padding: 1px;
    width: 200px;
+  color:white;
 }
 
  td{
@@ -91,10 +93,19 @@ img.reduction {
    margin: 1px;
    padding: 1px;
    width: 350px;
+  color:white;
 }
 
 .list{
    list-style:none;
+}
+
+ .con p{
+  color:white;
+}
+
+.sub a{
+ color:white;
 }
 
 </style>
@@ -102,8 +113,13 @@ img.reduction {
 
 <body>
 
-<div class="backBox1">
+<div style ="position:absolute; top:0px; left:0px">
+   <img src="../../image/back03.png">
+</div>
+
+ <div style ="position:absolute; top:0px; left:400px">
 <h1>　　　　　中学校教諭一種免許状「数学」</h1>
+</div>
 
 <!--左ボックス-->
 <div style ="position:absolute; top:0px; left:0px">
@@ -131,7 +147,7 @@ img.reduction {
 
 <!--サイト内リンク-->
 <div style ="position:absolute; top:10px; left:20px;">
- <h3>――――HP外リンク――――</h3>
+ <h3>――――HP内リンク――――</h3>
 </div>
 <div style ="position:absolute; top:50px; left:10px;">
  <ul class="list">
@@ -182,10 +198,13 @@ img.reduction {
 
 
 <div style="position:absolute; top:80px; left:925px;">
+ <div class="con">
 <p><b>免許取得の際に必要となる講義一覧</b></p>
+</div>
 </div>
 
 <div style="position:absolute; top:80px; left:765px;">
+ <div class="sub">
  <table>
   <tr>
    <th> </th>
@@ -259,7 +278,7 @@ CG基礎数学</center></a>
   </tr>
  </table>
 </div>
-
+</div>
 </div>
 </body>
 </html>
