@@ -347,7 +347,7 @@ function initialize() {
   var m_latlng15 = new google.maps.LatLng(40.78089381, 140.78092125);
   marker15_hinataboko = new google.maps.Marker({
     position: m_latlng15,
-    icon:iconImage8
+    icon:iconImage13
   });
   marker15_hinataboko.addListener('click', function() {
     infowindow_15.open(map, marker15_hinataboko);
