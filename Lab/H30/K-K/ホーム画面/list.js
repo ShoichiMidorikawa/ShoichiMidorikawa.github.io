@@ -798,7 +798,6 @@ function doOpen_6() {
 }
 
 function doOpen_7() {
-   marker1_daigaku.setMap(map);
   marker1_daigaku.setMap(map);
   marker32_aogin.setMap(map);
   marker33_aoginiten.setMap(map);
