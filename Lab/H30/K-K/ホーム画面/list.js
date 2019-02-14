@@ -733,6 +733,7 @@ function doClose() {
 }
 
 function doOpen_1() {
+   marker1_daigaku.setMap(map);
   marker3_roson.setMap(map);
   marker4_famima.setMap(map);
   marker5_sebun.setMap(map);
@@ -740,6 +741,7 @@ function doOpen_1() {
 }
 
 function doOpen_2() {
+   marker1_daigaku.setMap(map);
   marker26_tehutehu.setMap(map);
   marker27_CHELSEA.setMap(map);
   marker28_SUPERMAN.setMap(map);
@@ -749,6 +751,7 @@ function doOpen_2() {
 }
 
 function doOpen_3() {
+   marker1_daigaku.setMap(map);
   marker18_yakkyoku.setMap(map);
   marker19_famirikuriniku.setMap(map);
   marker20_sekotuin.setMap(map);
@@ -760,6 +763,7 @@ function doOpen_3() {
 }
 
 function doOpen_4() {
+   marker1_daigaku.setMap(map);
   marker7_tibasyokudou.setMap(map);
   marker8_tarukou.setMap(map);
   marker9_hokatei.setMap(map);
@@ -774,10 +778,12 @@ function doOpen_4() {
 }
 
 function doOpen_5() {
+   marker1_daigaku.setMap(map);
   marker2_makuba.setMap(map);
 }
 
 function doOpen_6() {
+   marker1_daigaku.setMap(map);
   marker35_aodaimae.setMap(map);
   marker36_aodaimae2.setMap(map);
   marker37_aodaimae3.setMap(map);
@@ -792,6 +798,7 @@ function doOpen_6() {
 }
 
 function doOpen_7() {
+   marker1_daigaku.setMap(map);
   marker1_daigaku.setMap(map);
   marker32_aogin.setMap(map);
   marker33_aoginiten.setMap(map);
