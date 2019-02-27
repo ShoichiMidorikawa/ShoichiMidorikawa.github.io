@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>¿–âƒR[ƒi[</title>
+<title>è³ªå•ã‚³ãƒ¼ãƒŠãƒ¼</title>
 <style>
 div1{
   position:absolute;
@@ -13,17 +13,24 @@ div2{
   top:  400px;
 }
 </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-135083881-1');
+  
  function onClick(){
   var str1=document.getElementById("txt").value;
   var str2=document.getElementById("display");
   if(str1){
-    str2.innerHTML='<h3>—F‚æA“š‚¦‚Í•—‚Ì’†‚ÉB<br><br>' + 
-@@'<font face="cursive">The answer, my friend, is blowing in the wind. <br>' +
+    str2.innerHTML='<h3>å‹ã‚ˆã€ç­”ãˆã¯é¢¨ã®ä¸­ã«ã€‚<br><br>' + 
+ã€€ã€€'<font face="cursive">The answer, my friend, is blowing in the wind. <br>' +
     'The anser is blowing in the wind. </font></h3>';
   }else{
-    str2.innerHTML ='<font color="red"><b> ¿–â‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B</b></font>';
+    str2.innerHTML ='<font color="red"><b> è³ªå•ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚</b></font>';
   }
  }
 </script>
@@ -31,7 +38,7 @@ div2{
 <body> 
 <div1>
 <center>
-<h2><font face="serif"> ¿–âƒR[ƒi[‚Å‚·B‰½‚Å‚à‚¨‹CŒy‚É‚¨q‚Ë‚­‚¾‚³‚¢B</font></h2>
+<h2><font face="serif"> è³ªå•ã‚³ãƒ¼ãƒŠãƒ¼ã§ã™ã€‚ä½•ã§ã‚‚ãŠæ°—è»½ã«ãŠå°‹ã­ãã ã•ã„ã€‚</font></h2>
 <br>
 <form name="f1">
 
@@ -39,7 +46,7 @@ div2{
  
   <br>
   <br>
-  <input type="button"  name="button" value="‰ñ“š"  onclick="onClick()">
+  <input type="button"  name="button" value="å›ç­”"  onclick="onClick()">
   <br>
   <p id="display"></p>
 </form>
