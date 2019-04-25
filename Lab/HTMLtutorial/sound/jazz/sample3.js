@@ -32,9 +32,15 @@ var ytID = 'E7X86QlQFQQ';
                 videoId: 'omjZ73GFPaQ' // YouTubeのID
              }
           );
+          ytPlayer4 = new YT.Player(
+             'sample4', // 埋め込む場所の指定
+             {
+                width: '0', // プレーヤーの幅
+                height: '0', // プレーヤーの高さ
+                videoId: 'fhyhP_5VfKM' // YouTubeのID
+             }
+          );
        };
-
-
 
 
 onload = function(){
@@ -62,6 +68,7 @@ onload = function(){
        $('#play').click(function() {
          ytPlayer2.pauseVideo();
          ytPlayer3.pauseVideo();
+         ytPlayer4.pauseVideo();
          ytPlayer1.playVideo();
        });
        $('#pause').click(function() {
@@ -74,6 +81,7 @@ onload = function(){
        $('#play').click(function() {
          ytPlayer1.pauseVideo();
          ytPlayer3.pauseVideo();
+         ytPlayer4.pauseVideo();
          ytPlayer2.playVideo();
        });
        $('#pause').click(function() {
@@ -86,6 +94,7 @@ onload = function(){
        $('#play').click(function() {
          ytPlayer1.pauseVideo();
          ytPlayer2.pauseVideo();
+         ytPlayer4.pauseVideo();
          ytPlayer3.playVideo();
        });
        $('#pause').click(function() {
@@ -94,7 +103,19 @@ onload = function(){
        $('#stop').click(function() {
          ytPlayer3.pauseVideo().seekTo(0);
        });
-    
+    }else if(selectedItem.value == 3){
+       $('#play').click(function() {
+         ytPlayer1.pauseVideo();
+         ytPlayer2.pauseVideo();
+         ytPlayer3.pauseVideo();
+         ytPlayer4.playVideo();
+       });
+       $('#pause').click(function() {
+         ytPlayer4.pauseVideo();
+       });
+       $('#stop').click(function() {
+         ytPlayer4.pauseVideo().seekTo(0);
+       });    
     }
   }
 
