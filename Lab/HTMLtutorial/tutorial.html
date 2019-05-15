@@ -11,18 +11,26 @@ body{
   padding: 30px;
   margin-left: 250px;
 }
+ .br-pc { display:block; }
+ .br-sp { display:none; }
+}
 
 @media screen and (max-width: 840px){
    body{
      padding: 30px;
      margin-left: 100px;
-   }
+     .br-pc { display:block; }
+     .br-sp { display:none; }
+}
 }
 
 @media screen and (max-width: 750px){
    body{
      padding: 30px;
      margin-left: 20px;
+     .br-pc { display:block; }
+     .br-sp { display:none; }
+
    }
 }
 
@@ -36,6 +44,8 @@ body{
   ul{
      margin-left: -30px;
   }
+  .br-pc { display:none; }
+  .br-sp { display:block; }
 }
 
 
@@ -58,48 +68,49 @@ body{
   <LI style="line-height : 6mm;"><A href="sample1-2.html">sample1-2.html</A> （CSS入門)
   <LI style="line-height : 6mm;"><A href="sample1-3.html">sample1-3.html</A> （壁紙を張る)<BR>
   壁紙で使用した写真　：　<A href="back1_4.jpg">back1_4.jpg</A> 
-  <LI style="line-height : 6mm;"><A href="sample2.html">sample2.html</A> (リンクと動画共有 as time goes by)
+  <LI style="line-height : 6mm;"><A href="sample2.html">sample2.html</A> <br class="br-sp" />(リンクと動画共有 as time goes by)
   <LI style="line-height : 6mm;"><A href="sample3-1.html">sample3-1.html</A> (フォーム機能)
-  <LI style="line-height : 6mm;"><A href="sample3-2.html">sample3-2.html</A> (JavaScript入門(１)テキスト入力)
+  <LI style="line-height : 6mm;"><A href="sample3-2.html">sample3-2.html</A> <br class="br-sp" />(JavaScript入門(１)テキスト入力)
   <LI style="line-height : 6mm;"><A href="sample3-3.html">sample3-3.html</A> (JavaScript入門(2)改良)
-  <LI style="line-height : 6mm;"><A href="sample3f.html">sample3f.html</A> (応用例題 blowing in the wind)
+  <LI style="line-height : 6mm;"><A href="sample3f.html">sample3f.html</A> <br class="br-sp" />(応用例題 blowing in the wind)
   <LI style="line-height : 6mm;"><A href="sample4.html">sample4.html</A> (縦書き　三人吉三廓初買)
   <LI style="line-height : 6mm;"><A href="sample5-1.html">sample5-1.html</A> (ビデオの公開　リンク)
-  <LI style="line-height : 6mm;"><A href="sample5-2.html">sample5-2.html </A> (ビデオの公開　動画の埋め込み)   
-  <LI style="line-height : 6mm;"><A href="sample5-3.html">sample5-3.html </A> (ビデオの公開　複数動画の再生)   
-  <LI style="line-height : 6mm;"><A href="sample5-4.html">sample5-4.html</A> (複数動画の再生2 Sukiyaki聴き比べ)
-  <LI style="line-height : 6mm;"><A href="sample5-5.html">sample5-5.html</A> (YouTubeビデオのloop再生 the circle game)
-  <LI style="line-height : 6mm;"><A href="sound/sound1.html">sound1.html</A> (コントローラによるサウンドの再生)
+  <LI style="line-height : 6mm;"><A href="sample5-2.html">sample5-2.html </A> <br class="br-sp" />(ビデオの公開　動画の埋め込み)   
+  <LI style="line-height : 6mm;"><A href="sample5-3.html">sample5-3.html </A> <br class="br-sp" />(ビデオの公開　複数動画の再生)   
+  <LI style="line-height : 6mm;"><A href="sample5-4.html">sample5-4.html</A> <br class="br-sp" />(複数動画の再生2 Sukiyaki聴き比べ)
+  <LI style="line-height : 6mm;"><A href="sample5-5.html">sample5-5.html</A> <br class="br-sp" />(YouTubeビデオのloop再生 the circle game)
+  <LI style="line-height : 6mm;"><A href="sound/sound1.html">sound1.html</A> <br class="br-sp" />(コントローラによるサウンドの再生)
   <LI style="line-height : 6mm;"><A href="sound/sound2.html">sound2.html</A> (サウンドの自動再生)  
   
     <LI style="line-height : 6mm;"><A href="sound/sound3.html">sound3.html</A> (サウンドのループ再生)  
   
-    <LI style="line-height : 6mm;"><A href="sound/sound4.html">sound4.html</A> (JavaScriptによるサウンドの再生)
+    <LI style="line-height : 6mm;"><A href="sound/sound4.html">sound4.html</A> <br class="br-sp" />(JavaScriptによるサウンドの再生)
     
     <LI style="line-height : 6mm;"><A href="sound/sound5.html">sound5.html</A> (異なるサウンドの連続再生)
     
-    <LI style="line-height : 6mm;"><A href="sound/sound6.html">sound6.html </A>(異なる2つのサウンドを続けて有限回再生) 
+    <LI style="line-height : 6mm;"><A href="sound/sound6.html">sound6.html </A> <br class="br-sp" />(異なる2つのサウンドを続けて有限回再生) 
     
-    <LI style="line-height : 6mm;"><A href="sound/sound7.html">sound7.html</A> (異なる2つのサウンドを続けてloop再生)<BR>
+    <LI style="line-height : 6mm;"><A href="sound/sound7.html">sound7.html</A> <br class="br-sp" />(異なる2つのサウンドを続けてloop再生)<BR>
     　デモで使用したサウンド<BR>
-    　　 　<A href="sound/sin.wav">sin.wav</A> , 
-      　<A href="sound/beat.wav">beat.wav</A> ,  
+    　<A href="sound/sin.wav">sin.wav</A> , 
+      　<A href="sound/beat.wav">beat.wav</A> ,  <br class="br-sp" />
       　<A href="sound/timbre.wav">timbre.wav</A> ,  
-     　 <A href="sound/sin2.wav">sin2.wav</A> ,
+     　 <A href="sound/sin2.wav">sin2.wav</A> ,  <br class="br-sp" /> 
       　<A href="sound/siren.wav">siren.wav</A> ,  
       　<A href="sound/beep.wav">beep.wav</A> , <BR>
-　      　　<A href="sound/doremi.wav">doremi.wav,</A>
+　<A href="sound/doremi.wav">doremi.wav,</A>
           　<A href="sound/doshira.wav">doshira.wav</A>,
-        　　<A href="sound/doshiraS.wav">doshiraS.wav</A> 
+  　　   　<A href="sound/doshiraS.wav">doshiraS.wav</A> 
 
-    <LI style="line-height : 6mm;"><A href="sound/sound8.html">sound8.html </A>(YouTubeをオーディオプレーヤーとして１　rock'n'roll music）
-    <LI style="line-height : 6mm;"><A href="sound/sound9.html">sound9.html </A>(YouTubeをオーディオプレーヤーとして２　雨の曲5つ）
-    <LI style="line-height : 6mm;"><A href="sound/jazz/sound10.html">sound10.html </A>(YouTubeをオーディオプレーヤーとして３　Jazzの調べ)
+    <LI style="line-height : 6mm;"><A href="sound/sound8.html">sound8.html </A><br class="br-sp" />(YouTubeをオーディオプレーヤーとして１　rock'n'roll music）
+    <LI style="line-height : 6mm;"><A href="sound/sound9.html">sound9.html </A><br class="br-sp" />(YouTubeをオーディオプレーヤーとして２　
+雨の曲5つ）
+    <LI style="line-height : 6mm;"><A href="sound/jazz/sound10.html">sound10.html </A><br class="br-sp" />(YouTubeをオーディオプレーヤーとして３　Jazzの調べ)
     <LI style="line-height : 6mm;"><A href="sample6.html">sample6.html </A>(「確率・統計学」講義）
-    <LI style="line-height : 6mm;"><A href="sample7.html">sample7.html </A>(YouTube動画のplaylistによる連続再生　Waterloo Road, ... ）
-    <LI style="line-height : 6mm;"><A href="sample8.html">sample8.html </A>(YouTube動画の部分再生 "After all, tomorrow is another day."）
-    <LI style="line-height : 6mm;"><A href="sample9.html">sample9.html </A>(YouTube動画の部分再生 "Wir m&uuml;ssen wissen. Wir werden wissen."）
-    <LI style="line-height : 6mm;"><A href="sample10.html">sample10.html </A>(YouTubeをBGMとして "Moon River, Charade, and My Fair Lady Overture"）
+    <LI style="line-height : 6mm;"><A href="sample7.html">sample7.html </A><br class="br-sp" />(YouTube動画のplaylistによる連続再生　Waterloo Road, ... ）
+    <LI style="line-height : 6mm;"><A href="sample8.html">sample8.html </A><br class="br-sp" />(YouTube動画の部分再生 "After all, tomorrow is another day."）
+    <LI style="line-height : 6mm;"><A href="sample9.html">sample9.html </A><br class="br-sp" />(YouTube動画の部分再生 "Wir m&uuml;ssen wissen. Wir werden wissen."）
+    <LI style="line-height : 6mm;"><A href="sample10.html">sample10.html </A><br class="br-sp" />(YouTubeをBGMとして "Moon River, Charade, and My Fair Lady Overture"）
 
 </UL>
  　　　　　
