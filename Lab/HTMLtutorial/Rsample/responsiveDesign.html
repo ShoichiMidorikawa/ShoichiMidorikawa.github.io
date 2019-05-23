@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title></title>
+<script></script>
+<style>
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 500px;
+    margin: auto;
+}
+div.child2{
+    background-color: lightblue;
+    text-align: left;
+    font-size: 16px;
+    width: 610px;
+    margin: auto;
+    padding:1px 3px 1px;
+}
+
+.pc-eff { display:block; }
+.sp-eff { display:none; }
+
+@media screen and (max-width: 640px){
+  .pc-eff { display:none; }
+  .sp-eff { display:block; }
+}
+
+</style>
+
+</head>
+<body>
+<center>
+<H1>レスポンシブ WEB デザイン</H1>
+</center>
+
+<div class="parent">
+ <div class="child">
+レスポンシブWEBデザインでは、まず、head要素に
+<div class="child2">
+<pre>
+&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+</pre>
+</div>
+と書きます。
+
+<p> 画面に制約があるため、大きさによって内容を表示させたり、させなかったりしたい場合が
+あります。
+、HTMLファイルのstyle要素の中に、
+<div class="child2">
+<pre>
+ .pc-eff { display:block; }     
+ .sp-eff { display:none; }      
+
+ @media screen and (max-width: 640px){
+   .pc-eff { display:none; }    
+   .sp-eff { display:block; }   
+ }                              
+</pre>
+</div>
+<p>と書きましょう。
+次に、body要素の中に、
+<div class="child2">
+<pre>
+&lt;div class="sp-eff"&gt;"sp-eff"はスマホで有効です。&lt;/div&gt; 
+&lt;div class="pc-eff"&gt;"pc-eff"はPCで有効です。&lt;/div&gt;    
+</pre>
+</div>
+<p>と書きます。すると、PCの画面では、
+
+<div class="child2">
+"pc-eff"はPCで有効です。
+</div>
+<p>スマホの画面では、
+
+<div class="child2">
+"sp-eff"はスマホで有効です。
+</div>
+
+<p>と表示されます。結果は、
+
+<A href="Rsample1.html">Rsample1.html</A>で確認できます。
+
+
+
+
+ </div>
+</div>　
+</body>
+</html> 
