@@ -1,25 +1,112 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML><HEAD>
-<TITLE></TITLE>
-<META content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<META http-equiv="Content-Style-Type" content="text/css">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135058747-1"></script>
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Midorikawa's Page</title>
+<style>
+body{
+   background-image : url(indexFiles/b_bcg003.gif);
+   display: inline-block;
+}
+
+ .br-pc{ display:block; }
+ .br-sp{ display:none; }
+
+#left{
+   position: relative; 
+   display: inline-block;
+   float: left;
+}
+#right{
+   position: absolute;  
+   left: 100px;
+   display: inline-block;
+   float right;
+ border-left: thin dotted brown;
+
+} 
+
+
+
+@media screen and (max-width: 690px){
+   img{
+      width: 100%;
+      height: auto;
+   }
+
+   .br-pc{ display:none; }
+   .br-sp{ display:block; }
+
+
+#left{
+   position: relative; 
+   display: inline-block;
+   float: left;
+}
+
+#right{
+   top: 170px;
+   left: 0px;
+   display: inline-block;
+   float right;
+   border:none;
+} 
+
+
+}
+
+</style>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-135058747-1');
 </script>
+</head>
+<body scroll="no">
+<TABLE width="835" height="113">
+  <TBODY>
+    <TR>
+      <TD rowspan="2" width="99"><img src="indexFiles/portrait.JPG" alt="(Midorikawa's portrait)" width="89" height="98"></TD>
+      <TD align="center" width="720"><FONT size="+4"><A href="PlatoAcademy.pdf" target="_blank">
+      <img src="indexFiles/logo3.gif" border="0" width="627" height="40" alt="Welcome to Midorikawa's Page"></A></FONT></TD>
+    </TR>
+    <TR>
+      <TD align="center" width="720" height="40">
+      <H3><FONT color="#008040"><B><A href="indexFiles/HeineSummer.pdf" style="text-decoration: none" target="_blank">Unser Sommer ist nur ein gr&uuml;n angestrichener
+      Winter.... <BR>
+      Das einzige Obst, das wir haben, sind
+      goldene
+      &Auml;pfel ..</A>.</B></FONT><FONT color="#008040"><B> </B></FONT></H3>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
 
-</HEAD>
-<FRAMESET rows="23%,77%">
-  <FRAME noresize src="indexFiles/Default0.html" scrolling="NO">
-  <FRAMESET cols="16%,84%">
-    <FRAME src="newpage5.html">
-    <FRAME src="newpage6.html">
-  </FRAMESET>
-  <NOFRAMES><P>このページをご覧いただくにはフレーム対応のブラウザが必要です。</P></NOFRAMES>
-</FRAMESET>
-</HTML>
+<hr>
+<div id="left" >
+<H3>緑川章一<br class="br-pc" />
+<FONT size="-1">Shoichi Midorikawa</FONT>
+<P>
+<A href="Activities/profile.htm" target="_blank"><br class="br-pc" />プロフィール</A><br class="br-pc" />
+<A href="Activities/contact.htm" target="_blank"><FONT color="#0000ff">連絡先</FONT></A><br class="br-pc" />
+<A href="Activities/research.htm" target="_blank">研究分野</A><br class="br-pc" />
+<A href="lecture.htm" target="_blank">担当科目</A>
+<br class="br-pc">
+<font size="1">
+平成２９年度教員免許更新講習
+<br class="br-pc">
+<a href="license/MathSoftware.html"  target="_blank">数学とコンピュータソフトウェア</a>　　
+</font>
+</P>
+</H3>
+</div>
+
+<div id="right">
+    <iframe src="newpage6.html" id="right" width="780" height="2800"  scrolling="no" aligh="right"
+      marginwidth="5" marginheight="5" frameborder="0" >
+    </iframe>
+</div>
+
+
+
+</body>
+</html> 
