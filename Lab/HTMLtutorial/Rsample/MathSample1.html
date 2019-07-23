@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>MathJaxの例(レスポンシブ非対応)</title>
+<style></style>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<style>
+  body{
+    margin:  100px;
+  }
+@media screen and (max-width: 690px){
+  body{
+    margin:  10px;
+  }
+}
+
+</style>
+</head>
+<body>
+ド・モアブルの公式
+\begin{equation}
+\cos n \theta + i \sin n \theta = (\cos \theta + i \sin \theta)^n \tag{1}
+\end{equation}
+オイラーの公式
+\[
+e^{i \theta} = \cos \theta + i \sin \theta \tag{2}
+\]
+オイラーの公式(2)を用いて、(1)式を表すと、
+\[
+e^{i n \theta} = \left( e^{i \theta} \right)^n 
+\]
+となる。
+(2)式において、\(\theta = \pi\) とおくと、
+\[
+e^{i \pi} = -1　% ここに数式を書きます。
+\]
+が得られる。
+</body>
+</html> 
