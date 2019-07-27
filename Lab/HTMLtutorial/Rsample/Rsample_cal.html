@@ -12,12 +12,13 @@ div1{
   top:  100px;
 }
 
- .br-pc{ display:block; }
- .br-sp{ display:none; }
+  .pc-eff { display:block; }
+  .sp-eff { display:none; }
+
 
 @media screen and (max-width: 690px){
-   .br-pc{ display:none; }
-   .br-sp{ display:block; }
+  .pc-eff { display:none; }
+  .sp-eff { display:block; }
 
 }
 
@@ -203,9 +204,9 @@ function onClick2(){
 </script>
 </head>
 <body> 
-<div1>
+<div1>-
  <center>
-   <p>足し算と引き算を10問正解するまでの<br class="br-sp" />時間を測ります。</p>
+   <p>足し算と引き算を10問正解するまでの<br class="sp-eff" />時間を測ります。</p>
    <p>スタートボタンを押してください。<p>
    <button id="btn0"  onclick="onClick()"><font color="black">スタート</font></button>
    <br>
