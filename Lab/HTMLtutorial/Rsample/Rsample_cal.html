@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang"ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<head>
+<title></title>
+<style>
+div1{
+  position:relative;
+  left: 300px 
+  top:  100px;
+}
+
+ .br-pc{ display:block; }
+ .br-sp{ display:none; }
+
+@media screen and (max-width: 690px){
+   .br-pc{ display:none; }
+   .br-sp{ display:block; }
+
+}
+
+</style>
+<script>
+
+var now;
+var s, m, h;
+var s0, m0, h0;
+var s1, m1, h1;
+var s2, m2, h2;
+var s3, m3, h3;
+var now, now2;
+var image, image2;
+var bbb;
+var nr;
+var nw;
+var a, b;
+var str1, str2;
+var bt;
+var n=0;
+var num;
+
+onload = function(){
+  bt=document.getElementById('btn0'); 
+  bbb=document.getElementById('box');
+  nr = 0;
+  nw = 0;
+
+ msg =  '00:00';  
+ display.innerHTML = msg;
+ bbb.innerHTML='　　　 ';
+
+  bt.onclick = function(){
+      n+=1;
+      num=n%2;
+      if (num==1){
+         var num = n%2;
+         bt.style.color='red';
+         bt.innerHTML='リセット';
+
+         now = new Date();
+         h0 = now.getHours();
+         m0 = now.getMinutes();
+         s0 = now.getSeconds();
+
+      timer=setInterval('showClock()', 1000);
+
+         calc();
+      }
+      else if(num==0){
+         bt.style.color='black';
+         bt.innerHTML='スタート';
+         bbb.innerHTML='　　　 ';
+         str2.innerHTML ='<font color="red"><b>　　　　　</b></font>';
+         box2.innerHTML=' ';
+         box3.innerHTML=' ';
+         box5.innerHTML=' ';
+
+         clearInterval(timer);
+         display.innerHTML = '00:00'; 
+         box4.innerHTML=' ';
+
+         nr=0;
+         nw=0; 
+      }
+  }
+};
+
+
+
+
+function showClock(){  
+   now2 = new Date();
+   h1 = now2.getHours();
+   m1 = now2.getMinutes();
+   s1 = now2.getSeconds();
+  
+
+   var ss =(h1-h0)*3600+(m1-m0)*60+(s1-s0);
+      s = ss%60;
+   var mm = (ss-s)/60;
+      m = mm%60;
+ 
+   s3=s;
+   if(s3<10)
+     s3='0'+s3;
+   m3=m;
+   if(m3<10)
+     m3='0'+m3;
+  
+   msg = m3 + ':' + s3;
+
+   display.innerHTML = msg; 
+
+};
+
+
+function calc(){
+
+  a = Math.floor( Math.random() * 101 );
+  b = Math.floor( Math.random() * 101 ); 
+
+  rand = Math.random();
+  var sign;
+  if(rand <0.5){
+     sign = '+';
+  }else{
+     sign = '-';
+  }
+
+  if(sign == '+'){
+     c= a+b;
+  }else if(sign == '-'){
+     if(b>a){
+        var tmp = a;
+        a=b;
+        b = tmp;
+     } 
+     c = a-b;
+  } 
+  value= null;
+  document.getElementById('txt').value='';
+  str2=document.getElementById("display2");
+
+  bbb.innerHTML= a + sign + b + '=';
+};
+
+function onClick2(){
+    str1=document.getElementById("txt").value;
+    str2=document.getElementById("display2");
+
+    if(str1==c){
+      str2.innerHTML='　　　　　正解';
+      nr+=1;
+      box2.innerHTML='正解数：'+nr;
+      
+      if(nr==10){
+         var bt=document.getElementById('btn0'); 
+         bt.style.color='blue';
+         bt.innerHTML='リセット';
+         box4.innerHTML='かかった時間：'+msg;
+         box5.innerHTML='リセットを押してください。'
+
+      }
+;
+
+    }else{
+      str1='null';
+      str2.innerHTML ='<font color="red"><b>　　　　　間違い</b></font>';
+      nw+=1;
+      box3.innerHTML='間違い：'+nw;
+    }
+    a = Math.floor( Math.random() * 101 );
+    b = Math.floor( Math.random() * 101 ); 
+
+    rand = Math.random();
+    var sign;
+    if(rand <0.5){
+       sign = '+';
+    }else{
+       sign = '-';
+    }
+
+    if(sign == '+'){
+       c= a+b;
+    }else if(sign == '-'){
+     if(b>a){
+        var tmp = a;
+        a=b;
+        b = tmp;
+     } 
+       c = a-b;
+    } 
+    value= null;
+    document.getElementById('txt').value='';
+    str2=document.getElementById("display2");
+
+    box.innerHTML= a + sign + b + '=';
+};
+
+
+</script>
+</head>
+<body> 
+<div1>
+ <center>
+   <p>足し算と引き算を10問正解するまでの<br class="br-sp" />時間を測ります。</p>
+   <p>スタートボタンを押してください。<p>
+   <button id="btn0"  onclick="onClick()"><font color="black">スタート</font></button>
+   <br>
+   <p id="display"></p>
+
+  <div23>
+   <div0 id="box"></div0>
+   <input type="text" size="7" id="txt" >
+   <input type="button" name="button" value="解答する"  onclick="onClick2()">
+   <br>
+   <p id="display2"></p>
+   <p id="box2"></p>
+   <p id="box3"></p> 
+   <p id="box4"></p> 
+   <p id="box5"></p> 
+</div23>
+</div1>
+</center>
+</body>
+</html> 
