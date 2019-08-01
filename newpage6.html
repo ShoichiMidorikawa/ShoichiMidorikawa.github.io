@@ -33,17 +33,21 @@ body{
 #div1{
    padding-left: 2em;
 }
+#div2{
+   text-align: center;
+}
+
+
 H2{
    text-align: left;
 }
 
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 690px){
    body{
-     padding: 28px;
-     margin-left: -20px;
-//     width: 100%;
-   }
+//     padding: 28px;
+//     margin-left: -20px;
+     width: 100%;
+//   }
 
    #div0{
       padding-left: 0em;
@@ -51,20 +55,19 @@ H2{
    #div1{
       padding-left: 0em;
    }
-   H2{
-//      align: center;
-      padding-left:0em;
+   #div2{
+      text-align: left;
    }
- 
-
+   #aaa{
+      text-align: left;
+      padding-left: 0em;
+   } 
    .br-pc{ display:none; }
    .br-sp{ display:block; }
 
 }
 
 </style>
-
-
 
 
 
@@ -91,25 +94,25 @@ H2{
 <BR>
 <A href="Miscellaneous/QMpath-int.pdf" target="_blank">経路積分(Path Integral)</A><BR> 
 
-
 <BR>
 <BR>
 確率論と統計学<p>
 <div id="div1">
 <A href="Lec/ProbDistr/DiceProblem.pdf" target="_blank">賽は投げられた(The dice are cast.)</A><p>
-<A href="Lec/ProbDistr/uniform.pdf" target="_blank">連続一様分布する確率変数の和(Sums of Continuous Uniform Random Variables)</A><p>
+<A href="Lec/ProbDistr/uniform.pdf" target="_blank">連続一様分布する確率変数の和　<br class="br-sp"/>(Sums of Continuous Uniform Random Variables)</A><p>
 <A href="Lec/prob_stat/MontyHall.pdf" target="_blank">モンティ・ホール問題(Monty Hall problem)</A><p>
 <A href="Lec/prob_stat/ruin.pdf" target="_blank">破産問題(ruin problem)</A><p>
 <A href="Lec/ProbDistr/CLT.pdf" target="_blank">中心極限定理(central limit theorem)</A><p>
 <A href="Lec/ProbDistr/DPD.pdf" target="_blank">離散確率分布(Discrete Probability Distributions)</A><p>
 </div>
 <BR>
-<div>
+<div id="div0">
 統計学で用いられる関数<BR>
 </div>
 <div id="div1">
 <A href="Lec/ProbDistr/gamma.pdf" target="_blank">ガンマ関数とベータ関数(Gamma and Beta functions)</A><p>
-<A href="Lec/ProbDistr/s-p-r.pdf" target="_blank">確率変数の和，積，商，べき乗の分布(PDFs of X+Y, XY, X/Y, X^Y)</A><p>
+<A href="Lec/ProbDistr/s-p-r.pdf" target="_blank">確率変数の和，積，商，べき乗の分布</A>
+<A href="Lec/ProbDistr/pdfs.html"  target="_blank">(Joint PDFs)</A><p>
 <A href="Lec/ProbDistr/hypergeometric.pdf" target="_blank">超幾何分布(hypergeometric distribution)</A><p>
 <A href="Lec/ProbDistr/normal.pdf" target="_blank">正規分布(normal distribu tion)</A><p>
 <A href="Lec/ProbDistr/binom_gauss.pdf" target="_blank">二項分布と正規分布(Binomial and Gaussian distributions)</A><p>
@@ -156,13 +159,14 @@ JAVAによる作品紹介<BR><BR>
 <A href="Java/Calculation/Calculation3.html" target="_blank">頭脳トレーニング</A>、
 <A href="Java/kanji/kanji.html" target="_blank">漢字検定</A>、<br class="br-sp" />
 <A href="Java/kanji2/kanji.html" target="_blank">漢字検定（国名・地名編）</A><BR>
+</div>
 <BR>
 <BR>
 写真からの３次元像　<BR>
 <A href="Java/man/DBAnimeEvent.html" target="_blank">
 <IMG border=0 src="Java/man/OldMan.JPG" width=71 
 height=75></A>　(画像をマウスで回転できます)<BR>
-</div>
+
 <BR>
 <BR>
 <BR>
@@ -206,9 +210,11 @@ JAVA3Dによる作品紹介　<br class="br-sp" />
 <BR>
 <A href="Java/ConicSection/SwitchTest.html" target="_blank">円錐曲線</A><BR>
 <BR>
+</div>
+<!-- div id="div0"-->
 ステレオグラム　<BR class="br-sp" />
 交差法による裸眼立体視（左の図を右目で、右の図を左目で見ます。）<BR>
-
+<!-- /div -->
 <div id="div1">
 三つ葉結び目<BR>
 <A href="Java/knot2L/MyRotationInterpolator.html" target="_blank">左（負）</A>
@@ -227,9 +233,10 @@ JAVA3Dによる作品紹介　<br class="br-sp" />
 <A href="Java/stereoRW2/AWTInteraction.html" target="_blank">３次元拡散</A><BR>
 左の点を右目で、右の点を左目で見て、２つの像が重なったらSTARTボタンを押します。）</H4>
 </div>
+</div>
 <BR>
-</div>
 
-</div>
+<H2><FONT color=#0000ff><A href="midorikawaLab.htm" target="_blank">研究室のホームページへ</A></FONT></H2>
 
-<H2><FONT color=#0000ff><A href="midorikawaLab.htm" target="_blank">研究室のホームページへ</A></FONT></H2></BODY></HTML>
+
+</BODY></HTML>
