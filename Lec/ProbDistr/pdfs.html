@@ -23,19 +23,37 @@
 <body>
 <article>
 <center>
-<H2>Joint Probability Density Function</H2>
+<H2>Functions of Two Random Variables</H2>
 </center>
 <p style="text-align: center">
 Shoichi Midorikawa
 </p>
 
 <section>
-<h3>0. Dirac delta function</h3>
+<h3>General Formula</h3>
+<p>　Let \(X\) and \(Y\) be two independent continuous random variables.
+Suppose \(Z\) is a function of \(X\) and \(Y\), i.e.,  \(z = \varphi(x, y)\), then
+the pdf of \(z\) is 
+\[
+f_Z(z) = \int \delta \left(z-\varphi(x, y) \right) f_X(x) f_Y(y) \, dx \, dy
+\]
+where \( \delta \left(z-\varphi(x, y) \right) \) is the Dirac delta function.
+</p>
+<p>
+　To evaluate the integral, it is convenient to use the formula
 \[
 \delta\left( \varphi(x) \right) = \sum_i \frac{1}{|\varphi'(\alpha_i)|}\delta(x-\alpha_i)
 \]
-<p>　where \(\alpha_i\) is a solution of \( \varphi(x)=0 \).</p>
+where \(\alpha_i\) is a solution of \( \varphi(x)=0 \), namely, \( \varphi(\alpha_i)=0  \) .
+</p>
+<p>
+　The following are representative examples.
+</p> 
 </section>
+
+
+
+
 <section>
   
 <h3>1. \(\bf Z=X+Y\)</h3>
