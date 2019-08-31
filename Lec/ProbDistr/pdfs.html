@@ -63,6 +63,7 @@ f_Z(z) &=& \int \delta(z-x-y)f_X(x)f_Y(y)\, dx\, dy \\
 \end{eqnarray*}
 </section>
 
+<section>
 <h3>2. \(\bf Z=X-Y\)</h3>
 \begin{eqnarray*}
 f_Z(z) &=& \int \delta(z-x+y)f_X(x)f_Y(y)\, dx\, dy \\
@@ -70,18 +71,51 @@ f_Z(z) &=& \int \delta(z-x+y)f_X(x)f_Y(y)\, dx\, dy \\
 \end{eqnarray*}
 </section>
 
+<section>
 <h3>3. \(\bf Z=XY\)</h3>
-\begin{eqnarray*}
-f_Z(z) &=& \int \delta(z-xy)f_X(x)f_Y(y)\, dx\, dy \\
-&=& \int \frac{1}{|y|}f_X(z/y) f_Y(y)\, dy
-\end{eqnarray*}
+\[
+f_Z(z) = \int \delta(z-xy)f_X(x)f_Y(y)\, dx\, dy \\
+\]
+\[
+{\rm Since} \ \ \delta(z-xy) = \delta\left(y(x-\frac{z}{y})\right)= \frac{1}{|y|}\delta\left(x-\frac{z}{y}\right)
+\]
+\[
+f_Z(z) = \int \frac{1}{|y|}f_X(z/y) f_Y(y)\, dy
+\]
 </section>
 
-<h3>4. \(\bf Z=X^Y\)</h3>
-\begin{eqnarray*}
-f_Z(z) &=& \int \delta(z-x^y)f_X(x)f_Y(y)\, dx\, dy \\
-&=& \int \frac{1}{|yz^{1-1/y}|}f_X\left(z^{1/y}\right) f_Y(y)\, dy
-\end{eqnarray*}
+<section>
+<h3>4. \(\bf Z=X/Y\)</h3>
+\[
+f_Z(z) = \int \delta\left(z-\frac{x}{y}\right)f_X(x)f_Y(y)\, dx\, dy \\
+\]
+\[
+{\rm Since}\ \ \delta\left(z-\frac{x}{y}\right) = \delta\left(\frac{1}{y}(x-yz)\right)= |y|\delta\left(x-yz\right)
+\]
+\[
+f_Z(z) = \int |y| f_X(yz) f_Y(y)\, dy
+\]
+</section>
+
+
+
+<section>
+<h3>5. \(\bf Z=X^Y\)</h3>
+\[
+f_Z(z) = \int \delta(z-x^y)f_X(x)f_Y(y)\, dx\, dy \\
+\]
+Let \( g(x) = z-x^y\). 
+
+\[
+{\rm Then, \ \ from}\ \   g(x)= 0, \ \ x = z^{1/y} .   
+\]
+\[
+ g'(x) = -yx^{y-1},\ \  {\rm hence} \ \ g'(z^{1/y}) = - y z^{1-1/y}.　　　　
+\] 
+Thus, we find
+\[
+f_Z(z)= \int \frac{1}{|yz^{1-1/y}|}f_X\left(z^{1/y}\right) f_Y(y)\, dy
+\]
 </section>
 
 <br>
