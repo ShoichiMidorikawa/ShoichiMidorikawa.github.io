@@ -2,10 +2,19 @@
 <html lang"ja">
 <meta charset="utf-8">
 <head>
-<title></title>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+
+
+
+<title></title>
 <style>
 div1{
   position:relative;
@@ -26,8 +35,8 @@ var s3, m3, h3;
 var now, now2;
 var image, image2;
 var bbb;
-var nr;
-var nw;
+var nr=0;
+var nw=0;
 var a, b;
 var str1, str2;
 var bt;
@@ -37,8 +46,6 @@ var num;
 onload = function(){
   bt=document.getElementById('btn0'); 
   bbb=document.getElementById('box');
-  nr = 0;
-  nw = 0;
 
  msg =  '00:00';  
  display.innerHTML = msg;
@@ -68,14 +75,9 @@ onload = function(){
          str2.innerHTML ='<font color="red"><b>　　　　　</b></font>';
          box2.innerHTML=' ';
          box3.innerHTML=' ';
-         box5.innerHTML=' ';
 
          clearInterval(timer);
          display.innerHTML = '00:00'; 
-         box4.innerHTML=' ';
-
-         nr=0;
-         nw=0; 
       }
   }
 };
@@ -153,10 +155,8 @@ function onClick2(){
          bt.style.color='blue';
          bt.innerHTML='STOP';
          box4.innerHTML='かかった時間：'+msg;
-         box5.innerHTML='STOPを押してください。'
-
       }
-;
+
 
     }else{
       str1='null';
@@ -212,8 +212,7 @@ function onClick2(){
    <p id="box2"></p>
    <p id="box3"></p> 
    <p id="box4"></p> 
-   <p id="box5"></p> 
-</div23>
+ </div23>
 </div1>
 </center>
 </body>
