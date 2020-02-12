@@ -21,18 +21,21 @@
       function display_eq2(){
          if(n2%2 == 0){ 
             document.getElementById("MyEquation2").innerHTML=
-　　　  '$$ \\sin\\theta+\\cos\\theta=\\frac{1}{2}より、\\cos\\theta=\\frac{1}{2}-\\sin\\thetaとなる。 $$'+
-            '$$ \\cos\\theta=\\frac{1}{2}-\\sin\\thetaを\\sin^2\\theta+\\cos^2\\theta=1に代入して、$$'+
-　　　  '$$ \\sin^2\\theta+ \\left(\\frac{1}{2}-\\sin\\theta \\right)^2 =1$$'+
-            '$$ 2\\sin^2\\theta- \\sin\\theta-\\frac{3}{4}=0 $$'+
-　　　  '$$ \\sin\\theta=t とおく。(0^\\circ≦\\theta≦180^\\circより、0≦t≦1) $$'+
-            '$$ 2t^2-t-\\frac{3}{4}=0 $$'+
-            '$$ 8t^2-4t-3=0 $$'+
+　　　  '$$ \\sin\\theta+\\cos\\theta=\\frac{1}{2}より、\\sin\\theta=\\frac{1}{2}-\\cos\\thetaとなる。 $$'+
+        '$$ \\sin\\theta=\\frac{1}{2}-\\cos\\theta$$'+
+　　　  '$$ \\sin^2\\theta=\\left(\\frac{1}{2}-\\cos\\theta\\right)^2 $$'+
+        '$$ \\sin^2\\theta=1-\\cos^2\\thetaより、 $$'+
+　　　  '$$ 1-\\cos^2\\theta=\\left(\\frac{1}{2}-\\cos\\theta\\right)^2 $$'+
+        '$$ \\cos\\theta=xとおくと、1-x^2=\\left(\\frac{1}{2}-x\\right)^2 $$'+
+        '$$ 1-x^2=\\frac{1}{4}-x+x^2 $$'+
+        '$$ 2x^2-x-\\frac{3}{4}=0 $$'+
+        '$$ 8x^2-4x-3=0 $$'+
 　　　  '$$ これを解の公式を用いて解くと、 $$'+
-            '$$ t=\\frac{1\\pm\\sqrt{7}}{4} $$'+
-            '$$ 0≦t≦1より、 t=\\sin\\theta=\\frac{1+\\sqrt{7}}{4} $$'+
-            '$$ よって、\\cos\\theta=\\frac{1}{2}-\\frac{1+\\sqrt{7}}{4}=\\frac{1-\\sqrt{7}}{4} $$'+
-            '$$ 以上より、解答は　２　\\frac{1-\\sqrt{7}}{4} $$';
+        '$$ x=\\frac{1\\pm\\sqrt{7}}{4} $$'+
+        '$$ \\sin\\theta=\\frac{1}{2}-\\cos\\theta＞0より、 $$'+
+        '$$ \\frac{1}{2}＞\\cos\\thetaとなるので、 $$'+
+        '$$ x=\\frac{1-\\sqrt{7}}{4} $$'+
+        '$$ 以上より、解答は　２　\\frac{1-\\sqrt{7}}{4} $$';
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
             n2+=1;
          }else{
@@ -104,6 +107,16 @@
       function display_eq5(){
          if(n5%2 == 0){ 
             document.getElementById("MyEquation5").innerHTML=
+            '$$ 接する点を(x,y)とおくと、点A(1,3)を通り、円x^2+y^2=5に第2象限で接する直線の傾きは、 $$'+
+            '$$ \\frac{y-3}{x-1}で表すことができる。 $$'+
+            '$$ 円の中心である原点(0,0)から接する点(x,y)に伸びる直線の傾きは、 $$'+
+            '$$ \\frac{y}{x}で表すことができる。 $$'+
+            '$$ この2つの直線は接する点で直角に交わるので、 $$'+
+            '$$ \\left(\\frac{y-3}{x-1}\\right)・\\left(\\frac{y}{x}\\right)=-1で表すことができる。 $$'+
+            '$$ y(y-3)=-x(x-1) $$'+
+            '$$ y^2-3y=-x^2+x $$'+
+            '$$ x^2+y^2=x+3y $$'+
+            '$$ x^2+y^2=5より、 $$'+
             '$$ x+3y=5 $$'+
             '$$ x=-3y+5 $$'+
             '$$ 円x^2+y^2=5より $$'+
@@ -120,7 +133,52 @@
             '$$ y=2の場合x+3y=5の式に代入して $$'+
             '$$ x+6=5 $$'+
             '$$ x=-1 $$'+
-            '$$ この条件を満たすのは　１　-x+2y=5 $$';
+            '$$ この条件を満たすのは　１　-x+2y=5 $$'+
+            '$$  $$'+
+            '$$ 別解１　 $$'+
+            '$$ (1,3)を通る直線の方程式は、傾きはをaとおくと、 $$'+
+            '$$ y-3=a(x-1)で表すことができる。 $$'+
+            '$$ y-3=ax-a $$'+
+            '$$ ax-y-(a-3)=0 $$'+
+            '$$ この直線と原点(0,0)の距離dは $$'+
+            '$$ d=\\frac{|a-3|}{\\sqrt{a^2+(1)^2}}=\\sqrt{5} $$'+
+            '$$ \\frac{(a-3)^2}{a^2+1}=5 $$'+
+            '$$ (a-3)^2=5(a^2+1) $$'+
+            '$$ a^2-6a+9=5a^2+5 $$'+
+            '$$ 4a^2+6a-4=0 $$'+
+            '$$ 2a^2+3a-2=0 $$'+
+            '$$ (2a-1)(a+2)=0 $$'+
+            '$$ a=\\frac{1}{2},-2 $$'+
+            '$$ 第2象限で接するので、傾きはa＞0となる。 $$'+
+            '$$ よって、a=\\frac{1}{2} $$'+
+            '$$ y-3=\\frac{1}{2}(x-1) $$'+
+            '$$ 2y-6=x-1 $$'+
+            '$$ -x+2y=5 $$'+
+            '$$ よって解答は、　１　-x+2y=5 $$'+
+            '$$  $$'+
+            '$$ 別解２ $$'+
+            '$$ (1,3)を通る直線の方程式は、傾きはをaとおくと、 $$'+
+            '$$ y-3=a(x-1)で表すことができる。 $$'+
+            '$$ y-3=ax-a $$'+
+            '$$ y=ax-(a-3) $$'+
+            '$$ この直線の式を、円x^2+y^2=5の式に代入して、 $$'+
+            '$$ x^2+\\left\\{ax-(a--3)\\right\\}^2 $$'+
+            '$$ x^2+a^2x^2-2a(a-3)x+(a-3)^2-5=0 $$'+
+            '$$ (a^2+1)x^2-2a(a-3)x+\\left\\{(a-3)^2-5\\right\\}=0 $$'+
+            '$$ 接するとき判別式D=0となるので、 $$'+
+            '$$ \\frac{D}{4}=4a^2(a-3)^2-4(a^2-1)・\\left\\{(a-3)^2-5\\right\\}=0 $$'+
+            '$$ D=a^2(a-3)^2-a^2(a-3)^2+5a^2-(a-3)^2+5=0 $$'+
+            '$$ D=5a^2-a^2+6a-9+5=0 $$'+
+            '$$ D=4a^2+6a-4=0 $$'+
+            '$$ D=2a^2+3a-2=0 $$'+
+            '$$ (2a-1)(a+2)=0 $$'+
+            '$$ a=\\frac{1}{2},-2 $$'+
+            '$$ 第2象限で接するので、傾きはa＞0となる。 $$'+
+            '$$ よって、a=\\frac{1}{2} $$'+
+            '$$ y-3=\\frac{1}{2}(x-1) $$'+
+            '$$ 2y-6=x-1 $$'+
+            '$$ -x+2y=5 $$'+
+            '$$ よって解答は、　１　-x+2y=5 $$';
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
             n5+=1;
          }else{
@@ -215,6 +273,17 @@
             '$$ \\frac{1}{y} \\cdot \\frac{dy}{dx}=\\log x+1 $$'+
             '$$ \\frac{dy}{dx}=y(\\log x+1) $$'+
             '$$ \\frac{dy}{dx}=x^x(\\log x+1) $$'+
+            '$$ よって解答は４　x^x(\\log x+1) $$'+
+            '$$  $$'+
+　　　  '$$ 別解 $$'+
+            '$$ x=e^{\\log x}と表すことができるので、 $$'+
+            '$$ x^x=e^{x\\log x} $$'+
+            '$$ \\left(x^x\\right)’=\\left(e^{x\\log x}\\right)’ $$'+
+            '$$ \\left(x^x\\right)’=(x\\log x)’e^{x\\log x} $$'+
+            '$$ (x\\log x)’=x・\\frac{1}{x}+1・\\log x=1+\\log xと表すことができるので、 $$'+
+            '$$ \\left(x^x\\right)’=(\\log x +1)e^{x\\log x} $$'+
+            '$$ \\left(x^x\\right)’=x^x(\\log x +1) $$'+
+
             '$$ よって解答は４　x^x(\\log x+1) $$';
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
             n10+=1;
@@ -284,11 +353,12 @@
       function display_eq14(){
          if(n14%2 == 0){ 
             document.getElementById("MyEquation14").innerHTML=
-　　　  '$$ 1は、Rは接点をとっているのでPQ⊥ORである。 $$'+
-            '$$ 2は、Oが直角になるので\\triangle OPQは直角三角形である。 $$'+
-            '$$ 3は、OP:QOの比は一定であるが、OP+QOの値は一定ではない。 $$'+
+        ' <img src = "img6.jpg" width="350" height="500">'+
+　　　  '$$ 1は、2\\alpha+2\\beta=\\piであるから、\\alpha+\\beta=\\frac{\\pi}{2}より、 PQ⊥ORである。 $$'+
+            '$$ 2は、1と同様に\\alpha+\\beta=\\frac{\\pi}{2}より、\\triangle OPQは直角三角形である。 $$'+
+            '$$ 3は、OP+QOの値は一定ではない。 $$'+
             '$$ 4は、PQはPA+QBで表せるので合っている。 $$'+
-            '$$ 5は、(\\triangle{AOP} ∽ \\triangle{BQO})となっている。 $$'+
+            '$$ 5は、3つの対応する角がすべて等しいので、\\triangle{AOP} ∽ \\triangle{BQO}となっている。 $$'+
             '$$ よって解答は３ $$';
             MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
             n14+=1;
@@ -303,6 +373,24 @@
       function display_eq15(){
          if(n15%2 == 0){ 
             document.getElementById("MyEquation15").innerHTML=
+            '$$ 線分EFが最大値となるのは、線分PQが最大値をとるときなので、PQの最大値を求めていく。 $$'+
+            '$$ 線分PQが最大値をとるのは、点Pまたは点Qが点Dまたは点Cから伸びているときより、 $$'+
+            '$$ PR、QR=7となるときである。 $$'+
+            '$$ PR=7の場合を考える。 $$'+
+            '$$ \\tan\\alpha=\\frac{3}{PR}、\\tan\\beta=\\frac{3}{QR}と表すと、 $$'+
+            '$$ PQ=PR+RQより、 $$'+
+            '$$ PQ=\\frac{3}{\\tan\\alpha}+=\\frac{3}{\\tan\\beta} $$'+
+            '$$ PQ=3\\left(\\frac{1}{\\tan\\alpha}+\\frac{1}{\\tan\\beta}\\right) $$'+
+            '$$ \\frac{1}{\\tan\\beta}=\\frac{1}{\\tan\\left(\\frac{\\pi}{2}-\\alpha\\right)}=\\tan\\alphaより、 $$'+
+            '$$ PQ=3\\left(\\frac{1}{\\tan\\alpha}+\\tan\\alpha\\right) $$'+
+            '$$ AP=7,OA=3より、\\tan\\alpha=\\frac{3}{7}と表すことができるので、 $$'+
+            '$$ PQ=3\\left(\\frac{7}{3}+\\frac{3}{7}\\right) $$'+
+            '$$ PQ=\\frac{58}{7} $$'+
+            '$$ 中点連結定理より、線分EFは線分PQの\\frac{1}{2}の長さなので、 $$'+
+            '$$ EF=\\frac{29}{7} $$'+
+            '$$ よって解答は２　\\frac{29}{7} $$'+
+　　　　　  '$$  $$'+
+            '$$ 別解 $$'+
 　　　  '$$ AP=xとする。対称なので、半円Oの半径は3、AD=7より、3≦x≦7として考える。 $$'+
             '$$ \\triangle{AOP} ∽ \\triangle{BQO}より、AP:AO=BO:BQ $$'+
 　　　  '$$ よってx:3＝3:BQより、BQ=\\frac{9}{x} $$'+
