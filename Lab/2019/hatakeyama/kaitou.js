@@ -379,7 +379,7 @@
             '$$ PR=7の場合を考える。 $$'+
             '$$ \\tan\\alpha=\\frac{3}{PR}、\\tan\\beta=\\frac{3}{QR}と表すと、 $$'+
             '$$ PQ=PR+RQより、 $$'+
-            '$$ PQ=\\frac{3}{\\tan\\alpha}+=\\frac{3}{\\tan\\beta} $$'+
+            '$$ PQ=\\frac{3}{\\tan\\alpha}+\\frac{3}{\\tan\\beta} $$'+
             '$$ PQ=3\\left(\\frac{1}{\\tan\\alpha}+\\frac{1}{\\tan\\beta}\\right) $$'+
             '$$ \\frac{1}{\\tan\\beta}=\\frac{1}{\\tan\\left(\\frac{\\pi}{2}-\\alpha\\right)}=\\tan\\alphaより、 $$'+
             '$$ PQ=3\\left(\\frac{1}{\\tan\\alpha}+\\tan\\alpha\\right) $$'+
