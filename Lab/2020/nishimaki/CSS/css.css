@@ -1,0 +1,163 @@
+@charset"UTF-8"; /* 文字コード */
+
+.background {
+             
+             }
+
+a {
+  text-decoration: none;
+  background:;
+}
+
+header{
+       font-family:"Yu Mincho";/*フォント指定*/
+       color:#FFFF;/*フォント指定*/
+       font-size:2vw;/*文字の大きさ*/
+       background-color: rgba(0,50,100,1);
+       margin:0px 0px 0px -20px; /*上右下左*/
+       }
+       
+.title{
+       font-family:"Yu Mincho";/*フォント指定*/
+       color:#FFFF;/*フォント指定*/
+       font-size:5vw;/*文字の大きさ*/
+       background-color: rgba(0,50,100,1);
+       }
+nav{
+     
+    }
+nav ul{
+ 
+ text-align:center;/*中央揃え*/
+ display:flex;/*ボックス形式*/ 
+   }
+
+nav li{ 
+ display:inline;/*文字列を横に*/
+ flex:1 0 auto;/*間隔をあける*/
+ font-size: 2vw;/*文字のサイズ*/
+  background-color: rgba(0,0,125,0.25);
+  margin:-15px 0px 0px -40px; /*上右下左*/
+ 
+   }
+   
+body{
+    background-image: url(".././img/背景画像1.jpg");
+    font-family:"Yu Mincho";/*フォント指定*/
+    font-size:20px;/*文字の大きさ*/
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    
+table{
+       background-color: rgba(255,255,255,0.75);
+       width:100% ;
+       height:100% ;
+       }
+.susi{
+       background-color: rgba(255,0,0,0.45);
+      }
+.kanbutu{
+       background-color: rgba(0,255,0,0.45);
+      }
+.tyoumiryo{
+       background-color: rgba(0,0,255,0.45);
+      }
+.reitourui{
+       background-color: rgba(255,255,0,0.45);
+      }
+      
+.main{
+color:#FFFF;/*フォント指定*/
+        background-color: rgba(0,100,150,1);
+       margin:0px 12.5% 0px 12.5%; /*上右下左*/
+      }
+    
+.acd-check{
+    display: none;
+}
+.acd-label{
+    background: #333;
+    color: #fff;
+    display: block;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+.acd-content{
+    border: 0px solid #333;
+    height: 0;
+    opacity:0;
+    padding: 0 10px;
+    transition: .5s;
+    visibility: hidden;
+}
+
+.acd-check:checked + .acd-label + .acd-content{
+    height: 40px;
+    opacity: 1;
+    padding: 10px;
+    visibility: visible;
+}
+
+
+.Move {
+ font-size: 20px;
+ font-weight: bold;
+ animation-name: fadein;
+ animation-duration: 2s;
+      }
+ 
+ @keyframes fadein {
+from {
+ opacity: 0;
+ transform: translateY(50px);
+     }
+     
+to {
+ opacity: 1;
+ transform: translateY(0);
+   }
+   
+ } 
+
+.box {
+margin:0px 80% 0px 10px; /*上右下左*/
+padding:5px; 
+border:0px solid black;
+background-color:lightgray;
+}
+ .left{
+   margin-left:17.5%; 
+   margin-right:auto; 
+  }
+
+ 
+ footer{
+       font-family:"Yu Mincho";/*フォント指定*/
+       color:#;/*フォント指定*/
+       font-size:2vw;/*文字の大きさ*/
+       background-color: rgba(255,255,255,0.75);
+       }
+
+button {
+    padding: 10px 13px 11px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    font-weight: bold;
+    border-radius: 4px;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 1px solid #0093c9;
+    color: #ffffff;
+    background: #009ecf;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.28),inset 0px 2px 0px -1px #10a4d2;
+}
+
+button:hover {
+    background: #00b0da;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1, #00a1d0), color-stop(0, #00bedf));
+    background: -webkit-linear-gradient(#00bedf, #00a1d0);
+}
