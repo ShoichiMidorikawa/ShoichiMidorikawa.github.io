@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> ジャンル別 TOP3</title>
+<style>
+
+body{
+  padding: 5px;
+  margin:  5px;
+  background-image: url("201107-4-1680-no.jpg");
+  background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+h2{
+ position: absolute;
+  top: 120px;
+  left: 400px;
+}
+
+h3{
+ position: absolute;
+  top: 170px;
+  left: 400px;
+}
+
+h4{
+ position: absolute;
+  top: 220px;
+  left: 400px;
+}
+
+h5{
+ position: absolute;
+  top: 270px;
+  left: 400px;
+}
+
+h6{
+ position: absolute;
+  top: 600px;
+  left: 30px;
+}
+</style>
+<script>
+onload= function(){
+  var sl=document.getElementById('sel1');
+  var im=document.getElementById('image');
+  
+  sl.onchange = function(){
+    var selectedItem = this.options[this.selectedIndex];
+    if(selectedItem.value == 0){
+      im.width='600';
+      im.height='390';
+    }else if(selectedItem.value == 1){
+      im.width='0';
+      im.height='0';
+    }
+    console.log( selectedItem.value );
+  }
+
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    image.src="https://www.youtube.com/embed/uBPBf-wDVNc?rel=0&autoplay=1";
+  }
+  b[1].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    image.src="https://www.youtube.com/embed/5WlMAuWTyLM?rel=0&autoplay=1";
+  }
+  b[2].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[2].style.color='red';
+    image.src="https://www.youtube.com/embed/prfepwJ5wZE?rel=0&autoplay=1";
+  }
+ 
+};
+
+</script>
+</head>
+<body>
+<center>
+<h1>
+<p>7月</p>
+</h1>
+
+
+動画(ON/OFF)
+<select id="sel1">
+ <option value="0">ON</option>
+ <option value="1" >OFF</option>
+</select>
+
+
+<br>
+<br>
+
+         <br> 　</br>
+<span>
+アニソン　1位
+<button id="btn0" > 　HELLO to DREAM 　<br>　井口裕香　</button>
+
+2位
+<button id="btn1" >　I'm with you　 <br> 　ラティナ(高尾奏音) 　</button>
+
+3位
+<button id="btn2" >　 ティラナ・エクセディリカ　<br> 　吉岡茉祐 　</button>
+</span>
+
+         <br>  </br>
+<div>
+ＪＰＯＰ　1位
+<button id="btn3" > 　ドレミソラシド 　<br>　日向坂46  </button>
+
+2位
+<button id="btn4" >　ハローフィクサー　 <br> 　10-FEET 　</button>
+
+3位
+<button id="btn5" >　THE IDOLM@STER MILLION THE@TER WAVE 01 Flyers!!! 　<br> 　765 MILLION ALLSTARS   </button>
+</div>
+
+
+         <br>  </br>
+<span>
+洋楽　1位
+<button id="btn6" > 　Old Town Road 　<br>　Lil Nas X Featuring Billy Ray Cyrus　</button>
+
+2位
+<button id="btn7" >　bad guy 　<br> 　 Billie Eilish　</button>
+
+3位
+<button id="btn8" >　 7 Rings　<br> 　Ariana Grande 　</button>
+</span>
+
+
+         <br>  </br>
+<div>
+ボカロ　1位
+<button id="btn9" > 　DECO*27-人質変換 　<br>　feat.初音ミク　</button>
+
+2位
+<button id="btn10" >　morse 　<br> 　初音ミク 　</button>
+
+3位
+<button id="btn11" >　絶え間なく藍色 　<br> 　初音ミク 　</button>
+</div>
+
+<br>
+<p> 
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/eEExJJiQdvw?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/qsureA57fEo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/w2Ov5jzm3j8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/d_svmw65Mgk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</p>
+</center>
+
+<h6>
+<a href="月毎の人気曲ランキング 2019.html"></a>
+<a name="月毎の人気曲ランキング 2019"></a>
+<br>
+<a name="7月"></a></br>
+</h6>
+
+</body>
+</html> 

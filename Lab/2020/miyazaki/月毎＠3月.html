@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> ジャンル別 TOP3</title>
+<style>
+
+body{
+  padding: 50px;
+  margin:  50px;
+  background-image: url("3月.jpg");
+  background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+h2{
+ position: absolute;
+  top: 120px;
+  left: 500px;
+}
+
+h3{
+ position: absolute;
+  top: 170px;
+  left: 500px;
+}
+
+h4{
+ position: absolute;
+  top: 220px;
+  left: 500px;
+}
+
+h5{
+ position: absolute;
+  top: 270px;
+  left: 500px;
+}
+
+h6{
+ position: absolute;
+  top: 600px;
+  left: 30px;
+}
+</style>
+<script>
+onload= function(){
+  var sl=document.getElementById('sel1');
+  var im=document.getElementById('image');
+  
+  sl.onchange = function(){
+    var selectedItem = this.options[this.selectedIndex];
+    if(selectedItem.value == 0){
+      im.width='600';
+      im.height='390';
+    }else if(selectedItem.value == 1){
+      im.width='0';
+      im.height='0';
+    }
+    console.log( selectedItem.value );
+  }
+
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    image.src="https://www.youtube.com/embed/uBPBf-wDVNc?rel=0&autoplay=1";
+  }
+  b[1].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    image.src="https://www.youtube.com/embed/5WlMAuWTyLM?rel=0&autoplay=1";
+  }
+  b[2].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[2].style.color='red';
+    image.src="https://www.youtube.com/embed/prfepwJ5wZE?rel=0&autoplay=1";
+  }
+};
+
+</script>
+</head>
+<body>
+<center>
+<h1>
+<p>3月</p>
+</h1>
+
+
+動画(ON/OFF)
+<select id="sel1">
+ <option value="0">ON</option>
+ <option value="1" >OFF</option>
+</select>
+
+
+<br>
+<br>
+
+         <br> 　</br>
+<span>
+アニソン　1位
+<button id="btn0" > 　Fascinate 　<br>　M@STER VERSION　</button>
+
+2位
+<button id="btn1" >　ラブ・ドラマティック feat.伊原六花　 <br> 　鈴木 雅之 　</button>
+
+3位
+<button id="btn2" >　RESISTER 　<br> 　ASCA 　</button>
+</span>
+
+         <br>  </br>
+<div>
+ＪＰＯＰ　1位
+<button id="btn3" > 　令和 　<br>　ゴールデンボンバー </button>
+
+2位
+<button id="btn4" >　SUPERMOON　 <br> 　HIROOMI TOSAKA 　</button>
+
+3位
+<button id="btn5" >　黒い羊 　<br> 　欅坂46 　</button>
+</div>
+
+         <br>  </br>
+<span>
+洋楽　1位
+<button id="btn6" > 　Pedro Capo 　<br>　Calma(Rimix)(Pedro Capo & Farruko)　</button>
+
+2位
+<button id="btn7" >　7 rings 　<br> 　 Ariana Grande　</button>
+
+3位
+<button id="btn8" >　 Aankh　<br> 　Marey(From"Simmba")(Neha) 　</button>
+</span>
+
+         <br>  </br>
+<div>
+ボカロ　1位
+<button id="btn9" > 　SHAKER 　<br>　40mp faet.初音ミク　</button>
+
+2位
+<button id="btn10" >　結い傷な 　<br> 　音街ウナ 　</button>
+
+3位
+<button id="btn11" >　Origin,v flower 　<br> 　ノイローゼ 　</button>
+</div>
+
+<br>
+<p> 
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/2nT3WOsx-_o?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/egcAyCszWSo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/8EFalFXALEA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image"width="600" height="390" src="https://www.youtube.com/embed/oR-a1NS_bH8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</p>
+</center>
+
+<h6>
+<a href="月毎の人気曲ランキング 2019.html"></a>
+<a name="月毎の人気曲ランキング 2019"></a>
+<br>
+<a name="3月"></a></br>
+</h6>
+
+</body>
+</html> 

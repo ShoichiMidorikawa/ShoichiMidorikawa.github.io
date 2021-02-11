@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> ジャンル別 TOP3</title>
+<style>
+body{
+  padding: 5px;
+  margin:  5px;
+  background-image: url("10月.jpg");
+  background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+h2{
+ position: absolute;
+  top: 120px;
+  left: 400px;
+}
+
+h3{
+ position: absolute;
+  top: 170px;
+  left: 400px;
+}
+
+h4{
+ position: absolute;
+  top: 220px;
+  left: 400px;
+}
+
+h5{
+ position: absolute;
+  top: 270px;
+  left: 400px;
+}
+
+h6{
+ position: absolute;
+  top: 600px;
+  left: 30px;
+}
+</style>
+<script>
+onload= function(){
+  var sl=document.getElementById('sel1');
+  var im=document.getElementById('image');
+  
+  sl.onchange = function(){
+    var selectedItem = this.options[this.selectedIndex];
+    if(selectedItem.value == 0){
+      im.width='600';
+      im.height='390';
+    }else if(selectedItem.value == 1){
+      im.width='0';
+      im.height='0';
+    }
+    console.log( selectedItem.value );
+  }
+
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    image.src="https://www.youtube.com/embed/uBPBf-wDVNc?rel=0&autoplay=1";
+  }
+  b[1].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    image.src="https://www.youtube.com/embed/5WlMAuWTyLM?rel=0&autoplay=1";
+  }
+  b[2].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[2].style.color='red';
+    image.src="https://www.youtube.com/embed/prfepwJ5wZE?rel=0&autoplay=1";
+  }
+ 
+};
+
+</script>
+</head>
+<body>
+<center>
+<h1>
+<p>10月</p>
+</h1>
+
+
+動画(ON/OFF)
+<select id="sel1">
+ <option value="0">ON</option>
+ <option value="1" >OFF</option>
+</select>
+
+
+<br>
+<br>
+
+         <br> 　</br>
+<span>
+アニソン　1位
+<button id="btn0" > 　残酷な天使のテーゼ 　<br>　高橋　洋子　</button>
+
+2位
+<button id="btn1" >　紅蓮華　 <br> 　LiSA 　</button>
+
+3位
+<button id="btn2" >　シュガーソングとビターステップ 　<br> 　ＵＮＩＳＯＮ　ＳＱＵＡＲＥ　ＧＡＲＤＥＮ 　</button>
+</span>
+
+         <br>  </br>
+<div>
+ＪＰＯＰ　1位
+<button id="btn3" > 　lemon 　<br>　米津玄師  </button>
+
+2位
+<button id="btn4" >　イエスタデイ　 <br> 　髭男dism 　</button>
+
+3位
+<button id="btn5" >　 馬と鹿　<br> 　米須玄師   </button>
+</div>
+
+         <br>  </br>
+<span>
+洋楽　1位
+<button id="btn6" > 　Ed Sheeran 　<br>　Shape of You [Official Video　</button>
+
+2位
+<button id="btn7" >　Dance Monkey　<br> 　Tones and I 　</button>
+
+3位
+<button id="btn8" >　Circles 　<br> 　Post Malone 　</button>
+</span>
+
+         <br>  </br>
+
+<div>
+ボカロ　1位
+<button id="btn9" > 　アンクローズ・ヒューマン 　<br>　初音ミク　</button>
+
+2位
+<button id="btn10" >　五線譜 　<br> 　初音ミク 　</button>
+
+3位
+<button id="btn11" >　つらい！やばい！つらい！ 　<br> 　薄塩指数 feat.重音テト 　</button>
+</div>
+
+<br>
+<p> 
+<iframe id="image" width="600" height="390" src="https://www.youtube.com/embed/-zGa35qO8nw?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image" width="600" height="390" src="https://www.youtube.com/embed/SX_ViT4Ra7k?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image" width="600" height="390" src="https://www.youtube.com/embed/OeadMRojh18?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe id="image" width="600" height="390" src="https://www.youtube.com/embed/JGwWNGJdvx8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</p>
+</center>
+
+<h6>
+<a href="月毎の人気曲ランキング 2019.html"></a>
+<a name="月毎の人気曲ランキング 2019"></a>
+<br>
+
+<a name="10月"></a></br>
+</h6>
+
+</body>
+</html> 

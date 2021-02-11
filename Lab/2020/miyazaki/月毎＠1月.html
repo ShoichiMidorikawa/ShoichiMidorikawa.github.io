@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> ジャンル別 TOP3</title>
+<style>
+
+body{
+  padding: 5px;
+  margin:  5px;
+  background-image: url("wakusei1901-400x267.jpg");
+  background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+h2{
+ position: absolute;
+  top: 120px;
+  left: 400px;
+}
+
+h3{
+ position: absolute;
+  top: 170px;
+  left: 400px;
+}
+
+h4{
+ position: absolute;
+  top: 220px;
+  left: 400px;
+}
+
+h5{
+ position: absolute;
+  top: 270px;
+  left: 400px;
+}
+
+h6{
+ position: absolute;
+  top: 600px;
+  left: 30px;
+}
+</style>
+<script>
+onload= function(){
+  var sl=document.getElementById('sel1');
+  var im=document.getElementById('image');
+  
+  sl.onchange = function(){
+    var selectedItem = this.options[this.selectedIndex];
+    if(selectedItem.value == 0){
+      im.width='600';
+      im.height='390';
+    }else if(selectedItem.value == 1){
+      im.width='0';
+      im.height='0';
+    }
+    console.log( selectedItem.value );
+  }
+
+  var b=document.getElementsByTagName('button'); 
+    b[0].style.color='red';
+
+  b[0].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[0].style.color='red';
+    image.src="https://www.youtube.com/watch?v=fe4wPCYcXSc?rel=0&autoplay=1";
+  }
+
+  b[1].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[1].style.color='red';
+    image.src="https://www.youtube.com/watch?v=pCC6qbAnX00&list=TLPQMTkxMjIwMTmNPZII9m-d7Q&index=3?rel=0&autoplay=1";
+  }
+
+  b[2].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[2].style.color='red';
+    image.src="https://www.youtube.com/watch?v=ZAfAud_M_mg?rel=0&autoplay=1";
+  }
+ 
+  b[3].onclick = function(){
+    for(var i=0; i<3; i++)
+           b[i].style.color='black';
+    b[3].style.color='red';
+    image.src="https://www.youtube.com/watch?v=WXl1ZPk--Zs?rel=0&autoplay=1";
+  }
+};
+
+</script>
+</head>
+<body>
+<center>
+<h1>
+<p>1月</p>
+</h1>
+
+
+
+
+<br>
+<br>
+
+          　<br> </br>
+
+<span>
+アニソン　1位
+<button id="btn0" > 　ラブ・ドラマティック 　<br>　鈴木 雅之　</button>
+
+2位
+<button id="btn1" >　blooming　 <br> 　安田 レイ 　</button>
+
+3位
+<button id="btn2" >　ハッピー・ハッピー・ブレンズ 　<br> 　わたてん５ 　</button>
+</span>
+
+           <br> </br>
+
+<div>
+JPOP 1位
+<button id="btn3" > 　I beg you 　<br>　Aimer　</button>
+
+2位
+<button id="btn4" >　逃走迷走メビウスループ　 <br> 　米津玄師 　</button>
+
+3位
+<button id="btn5" >　Lemon 　<br> 　Poppin’米津玄師 　</button>
+</div>
+
+           <br> </br>      
+
+<span>
+洋楽　1位
+<button id="btn6" > 　Without Me 　<br>　Halsey　</button>
+
+2位
+<button id="btn7" >　Sunflower (Spider-Man:Into the Spider-Verse)　 <br> 　Post Malon & Swae Lee	 　</button>
+
+3位
+<button id="btn8" >　Sicko Mode 　<br> 　Travis Scott 　</button>
+</span>
+
+         <br> </br>
+
+<div>
+ボカロ　1位
+<button id="btn9" > 　DECO*27-夜行性ハイズ 　<br>　feat.初音ミク　</button>
+
+2位
+<button id="btn10" >　{初音ミク}DECO*27-アイ 　<br> 　AI 　</button>
+
+3位
+<button id="btn11" >　[Remake]ワンダーラスト (2019 　<br> 　A Self Odyssey)巡音ルカ 　</button>
+</div>
+
+<br>
+<p> 
+<iframe  id="image" width="600" height="390"  src="https://www.youtube.com/embed/6vRxlXHH4H8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe  id="image" width="600" height="390"  src="https://www.youtube.com/embed/pCC6qbAnX00?list=TLPQMTkxMjIwMTmNPZII9m-d7Q?rel=0" frameborder="0" allowfullscreen></iframe> 
+<iframe  id="image" width="600" height="390"  src="https://www.youtube.com/embed/ZAfAud_M_mg?list=TLPQMTkxMjIwMTmNPZII9m-d7Q?rel=0" frameborder="0" allowfullscreen></iframe> 
+<iframe  id="image" width="600" height="390"  src="https://www.youtube.com/embed/WXl1ZPk--Zs?list=TLPQMTkxMjIwMTmNPZII9m-d7Qrel=0rel=0" frameborder="0" allowfullscreen></iframe> 
+
+
+
+</p>
+
+</center>
+
+<h6>
+<a href=~月毎の人気曲ランキング 2019.html"></a>
+<a name=~月毎の人気曲ランキング 2019"></a>
+<br>
+<a name="1月"></a></br>
+</h6>
+
+</body>
+</html> 
