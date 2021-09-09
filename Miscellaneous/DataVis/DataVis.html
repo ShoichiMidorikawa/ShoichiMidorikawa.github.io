@@ -1,0 +1,158 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+}
+
+div2{
+     align : left ;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<FONT size="5">Pythonによるデータの可視化</FONT><BR>
+<FONT size="4">Data Visualization with Python</FONT>
+</P>  
+<BR>
+<div class="parent">
+ <div class="child2">
+　pythonで読み込んだcsvデータを用いてグラフを作成する。csvデータとして、
+NHKが作成したコロナのexcelデータ
+を用いる。まず、
+<br>
+<b1>
+<center>
+  <a href="https://www3.nhk.or.jp/news/special/coronavirus/data-all/">
+  NHK特設サイト 新型コロナウイルス</a>
+</center>
+</b1>
+から、データをダウンロードする。
+<br>
+　次に、データの置いてあるのと同じディレクトリに以下のPythonプログラムを作成する。
+
+<pre><code>
+import numpy as np
+import pandas as pd
+import numpy as np
+from pandas import Series,DataFrame
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
+covid = pd.read_csv('nhk_news_covid19_domestic_daily_data.csv')
+df = DataFrame(covid)
+
+ax=df.plot(x="日付", y="国内の感染者数_1日ごとの発表数", kind='bar', rot=90, fontsize=9)
+
+ax.xaxis.set_major_locator(mdates.DayLocator(interval=30))
+
+plt.xlabel("", fontname="MS Gothic") #これが無いとコンパイル時にwarning messageが出る。
+
+plt.legend(prop={"family":"MS Gothic"})
+
+plt.show()
+</code></pre>
+　このプログラムをコンパイルすると、次のグラフが作成されます。
+
+<img src="Figure_1.png" alt="1日ごと" width="900" height="540"> 
+
+<pre><code>
+ax=df.plot(x="日付", y="国内の感染者数_1日ごとの発表数", kind='bar', rot=90, fontsize=9)
+</pre></code>
+を
+<pre><code>
+ax=df.plot(x="日付", y="国内の感染者数_累計", kind='bar', rot=90, fontsize=9)
+</pre></code>
+で置き換えると、感染者数の累計が表示されます。
+
+<img src="Figure_1_2.png" alt="累計" width="900" height="540"> 
+<br>
+<br>
+
+　特定の期間について表示する場合には、次のようにします。
+<pre><code>
+import numpy as np
+import pandas as pd
+import numpy as np
+from pandas import Series,DataFrame
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
+covid = pd.read_csv('nhk_news_covid19_domestic_daily_data.csv')
+df = DataFrame(covid)
+
+df_s=df.set_index("日付")["2021/3/15":"2021/9/2"]
+df_r = df_s.reset_index()
+
+ax=df_r.plot(x="日付", y="国内の感染者数_1日ごとの発表数", kind='bar', rot=45, fontsize=9)
+
+ax.xaxis.set_major_locator(mdates.DayLocator(interval=10))
+
+plt.xlabel("", fontname="MS Gothic") #これが無いとコンパイル時にwarning messageが出る。
+plt.legend(prop={"family":"MS Gothic"})
+
+plt.show()
+</pre></code>
+ここでは、2021年3月15日から2021年9月2日までを表示します。結果は、以下の通りです。
+
+<img src="Figure_2.png" alt="累計" width="900" height="540"> 
+
+
+ </div>
+</div>
+</center>
+</body>
+
