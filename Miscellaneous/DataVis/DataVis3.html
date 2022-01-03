@@ -7,6 +7,10 @@
 
   gtag('config', 'UA-135083881-1');
 </script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -73,15 +77,51 @@ code {
 <FONT size="4">Data Visualization with Python 3</FONT>
 <FONT size="3">COvid-19と回帰分析</FONT>
 </P>  
+
 <BR>
+
 <div class="parent">
  <div class="child2">
 実効再生産数の回帰直線をエイヤッと引いてみる。　
 <br>
 </div>
 </div>
+
 <div2>
-<img src="DaylyNo_vs_Re2021.9.22-12.9wLR.png" alt="No.vs.RewLR" width="1000"> 
+<img src="DaylyNo_vs_Re2021.9.22-12.9wLR.png" alt="No.vs.RewLR" width="700"> 
+<br>
+</div2>
+
+<div class="parent">
+ <div class="child2">
+データの数が増えると直線近似は良くないように思えます。そこで、
+指数関数でのフィッティングをいろいろと試みました。
+
+ここで、2021/9/23を起点とした日数を\(x\)として、実効再生産数を\(y\)とします。
+
+\(x\)の2次式の指数関数とし、
+ウエイト(\(w\))を\(y\)、または、\(y^2\)とした場合のfittingの結果は、以下の図のようになりました。
+<ul>
+<li>\(w=y \ \) の場合
+  <ul>
+    <li>  2021/12/25までのデータを使用した場合
+　　　\(y = \exp(-0.434656175 + 0.00262067149*x + 4.83403391e-05*x^2) \)
+    <li>　2022/1/1までのデータを使用した場合
+　　　\(y = \exp( -0.42786221 + 0.00214405078*x + 5.39384081e-05*x^2) \)
+  </ul>  
+<li>\(w=y^2\)の場合
+  <ul>
+    <li>  2021/12/25までのデータを使用した場合
+　　　\(y = \exp(-0.410929621 + 0.00205032382*x + 5.35490199e-05*x^2)\)
+    <li>　2022/1/1までのデータを使用した場合
+　　　\(y = \exp(-0.406312266 + 0.00179863723*x+ 5.607644648e-05*x^2)\)
+  </ul>  
+</ul>
+これらを図示すると以下のようになります。\(w=y^2\)の場合には、データの数が増えても、再帰曲線は、
+ほとんど変化しないことが分かります。
+<div2>
+<img src="DaylyNo_vs_Re2021.9.22-01.01withRC.png" alt="No.vs.RewLR" width="900"> 
+<br>
 </div2>
 <br>
 
