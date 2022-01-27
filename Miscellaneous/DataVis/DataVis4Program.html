@@ -1,0 +1,262 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+   img{
+      width: 100%;
+      height: auto;
+   }
+
+}
+
+div2{
+     align : left ;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+<div class="parent">
+ <div class="child2">
+
+
+<!-- ------------------------------- -->
+<pre><code>
+import numpy as np
+import pandas as pd
+from pandas import Series,DataFrame
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import csv
+from scipy.interpolate import interp1d
+from scipy.optimize import curve_fit
+import locale
+import japanize_matplotlib
+from sklearn.linear_model import LinearRegression
+import numpy.polynomial.polynomial as P
+from numpy import arange
+
+
+encoding = locale.getpreferredencoding()
+
+plt.rcParams['figure.subplot.bottom'] = 0.25
+
+fig = plt.figure()
+ax1 = fig.add_subplot(1,1,1)
+ax2 = ax1.twinx()
+ax3 = ax1.twinx()
+
+covid = pd.read_csv('nhk_news_covid19_domestic_daily_data.csv')
+df = DataFrame(covid)
+
+start_date = "2022/1/18"  
+
+df_s=df.set_index("日付")[start_date:]
+df_r = df_s.reset_index()
+
+df0 = pd.DataFrame(df_r)
+#-----------------
+df_0=df0.set_index("日付")[start_date:]
+df_0r = df_0.reset_index()
+
+#print(df_0r)
+
+# number = df_0の行数(rows)
+number = len(df_0)
+
+#df_4 = pd.DataFrame(df_r)
+ml = pd.DataFrame({'no': range(number)})
+
+#print(ml)
+df_new0 = pd.concat([df_0r, ml], axis=1)
+
+#print('df_new0')
+#print(df_new0)
+
+
+#-----------x軸目盛の変更-----------------
+ax1.bar(df_new0["日付"],df_new0["国内の感染者数_1日ごとの発表数"], label="国内の感染者数_1日ごとの発表数")
+#ax1.bar(df_new0["no"],df_new0["国内の感染者数_1日ごとの発表数"], label="国内の感染者数_1日ごとの発表数")
+
+ax1.xaxis.set_major_locator(mdates.DayLocator(interval=2))
+ax1.tick_params(axis='x', colors ="black", rotation = 90)
+ax1.tick_params(axis='y', colors ="navy")
+
+#---------------------------------------
+
+encoding = locale.getpreferredencoding()
+
+df_2 = pd.read_csv('effective_reproduction_number.csv', encoding="ANSI")
+
+n0 = len(df_2)
+
+l_date = df_2['日付'].values[n0-1]
+
+#-----------------------------------
+
+df_3 = DataFrame(df_2)
+
+df_s=df_3.set_index("日付")[start_date:]
+df_r = df_s.reset_index()
+
+#print(df_2)
+
+# num = df_rの行数(rows)
+num = len(df_r)
+
+df_4 = pd.DataFrame(df_r)
+ml = pd.DataFrame({'no': range(num)})
+
+
+df_new = pd.concat([df_4, ml], axis=1)
+
+
+df_new.to_csv('df_new.csv', encoding = encoding)
+
+#特定の列の抽出
+df_a=df_new.loc[:,["no", "実効再生産数"]]
+
+df_a.to_csv('df_a.csv', encoding = encoding)
+
+#--------線形再帰--------------------------
+lr = LinearRegression()
+
+x = df_a[['no']]
+y = df_a[['実効再生産数']]
+coef1 = lr.fit(x, y)
+co = lr.fit(x, y)
+
+w = lr.coef_
+w0 = lr.intercept_
+
+
+#------objective function----------------
+
+def objective(x, a, b):
+        y = b/(x+a)
+        return y
+
+# fit curve
+popt, _ = curve_fit(objective, df_a['no'], df_a['実効再生産数'])
+a, b = popt
+
+#---------------回帰分析------------------
+print('\n')
+print('回帰分析 \n')
+print(df_2['日付'][n0-1])
+print('回帰直線')
+
+print('lr =', w, w0)
+
+print('objective function')
+print('popt', popt)
+print('a=', a)
+print('b=', b)
+
+
+#-----------------------------------
+interp = interp1d(df_a['no'], df_a['実効再生産数'],kind="cubic")
+
+new_t = np.arange(0, num-1, 0.2)  #range(num) num-1
+
+#-------------------------
+
+file = pd.DataFrame({'no': new_t, '実効再生産数':interp(new_t)})
+
+#print(file)
+
+
+ax2.plot(new_t, interp(new_t), label="実効再生産数", color='red')
+ax2.tick_params(colors ="red")
+ax3.tick_params(colors ="red")
+
+#ax2.plot(df_new["no"],df_new['実効再生産数'], color='orangered', label="")
+
+ax2.plot(df_new['no'], df_new['実効再生産数'], 'o', color='orangered')
+
+ymin = 0.5
+ymax = 6.
+ax2.set_ylim(ymin, ymax)
+ymin, ymax =ax2.set_ylim()
+plt.ylim(ymin, ymax)
+
+
+plt.xlim(0, num+20)
+
+handler1, label1 = ax1.get_legend_handles_labels()
+handler2, label2 = ax2.get_legend_handles_labels()
+ax1.legend(handler1+handler2,label1+label2,borderaxespad=0)
+ax1.grid(axis='x')
+
+#---------------------------------
+
+x1 = np.linspace(0,155,155);
+
+plt.plot(x1, w[0]*x1+w0[0], color='skyblue', label='linear')
+plt.plot(x1,  b/(x1+a), color='lightgreen', label ='b/(x+a)')
+
+plt.plot(x1, 0*x1+1, color='purple')
+#plt.legend(bbox_to_anchor=(0.5, 1.0), loc='center', borderaxespad=0)
+plt.legend(bbox_to_anchor=(1.0, 1.0), loc='upper right', borderaxespad=0)
+plt.grid()
+plt.show()
+
+</code></pre>
+<!-- ------------------------------- -->
+
+ </div>
+</div>
+</center>
+
+</body>
+

@@ -1,0 +1,119 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+   img{
+      width: 100%;
+      height: auto;
+   }
+
+}
+
+div2{
+     align : left ;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<FONT size="5">Covid-19 第6波-ピークの予測</FONT><BR>
+</P>  
+
+<BR>
+
+<div class="parent">
+ <div class="child2">
+2022年1月8日から1月25日までの実効再生産数のデータ(東洋経済)を用いて、
+第6波の感染者数のピークを予測します。
+<br>
+予測方法は、回帰直線を用いたものと、関数\(\displaystyle y = \frac{b}{x+a}\)でフィッティング
+したものを用います。ピークの予測日は、実効再生産数の予測値が１になった時で与えられます。
+<br>
+結果は、
+<ul>
+<li>回帰直線を用いた場合
+  <ul>
+    <li>  2022年1月31日　
+  </ul>  
+<li>\(\displaystyle y = \frac{b}{x+a}\)を用いた場合
+  <ul>
+    <li>  2022年2月11日
+  </ul>  
+</ul>
+となりました。この範囲に収まれば、予測は正しかったことになります。
+図示すると以下のようになります。さて、この予測は当たるでしょうか？
+<br>
+
+<div2>
+<img src="covid19Forecast.png" alt="Forecast" width="700"> 
+<br>
+</div2>
+
+作成したプログラムについては、
+  <a href="DataVis4Program.html">
+  ここ</a>
+をご覧ください。
+
+ </div>
+</div>
+
+</center>
+</body>
+
