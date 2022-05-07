@@ -87,7 +87,10 @@ code {
 <center>
 
 <BR>
-<P>Covid-19 1日当たりの感染者数と死者数
+<P>
+<h2>
+Covid-19 1日当たりの感染者数と死者数
+</h2>
 <FONT size="5"></FONT><BR>
 </P>  
 
@@ -126,7 +129,7 @@ NHKのデータをもとに、1日ごとの感染者数と死者数のグラフ�
   <tr><th> 第1波 </th><th> 2020年4月11日</th><th> 2020年5月2日  </th><th> 21日</th></tr>
   <tr><th> 第2波 </th><th> 2020年8月7日 </th><th> 2020年8月28日 </th><th> 21日</th></tr>
   <tr><th> 第3波 </th><th> 2021年1月8日 </th><th> 2021年2月10日 </th><th> 33日</th></tr>
-  <tr><th> 第4波 </th><th> 2021年5月8日 </th><th> 2021年2月10日 </th><th> 10日</th></tr>
+  <tr><th> 第4波 </th><th> 2021年5月8日 </th><th> 2021年5月18日 </th><th> 10日</th></tr>
   <tr><th> 第5波 </th><th> 2021年8月20日</th><th> 2021年9月8日  </th><th> 19日</th></tr>
   <tr><th> 第6波 </th><th> 2022年2月5日 </th><th> 2022年2月22日 </th><th> 17日</th></tr>
 </table>
@@ -144,12 +147,50 @@ NHKのデータをもとに、1日ごとの感染者数と死者数のグラフ�
 2022年3月22日
 <br>
 を境に新たなフェーズ、すなわち第7波に突入したようにも思われます。
+<br>
+<br>
+<h3>データの平滑化</h3>
 
+もう少し見やすくするために、日ごとの感染者数と志望者数データを7日間の移動平均を用いて平滑化します。
 </div4>
-</div3>
+
+<img src="Covid_IvsDplot.png" alt="IvsD" width="1000"> 
+
+<img src="Covid_IvsD1-3plot.png" alt="IvsD" width="1000"> 
 
 <br>
+<div4>
+平滑化されたデータについても、各々の波における新規感染者数と死者数のピークの日にちを調べる。
+<br>
+さらに、ピーク時の死者数と感染者数の比を計算する。
+<br>
+<br>
+<table border="1" style="border-collapse: collapse">
+  <tr>
+	<th nowrap> 波種類 </th>
+	<th > 新規感染者<br>人数 </th>
+	<th > 死者<br>人数  </th>
+	<th nowrap> 日差   </th>
+	<th nowrap> 感染者/数死者数 </th>
+</tr>
+<tr>
+	<th nowrap> 第1波 </th>
+	<th nowrap> 2020年4月12日<br>540.14</th>
+	<th nowrap> 2020年4月30日<br>23.43 </th>
+	<th nowrap> 18日</th>
+	<th nowrap> 0.0434</th>
+</tr>
+  <tr><th> 第2波 </th><th nowrap> 2020年8月6日<br>1381.14 </th><th> 2020年8月28日<br>13.86 </th><th> 22日</th><th> 0.0100 </th></tr>
+  <tr><th> 第3波 </th><th> 2021年1月8日<br>6495.14 </th><th> 2021年2月3日<br>98.29  </th><th> 26日</th><th> 0.0151 </th></tr>
+  <tr><th> 第4波 </th><th> 2021年5月11日6440.43 </th><th> 2021年5月20日<br>113.86 </th><th> 9日</th><th> 0.0176 </th></tr>
+  <tr><th> 第5波 </th><th> 2021年8月22日23190.29</th><th> 2021年9月10日<br>64.71  </th><th> 19日</th><th> 0.0028 </th></tr>
+  <tr><th> 第6波 </th><th> 2022年2月8日93226.43 </th><th> 2022年2月25日<br>235.71 </th><th> 17日</th><th> 0.0025 </th></tr>
+</table>
+<br>
+</div4>
 
+
+</div3>
 
  </div>
 </div>
