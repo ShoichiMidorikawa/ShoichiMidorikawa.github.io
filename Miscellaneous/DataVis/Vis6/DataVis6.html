@@ -1,0 +1,178 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+
+<script>
+MathJax = {
+  chtml: {
+    displayAlign: "left",
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+   img{
+      width: 100%;
+      height: auto;
+   }
+
+}
+
+div2{
+     align : left ;
+}
+
+div3{
+     position:absolute;
+     top:150px; 
+     left:130px; 
+}
+
+div4{
+     position:relative;
+     //top:200px; 
+     left: 50px;
+     text-align: left;
+     width: 50px;
+     margin: auto;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<h2>
+Covid-19 1日当たりの感染者数と死者数の推移(第6波以降)
+</h2>
+<FONT size="5"></FONT><BR>
+</P>  
+
+<BR>
+
+<div class="parent">
+ <div class="child2">
+<div3>
+
+<div4>
+NHKのデータは日々更新しますので、2022年5月19日までの最新データによる1日ごとの感染者数と死者数の7日間の<br>
+移動平均グラフを一つにまとめて表示します。<br>
+</div4>
+
+<img src="Figure40.png" alt="40" width="1000"> 
+<br>
+
+<div4>
+作成したプログラムについては、
+  <a href="DataVis6Program.html">
+  ここ</a>
+をご覧ください。
+<br>
+<br>
+<br>
+第6波以降は、次のようになります。
+<br>
+</div4>
+
+<img src="Figure40_6wave.png" alt="IvsD" width="1000"> 
+
+<br>
+<div4>
+<br>
+この図から、死者数のは、新規感染者のピークから17日遅れでやってくることが分かります。
+<br>
+そこで、死者数のグラフを左に17日シフトすると、こんな感じになります。
+<br>
+</div4>
+
+<img src="Figure40_17D.png" alt="40_17D" width="1000"> 
+
+<br>
+<div4>
+2つのカーブは、2022年2月20日頃までは、見事に重なっていることが分かります。
+<br>
+そこで、ある日の死亡率を、
+\[
+\rm ある日の死亡率 = \frac{17日後の死亡者数}{その日の新規感染者数}
+\]
+と定義することにします。すると、各々の日にちごとの死亡率のグラフは、次のようになります。
+<br>
+</div4>
+
+<img src="covid19_6thMortality.png" alt="40_17D" width="1000"> 
+
+<br>
+<div4>
+この図から、2022年2月20日頃までは、0.0025だった死亡率が、それ以降、徐々に下がり始め、現在では
+0.001程度<br>
+であることが分かります。
+<br>
+
+<br>
+</div4>
+
+
+</div3>
+
+ </div>
+</div>
+</center>
+
+</body>
+
