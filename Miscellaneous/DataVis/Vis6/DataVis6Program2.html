@@ -1,0 +1,156 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 10px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+   img{
+      width: 100%;
+      height: auto;
+   }
+
+}
+
+div2{
+     align : left ;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: 5;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+<div class="parent">
+ <div class="child2">
+
+
+<!-- ------------------------------- -->
+<pre><code>
+import numpy as np
+import pandas as pd
+from pandas import Series,DataFrame
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import csv
+from scipy.interpolate import interp1d
+import locale
+import japanize_matplotlib
+
+encoding = locale.getpreferredencoding()
+
+plt.rcParams['figure.subplot.bottom'] = 0.25
+
+fig = plt.figure()
+ax1 = fig.add_subplot(1,1,1)
+ax2 = ax1.twinx()
+
+covid = pd.read_csv('nhk_news_covid19_domestic_daily_data.csv')
+df = DataFrame(covid)
+
+n = len(df)
+b1 = df.iloc[:,1]
+b3 = df.iloc[:,3]
+
+for i in range(3, n-3):
+    df.loc[i,"感染者_7日平均"] = sum(b1[i-3:i+4])/7
+    df.loc[i,"死亡者_7日平均"] = sum(b3[i-3:i+4])/7
+
+
+df.to_csv('nhk_news_covid19_domestic_daily_dataNo2.csv',encoding="ANSI", index=False)
+
+df3 = pd.read_csv('nhk_news_covid19_domestic_daily_dataNo2.csv',encoding="ANSI")
+
+df_s=df3.set_index("日付")["2022/1/1":]
+df_r = df_s.reset_index()
+
+# num = df_rの行数(rows)
+num = len(df_r)
+
+
+df0 = pd.DataFrame(df_r)
+ 
+ax1.plot(df0["日付"],df0["感染者_7日平均"], label="国内の感染者数_1日ごとの発表数(一週間平均)", linewidth=0.5)
+ax1.xaxis.set_major_locator(mdates.DayLocator(interval=10))
+
+ax1.tick_params(axis='x', colors ="black", rotation = 90)
+ax1.tick_params(axis='y', colors ="navy")
+
+ax1.set_ylim(0,)
+#---------------------------------------
+
+
+ax2.plot(df0["日付"],df0["死亡者_7日平均"], label="国内の死者数_1日ごとの発表数(一週間平均)", linewidth=0.5,color='red')
+ax2.xaxis.set_major_locator(mdates.DayLocator(interval=5))
+
+#ax2.tick_params(axis='x', colors ="black", rotation = 90)
+ax2.tick_params(axis='y', colors ="red")
+
+ax2.set_ylim(0,)
+
+
+plt.xlim(0, num)
+
+handler1, label1 = ax1.get_legend_handles_labels()
+handler2, label2 = ax2.get_legend_handles_labels()
+ax1.legend(handler1+handler2,label1+label2,borderaxespad=0)
+ax1.grid(axis='x')
+
+plt.grid()
+plt.show()
+
+
+</code></pre>
+<!-- ------------------------------- -->
+
+ </div>
+</div>
+</center>
+
+</body>
+
