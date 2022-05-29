@@ -31,7 +31,7 @@ table, td {
   padding: 3px;
   width: 360px;
 }
-@media screen and (max-width: 840px){
+@media screen and (max-width: 800px){
    body{
      align; left;
      margin-left: 0px;
@@ -78,7 +78,7 @@ div.child2{
 //    background-color: lightblue;
     text-align: left;
     font-size: 18px;
-    width: 800px;
+    width: 600px;
     margin: auto;
     padding:6px 6px 6px;
 }
@@ -164,15 +164,78 @@ NHKのデータは日々更新しますので、2022年5月19日までの最新�
 
 <br>
 <div4>
-この図から、2022年2月20日頃までは、0.0025だった死亡率が、それ以降、徐々に下がり始め、現在では
-0.001程度<br>
-であることが分かります。
+この図から、2022年2月20日頃までは、0.0025だった死亡率が、それ以降、徐々に下がり始め、現在では<br>
+0.001程度であることが分かります。
 <br>
-
 <br>
+<b>【追記】</b>
+<br>
+この文章を書いてから、似たような解析が無いか色々調べたところ、次のことが分かった。
+<ul>
+<li>今回の場合、「死亡率(Mortality)」という言葉は適切ではなく、「致死率(case fatality rate)」<br>
+を使うべきであった。<br>
+広辞苑(第5版)によると、
+<ul>
+<li> しぼう‐りつ【死亡率】
+死亡する比率。人口調査などでは、普通、一定期間における人口千人当りの<br>
+割合で表される。
+</li>
+<li>
+ちめい‐りつ【致命率】
+ある疾患による死亡者数を患者数で割った比率。百分率または千分率で示す。<br>
+致死率。
+</li>
+</ul>
+<li>ある日の致死率の定義 \(\rm \frac{17日後の死亡者数}{その日の新規感染者数}\)の使用例があるかを調べると、
+2つ見つかった。詳しく調べると、<br>
+もっとあるかもしれない。
+<ul>
+<li> 三菱総合研究所　
+<a href="https://www.mri.co.jp/knowledge/column/20200423.html">
+新型コロナウイルス各国施策分析レポート3：致死率の分析からみた各国の感染状況</a><br>
+</li>
+<li> 日本經濟新聞　
+<a href="https://www.nikkei.com/article/DGXZQOCA063K80W2A100C2000000/">
+世界のコロナ死亡率、1%を割る</a>
+</li>
+</ul>
+三菱総合研究所の致死率(a)の定義は、彼らの記号を用いると、\(a =x_t/y_{t-b} \)である。<br>
+一方、私の定義を彼らの流儀で書くと、\(a_t = x_{t+b}/y_t \) となる。\( a \) は時間の関数である。<br>
+日経新聞の致死率(死亡率)も時間の関数であるが、、\(a_t = x_{t}/y_{t-b}  \) のようである。
+</ul>
+<br>
+先の解析で死亡率と書いた致死率の時間変化の求め方が妥当かどうか調べるため、第6波を便宜的に2期に分けて、<br>
+致死率の平均を求めると、
+<br>
+<table border="1" style="border-collapse: collapse">
+  <tr>
+      <th>　　期 　</th><th> 種類 </th><th>　期間 　</th><th> 　 人数　    </th><th nowrap> 　致死率　   </th>
+  </tr>
+  <tr>
+      <th rowspan="2"> I </th>
+      <th nowrap> 　新規感染者　  </th><th nowrap> 　2021/11/26 から 2022/2/21　  </th><th> 　2,822,037　　  </th>
+      <th rowspan="2"> 0.0026 </th>
+  </tr> 　  
+      <th > 死亡者  </th><th> 2021/12/16 から 2022/3/10  </th><th> 7,346 </th>
+  </tr>
+  <tr>
+     <th rowspan="2"> II </th>
+     <th > 新規感染者  </th><th > 2022/2/22 から 2022/5/26  </th><th> 4,197,133  </th>
+     <th rowspan="2"> 0.0011 </th>
+    </tr> 　  
+      <th > 死亡者  </th><th> 2022/3/11 から 2022/5/26  </th><th> 30,467 </th>
+  </tr>
+</table>
+<br>
+第6波における日にち毎の致死率のグラフに期間毎の平均致死率を重ねて表示すると、以下のようになります。
 </div4>
 
+<img src="Figure40_6thCFR2.png" alt="40_17D" width="1000"> 
 
+
+<br>
+<br>
+<br>
 </div3>
 
  </div>
