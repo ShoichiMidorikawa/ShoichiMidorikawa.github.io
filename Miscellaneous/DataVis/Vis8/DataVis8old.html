@@ -1,0 +1,209 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+
+<script>
+MathJax = {
+  chtml: {
+    displayAlign: "left",
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 2000px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+   img{
+      width: 100%;
+      height: auto;
+   }
+
+}
+
+div2{
+     align : left ;
+}
+
+div4{
+     position:relative;
+     //top:200px; 
+     //left: 30px;
+     text-align: left;
+     width: 50px;
+     margin: auto;
+}
+
+div.parent{
+  text-align: left;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+ //   background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    //width: 50%;
+    margin: auto;
+    //padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<h2>
+Covid-19 SIRモデルと実効再生産数\(R(t)\)
+</h2>
+<FONT size="5"></FONT><BR>
+</P>  
+
+<BR>
+
+<div class="parent">
+ <div class="child2">
+
+
+<div4>
+2022年7月よりcovid-19の第7波が始まりました。2022年1月に始まった第6波以降の新規感染者
+の推移と共に実効再生産数をグラフで表すと以下のようになります。
+いろはにほへとちりぬるをわかよたれそつねなまむ
+</div4>
+</div>
+
+<img src="Figure8_NOvsRE.png" alt="Figure8_NOvsRE" width="1000px" align="buttom"> 
+<br>
+
+<div4>
+もう一度7日間の移動平均を行います。移動平均を2回繰り返したものを三角移動平均(Triangular Moving Average - TMA)<br>
+と言います。
+<br>
+</div4>
+
+<img src="7D_TMA.png" alt="7D_TMA" width="1000"> 
+
+<br>
+<div4>
+この図をもとに、各感染の波の継続期間を推定し、致死率を計算します。
+<br>
+<table border="1" style="border-collapse: collapse">
+  <tr>
+      <th nowrap>　感染波 　</th><th> 種類 </th><th>　期間 　</th><th> 　 人数　    </th><th nowrap> 　致死率　   </th>
+  </tr>
+  <tr>
+      <th rowspan="2"> 第1波 </th>
+      <th nowrap> 　新規感染者　  </th><th nowrap> 　2020/1/16 から 2020/5/22　  </th><th> 16,529　 </th>
+      <th rowspan="2"> 0.0560 </th>
+  </tr>
+  <tr> 　  
+      <th > 死亡者  </th><th> 2020/2/13 から 2020/6/12  </th><th> 925 </th>
+  </tr>
+  <tr>
+     <th rowspan="2"> 第2波 </th>
+     <th > 新規感染者  </th><th > 2020/5/23 から 2020/9/23  </th><th> 63,624  </th>
+     <th rowspan="2"> 0.0110 </th> 
+  </tr>
+  <tr> 　  
+      <th > 死亡者  </th><th> 2020/6/13 から 2020/10/9  </th><th> 700 </th>
+  </tr>
+　<tr>
+     <th rowspan="2"> 第3波 </th>
+     <th > 新規感染者  </th><th > 2020/9/24 から 2021/2/26  </th><th> 350,427  </th>
+     <th rowspan="2"> 0.0217 </th>  
+  </tr>
+  <tr> 　  
+     　<th > 死亡者  </th><th> 2020/10/10 から 2021/4/3  </th><th> 7,611 </th>
+  </tr>
+　<tr>
+     <th rowspan="2"> 第4波 </th>
+     <th > 新規感染者  </th><th > 2021/2/27 から 2021/6/19  </th><th> 353,270  </th>
+     <th rowspan="2"> 0.0168 </th>
+    </tr> 　  
+      <th > 死亡者  </th><th> 2021/4/4 から 2021/7/28  </th><th> 5,926 </th>
+  </tr>
+　<tr>
+     <th rowspan="2"> 第5波 </th>
+     <th > 新規感染者  </th><th > 2021/6/20 から 2021/11/25  </th><th> 942,472  </th>
+     <th rowspan="2"> 0.0034 </th>
+    </tr> 　  
+      <th > 死亡者  </th><th> 2021/7/29 から 2021/12/15  </th><th> 3,214 </th>
+  </tr>
+　<tr>
+      <th rowspan="2"> 第6波I期 </th>
+      <th nowrap> 　新規感染者　  </th><th nowrap> 　2021/11/26 から 2022/2/21　  </th><th> 　2,822,037　　  </th>
+      <th rowspan="2"> 0.0026 </th>
+  </tr>
+  <tr> 　  
+　    <th > 死亡者  </th><th> 2021/12/16 から 2022/3/10  </th><th> 7,346 </th>
+  </tr>
+　<tr>
+     <th rowspan="2"> 第6波Ⅱ期  </th>
+     <th > 新規感染者  </th><th > 2022/2/22 から 2022/5/26  </th><th> 4,197,133  </th>
+     <th rowspan="2"> 0.0011 </th>
+　</tr> 　  
+     <th > 死亡者  </th><th> 2022/3/11 から 2022/5/26  </th><th> 30,467 </th>
+  </tr>
+</table>
+<br>
+ ここで、各々の日の致死率を、
+\[
+\rm t 日の致死率 = \frac{(t+d)日の死亡者数}{t日の新規感染者数}
+\]
+と近似し\( d= 17 \)とおいて計算したものと、上で求めた期間毎の平均致死率を重ねて表示すると、次のようになります。
+</div4>
+
+<img src="CFR_time&average.png" alt="CFR_time&average" width="1000"> 
+
+
+<br>
+<br>
+<br>
+</div3>
+
+ </div>
+</div>
+</center>
+
+</body>
+

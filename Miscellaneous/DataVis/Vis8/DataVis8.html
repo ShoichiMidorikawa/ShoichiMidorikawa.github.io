@@ -1,0 +1,230 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+
+<script>
+MathJax = {
+  chtml: {
+    displayAlign: "left",
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+}
+
+div2{
+     align : left ;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<FONT size="5">Covid-19 SIRモデルと実効再生産数\(R(t)\)</FONT><BR>
+<FONT size="4">
+\(\displaystyle 
+\frac{d I(t)}{dt} = \gamma \left(R(t) -1 \right) I(t) 
+\)　は成り立つか？
+</FONT>
+</P>  
+<BR>
+<div class="parent">
+ <div class="child2">
+　2022年7月よりcovid-19の第7波が始まりました。2022年1月に始まった第6波以降の新規感染者
+の推移と共に実効再生産数をグラフで表すと以下のようになります。
+今までと同様に、新規感染者数については、NHKの
+  <a href="https://www3.nhk.or.jp/news/special/coronavirus/data-all/">
+  NHK特設サイト 新型コロナウイルス</a>
+から、データをダウンロードして使用します。
+<br>
+　実効再生産数については、東洋経済onlineの
+ <a href="https://toyokeizai.net/sp/visual/tko/covid19/">
+ 新型コロナウイルス 国内感染の状況</a>
+から、日別全国の実効再生産数(effective_reproduction_number.csv)をダウンロードします。
+ダウンロードしたデータはメモ帳で開いてエンコードをANSIにして保存し直します。
+<br>
+　2022年1月に始まった第6波以降の新規感染者
+の推移と共に実効再生産数をグラフで表すと以下のようになります。
+
+ </div>
+</div>
+
+<img src="Figure8_NOvsRE.png" alt="Figure8_NOvsRE" width="1000px" align="buttom"> 
+
+<br>
+
+作成したプログラムについては、
+  <a href="covid19_main0.py">
+  ここ</a>
+をご覧ください。
+
+<br>
+<br>
+<br>
+
+<div class="parent">
+ <div class="child2">
+　最近では、covid-19における感染の広がりの解析を数理モデルを用いて行おうとする
+機運は薄れつつあります。理由は色々あるでしょうが、一つには、代表的なSIRモデルは、確定的
+であることが挙げられます。すなわち、全てのふるまいは初期値を与えることによって、全てが
+決まってしまいます。我々は、感染が広がると、マスクをしたり、人混みの中に出かけないとか、
+ワクチン接種を受けるとか、何らかの防衛策を講じます。こうして実効再生産数を制御することが
+できます。それを考慮するためには、実効再生産数を外部パラメータとして導入する必要があります。
+<br>
+　ここでは、第6波から第7波において、表題の関係が成り立っているかを調べます。
+<br>
+　上の図では、曜日による変動など、細かな変動のために全体の傾向がつかみにくくなっています。
+そこで、新規感染者数については、7日間の移動平均を2回行うことにします。これは、加重移動平均
+(三角移動平均 Triangular Moving Average (TMA))に相当します。また、対応する実効再生産数の
+細かな変動も、7日間移動平均を取ることにより、平滑化することにします。すなわち、我々が解析
+するモデルは、次の図で与えられます。
+ </div>
+</div>
+<img src="Figure8_1.png" alt="Figure8_1" width="1000"> 
+
+<br>
+
+作成したプログラムについては、
+  <a href="covid19_main1.py">
+  ここ</a>
+をご覧ください。
+
+<br>
+<br>
+<br>
+
+
+<div class="parent">
+ <div class="child2">
+
+　新規感染者数についてはNHKのデータを、実効再生産数については東洋経済オンラインのデータを用いて、
+\(I(t)\)と\(R(t)\)の関係、
+\[
+\frac{d I(t)}{dt} = \gamma \left(R(t) -1 \right) I(t) 
+\]
+が成り立つかを調べるわけですが、データは日ごとに与えられているので、実際には、上式で \(dt = 1日 \)
+と取って差分で扱います。すなわち、\(i\)日目のデータについて、
+\[
+I(i+1) - I(i) = \gamma \left(R(i) -1 \right) I(i) 
+\]
+が成り立つかを調べます。ここで、\(\gamma = 1/4\) とした場合の結果は、以下の通りです。
+この図からは、第6波の最初の大きな山は、大体合っているいるが、それ以降は、全く合っていないのが
+分かります。特に、\(R(i) -1 = 0 \)となる\(i\)の値が\(I(i+1) - I(i)\)となる\(i\)の値よりも
+7日程度後ろにずれていいるのが、分かります。
+
+ </div>
+</div>
+
+<img src="Figure8_2.png" alt="Figure8_2" width="900" height="540"> 
+
+<br>
+
+作成したプログラムについては、
+  <a href="covid19_main2.py">
+  ここ</a>
+をご覧ください。
+
+<br>
+<br>
+<br>
+
+<div class="parent">
+ <div class="child2">
+
+　そこで、\(R(i)\) を \(R(i+7)\) で置き換えた式、
+\[
+I(i+1) - I(i) = \gamma \left(R(i+7) -1 \right) I(i) 
+\]  
+が成り立つかを調べてみました。全体のスケールを合わせるために、今度は\(\gamma = 1/3\)としました。
+結果は、以下の通りで、第6波の最初を除いて、良く合っているのが分かります。
+
+ </div>
+</div>
+
+<img src="Figure8_3.png" alt="累計" width="900" height="540"> 
+
+<br>
+
+作成したプログラムについては、
+  <a href="covid19_main3.py">
+  ここ</a>
+をご覧ください。
+
+<br>
+<br>
+<br>
+
+<div class="parent">
+ <div class="child2">
+　以上の結果から、以下のように推測しています。東洋経済オンラインの実効再生産数は、
+オミクロン株のBA.2に合わせて計算されていたので、それらがBA.5に置き換わるとともに関係式、
+\( \displaystyle 
+\frac{d I(t)}{dt} = \gamma \left(R(t) -1 \right) I(t) 
+\)
+は成り立たなくなったのではないか。BA.5の影響は、\(R(t)\)を\(R(t+7)\)に置き換えることにより
+取り込むことができたのではないだろうかと。
+<br>
+　もう少し、考えてみる必要がありそうです。
+
+<br>
+<br>
+<br>
+</center>
+</body>
+
