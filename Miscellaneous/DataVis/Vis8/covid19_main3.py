@@ -61,14 +61,17 @@ handler1, label1 = ax1.get_legend_handles_labels()
 handler2, label2 = ax2.get_legend_handles_labels()
 ax1.legend(handler1+handler2,label1+label2,borderaxespad=0)
 ax1.grid(axis='x')
-ax1.set_ylim(-2000,13000)
+
+print('(ax1.get_ylim() =', ax1.get_ylim())
+y_min, y_max = ax1.get_ylim()
+
+
+
 
 
 ax1.set_ylabel("dI(t)/dt", fontname="MS Gothic", fontsize=13, color="navy")
 ax2.set_ylabel("γ*(R(t+"+str(day)+")-1)*I(t)", fontname="MS Gothic", fontsize=13, color="red")
-ax2.set_ylim(-2000,13000)
-
-#ax2.set_ylim(0.5,2.6)
+ax2.set_ylim(y_min,y_max)
 
 
 
