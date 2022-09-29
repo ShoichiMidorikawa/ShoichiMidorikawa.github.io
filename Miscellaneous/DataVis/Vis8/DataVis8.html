@@ -86,6 +86,15 @@ code {
 <BR>
 <div class="parent">
  <div class="child2">
+<b>注：</b> 2022年9月26日より、厚生労働省は新型コロナ感染者の全数把握の簡略化を開始しました。
+それに伴い、NHKでは9月28日以降については「データのダウンロード」を停止しました。そこで、以下では
+NHKから提供のあった9月27日までのデータ解析の結果を掲載します。
+<br>
+　ついでに、数値などのタイプミスの修正も行いました。
+<br>
+<br>
+
+
 　2022年7月よりcovid-19の第7波が始まりました。2022年1月に始まった第6波以降の１日ごとの感染者
 の推移と共に実効再生産数をグラフで表すと以下のようになります。
 今までと同様に、１日ごとの規感染者数については、NHKの
@@ -105,7 +114,7 @@ code {
  </div>
 </div>
 
-<img src="Figure8_NOvsRE.png" alt="Figure8_NOvsRE" width="1000px" align="buttom"> 
+<img src="Figure8_NOvsRE (2).png" alt="Figure8_NOvsRE" width="1000px" align="buttom"> 
 
 <br>
 
@@ -136,7 +145,7 @@ code {
 するモデルは、次の図で与えられます。
  </div>
 </div>
-<img src="Figure8_1.png" alt="Figure8_1" width="1000"> 
+<img src="Figure8_1 (2).png" alt="Figure8_1" width="1000"> 
 
 <br>
 
@@ -173,7 +182,7 @@ I(i+1) - I(i) = \gamma \left(R(i) -1 \right) I(i)
  </div>
 </div>
 
-<img src="Figure8_2.png" alt="Figure8_2" width="900" height="540"> 
+<img src="Figure8_2 (2).png" alt="Figure8_2" width="900" height="540"> 
 
 <br>
 
@@ -193,13 +202,13 @@ I(i+1) - I(i) = \gamma \left(R(i) -1 \right) I(i)
 \[
 I(i+1) - I(i) = \gamma \left(R(i+7) -1 \right) I(i) 
 \]  
-が成り立つかを調べてみました。全体のスケールを合わせるために、今度は\(\gamma = 1/3\)としました。
+が成り立つかを調べてみました。全体のスケールを合わせるために、今度は\(\gamma = 1/2\)としました。
 結果は、以下の通りで、第6波の最初を除いて、良く合っているのが分かります。
 
  </div>
 </div>
 
-<img src="Figure8_3.png" alt="累計" width="900" height="540"> 
+<img src="Figure8_3 (2).png" alt="累計" width="900" height="540"> 
 
 <br>
 
@@ -212,13 +221,7 @@ I(i+1) - I(i) = \gamma \left(R(i+7) -1 \right) I(i)
 <br>
 <br>
 
-<div class="parent">
- <div class="child2">
-あれからひと月が経過しました。最近までの結果を表示すると以下のようになります。
- </div>
-</div>
 
-<img src="Figure8_3-1.png" alt="累計" width="900" height="540"> 
 <div class="parent">
  <div class="child2">
 【注】上記結果を得るためには、covid19_main1.py，covid19_main2.py，covid19_main3.py
@@ -271,7 +274,7 @@ I(i+1) - I(i)  と \gamma \left(R(i+7) -1 \right) I(i)
 \frac{d I(t)}{dt} = \gamma \left(R(t+7) -1 \right) I(t) 
 \]
 が成り立つ。ただし、第1波から第5波までは\(\gamma = 1/5 \)と、第6波以降は
-\(\gamma = 1/3\)とする。ここで、\(\gamma\) の値の違いは、変異株の性質によるものと
+\(\gamma = 1/2\)とする。ここで、\(\gamma\) の値の違いは、変異株の性質によるものと
 思われる。
 
 <br>
