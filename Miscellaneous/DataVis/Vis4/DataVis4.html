@@ -1,0 +1,136 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+}
+
+div2{
+     align : left ;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<FONT size="5">Pythonによるデータの可視化4</FONT><BR>
+<FONT size="4">Data Visualization with Python 4</FONT>
+</P>  
+<BR>
+<div class="parent">
+ <div class="child2">
+　pythonで読み込んだcsvデータを用いてグラフを作成します。今回は、csvデータとして、
+厚生労働省が作成したコロナのオープンデータ
+を用います。まず、
+<br>
+<b1>
+<center>
+  <a href="https://www.mhlw.go.jp/stf/covid-19/open-data.html">
+  厚生労働省　オープンデータ</a>
+</center>
+</b1>
+から、
+<a href="https://covid19.mhlw.go.jp/public/opendata/newly_confirmed_cases_daily.csv">
+新規陽性者数の推移（日別）</a>
+と
+<a href="https://covid19.mhlw.go.jp/public/opendata/deaths_cumulative_daily.csv">	
+死亡者数（累積）</a>
+をダウンロードします。
+
+<br>
+　次に、データの置いてあるのと同じフォルダ(ディレクトリ)にPythonプログラムを作成します。
+厚生労働省のcsvデータには、各都道府県のデータが載っていますので、
+必要なデータをダウンロードして、目的に応じた加工を行った後に表示します。その際に、自分専用の
+データファイルも作成しましょう。
+<br>
+　まずは、第6波以降の日本全体の新規感染者数と死者数のグラフを表示するプログラムを作成します。
+ここで注意すべきことは、新規感染者数については、日ごとのデータが与えられていますが、
+死者数については累計が与えられていることです。
+作成したプログラムについては、
+  <a href="covid19_daily_I&D.py">
+  ここ</a>
+をご覧ください。
+
+　このプログラムを実行すると、次のグラフが作成されます。
+ </div>
+</div>
+
+<img src="Japan.png" alt="Japan" width="1200" height="540"> 
+
+<div class="parent">
+ <div class="child2">
+　次に、厚生労働省のデータから、例として東京都の新規感染者と死亡者のデータを抜き出して、
+表示するプログラムを作成します。
+作成したプログラムについては、
+  <a href="covid19_daily_I&D_Tokyo.py">
+  ここ</a>
+をご覧ください。
+
+　このプログラムを実行すると、次のグラフが作成されます。
+
+ここでは、2021年3月15日から2021年9月2日までを表示します。結果は、以下の通りです。
+ </div>
+</div>
+
+<img src="Tokyo.png" alt="Tokyo" width="1200" height="540"> 
+
+<div class="parent">
+ <div class="child2">
+　他の道府県についてのプログラムも同様にして作成することができます。
+ </div>
+</div>
+
+</center>
+</body>
+
