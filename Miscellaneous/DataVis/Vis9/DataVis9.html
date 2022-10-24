@@ -1,0 +1,283 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+
+<script>
+MathJax = {
+  chtml: {
+    displayAlign: "left",
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+}
+
+div2{
+     align : left ;
+}
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    width: 250px;
+    margin: auto;
+}
+div.child2{
+//    background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 800px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<FONT size="5">Covid-19 様々な実効再生産数とその性質</FONT><BR>
+</P>  
+
+<BR>
+<div class="parent">
+ <div class="child2">
+　実効再生産数\(R(t)\)は、一人の感染者が何人に感染させられるかを表す指標である。
+時刻\(t\)における新規感染者数を\(I(t)\)とおく。
+時刻 \((t-a)\)における一人の新規感染者が、時刻 \(t\)、すなわち、\(a\) 時間後に
+新たに一人の感染者を生じる確率を\(g(a)\)とする。この \(a\)は、発症間隔(serial interval)
+と呼ばれる。
+時刻 \((t-a)\)の新規感染者数は、\(I(t-a) \)だから、時刻 \(t\)における新規感染者の数は、
+￥( g(a) I(t-a)) である。この量をすべての \( a>0 \) について加えた(積分)したものが、
+一人の感染者が一人の新規感染者を生み出すとした場合の時刻\(t\) における新規感染者数である。
+ところが、一人の感染者が一人の新規感染者を生み出すとは、限らないので、この値は、時刻
+\(t\)における新規感染者数 \(I(t)\)とは異なる。この値と前者の値の比が実効再生産数 \(R(t)\)
+である。すなわち、　 
+\begin{equation}
+ R(t) = \frac{I(t)}{\int_0^\infty g(a) I(t-a)\, da} 
+\end{equation}
+で与えられる。
+<br>
+　実効再生産数についての具体的な計算については、色々な方法が提案されている。そのうちのいくつかを挙げると、
+<ol>
+<li> 
+<a href ="https://watermark.silverchair.com/kwt133.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAr8wggK7BgkqhkiG9w0BBwagggKsMIICqAIBADCCAqEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMHc-YF3q_DAVvv7OnAgEQgIICct6FKO_wWNqTQj16zuovgR8OYAFBwwsBXo4FJ4EVBJwhUFH2PnJLJLATtxpQjAJ34zHZ0-aL-SgytDuXROO6GsevtBlgqZrmLwNkUVxdNd6Azu3dkVOPSQiK50rlDeSvtADCjNGx4L5G-VApNpBCN90uBBIA2XoK_AhciRKxe8ahscUdjehomjj_WYeQ6hBabVFpGL2Pd3vFKryexPuiSX040ulVkT8gD5Zj-bHROfRDKLx0_pUHuzAGStXQojKY9vI2cDozbbZMsuaBzqYZzBdzDFx7u0tz8dJ1m1f7edtNJFzzN0A289KVBJmpqAD64bkXoI5FwtMgbjSPVJlNuijZNNjnZnC57QVqBgRft99nzYEFgGaVDKbygBNUUIvvrtAWAABHgNKV3p55ExAENLmRMkDh8H3yJADC8aWlOgV9i3NeCsGK5L_uQcZGttc5wTAMaLCblMS7S7ufu2oD0ODLzNE_Jvs3aivQgT4NiSp9aojkJBLtjepL9ePW402dmg-K8R7IBjZo_y9fXOFGkpCgTH1pVnn5-pOrDfofV3ALHS0VuH_olFuekq72XZFPCD2CJ1W4suTB-xMw0w4JqaJObqiIYpSNvsHBSZ6bRa02dPPmiKgD1eTGgFx9MLLknPKpsouCoj9okGKayeSvmhUEe5fmz8Ql2QCE-riVHFFAVvPkXpOYh2Mh-LQnhbMCIJSHMb4EjADZ6oiQHoXBy75w-YD7LTe6JKg72Rz9Xbqf8bMWEKZNreq6f7HvFS5laDIfrPE8NA0cNDdtaoA6jgT6dfgy19PAayYYJs1MUWRomXzSRhs1x-aB46G3KY9OVro8">
+Cori et al.の方法</a><br>
+　この方法は、上式の\(R(t)\)の右辺の分母に現れる積分を和に置き換えて計算する。
+\[
+ R_C(t) = \frac{I(t)}{\sum_{s=0}^t w_s I(t-s)}
+\]
+ただし、\(t\)は、日にちである。
+ 国内におけるオミクロン株の伝染性の確率密度関数については、
+<a href = "https://www.niid.go.jp/niid/ja/2019-ncov/2551-cepr/10952-b11529-si.html">
+国立感染症研究所の推定</a>がある。それによれば、\(g(a)\)
+は、中央値2.6日のWeibull分布に従う。また、発症間隔の観測データより、
+\[
+w_0＝\frac{1}{30},\ w_1 = \frac{4}{30},\ w_2 = \frac{9}{30},\ w_3 = \frac{8}{30},\ 
+w_4 = \frac{7}{30},\ w_5 =\frac{1}{30}   
+\]
+である。
+</li>
+<li> 
+<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/R-Wert-Erlaeuterung.pdf?__blob=publicationFile">
+ロベルト・コッホ研究所 (Robert Koch Institute) の方法</a><br>
+これは、感染間隔の平均日数 \( \tau_g \) (the generation time)におけるウェイトを１、他を0とする。
+すなわち、
+\[
+R(t) =  \frac{I(t)}{I(t-\tau_g)}
+\]
+オミクロン株の場合は、平均日数を\(\tau_g=2日\)とおくと、
+\(\displaystyle
+R_K(t) = \frac{I(t)}{I(t-2)}
+\)
+となる。
+</li>
+<li> 
+<a href="https://link.springer.com/content/pdf/10.1140/epjp/s13360-021-01339-6.pdf">
+Bonifazi et al. の方法</a><br>
+　上述のコッホ研究所の方法では、新規感染者数に含まれる日ごとのばらつきの影響が大きい場合には、
+その影響が実効再生産数にも直接現れるという欠点がある。そこで、Bonifazi等は、新規感染者数についての
+7日間の移動平均(moving average)を用いることを提案した。
+\begin{eqnarray}
+R_B(t) & = & \frac{I(t) + I(t-1) + \cdots + I(t-6)}{I(t-2)+I(t-3)+ \cdots + I(t-8)} \\ 
+& = & \frac{\sum_{i=0}^{6}I(t-i)}{\sum_{i=0}^{6}I(t-2-i)} \\
+\end{eqnarray}
+しかし、移動平均で求めるべき値は、中心のデータなので、
+\[
+I_{MV}(t) = \frac{I(t-3)+\cdots + I(t)+ \cdots + I(t+3)}{7}
+\]
+とすべきである。これを用いると、
+\[
+R_B(t) = \frac{I_{MV}(t-3)}{I_{MV}(t-5)}
+\]
+となるので、\(R_C(t)\)や\(R_K(t)\)に比べて3日の遅れが生じる。
+</li>
+<li> 
+<a href ="https://royalsocietypublishing.org/doi/epdf/10.1098/rsif.2009.0153">
+Nishiura et al.の方法</a><br>
+　これは、東洋経済オンラインの
+<a href="https://toyokeizai.net/sp/visual/tko/covid19/">
+ 新型コロナウイルス 国内感染の状況</a>で紹介されている方法で、
+\[
+R_N(t) = \left( \frac{\displaystyle \sum_{i=0}^{\Delta t -1} I(t-i)}{\displaystyle \sum_{i=0}^{\Delta t-1} I(t-\Delta t-i) } \right)^{\frac{\tau_g}{\Delta t}} 
+\]
+で与えられる。ここに\(\Delta t\) は日にちによる変動を除去するための移動平均の日数で、
+7日間の平均移動をとる場合には、\(\Delta t =7\)と置く。さらに、\(\tau_g = 2\)とすると、
+上式は、
+\[
+R_N(t) = \left( \frac{I(t)＋I(t-1)+ \cdots +I(t-6)}{I(t-7)+I(t-8)+ \cdots + I(t-13)} \right)^{\frac{2}{7}}
+\]
+となる。
+ここら辺の解説は、
+<a href="http://nalab.mind.meiji.ac.jp/~mk/labo/text/effective-reproduction-number.pdf">
+桂田</a>に詳しい。この方法は、新規感染者数に含まれるノイズに最も影響されにくいという特徴を持っているが、
+Cori et al. や　Koch研究所の方法に較べて6日の遅れがあるがこの後の解析で分かる。
+</li>
+</ol>
+
+<br>
+<br>
+<br>
+ 国内の日ごとの新規感染者数と上で述べた4つの実効再生産数を一つのグラフに表す。
+新規感染者数については、
+<a href="https://www.mhlw.go.jp/stf/covid-19/open-data.html">
+厚生労働省のオープンデータ</a>を用いる。
+
+ </div>
+</div>
+
+<img src="ReproductionNo_0-1.png" alt="ReproductionNo_0-1.png" width="1000px" align="buttom"> 
+
+<br>
+
+作成したプログラムについては、
+  <a href="covid19_effective_RPN_0.py">
+  ここ</a>
+をご覧ください。
+
+<br>
+<br>
+<br>
+
+<div class="parent">
+ <div class="child2">
+　一見して分かるように、Cori et al.とKoch 研究所の方法では、日ごとの新規感染者に含まれるノイズ
+のせいで有効な情報が取り出せない。そこで、新規感染者数についての平滑化を7日間の移動平均を2度行う。
+これは中心の重みが最大の3角形となることから、三角移動平均(Triangular Moving Average)と呼ばれる。
+こうして得られた新規感染者数を用いて、再び実効再生産数を計算して得られたグラフを以下に示す。
+ </div>
+</div>
+<img src="ReproductionNo_1-2.png" alt="ReproductionNo_1-2" width="1000"> 
+
+<br>
+作成したプログラムについては、
+  <a href="covid19_effective_RPN_1.py">
+  ここ</a>
+をご覧ください。
+
+<br>
+<br>
+<br>
+
+
+<div class="parent">
+ <div class="child2">
+　4つの方法で計算した実効再生産数は、かなり似た振舞いをするようになったが、\(R_B(t)\)と
+\(R_N(t)\)は、\(R_C(t)\)と\(R_K(t)\)に較べて時間に遅れががあるように思われる。そこで、
+\(R_B(t)\)を左に1日、\(R_N(t)\)を左に6日ずらしてグラフを描き直す。
+ </div>
+</div>
+
+<img src="ReproductionNo_2-2.png" alt="ReproductionNo_2-2" width="900" height="540"> 
+
+<br>
+
+作成したプログラムについては、
+  <a href="covid19_effective_RPN_2.py">
+  ここ</a>
+をご覧ください。
+
+<br>
+<br>
+<br>
+
+<div class="parent">
+ <div class="child2">
+
+　今度は、4つの方法の計算での山と谷の時間が一致していることが分かる。これらの結果を用いて、
+\[
+\frac{d I(t)}{dt} = \gamma \left(R(t) -1 \right) I(t) 
+\]
+が成り立つかを調べる。そのためには、時間 \(t\) を離散化
+\( (t= 0, \ 1, \ 2 \cdots,\ i, \ \cdots) \)
+し、\(\Delta t =1 \) とおいて、等式
+\[
+I(i+1) - I(i) = \gamma \left( R(i+1) -1 \right) I(i)
+\]
+が成り立つかを調べる。ただし、\(R_B(i)\) と \(R_N(i)\) については、時間の遅れを考慮して、
+それぞれ、\(R_B(i+4)\)、\(R_N(i+7)\)とする。以下に\( \gamma = 1/3\) の結果を示す。
+
+
+ </div>
+</div>
+
+<img src="ReproductionNo_3-2.png" alt="ReproductionNo_3-2" width="1000"> 
+
+<div class="parent">
+ <div class="child2">
+　4つの方法は、いずれも関係式
+\(\displaystyle
+\frac{d I(t)}{dt} = \gamma \left(R(t) -1 \right) I(t) 
+\)
+を概ね満たすことが分かる。特に、Cori et al.の方法が、手間がかかる分だけ
+優れているように思われる。この方法が、標準として
+用いられる所以である。
+　
+ </div>
+</div>
+<br>
+<br>
+<br>
+</center>
+</body>
+
