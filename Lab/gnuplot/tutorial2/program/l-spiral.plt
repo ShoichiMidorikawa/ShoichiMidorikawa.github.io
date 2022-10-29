@@ -1,6 +1,6 @@
 reset
-set terminal postscript portrait
-set output "l-spiral.eps"
+set terminal png
+set output "l-spiral.png"
 set size  square
 set xzeroaxis
 set yzeroaxis 
