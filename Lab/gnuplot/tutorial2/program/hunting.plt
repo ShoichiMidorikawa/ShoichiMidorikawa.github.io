@@ -1,10 +1,26 @@
-set size ratio 0.8  1
+reset
+set size ratio 0.8 1
+set samples 512
+set xrange [0:10]
+set yrange [0:200]
+set trange [0:5*pi]
+set nokey
+set parametric
 
-if(exist("n")==0 || n<0) n = 0  # ƒ‹[ƒv•Ï”‚Ì‰Šú‰»
+set terminal gif animate optimize size 1200, 480
+set output "m-hunting.gif"
+
+n = 0
+
+
+if(exist("n")==0 || n<0) n = 0  # ãƒ«ãƒ¼ãƒ—å¤‰æ•°ã®åˆæœŸåŒ–
 
 #-------------------------------------------------------------------------------
-# ƒvƒƒbƒg
+# ãƒ—ãƒ­ãƒƒãƒˆ
 #-------------------------------------------------------------------------------
+
+while(n<=120){
+
 tmax= n/6.0
 fx(t) = t<=tmax ? t : 1/0
 fy(t) = t<=tmax ? -2.*t**2+20.*t : 1/0 
@@ -31,9 +47,7 @@ fx(tmax), fy(tmax) w p pt 7 ps 2 lc rgb "purple", \
 10, gy(10,t) w l lc rgb "blue", \
 10, gy(10,tmax) w p pt 7 ps 2 lc rgb "blue"
 
+n=n+1
+}
 
-#-------------------------------------------------------------------------------
-# ƒ‹[ƒvˆ—
-#-------------------------------------------------------------------------------
-if ( n <= 120 ) n=n+1 ; reread  # ƒ‹[ƒv‚Ì•]‰¿
-undefine n            # ƒ‹[ƒv•Ï”‚Ìíœ
+set output

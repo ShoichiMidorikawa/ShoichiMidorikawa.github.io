@@ -1,11 +1,32 @@
-if (exist("n")==0 || n<0) n=0 #•Ï”‚Ì‰Šú‰»
-title(n) = sprintf("t = %d",n)  #ƒ^ƒCƒgƒ‹–¼
-unset label 
-#set label title(n)  font 'Times,20'  at 0 , 3.3 
+reset
+
+#set size ratio 0.2
+set size ratio -1
+
+set samples 512
+set xrange [0:20]
+set yrange [-1:3]
+set trange [0:8*pi]
+set xtics 0, 2, 20
+set ytics 0, 1, 3
+set xzeroaxis
+set yzeroaxis
+set nokey
+set parametric
+
+set terminal gif animate optimize size 1200, 400
+set output "trochoid.gif"
+
+n = 0
+
 
 theta = pi/20 * n
 a=0.5
 b=1.5
+
+while(n<200){
+theta = pi/20 * n
+
 fx(t) = t<=theta ? t-sin(t) : 1/0
 fy(t) = t<=theta ? 1-cos(t) : 1/0
 gx(t) = t<=theta ? t-a*sin(t) : 1/0
@@ -30,4 +51,8 @@ plot fx(t),fy(t) w l lc rgb "blue", \
      gx(theta), gy(theta) with points pt 7 lc rgb "red", \
      hx(theta), hy(theta) with points pt 7 lc rgb "green" 
 
-if (n<200)  n=n+1; reread
+n=n+1
+}
+
+set output
+
