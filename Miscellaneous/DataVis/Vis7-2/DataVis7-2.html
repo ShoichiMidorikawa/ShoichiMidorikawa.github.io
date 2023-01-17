@@ -1,0 +1,177 @@
+﻿<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135083881-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-135083881-1');
+</script>
+
+
+<script>
+MathJax = {
+  chtml: {
+    displayAlign: "left",
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="JustSystems Homepage Builder Version 18.0.13.0 for Windows">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+table, td {
+  margin-left: 100px;
+  padding: 3px;
+  width: 360px;
+}
+@media screen and (max-width: 840px){
+   body{
+     align; left;
+     margin-left: 0px;
+   }
+   table, td{
+     padding: 3px;
+     margin-left: 0px;
+   }
+   img{
+      width: 100%;
+      height: auto;
+   }
+
+}
+
+
+
+
+div.parent{
+  text-align: center;
+}
+div.child{
+    text-align: left;
+    margin: auto;
+}
+div.child2{
+    //background-color: lightblue;
+    text-align: left;
+    font-size: 18px;
+    width: 910px;
+    margin: auto;
+    padding:6px 6px 6px;
+}
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color: #444; /* 文字色 */
+  background-color: #e7edf3; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px #d6dde4; /* 枠線 */
+}
+</style>
+
+<body>
+<center>
+
+<BR>
+<P>
+<h2>
+Covid-19 致死率の推移2
+<br>
+第6波以降
+
+</h2>
+<FONT size="5"></FONT><BR>
+</P>  
+
+<BR>
+
+<div class="parent">
+ <div class="child2">
+
+厚生労働省のデータをもとに、第6波以降の1日ごとの感染者数と死者数のグラフを一つにまとめて表示します。
+
+
+<img src="Figure_1.png" alt="IvsD" width="1000"> 
+<br>
+
+
+作成したプログラムについては、
+  <a href="covid19_No1_daily_I&D.py">
+  ここ</a>
+をご覧ください。
+<br>
+
+
+<br>
+
+<h3>データの平滑化</h3>
+
+もう少し見やすくするために、日ごとの感染者数と志望者数データを7日間の移動平均を用いて平滑化します。
+
+
+<img src="Figure_2.png" alt="IvsD" width="1000"> 
+<br>
+
+
+作成したプログラムについては、
+  <a href="covid19_No2_I&D_MAV.py">
+  ここ</a>
+をご覧ください。
+<br>
+
+
+<br>
+
+死者数のピークは、新規感染者数のピークのおよそ17日後に訪れるので、死者数のグラフを17日前にずらして、
+新規感染者数のグラフと重ねて表示すると、以下のようになります。
+
+
+<img src="Figure_3.png" alt="IvsD" width="1000"> 
+<br>
+
+
+作成したプログラムについては、
+  <a href="covid19_No3_Death-Shift.py">
+  ここ</a>
+をご覧ください。
+<br>
+<br>
+<br>
+ そこで、上のグラフをもとに日々の致死率を、
+\[
+\rm t 日の致死率 = \frac{(t+17)日の死亡者数}{t日の新規感染者数}
+\]
+と近似して求めたものを一日ごとの新規感染者数のグラフとを重ねて表示すると、次のようになります。
+
+
+
+<img src="Figure_4.png" alt="IvsD" width="1000"> 
+<br>
+
+
+作成したプログラムについては、
+  <a href="covid19_No4_CFR.py">
+  ここ</a>
+をご覧ください。
+<br>
+<br>
+これを見ると、第7波に較べて第8波になってからの致死率が上がっているのが分かります。
+<br>
+専門家によると、これは感染者の届け出の方法が変わったことが背景にあると見られるとのことです。
+すなわち、感染しても軽症の患者は届出をしなくなったことが原因だそうです。
+裏付ける資料が望まれるところです。
+
+
+ </div>
+</div>
+</center>
+</body>
+
