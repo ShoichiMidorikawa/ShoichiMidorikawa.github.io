@@ -273,6 +273,30 @@ I(i+1) - I(i) = \gamma \left( R(i+1) -1 \right) I(i)
 優れているように思われる。この方法が、標準として
 用いられる所以である。
 　
+<br>
+<br>
+
+【付記】(2023/1/26)
+
+\[
+R_N(t) = \left( \frac{\displaystyle \sum_{i=0}^{\Delta t -1} I(t-i)}{\displaystyle \sum_{i=0}^{\Delta t-1} I(t-\Delta t-i) } \right)^{\frac{\tau_g}{\Delta t}} 
+\]
+は、
+\begin{equation}
+R_N\left( t-\Delta t + \frac{\tau_g+1}{2} \right)  = \left( \frac{\displaystyle \sum_{i=0}^{\Delta t -1} I(t-i)}{\displaystyle \sum_{i=0}^{\Delta t-1} I(t-\Delta t-i) } \right)^{\frac{\tau_g}{\Delta t}} 
+\label{eq:R_Nnew}
+\end{equation}
+と修正されるべきである。
+
+<br>
+
+ここで、オミクロン株の場合に合わせて、
+\(\tau_g = 2, \ \Delta t = 7\)とすると、
+\[
+R_N(t-5.5) = \left( \frac{I(t) + I(t-1) + \cdots + I(t-6)}{I(t-7) + I(t-8) + \cdots + I(t-13)}  \right)^{2/7}
+\]
+を得る。
+
  </div>
 </div>
 <br>
