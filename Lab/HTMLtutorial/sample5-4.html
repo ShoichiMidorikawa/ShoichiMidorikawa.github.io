@@ -15,43 +15,36 @@ onload= function(){
 
   str0  = "https://www.youtube.com/embed/C35DrtPlUbc?rel=0";
   str1 = "https://www.youtube.com/embed/AMQOAdqkXGs?rel=0";
-  str2 = "https://www.youtube.com/embed/pSYS7cPc3nE?rel=0";
-  str3 = "https://www.youtube.com/embed/v0zewZucBXI?rel=0";
-  str4 = "https://www.youtube.com/embed/WeCAQmxq_Ew?rel=0";
+  str2 = "https://www.youtube.com/embed/v0zewZucBXI?rel=0";
+  str3 = "https://www.youtube.com/embed/WeCAQmxq_Ew?rel=0";
 
   image.src=str0+"&autoplay=0" ;
 
     b[0].style.color='red';
 
   b[0].onclick = function(){
-    for(var i=0; i<5; i++)
+    for(var i=0; i<4; i++)
            b[i].style.color='black';
     b[0].style.color='red';
     image.src=str0 ;
   }
   b[1].onclick = function(){
-    for(var i=0; i<5; i++)
+    for(var i=0; i<4; i++)
            b[i].style.color='black';
     b[1].style.color='red';
     image.src= str1 ;
   }
   b[2].onclick = function(){
-    for(var i=0; i<5; i++)
+    for(var i=0; i<4; i++)
            b[i].style.color='black';
     b[2].style.color='red';
     image.src= str2;
   }
   b[3].onclick = function(){
-    for(var i=0; i<5; i++)
+    for(var i=0; i<4; i++)
            b[i].style.color='black';
     b[3].style.color='red';
     image.src= str3;
-  }
-  b[4].onclick = function(){
-    for(var i=0; i<5; i++)
-           b[i].style.color='black';
-    b[4].style.color='red';
-    image.src= str4;
   }
  
 };
@@ -63,9 +56,8 @@ onload= function(){
 <h1>Sukiyaki聴き比べ</h1>
 <button id="btn0" > Kyu Sakamoto </button>
 <button id="btn1" >Hikaru Nishida</button>
-<button id="btn2" >     4P.M.    </button>
-<button id="btn3" >A Taste of Honey</button>
-<button id="btn4" >Kenny Ball and His Jazzmen</button>
+<button id="btn2" >A Taste of Honey</button>
+<button id="btn3" >Kenny Ball and His Jazzmen</button>
 
 <p> 
 <iframe  id="image" width="600" height="390" 
